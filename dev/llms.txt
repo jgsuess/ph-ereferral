@@ -3,7 +3,11 @@
 ## Pages
 
 * [Home](index.md)
+* [Ai Reasoning](ai-reasoning.md)
+* [Version Management](version-management.md)
 * [Artifacts Summary](artifacts.md)
+* [Resource Architecture](resource-architecture.md)
+* [Technical Pipeline](technical-pipeline.md)
 * [Approach](approach.md)
 * [Dd Mapping](dd-mapping.md)
 

@@ -36,7 +36,7 @@ This is a
   "name" : "PHeReferralImplementationGuide",
   "title" : "PH eReferral Implementation Guide",
   "status" : "draft",
-  "date" : "2026-02-24T10:33:45+00:00",
+  "date" : "2026-02-24T11:01:46+00:00",
   "publisher" : "UP Manila SILab",
   "contact" : [{
     "name" : "UP Manila SILab",
@@ -945,6 +945,15 @@ This is a
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "ai-reasoning.html"
+        }],
+        "nameUrl" : "ai-reasoning.html",
+        "title" : "Ai Reasoning",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "approach.html"
         }],
         "nameUrl" : "approach.html",
@@ -958,6 +967,33 @@ This is a
         }],
         "nameUrl" : "dd-mapping.html",
         "title" : "Dd Mapping",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "resource-architecture.html"
+        }],
+        "nameUrl" : "resource-architecture.html",
+        "title" : "Resource Architecture",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "technical-pipeline.html"
+        }],
+        "nameUrl" : "technical-pipeline.html",
+        "title" : "Technical Pipeline",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "version-management.html"
+        }],
+        "nameUrl" : "version-management.html",
+        "title" : "Version Management",
         "generation" : "markdown"
       }]
     },

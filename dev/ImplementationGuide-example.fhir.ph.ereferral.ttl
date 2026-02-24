@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHeReferralImplementationGuide"] ; # 
   fhir:title [ fhir:v "PH eReferral Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-24T10:33:45+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-24T11:01:46+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila SILab"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila SILab" ] ;
@@ -1852,6 +1852,25 @@
            ] ;
            fhir:value [
              a fhir:Url ;
+             fhir:v "ai-reasoning.html"^^xsd:anyURI ;
+             fhir:l fhir:ai-reasoning.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "ai-reasoning.html"^^xsd:anyURI ;
+           fhir:l fhir:ai-reasoning.html
+         ] ;
+         fhir:title [ fhir:v "Ai Reasoning" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
              fhir:v "approach.html"^^xsd:anyURI ;
              fhir:l fhir:approach.html
            ]
@@ -1881,6 +1900,63 @@
            fhir:l fhir:dd-mapping.html
          ] ;
          fhir:title [ fhir:v "Dd Mapping" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
+             fhir:v "resource-architecture.html"^^xsd:anyURI ;
+             fhir:l fhir:resource-architecture.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "resource-architecture.html"^^xsd:anyURI ;
+           fhir:l fhir:resource-architecture.html
+         ] ;
+         fhir:title [ fhir:v "Resource Architecture" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
+             fhir:v "technical-pipeline.html"^^xsd:anyURI ;
+             fhir:l fhir:technical-pipeline.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "technical-pipeline.html"^^xsd:anyURI ;
+           fhir:l fhir:technical-pipeline.html
+         ] ;
+         fhir:title [ fhir:v "Technical Pipeline" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
+             fhir:v "version-management.html"^^xsd:anyURI ;
+             fhir:l fhir:version-management.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "version-management.html"^^xsd:anyURI ;
+           fhir:l fhir:version-management.html
+         ] ;
+         fhir:title [ fhir:v "Version Management" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;

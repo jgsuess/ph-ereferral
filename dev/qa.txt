@@ -3,7 +3,7 @@ PHeReferralImplementationGuide : Validation Results
 
 err = 27, warn = 25, info = 100
 IG Publisher Version: 2.1.1
-Generated Tue Feb 24 10:36:54 UTC 2026. FHIR version 4.0.1 for example.fhir.ph.ereferral#0.3.0-draft (canonical = https://jgsuess.github.io/ph-ereferral)
+Generated Tue Feb 24 11:03:19 UTC 2026. FHIR version 4.0.1 for example.fhir.ph.ereferral#0.3.0-draft (canonical = https://jgsuess.github.io/ph-ereferral)
  Build Errors : 1 / 4 / 0
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Bundle-anc-contact-transaction-ex : 13 / 18 / 85
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Bundle-registration-transaction-ex : 4 / 0 / 32
@@ -32,7 +32,7 @@ Generated Tue Feb 24 10:36:54 UTC 2026. FHIR version 4.0.1 for example.fhir.ph.e
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Task-task-referral-ex : 0 / 1 / 3
 </table>
 == n/a ==
-ERROR: index.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 199, column 157: The link 'dev/' for "development preview" cannot be resolved
+ERROR: index.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 218, column 157: The link 'dev/' for "development preview" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
