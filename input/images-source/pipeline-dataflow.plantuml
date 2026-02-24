@@ -1,0 +1,72 @@
+@startuml pipeline-dataflow
+!theme plain
+title PeRef Example Generation Pipeline
+
+skinparam rectangle {
+  BackgroundColor<<source>> #E8F5E9
+  BackgroundColor<<tool>> #E3F2FD
+  BackgroundColor<<output>> #FFF3E0
+  BackgroundColor<<final>> #FCE4EC
+}
+
+rectangle "**Source Artefacts**" <<source>> {
+  card "Excel Data Dictionary\n(46 REF-* elements)" as DD
+  card "scenario.xml\n(ANC User Scenario 3.1)" as SC
+  card "PH-Core IG\n(FHIR profiles)" as PHC
+}
+
+rectangle "**Extraction & Generation**" <<tool>> {
+  card "extract-data-dictionary.py\n(openpyxl)" as EXT
+  card "generate-json-from-dd.py\n(Python)" as GEN
+}
+
+rectangle "**Intermediate Artefacts**" <<output>> {
+  card "CSV files\n(input/data-dictionary/)" as CSV
+  card "22 JSON examples\n(input/examples-json-source/)" as JSON
+}
+
+rectangle "**Validation**" <<tool>> {
+  card "validate-all.sh\n(fhir-validate.py → FHIR server)" as VAL
+}
+
+rectangle "**Conversion & Bundling**" <<tool>> {
+  card "convert-to-fsh.sh\n(GoFSH v2.6)" as GOFSH
+  card "Manual FSH authoring\n(2 transaction bundles)" as BUNDLE
+}
+
+rectangle "**FSH Source**" <<output>> {
+  card "22 instance .fsh files\n+ aliases.fsh" as FSH_INST
+  card "registration-transaction-ex.fsh\nanc-contact-transaction-ex.fsh" as FSH_BUND
+}
+
+rectangle "**Compilation & Publishing**" <<final>> {
+  card "SUSHI v3.17\n(0 errors, 0 warnings)" as SUSHI
+  card "IG Publisher\n(publisher.jar)" as PUB
+  card "Published IG\n(24 FHIR resources)" as IG
+}
+
+rectangle "**Coverage Tracking**" <<tool>> {
+  card "update-dd-coverage.py" as COV
+  card "dd-coverage.csv\n(31 covered, 1 partial,\n4 deferred, 10 N/A)" as COVRPT
+}
+
+DD --> EXT
+EXT --> CSV
+CSV --> GEN
+SC --> GEN
+GEN --> JSON
+JSON --> VAL
+VAL --> GOFSH
+GOFSH --> FSH_INST
+FSH_INST --> BUNDLE
+BUNDLE --> FSH_BUND
+FSH_INST --> SUSHI
+FSH_BUND --> SUSHI
+PHC --> SUSHI
+SUSHI --> PUB
+PUB --> IG
+
+JSON --> COV
+COV --> COVRPT
+
+@enduml

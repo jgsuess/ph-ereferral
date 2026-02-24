@@ -1,0 +1,25 @@
+{
+  "resourceType": "Practitioner",
+  "id": "practitioner-jane-ex",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.com/peref-dd",
+        "code": "REF-1",
+        "display": "REF-1"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Jane — nurse at Barangay Malusog Health Centre providing ANC. [DD: REF-1]</div>"
+  },
+  "name": [
+    {
+      "family": "Dela Cruz",
+      "given": [
+        "Jane"
+      ]
+    }
+  ]
+}

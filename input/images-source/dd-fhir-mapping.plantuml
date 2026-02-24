@@ -1,0 +1,84 @@
+@startuml dd-fhir-mapping
+!theme plain
+title Data Dictionary → FHIR Resource Mapping
+
+skinparam rectangle {
+  BackgroundColor<<dd>> #E8F5E9
+  BackgroundColor<<fhir>> #E3F2FD
+  BackgroundColor<<deferred>> #F5F5F5
+}
+
+' --- Data Dictionary Groups (left) ---
+together {
+  rectangle "**01 Sending Practitioner**\nREF-1: Name\nREF-2: Signature _(deferred)_\nREF-3: Signature time _(deferred)_" as G01 <<dd>>
+  rectangle "**02 Sending Facility**\nREF-4: Facility name\nREF-5: NHFR code\nREF-6: Address\nREF-7: Contact number" as G02 <<dd>>
+  rectangle "**03 Receiving Practitioner**\nREF-8: Receiving personnel\n_(not covered — N/A)_" as G03 <<dd>>
+  rectangle "**04 Receiving Facility**\nREF-9: Facility name\nREF-10: NHFR code" as G04 <<dd>>
+}
+
+together {
+  rectangle "**05 Referral Request**\nREF-11: HCPN _(deferred)_\nREF-12: Date of referral\nREF-13: Category / priority\nREF-14: Time called _(N/A)_\nREF-15: Reason / service type\nREF-16: Action: Received\nREF-17: Action: Forwarded _(N/A)_\nREF-18: Return slip _(deferred)_\nREF-19: Call/email ref _(N/A)_" as G05 <<dd>>
+  rectangle "**06 Patient Demographics**\nREF-20: Full name\nREF-21: Gender\nREF-22: Birth date\nREF-23: Age _(computed)_\nREF-24: PhilSys ID\nREF-25: PhilHealth ID\nREF-26: Address\nREF-27: Contact\nREF-28: Next of kin\nREF-29: PWD reg _(N/A)_" as G06 <<dd>>
+  rectangle "**07 Clinical Information**\nREF-30: Chief complaint\nREF-31: Clinical history\nREF-32–37: Vital signs (×6)\nREF-38: Treatment given\nREF-39: Lab results _(partial)_\nREF-40: Working impression" as G07 <<dd>>
+}
+
+together {
+  rectangle "**Logistics / Decision / System**\nREF-41: Transport _(N/A)_\nREF-42: Response\nREF-43: Referring encounter\nREF-44: Receiving encounter _(N/A)_\nREF-45–46: Navigators _(N/A)_" as G08 <<dd>>
+}
+
+' --- FHIR Resources (right) ---
+together {
+  rectangle "**Practitioner**\n+ PractitionerRole" as F_PRAC <<fhir>>
+  rectangle "**Provenance**\n_(Future Release)_" as F_PROV <<deferred>>
+  rectangle "**Organization**\n(sending + receiving)" as F_ORG <<fhir>>
+  rectangle "**Communication**" as F_COMM <<deferred>>
+}
+
+together {
+  rectangle "**ServiceRequest**\n(ultrasound + lab)" as F_SR <<fhir>>
+  rectangle "**Task**\n(referral tracking)" as F_TASK <<fhir>>
+  rectangle "**DocumentReference**\n_(MVP excluded)_" as F_DOC <<deferred>>
+}
+
+together {
+  rectangle "**Patient**" as F_PAT <<fhir>>
+  rectangle "**RelatedPerson**" as F_REL <<fhir>>
+}
+
+together {
+  rectangle "**Observation** ×7\n(vitals + complaint)" as F_OBS <<fhir>>
+  rectangle "**Condition**\n(pregnancy)" as F_COND <<fhir>>
+  rectangle "**MedicationAdministration**\n(IFA)" as F_MED <<fhir>>
+  rectangle "**DiagnosticReport**\n_(pending results)_" as F_DIAG <<deferred>>
+}
+
+together {
+  rectangle "**Encounter**\n(registration + ANC)" as F_ENC <<fhir>>
+}
+
+' --- Mappings ---
+G01 --> F_PRAC : REF-1
+G01 ..> F_PROV : REF-2,3\n(deferred)
+G02 --> F_ORG : REF-4..7
+G03 ..> F_COMM : REF-8\n(N/A)
+G04 --> F_ORG : REF-9,10
+
+G05 --> F_SR : REF-12,13,15
+G05 --> F_TASK : REF-16
+G05 ..> F_COMM : REF-14,19\n(N/A)
+G05 ..> F_DOC : REF-18\n(deferred)
+
+G06 --> F_PAT : REF-20..27
+G06 --> F_REL : REF-28
+
+G07 --> F_OBS : REF-30, REF-32..37
+G07 --> F_SR : REF-31 (note)
+G07 --> F_MED : REF-38
+G07 --> F_SR : REF-39 (orders)
+G07 ..> F_DIAG : REF-39\n(results pending)
+G07 --> F_COND : REF-40
+
+G08 --> F_TASK : REF-42
+G08 --> F_ENC : REF-43
+
+@enduml

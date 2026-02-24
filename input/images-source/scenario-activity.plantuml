@@ -1,0 +1,106 @@
+@startuml scenario-activity
+!theme plain
+title User Scenario 3.1 — First Antenatal Care Contact
+
+|#E3F2FD| Abraham (Clerk) |
+|#E8F5E9| Jane (Nurse) |
+|#FFF3E0| Charity (Client) |
+
+|Charity (Client)|
+start
+:Arrives at health centre\n(missed cycle, nausea);
+
+|Abraham (Clerk)|
+:Check existing records\n→ no record found;
+
+|Charity (Client)|
+:Provides demographic info\n(name, DOB, address, phone,\nPhilSys ID, PhilHealth ID);
+
+|Abraham (Clerk)|
+:Register patient in system;
+note right
+  **Bundle A — Registration**
+  ----
+  Patient (REF-20..REF-27)
+  RelatedPerson (REF-28)
+  Organization (REF-4..REF-7)
+  Practitioner: Abraham (REF-1)
+  Encounter: registration (REF-43)
+end note
+:Generate QR code\nfor return visits;
+
+|Charity (Client)|
+:Wait in queue;
+
+|Jane (Nurse)|
+:Call Charity into\ncounselling room;
+:Close door, lower shade\n(ensure privacy);
+
+:Ask reason for visit\n→ Chief complaint;
+note right
+  Observation: chief complaint
+  (LOINC 10154-3)
+  REF-30
+end note
+
+:Ask about LMP\n→ "around new year holiday";
+:Administer pregnancy test\n→ **Positive**;
+
+|Jane (Nurse)|
+:Record working impression\n→ Pregnant (SNOMED 77386006);
+note right
+  Condition: pregnancy
+  REF-40
+end note
+
+:Ask detailed questions:\n• Occupation\n• Smoking / caffeine\n• General health\n• Obstetric history;
+
+:Estimate gestational age\n→ 12–15 weeks\n(exact date unknown);
+
+:Inform: ultrasound needed\nbefore 24th week;
+
+:Record weight & height;
+:Conduct physical exam;
+:Take blood pressure;
+note right
+  **Vital Signs (REF-32..REF-37)**
+  BP: 110/70 mmHg
+  HR: 78 bpm
+  RR: 18/min
+  SpO₂: 98%
+  Temp: 36.8°C
+  Weight: 55 kg
+end note
+
+:Order lab tests:\n• Diabetes screen\n• Hepatitis B\n• HIV;
+note right
+  ServiceRequest: lab orders
+  REF-39 (partial)
+end note
+
+:Dispense IFA tablets\n(iron + folic acid, 1/day);
+note right
+  MedicationAdministration
+  REF-38
+end note
+
+:Counsel on:\n• Reduce caffeine\n• Use condoms (STI risk)\n• Danger signs\n• Symptom management;
+
+:Create ultrasound referral\nto Metro Imaging Centre;
+note right
+  **Bundle B — ANC Contact**
+  ----
+  ServiceRequest: ultrasound (REF-12..REF-15)
+  Task: referral tracking (REF-16, REF-42)
+  Organization: receiving (REF-9, REF-10)
+end note
+
+:Schedule next ANC contact;
+
+|Charity (Client)|
+:Receive referral slip\nfor imaging centre;
+:Receive SMS reminder\n(if consent given);
+
+stop
+
+@enduml

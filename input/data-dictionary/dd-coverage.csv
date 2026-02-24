@@ -1,0 +1,47 @@
+Element ID,Data Element,Clinical Information Group,FHIR Resource,FHIR Element (R4),CDG Status,DD Required,Example File,Bundle,Coverage Status,Notes
+REF-1,Name of Referring Practitioner,01 Sending Practitioner (requestor),PractitionerRole → Practitioner,PractitionerRole.practitioner → Practitioner.name,Final for TDG,Yes,practitioner-abraham-ex.json; practitioner-jane-ex.json; practitionerrole-abraham-ex.json; practitionerrole-jane-ex.json,A+B,covered,Nurse Jane (Bundle B) and Clerk Abraham (Bundle A)
+REF-2,Professional Signature,01 Sending Practitioner (requestor),Provenance,Provenance.signature,Future Release,No,,—,deferred,Deferred — marked Future Release in DD
+REF-3,Date & Time of Signature,01 Sending Practitioner (requestor),Provenance,Provenance.occurredDateTime,Future Release,No,,—,deferred,Deferred — marked Future Release in DD
+REF-4,Initiating Facility Name,02 Sending Facility (requestor),Organization,Organization.name,Final for TDG,Required,organization-sending-facility-ex.json,A,covered,Government health centre
+REF-5,Initiating Facility NHFR Code,02 Sending Facility (requestor),Organization,Organization.identifier(system=NHFR),In-Review,Yes,organization-sending-facility-ex.json,A,covered,PH-Core NHFR identifier slice
+REF-6,Initiating Facility Address,02 Sending Facility (requestor),Organization,Organization.address,Final for TDG,No,organization-sending-facility-ex.json,A,covered,PH-Core Address
+REF-7,Initiating Facility Contact Number,02 Sending Facility (requestor),Organization,Organization.telecom(system=phone),In-Review,No,organization-sending-facility-ex.json,A,covered,
+REF-8,Receiving Personnel,03 Receiving Practitioner,Communication,Communication.recipient,In-Review,No,,—,not-covered,Not modelled in ANC scenario — receiving staff not yet known at referral creation
+REF-9,Receiving Facility Name,04 Receiving Facility,Organization,Organization.name,In-Review,Yes,organization-receiving-facility-ex.json,B,covered,Imaging centre for ultrasound referral
+REF-10,Receiving Facility NHFR Code,04 Receiving Facility,Organization,Organization.identifier(system=NHFR),In-Review,No,organization-receiving-facility-ex.json,B,covered,
+REF-11,Health Care Provider Network (HCPN) Name,05 Referral Request,Organization,Organization.name,On-Hold,No,,—,deferred,Deferred — On-Hold per DD status
+REF-12,Date of Referral,05 Referral Request,ServiceRequest,ServiceRequest.authoredOn,In-Review,Yes,servicerequest-ultrasound-ex.json,B,covered,2026-02-24
+REF-13,Referral Category,05 Referral Request,ServiceRequest,ServiceRequest.priority,In-Review,Yes,servicerequest-ultrasound-ex.json,B,covered,routine (outpatient)
+REF-14,Time Called,05 Referral Request,Communication,Communication.sent,In-Review,No,,—,not-covered,Not applicable — routine outpatient referral; no phone call required
+REF-15,Reason for Referral (service type),05 Referral Request,ServiceRequest,ServiceRequest.category,Final for TDG,Yes,servicerequest-ultrasound-ex.json,B,covered,Diagnostics
+REF-16,Action Point: Received,05 Referral Request,Task,Task.status + Task.note,—,No,task-referral-ex.json,B,covered,Task with businessStatus
+REF-17,Action Point: Referred (Forwarded),05 Referral Request,Task,Task.basedOn,—,No,,—,not-covered,Not applicable — no forwarding in this scenario
+REF-18,Return Referral Slip (Attachment),05 Referral Request,DocumentReference,DocumentReference.content.attachment,—,No,,—,deferred,Deferred — Excluded from MVP per DD
+REF-19,Call/Email Reference,05 Referral Request,Communication,Communication.category + medium + note,—,No,,—,not-covered,Not applicable — routine referral
+REF-20,Patient Full Name,06 Patient Demographics,Patient,Patient.name,—,Yes,patient-charity-ex.json,A,covered,Charity
+REF-21,Sex (Administrative Gender),06 Patient Demographics,Patient,Patient.gender,—,Yes,patient-charity-ex.json,A,covered,female
+REF-22,Birth Date,06 Patient Demographics,Patient,Patient.birthDate,—,Yes,patient-charity-ex.json,A,covered,2001-08-15
+REF-23,Age (computed),06 Patient Demographics,Observation,Observation.valueQuantity,—,No,,—,not-covered,Computed from birthDate — not persisted per DD recommendation
+REF-24,Identity Number (PhilSys),06 Patient Demographics,Patient,Patient.identifier(system=PhilSys),—,No,patient-charity-ex.json,A,covered,PH-Core PhilSys slice
+REF-25,PhilHealth ID,06 Patient Demographics,Patient,Patient.identifier(system=PhilHealth),—,No,patient-charity-ex.json,A,covered,PH-Core PhilHealth slice
+REF-26,Patient Address,06 Patient Demographics,Patient,Patient.address,—,Yes,patient-charity-ex.json,A,covered,PH-Core Address with barangay
+REF-27,Contact Number,06 Patient Demographics,Patient,Patient.telecom(system=phone),—,No,patient-charity-ex.json,A,covered,
+REF-28,Accompanied By / Next of Kin,06 Patient Demographics,RelatedPerson,RelatedPerson.patient + name + telecom + relationship,—,No,relatedperson-companion-ex.json,A,covered,Alternative contact person
+REF-29,Patient Disability Registration,06 Patient Demographics,Patient,Patient.extension(pddRegistration),—,No,,—,not-covered,PWD status unclear per DD — open question
+REF-30,Chief Complaint,07 Clinical Information,Observation,Observation.code + valueString,—,No,observation-chief-complaint-ex.json,B,covered,LOINC 10154-3; missed cycle + nausea
+REF-31,Clinical History,07 Clinical Information,ServiceRequest,ServiceRequest.note,—,No,servicerequest-ultrasound-ex.json,B,covered,Narrative in ServiceRequest.note
+REF-32,Vital Signs – Blood Pressure,07 Clinical Information,Observation,Observation.code + valueQuantity,—,No,observation-blood-pressure-ex.json,B,covered,"LOINC 85354-9; systolic 110, diastolic 70 mmHg"
+REF-33,Vital Signs – Heart Rate,07 Clinical Information,Observation,Observation.code + valueQuantity,—,No,observation-heart-rate-ex.json,B,covered,LOINC 8867-4; 78 bpm
+REF-34,Vital Signs – Respiratory Rate,07 Clinical Information,Observation,Observation.code + valueQuantity,—,No,observation-respiratory-rate-ex.json,B,covered,LOINC 9279-1; 18 /min
+REF-35,Vital Signs – Oxygen Saturation,07 Clinical Information,Observation,Observation.code + valueQuantity,—,No,observation-oxygen-saturation-ex.json,B,covered,LOINC 59408-5; 98 %
+REF-36,Vital Signs – Temperature,07 Clinical Information,Observation,Observation.code + valueQuantity,—,No,observation-temperature-ex.json,B,covered,LOINC 8310-5; 36.8 °C
+REF-37,Vital Signs – Weight,07 Clinical Information,Observation,Observation.code + valueQuantity,—,No,observation-weight-ex.json,B,covered,LOINC 29463-7; 55 kg
+REF-38,Treatment Given,07 Clinical Information,MedicationAdministration,MedicationAdministration / Procedure.code,—,No,medicationadministration-ifa-ex.json,B,covered,Iron + folic acid tablets dispensed
+REF-39,Laboratory Results (attachments),07 Clinical Information,DiagnosticReport,DiagnosticReport + result + presentedForm,—,No,servicerequest-lab-orders-ex.json,B,partial,Lab orders created as ServiceRequest; no DiagnosticReport with results yet
+REF-40,Working Impression (clinical reason),07 Clinical Information,Condition,Condition.code,Final for TDG,Yes,condition-pregnancy-ex.json,B,covered,SNOMED 77386006 Pregnant; referenced from ServiceRequest.reasonReference
+REF-41,Transport Mode / Ambulance,Logistics,Task,Task.extension(transportMode),—,No,,—,not-covered,Not applicable — outpatient self-transport
+REF-42,Response,Referral Decision,Task,Task.businessStatus,In-Review,Yes,task-referral-ex.json,B,covered,businessStatus: requested (pending acceptance)
+REF-43,Referring Encounter,System/Back,Encounter,"Encounter.class, period, serviceType",—,Yes,encounter-anc-ex.json; encounter-registration-ex.json,A+B,covered,Registration encounter (A) + ANC encounter (B)
+REF-44,Receiving Encounter,System/Back,Encounter,"Encounter.class, period",—,No,,—,not-covered,Created on arrival at receiving facility — not in this scenario
+REF-45,Navigator (Receiving/PHU),—,PractitionerRole,PractitionerRole.code (navigator),—,No,,—,not-covered,Not applicable in this scenario
+REF-46,Navigator (Referring),—,PractitionerRole,PractitionerRole.code (navigator),—,No,,—,not-covered,Not applicable in this scenario

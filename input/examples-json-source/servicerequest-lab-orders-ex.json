@@ -1,0 +1,62 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "servicerequest-lab-orders-ex",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.com/peref-dd",
+        "code": "REF-39",
+        "display": "REF-39"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lab orders: diabetes screen, hepatitis B, HIV test. Results pending. [DD: REF-39 (partial — orders only, no DiagnosticReport)]</div>"
+  },
+  "status": "active",
+  "intent": "order",
+  "priority": "routine",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "108252007",
+          "display": "Laboratory procedure"
+        }
+      ],
+      "text": "Laboratory"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "15220000",
+        "display": "Laboratory test"
+      }
+    ],
+    "text": "Diabetes screen, Hepatitis B surface antigen, HIV test"
+  },
+  "subject": {
+    "reference": "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"
+  },
+  "encounter": {
+    "reference": "urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"
+  },
+  "authoredOn": "2026-02-24",
+  "requester": {
+    "reference": "urn:uuid:5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d"
+  },
+  "reasonReference": [
+    {
+      "reference": "urn:uuid:c3d4e5f6-a7b8-9012-cdef-123456789012"
+    }
+  ],
+  "note": [
+    {
+      "text": "Ordered during first ANC contact: diabetes screening, hepatitis B, HIV."
+    }
+  ]
+}

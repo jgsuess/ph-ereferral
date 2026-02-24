@@ -1,0 +1,222 @@
+@startuml resource-class-diagram
+!theme plain
+title FHIR Resource Instances — ANC Scenario
+
+skinparam object {
+  BackgroundColor<<admin>> #E3F2FD
+  BackgroundColor<<clinical>> #E8F5E9
+  BackgroundColor<<workflow>> #FFF3E0
+}
+
+package "Bundle A — Registration" #FAFAFA {
+
+  object "patient-charity-ex : Patient" as PAT <<admin>> {
+    name = "Charity Santos"
+    gender = female
+    birthDate = 2001-08-15
+    identifier = PhilSys, PhilHealth
+    address = Barangay Malusog, QC
+    telecom = +63-917-xxx
+    --
+    DD: REF-20..REF-27
+  }
+
+  object "relatedperson-companion-ex : RelatedPerson" as REL <<admin>> {
+    name = "Maria Santos"
+    relationship = Mother
+    --
+    DD: REF-28
+  }
+
+  object "organization-sending-facility-ex : Organization" as ORG_S <<admin>> {
+    name = "Barangay Malusog HC"
+    identifier = DOH000-OO-0-0000123
+    --
+    DD: REF-4..REF-7
+  }
+
+  object "practitioner-abraham-ex : Practitioner" as PRAC_A <<admin>> {
+    name = "Abraham Reyes"
+    --
+    DD: REF-1
+  }
+
+  object "practitionerrole-abraham-ex : PractitionerRole" as ROLE_A <<admin>> {
+    code = Clerk
+    --
+    DD: REF-1
+  }
+
+  object "encounter-registration-ex : Encounter" as ENC_R <<clinical>> {
+    status = finished
+    class = AMB
+    type = Registration
+    period = 08:00–08:15
+    --
+    DD: REF-43
+  }
+}
+
+package "Bundle B — ANC Contact" #FAFAFA {
+
+  object "practitioner-jane-ex : Practitioner" as PRAC_J <<admin>> {
+    name = "Jane Dela Cruz"
+    --
+    DD: REF-1
+  }
+
+  object "practitionerrole-jane-ex : PractitionerRole" as ROLE_J <<admin>> {
+    code = Nurse
+    --
+    DD: REF-1
+  }
+
+  object "organization-receiving-facility-ex : Organization" as ORG_R <<admin>> {
+    name = "Metro Imaging Centre"
+    identifier = DOH000-OO-0-0000456
+    --
+    DD: REF-9, REF-10
+  }
+
+  object "encounter-anc-ex : Encounter" as ENC_A <<clinical>> {
+    status = finished
+    class = AMB
+    type = Prenatal initial visit
+    period = 08:30–10:00
+    --
+    DD: REF-43
+  }
+
+  object "condition-pregnancy-ex : Condition" as COND <<clinical>> {
+    code = SNOMED 77386006 Pregnant
+    clinicalStatus = active
+    verificationStatus = provisional
+    --
+    DD: REF-40
+  }
+
+  object "observation-chief-complaint-ex : Observation" as OBS_CC <<clinical>> {
+    code = LOINC 10154-3
+    value = "Missed cycle, nausea"
+    --
+    DD: REF-30
+  }
+
+  object "observation-blood-pressure-ex : Observation" as OBS_BP <<clinical>> {
+    code = LOINC 85354-9
+    systolic = 110 mmHg
+    diastolic = 70 mmHg
+    --
+    DD: REF-32
+  }
+
+  object "observation-heart-rate-ex : Observation" as OBS_HR <<clinical>> {
+    code = LOINC 8867-4
+    value = 78 /min
+    --
+    DD: REF-33
+  }
+
+  object "observation-respiratory-rate-ex : Observation" as OBS_RR <<clinical>> {
+    code = LOINC 9279-1
+    value = 18 /min
+    --
+    DD: REF-34
+  }
+
+  object "observation-oxygen-saturation-ex : Observation" as OBS_SPO2 <<clinical>> {
+    code = LOINC 59408-5
+    value = 98 %
+    --
+    DD: REF-35
+  }
+
+  object "observation-temperature-ex : Observation" as OBS_TEMP <<clinical>> {
+    code = LOINC 8310-5
+    value = 36.8 Cel
+    --
+    DD: REF-36
+  }
+
+  object "observation-weight-ex : Observation" as OBS_WT <<clinical>> {
+    code = LOINC 29463-7
+    value = 55 kg
+    --
+    DD: REF-37
+  }
+
+  object "medicationadministration-ifa-ex : MedicationAdministration" as MEDA <<clinical>> {
+    medication = Iron + Folic Acid
+    status = completed
+    dosage = "1 tablet daily"
+    --
+    DD: REF-38
+  }
+
+  object "servicerequest-ultrasound-ex : ServiceRequest" as SR_US <<workflow>> {
+    code = Obstetric ultrasound
+    priority = routine
+    category = Diagnostics
+    authoredOn = 2026-02-24
+    --
+    DD: REF-12..REF-15, REF-31
+  }
+
+  object "servicerequest-lab-orders-ex : ServiceRequest" as SR_LAB <<workflow>> {
+    code = Diabetes, HepB, HIV
+    status = active
+    --
+    DD: REF-39
+  }
+
+  object "task-referral-ex : Task" as TASK <<workflow>> {
+    status = requested
+    businessStatus = requested
+    --
+    DD: REF-16, REF-42
+  }
+}
+
+' --- Relationships ---
+REL --> PAT : patient
+ROLE_A --> PRAC_A : practitioner
+ROLE_A --> ORG_S : organization
+ENC_R --> PAT : subject
+ENC_R --> ROLE_A : participant
+
+ROLE_J --> PRAC_J : practitioner
+ROLE_J --> ORG_S : organization
+ENC_A --> PAT : subject
+ENC_A --> ROLE_J : participant
+COND --> PAT : subject
+COND --> ENC_A : encounter
+
+OBS_CC --> PAT : subject
+OBS_CC --> ENC_A : encounter
+OBS_BP --> PAT : subject
+OBS_BP --> ENC_A : encounter
+OBS_HR --> PAT : subject
+OBS_HR --> ENC_A : encounter
+OBS_RR --> PAT : subject
+OBS_RR --> ENC_A : encounter
+OBS_SPO2 --> PAT : subject
+OBS_SPO2 --> ENC_A : encounter
+OBS_TEMP --> PAT : subject
+OBS_TEMP --> ENC_A : encounter
+OBS_WT --> PAT : subject
+OBS_WT --> ENC_A : encounter
+
+MEDA --> PAT : subject
+MEDA --> ENC_A : context
+SR_US --> PAT : subject
+SR_US --> ENC_A : encounter
+SR_US --> ROLE_J : requester
+SR_US --> ORG_R : performer
+SR_US --> COND : reasonReference
+SR_LAB --> PAT : subject
+SR_LAB --> COND : reasonReference
+TASK --> SR_US : focus
+TASK --> PAT : for
+TASK --> ORG_R : owner
+
+@enduml

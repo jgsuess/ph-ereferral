@@ -1,0 +1,36 @@
+""
+HYPERLINK FOR ENDORSED FILE FOR TDG 
+""
+Follow the steps below when opening the spreadsheet and supporting documents for this review activity.
+""
+1. Review Data Elements in the Data Dictionary (Draft Copy Only)
+""
+All actions in this stage must be completed in the draft version of the Data Dictionary spreadsheet.
+1.1 Determine the Status of Each Data Element
+Open the sheet “PeRef Logical Information Model”.
+"For each data element, select an appropriate status:"
+Include
+Exclude
+Review
+1.2 Identify the Associated Workflow Task
+Open the sheet “Workflow task Consensus”.
+"For each data element, identify the workflow task it aligns with."
+Use the Minimum Viable Workflow as the reference workflow when making this decision.
+1.3 Assign Additional Columns to CDG Members
+""
+The following columns from the DRAFT CDG Consensus – PeRef Logical Information Model (Data Dictionary) must be assigned to specific CDG members for completion:
+Element ID
+Source
+Examples
+Code System / Annotation
+Occurrence
+2. Review the Draft High-Level Process Workflows
+2.1 Examine the Detailed and Minimum Viable Workflows
+Review both workflow versions provided.
+You may add comments directly using “sticky notes” on the draft workflow diagrams.
+"Alternatively, send your comments or suggestions to the CDG Lead."
+3. Review the Use Case Description
+3.1 Refer to the Operational Guide
+Open Page 6 of the document titled:
+“Philippine Health Referral FHIR IG (PeRef): WHO SMART Guideline L2 Operational Guide”.
+"Review the Use Case Description, including the accompanying table."
