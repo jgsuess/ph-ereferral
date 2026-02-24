@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHeReferralImplementationGuide"] ; # 
   fhir:title [ fhir:v "PH eReferral Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-24T06:59:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-24T07:04:48+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila SILab"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila SILab" ] ;
