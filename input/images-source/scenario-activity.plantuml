@@ -2,15 +2,11 @@
 !theme plain
 title User Scenario 3.1 — First Antenatal Care Contact
 
-|#E3F2FD| Abraham (Clerk) |
-|#E8F5E9| Jane (Nurse) |
 |#FFF3E0| Charity (Client) |
-
-|Charity (Client)|
 start
 :Arrives at health centre\n(missed cycle, nausea);
 
-|Abraham (Clerk)|
+|#E3F2FD| Abraham (Clerk) |
 :Check existing records\n→ no record found;
 
 |Charity (Client)|
@@ -32,7 +28,7 @@ end note
 |Charity (Client)|
 :Wait in queue;
 
-|Jane (Nurse)|
+|#E8F5E9| Jane (Nurse) |
 :Call Charity into\ncounselling room;
 :Close door, lower shade\n(ensure privacy);
 
@@ -46,7 +42,6 @@ end note
 :Ask about LMP\n→ "around new year holiday";
 :Administer pregnancy test\n→ **Positive**;
 
-|Jane (Nurse)|
 :Record working impression\n→ Pregnant (SNOMED 77386006);
 note right
   Condition: pregnancy
