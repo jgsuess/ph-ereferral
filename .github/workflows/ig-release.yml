@@ -52,6 +52,13 @@ jobs:
           curl -L -o input-cache/publisher.jar \
             https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
 
+      - name: Install Ruby and Jekyll (required by IG Publisher)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+      - name: Install Jekyll
+        run: gem install jekyll
+
       - name: Patch version for release build (sushi-config.yaml)
         env:
           RELEASE_VERSION: ${{ steps.v.outputs.version }}
