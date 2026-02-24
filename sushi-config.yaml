@@ -9,10 +9,10 @@ name: PHeReferralImplementationGuide
 title: PH eReferral Implementation Guide
 description: This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH eReferral profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 0.2.0-draft
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
-releaseLabel: ci-build
+releaseLabel: draft
 license: CC-BY-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#PH "Philippines" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:

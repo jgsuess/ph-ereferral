@@ -1,0 +1,60 @@
+name: IG CI (dev)
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ig-dev
+  cancel-in-progress: true
+
+jobs:
+  build-and-publish-dev:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node (for SUSHI)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install SUSHI
+        run: npm install -g fsh-sushi
+
+      - name: Install Java (for IG Publisher)
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "21"
+
+      - name: Download IG Publisher
+        run: |
+          mkdir -p input-cache
+          curl -L -o input-cache/publisher.jar \
+            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+
+      - name: Run IG Publisher (includes SUSHI)
+        run: java -jar input-cache/publisher.jar ig.ini
+
+      - name: Prepare publish directory (dev)
+        run: |
+          rm -rf .publish
+          mkdir -p .publish/dev
+          rsync -a output/ .publish/dev/
+
+      - name: Publish to gh-pages:/dev/
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: .publish
+          keep_files: true
+          commit_message: "ci(dev): publish dev build from ${{ github.sha }}"
