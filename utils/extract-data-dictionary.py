@@ -2,8 +2,12 @@
 """
 Extract all sheets from the PeRef Data Dictionary xlsx to CSV files.
 Output goes to input/data-dictionary/ with one CSV per sheet.
+
+If the plaintext xlsx is absent but the PGP-encrypted version (.xlsx.gpg)
+exists, the script will attempt to decrypt it automatically using gpg.
 """
 import os
+import subprocess
 import sys
 
 try:
@@ -18,16 +22,39 @@ XLSX_PATH = os.path.join(
     "DRAFT Working Copy CDG Consensus - PeRef Logical Information Model (Data Dictionary).xlsx"
 )
 
+GPG_PATH = XLSX_PATH + ".gpg"
+
 OUTPUT_DIR = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     "input", "data-dictionary"
 )
+
+
+def ensure_decrypted():
+    """Decrypt the .xlsx.gpg file if the plaintext .xlsx is missing."""
+    if os.path.exists(XLSX_PATH):
+        return  # plaintext already available
+    if not os.path.exists(GPG_PATH):
+        print(f"ERROR: Neither plaintext nor encrypted data dictionary found.\n"
+              f"  Expected: {XLSX_PATH}\n"
+              f"       or:  {GPG_PATH}", file=sys.stderr)
+        sys.exit(1)
+    print(f"Plaintext not found — decrypting {os.path.basename(GPG_PATH)} ...")
+    result = subprocess.run(
+        ["gpg", "--decrypt", "--output", XLSX_PATH, GPG_PATH],
+        capture_output=True, text=True
+    )
+    if result.returncode != 0:
+        print(f"ERROR: gpg decrypt failed:\n{result.stderr}", file=sys.stderr)
+        sys.exit(1)
+    print("  Decryption successful.")
 
 def sanitize_sheet_name(name):
     """Make a sheet name safe for use as a filename."""
     return "".join(c if c.isalnum() or c in (' ', '-', '_') else '_' for c in name).strip().replace(' ', '_')
 
 def extract_all_sheets():
+    ensure_decrypted()
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     wb = openpyxl.load_workbook(XLSX_PATH, read_only=True, data_only=True)

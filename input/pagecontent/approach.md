@@ -65,6 +65,24 @@ This approach aligns with agile delivery practices: deliver working software (a 
 
 ---
 
+#### Version Control & Traceability
+
+For this iterative approach to remain **auditable and reproducible**, every artefact that feeds the pipeline — the data dictionary (encrypted), scenario XML, CSV exports, FSH sources, generated JSON examples, and utility scripts — **must be committed to the same Git repository as the IG itself**.
+
+If any input artefact lives outside version control (e.g. on a shared drive or in email), the chain from L3 data elements through L4 FSH source to L5 published examples is broken: there is no way to determine which version of the data dictionary produced a given set of FHIR resources, and stakeholder review feedback cannot be traced back to a specific commit.
+
+**Rule:** If it is an input to or output of the pipeline, it belongs in this repository.
+
+*Note:* The data dictionary Excel workbook is stored as a PGP-encrypted file (`.xlsx.gpg`). To decrypt:
+
+```sh
+gpg --decrypt \
+  "DRAFT Working Copy CDG Consensus - PeRef Logical Information Model (Data Dictionary).xlsx.gpg" \
+  > "DRAFT Working Copy CDG Consensus - PeRef Logical Information Model (Data Dictionary).xlsx"
+```
+
+---
+
 #### Detailed Documentation
 
 The following pages provide in-depth coverage of each aspect of the project:

@@ -12,7 +12,7 @@ The table below lists each stage of the pipeline, the script or tool used, and t
 
 | Step | Script / Tool | Input | Output |
 |------|---------------|-------|--------|
-| **1. Extract data dictionary** | `utils/extract-data-dictionary.py` (Python + openpyxl) | Excel workbook (`.xlsx`) | CSV files in `input/data-dictionary/` |
+| **1. Extract data dictionary** | `utils/extract-data-dictionary.py` (Python + openpyxl) | Encrypted workbook (`.xlsx.gpg`) — auto-decrypted via `gpg` | CSV files in `input/data-dictionary/` |
 | **2. Generate JSON skeletons** | `utils/generate-json-from-dd.py` | CSV + scenario narrative | 22 annotated FHIR R4 JSON files in `input/examples-json-source/` |
 | **3. Validate JSON** | `utils/validate-all.sh` → `utils/fhir-validate.py` | JSON files + FHIR server | Validation result summaries |
 | **4. Convert to FSH** | `utils/convert-to-fsh.sh` → `gofsh` | Validated JSON files | 22 FSH instance files in `input/fsh/examples/` |
@@ -21,6 +21,8 @@ The table below lists each stage of the pipeline, the script or tool used, and t
 | **7. Generate DD mapping page** | `utils/generate-dd-mapping-page.py` | `dd-coverage.csv` | `input/pagecontent/dd-mapping.md` (pivot tables + narrative) |
 | **8. Compile IG** | `sushi .` | All FSH sources + ph-core dependency | `fsh-generated/resources/*.json` (24 resources) |
 | **9. Publish IG** | `_genonce.sh` → IG Publisher | SUSHI output + `publisher.jar` | `output/` (HTML site) |
+
+> **Traceability requirement:** Every input and output listed in the table above must be stored in this Git repository. If any artefact is maintained outside version control, the reproducibility of the pipeline is compromised and the link between data-dictionary elements and published FHIR resources cannot be verified. See [Approach — Version Control & Traceability](approach.html#version-control--traceability) for details.
 
 #### DD Coverage Tracking
 
