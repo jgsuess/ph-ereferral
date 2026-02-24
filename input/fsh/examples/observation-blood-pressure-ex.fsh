@@ -1,6 +1,8 @@
 Instance: observation-blood-pressure-ex
 InstanceOf: Observation
 Usage: #example
+Title: "Observation — Blood Pressure"
+Description: "Charity's blood pressure measured during the physical exam: systolic 110 mmHg, diastolic 70 mmHg — within the normal range for pregnancy."
 * meta.profile[0] = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
 * meta.profile[+] = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
 * meta.profile[+] = "http://hl7.org/fhir/StructureDefinition/bp"

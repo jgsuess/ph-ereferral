@@ -1,6 +1,8 @@
 Instance: organization-receiving-facility-ex
 InstanceOf: Organization
 Usage: #example
+Title: "Organization — Metro Imaging Centre"
+Description: "The external imaging centre where Charity is referred for an obstetric ultrasound to confirm gestational age."
 * meta.profile = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"
 * meta.tag[0] = $peref-dd#REF-9 "REF-9"
 * meta.tag[+] = $peref-dd#REF-10 "REF-10"

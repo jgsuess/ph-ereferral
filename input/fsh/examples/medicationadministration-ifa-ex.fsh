@@ -1,6 +1,8 @@
 Instance: medicationadministration-ifa-ex
 InstanceOf: MedicationAdministration
 Usage: #example
+Title: "MedicationAdministration — Iron and Folic Acid"
+Description: "Jane dispenses iron and folic acid (IFA) tablets to Charity with instructions to take one tablet daily, following WHO ANC guidelines for nutritional supplementation."
 * meta.tag = $peref-dd#REF-38 "REF-38"
 * status = #completed
 * medicationCodeableConcept = $sct#74935002 "Product containing iron and folic acid"

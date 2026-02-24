@@ -1,6 +1,8 @@
 Instance: patient-charity-ex
 InstanceOf: Patient
 Usage: #example
+Title: "Patient — Charity Santos"
+Description: "Charity is a 24-year-old woman from Barangay Malusog, Quezon City, visiting the health centre for the first time during her pregnancy. Abraham registers her demographics, national IDs, and contact details."
 * meta.profile = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"
 * meta.tag[0] = $peref-dd#REF-20 "REF-20"
 * meta.tag[+] = $peref-dd#REF-21 "REF-21"

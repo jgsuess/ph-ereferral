@@ -1,6 +1,8 @@
 Instance: encounter-registration-ex
 InstanceOf: Encounter
 Usage: #example
+Title: "Encounter — Registration"
+Description: "A brief ambulatory encounter (08:00–08:15) in which clerk Abraham collects Charity's demographic information and registers her in the system."
 * meta.profile = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter"
 * meta.tag = $peref-dd#REF-43 "REF-43"
 * status = #finished

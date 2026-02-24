@@ -1,6 +1,8 @@
 Instance: encounter-anc-ex
 InstanceOf: Encounter
 Usage: #example
+Title: "Encounter — First Antenatal Care Contact"
+Description: "The counselling session (08:30–10:00) in which nurse Jane confirms Charity's pregnancy, records vital signs and clinical history, and initiates the referral."
 * meta.profile = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter"
 * meta.tag = $peref-dd#REF-43 "REF-43"
 * status = #finished

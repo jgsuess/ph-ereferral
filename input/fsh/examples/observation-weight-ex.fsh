@@ -1,6 +1,8 @@
 Instance: observation-weight-ex
 InstanceOf: Observation
 Usage: #example
+Title: "Observation — Body Weight"
+Description: "Charity's weight of 55 kg, recorded as a baseline measurement at her first ANC contact."
 * meta.profile[0] = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
 * meta.profile[+] = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
 * meta.tag = $peref-dd#REF-37 "REF-37"

@@ -1,6 +1,8 @@
 Instance: observation-respiratory-rate-ex
 InstanceOf: Observation
 Usage: #example
+Title: "Observation — Respiratory Rate"
+Description: "Charity's respiratory rate of 18 breaths per minute, within the normal adult range."
 * meta.profile[0] = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
 * meta.profile[+] = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
 * meta.tag = $peref-dd#REF-34 "REF-34"

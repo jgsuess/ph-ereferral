@@ -11,13 +11,12 @@ Instance: anc-contact-transaction-ex
 InstanceOf: Bundle
 Usage: #example
 Description: """
-  ANC contact transaction bundle — Nurse Jane conducts the first antenatal
-  care visit for Charity at Barangay Malusog Health Centre (Process B: Routine ANC).
-  DD elements covered: REF-1 (practitioner Jane), REF-9..REF-10 (receiving facility),
-  REF-12..REF-13 (referral date/category), REF-15 (reason for referral),
-  REF-16 + REF-42 (task/response), REF-30 (chief complaint), REF-31 (clinical history),
-  REF-32..REF-37 (vitals), REF-38 (treatment/IFA), REF-39 (lab orders),
-  REF-40 (working impression), REF-43 (encounter).
+  Nurse Jane conducts Charity's first antenatal care visit at
+  Barangay Malusog Health Centre. This bundle captures the full clinical
+  encounter: pregnancy confirmation, vital signs, chief complaint,
+  iron-and-folic-acid dispensing, laboratory orders, and the ultrasound
+  referral to Metro Imaging Centre — along with the task that tracks the
+  referral outcome.
 """
 * type = #transaction
 * timestamp = "2026-02-24T10:00:00+08:00"

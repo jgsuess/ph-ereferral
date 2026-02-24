@@ -1,6 +1,8 @@
 Instance: servicerequest-lab-orders-ex
 InstanceOf: ServiceRequest
 Usage: #example
+Title: "ServiceRequest — Laboratory Orders"
+Description: "Routine ANC laboratory tests ordered for Charity: diabetes screen, hepatitis B surface antigen, and HIV — in line with WHO recommended investigations."
 * meta.tag = $peref-dd#REF-39 "REF-39"
 * status = #active
 * intent = #order

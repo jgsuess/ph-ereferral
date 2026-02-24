@@ -1,6 +1,8 @@
 Instance: task-referral-ex
 InstanceOf: Task
 Usage: #example
+Title: "Task — Referral Tracking"
+Description: "Tracks the status of Charity's ultrasound referral. Currently in 'requested' state, awaiting acceptance by Metro Imaging Centre."
 * meta.tag[0] = $peref-dd#REF-16 "REF-16"
 * meta.tag[+] = $peref-dd#REF-42 "REF-42"
 * status = #requested

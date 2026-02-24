@@ -78,6 +78,7 @@ dependencies:
 menu:
   Home: index.html
   Approach: approach.html
+  DD Mapping: dd-mapping.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

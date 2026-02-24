@@ -1,6 +1,8 @@
 Instance: observation-chief-complaint-ex
 InstanceOf: Observation
 Usage: #example
+Title: "Observation — Chief Complaint"
+Description: "Charity's reason for visiting the health centre: a missed menstrual cycle and nausea, prompting her to seek antenatal care."
 * meta.profile = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
 * meta.tag = $peref-dd#REF-30 "REF-30"
 * status = #final

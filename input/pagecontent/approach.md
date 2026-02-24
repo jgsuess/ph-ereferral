@@ -64,8 +64,10 @@ The diagram below summarises the end-to-end data flow from source artefacts to a
 | **3. Validate JSON** | `utils/validate-all.sh` → `utils/fhir-validate.py` | JSON files + FHIR server | Validation result summaries |
 | **4. Convert to FSH** | `utils/convert-to-fsh.sh` → `gofsh` | Validated JSON files | 22 FSH instance files in `input/fsh/examples/` |
 | **5. Author bundles** | Manual (FSH) | Individual FSH instances | `registration-transaction-ex.fsh`, `anc-contact-transaction-ex.fsh` |
-| **6. Compile IG** | `sushi .` | All FSH sources + ph-core dependency | `fsh-generated/resources/*.json` (24 resources) |
-| **7. Publish IG** | `_genonce.sh` → IG Publisher | SUSHI output + `publisher.jar` | `output/` (HTML site) |
+| **6. Add narrative descriptions** | `utils/update-fsh-descriptions.py` | FSH instance files | FSH files with `Title:` and `Description:` added |
+| **7. Generate DD mapping page** | `utils/generate-dd-mapping-page.py` | `dd-coverage.csv` | `input/pagecontent/dd-mapping.md` (pivot tables + narrative) |
+| **8. Compile IG** | `sushi .` | All FSH sources + ph-core dependency | `fsh-generated/resources/*.json` (24 resources) |
+| **9. Publish IG** | `_genonce.sh` → IG Publisher | SUSHI output + `publisher.jar` | `output/` (HTML site) |
 
 ##### 2.2  DD Coverage Tracking
 

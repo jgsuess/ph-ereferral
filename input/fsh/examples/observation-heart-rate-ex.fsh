@@ -1,6 +1,8 @@
 Instance: observation-heart-rate-ex
 InstanceOf: Observation
 Usage: #example
+Title: "Observation — Heart Rate"
+Description: "Charity's resting heart rate of 78 beats per minute, recorded as part of her vital signs during the ANC contact."
 * meta.profile[0] = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
 * meta.profile[+] = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
 * meta.tag = $peref-dd#REF-33 "REF-33"

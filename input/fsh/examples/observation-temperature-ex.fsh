@@ -1,6 +1,8 @@
 Instance: observation-temperature-ex
 InstanceOf: Observation
 Usage: #example
+Title: "Observation — Body Temperature"
+Description: "Charity's body temperature of 36.8 degrees Celsius, a normal reading taken during the physical exam."
 * meta.profile[0] = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"
 * meta.profile[+] = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
 * meta.tag = $peref-dd#REF-36 "REF-36"

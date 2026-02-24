@@ -1,6 +1,8 @@
 Instance: organization-sending-facility-ex
 InstanceOf: Organization
 Usage: #example
+Title: "Organization — Barangay Malusog Health Centre"
+Description: "The government health centre where Charity is registered and receives her first ANC contact. Identified by its NHFR code."
 * meta.profile = "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"
 * meta.tag[0] = $peref-dd#REF-4 "REF-4"
 * meta.tag[+] = $peref-dd#REF-5 "REF-5"

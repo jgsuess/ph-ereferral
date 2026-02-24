@@ -1,6 +1,8 @@
 Instance: servicerequest-ultrasound-ex
 InstanceOf: ServiceRequest
 Usage: #example
+Title: "ServiceRequest — Obstetric Ultrasound Referral"
+Description: "Jane refers Charity to Metro Imaging Centre for an obstetric ultrasound to confirm gestational age and due date, needed before 24 weeks of pregnancy."
 * meta.tag[0] = $peref-dd#REF-12 "REF-12"
 * meta.tag[+] = $peref-dd#REF-13 "REF-13"
 * meta.tag[+] = $peref-dd#REF-15 "REF-15"

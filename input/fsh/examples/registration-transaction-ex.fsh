@@ -11,11 +11,11 @@ Instance: registration-transaction-ex
 InstanceOf: Bundle
 Usage: #example
 Description: """
-  Registration transaction bundle — Clerk Abraham registers Charity at
-  Barangay Malusog Health Centre (Process A: Registration).
-  DD elements covered: REF-1 (practitioner), REF-4..REF-7 (sending facility),
-  REF-20..REF-22 (patient name/gender/DOB), REF-24..REF-27 (identifiers/address/phone),
-  REF-28 (next of kin), REF-43 (encounter).
+  Clerk Abraham registers Charity at Barangay Malusog Health Centre.
+  This bundle captures everything recorded at the front desk: Charity's
+  demographic details, her national identifiers (PhilSys and PhilHealth),
+  her home address and phone number, and her mother Maria as next-of-kin.
+  It also records Abraham's practitioner role and the registration encounter.
 """
 * type = #transaction
 * timestamp = "2026-02-24T08:15:00+08:00"
