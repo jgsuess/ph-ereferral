@@ -1,4 +1,5 @@
 @startuml pipeline-dataflow
+!pragma layout smetana
 !theme plain
 title PeRef Example Generation Pipeline
 

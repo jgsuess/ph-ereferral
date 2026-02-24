@@ -1,4 +1,5 @@
 @startuml resource-class-diagram
+!pragma layout smetana
 !theme plain
 title FHIR Resource Instances — ANC Scenario
 

@@ -1,4 +1,5 @@
 @startuml dd-fhir-mapping
+!pragma layout smetana
 !theme plain
 title Data Dictionary → FHIR Resource Mapping
 
