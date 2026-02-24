@@ -38,11 +38,8 @@ jobs:
           curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
             -o input-cache/publisher.jar
 
-      - name: Run SUSHI
-        run: sushi .
-
-      - name: Run IG Publisher
-        run: java -jar input-cache/publisher.jar ig.ini -no-sushi
+      - name: Run IG Publisher (includes SUSHI)
+        run: java -jar input-cache/publisher.jar ig.ini
 
       - name: Extract tag version
         id: tag
@@ -66,13 +63,11 @@ jobs:
           rm -rf gh-pages/${VERSION}
           cp -r output gh-pages/${VERSION}
 
-          # Update root with latest build, preserving versioned subdirs and .git
-          cd gh-pages
-          # Remove root-level files (not directories matching version patterns)
-          find . -maxdepth 1 -type f -not -name '.git' -delete
-          # Copy new output to root
-          cp -r ../${VERSION}/* .
-          cd ..
+          # Update root with latest build, preserving versioned subdirs
+          # Remove root-level files only (keep version directories and .git)
+          find gh-pages -maxdepth 1 -type f -delete
+          # Copy new output files to root
+          cp -r output/* gh-pages/
 
           # Create/update package-list.json (FHIR IG convention)
           cat > gh-pages/package-list.json << PLIST
