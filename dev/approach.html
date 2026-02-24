@@ -284,6 +284,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
+<h4 id="version-control--traceability">Version Control &amp; Traceability</h4>
+
+<p>For this iterative approach to remain <strong>auditable and reproducible</strong>, every artefact that feeds the pipeline — the data dictionary (encrypted), scenario XML, CSV exports, FSH sources, generated JSON examples, and utility scripts — <strong>must be committed to the same Git repository as the IG itself</strong>.</p>
+
+<p>If any input artefact lives outside version control (e.g. on a shared drive or in email), the chain from L3 data elements through L4 FSH source to L5 published examples is broken: there is no way to determine which version of the data dictionary produced a given set of FHIR resources, and stakeholder review feedback cannot be traced back to a specific commit.</p>
+
+<p><strong>Rule:</strong> If it is an input to or output of the pipeline, it belongs in this repository.</p>
+
+<p><em>Note:</em> The data dictionary Excel workbook is stored as a PGP-encrypted file (<code class="language-plaintext highlighter-rouge">.xlsx.gpg</code>). To decrypt:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--decrypt</span> <span class="se">\</span>
+  <span class="s2">"DRAFT Working Copy CDG Consensus - PeRef Logical Information Model (Data Dictionary).xlsx.gpg"</span> <span class="se">\</span>
+  <span class="o">&gt;</span> <span class="s2">"DRAFT Working Copy CDG Consensus - PeRef Logical Information Model (Data Dictionary).xlsx"</span>
+</code></pre></div></div>
+
+<hr />
+
 <h4 id="detailed-documentation">Detailed Documentation</h4>
 
 <p>The following pages provide in-depth coverage of each aspect of the project:</p>
@@ -314,7 +331,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">UP Manila SILab</a>.  Package example.fhir.ph.ereferral#0.3.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 24, 2026 11:01+0000">2026-02-24</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">UP Manila SILab</a>.  Package example.fhir.ph.ereferral#0.3.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 24, 2026 11:20+0000">2026-02-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

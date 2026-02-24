@@ -190,7 +190,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><strong>1. Extract data dictionary</strong></td>
       <td><code class="language-plaintext highlighter-rouge">utils/extract-data-dictionary.py</code> (Python + openpyxl)</td>
-      <td>Excel workbook (<code class="language-plaintext highlighter-rouge">.xlsx</code>)</td>
+      <td>Encrypted workbook (<code class="language-plaintext highlighter-rouge">.xlsx.gpg</code>) — auto-decrypted via <code class="language-plaintext highlighter-rouge">gpg</code></td>
       <td>CSV files in <code class="language-plaintext highlighter-rouge">input/data-dictionary/</code></td>
     </tr>
     <tr>
@@ -243,6 +243,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
   </tbody>
 </table>
+
+<blockquote>
+  <p><strong>Traceability requirement:</strong> Every input and output listed in the table above must be stored in this Git repository. If any artefact is maintained outside version control, the reproducibility of the pipeline is compromised and the link between data-dictionary elements and published FHIR resources cannot be verified. See <a href="approach.html#version-control--traceability">Approach — Version Control &amp; Traceability</a> for details.</p>
+</blockquote>
 
 <h4 id="dd-coverage-tracking">DD Coverage Tracking</h4>
 
@@ -313,7 +317,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">UP Manila SILab</a>.  Package example.fhir.ph.ereferral#0.3.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 24, 2026 11:01+0000">2026-02-24</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">UP Manila SILab</a>.  Package example.fhir.ph.ereferral#0.3.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 24, 2026 11:20+0000">2026-02-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
