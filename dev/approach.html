@@ -483,6 +483,65 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
+<h4 id="fhir-design-patterns">FHIR Design Patterns</h4>
+
+<p>The FHIR specification defines a set of reusable <a href="https://build.fhir.org/patterns.html"><strong>Design Patterns</strong></a> that standardise how resources behave across clinical, administrative, and workflow domains. The table below shows which patterns this IG relies on and how they map to the eReferral resources.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>Spec link</th>
+      <th>Resources in this IG</th>
+      <th>How it is applied</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Request</strong></td>
+      <td><a href="https://build.fhir.org/request.html">Event / Request</a></td>
+      <td>ServiceRequest (×2)</td>
+      <td>The ultrasound referral and laboratory orders follow the <em>Request</em> pattern — they capture the intent, priority, and coded reason for a service to be performed.</td>
+    </tr>
+    <tr>
+      <td><strong>Event</strong></td>
+      <td><a href="https://build.fhir.org/event.html">Event</a></td>
+      <td>Observation (×7), MedicationAdministration, Encounter (×2), Condition</td>
+      <td>Clinical acts that have already occurred use the <em>Event</em> pattern — vital-sign observations, medication dispensing, encounter records, and the pregnancy condition all carry status, timing, and performer.</td>
+    </tr>
+    <tr>
+      <td><strong>Participant</strong></td>
+      <td><a href="https://build.fhir.org/participant.html">Participant</a></td>
+      <td>Patient, Practitioner (×2), PractitionerRole (×2), RelatedPerson, Organization (×2)</td>
+      <td>People and organisations are modelled with the <em>Participant</em> pattern. PractitionerRole links a Practitioner to an Organization and role code, following the <a href="https://build.fhir.org/participantandentity.html"><strong>Participant and RoleEntity pattern</strong></a>.</td>
+    </tr>
+    <tr>
+      <td><strong>Workflow</strong></td>
+      <td><a href="https://build.fhir.org/workflow.html">Workflow</a></td>
+      <td>Task, ServiceRequest</td>
+      <td>The referral lifecycle uses the <em>Workflow</em> pattern: a ServiceRequest expresses the clinical intent, while a Task tracks fulfilment state (<code class="language-plaintext highlighter-rouge">requested → received → accepted</code>). This follows the <a href="https://build.fhir.org/workflow-management.html"><strong>ServiceRequest + Task</strong></a> coordination approach.</td>
+    </tr>
+    <tr>
+      <td><strong>Observation</strong></td>
+      <td><a href="https://build.fhir.org/observation.html">Observation</a></td>
+      <td>Observation (×7)</td>
+      <td>Vital signs and the chief complaint follow the <em>Observation</em> pattern with LOINC-coded types and quantity values. Blood pressure uses the <a href="https://build.fhir.org/observation.html#component"><strong>component pattern</strong></a> for systolic/diastolic.</td>
+    </tr>
+    <tr>
+      <td><strong>Bundle / Transaction</strong></td>
+      <td><a href="https://build.fhir.org/bundle.html">Bundle</a></td>
+      <td>Bundle (×2)</td>
+      <td>Registration and ANC-contact resources are grouped into <em>transaction</em> Bundles, ensuring atomic submission of related resources.</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>Further reading:</strong> The FHIR <a href="https://build.fhir.org/patterns.html">Design Patterns overview</a> explains the rationale behind these abstractions and how they promote consistency across implementation guides.</p>
+</blockquote>
+
+<hr />
+
 <h4 id="scenario-activity-flow">Scenario Activity Flow</h4>
 
 <p>The following activity diagram traces the clinical workflow through the two business processes.</p>
@@ -689,7 +748,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-
 </div>
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
@@ -706,7 +764,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">UP Manila SILab</a>.  Package example.fhir.ph.ereferral#0.3.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 24, 2026 07:04+0000">2026-02-24</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">UP Manila SILab</a>.  Package example.fhir.ph.ereferral#0.3.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 24, 2026 07:20+0000">2026-02-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
