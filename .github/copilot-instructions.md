@@ -40,6 +40,7 @@ inside the PlantUML jar. It eliminates the external `dot` dependency entirely.
 
 | File | Type | Smetana? |
 |------|------|----------|
+| `agile-smart-cycle.plantuml` | Activity diagram | ❌ Not needed |
 | `dd-fhir-mapping.plantuml` | Rectangle/mapping diagram | ✅ Yes |
 | `resource-class-diagram.plantuml` | Object diagram | ✅ Yes |
 | `pipeline-dataflow.plantuml` | Rectangle/dataflow diagram | ✅ Yes |

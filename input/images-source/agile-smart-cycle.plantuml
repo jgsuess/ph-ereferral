@@ -1,0 +1,56 @@
+@startuml agile-smart-cycle
+!theme plain
+title Agile Iteration through WHO SMART Guideline Layers
+
+start
+
+:Identify scope for this iteration\n(new data elements, scenario extensions,\nor feedback from previous review);
+
+repeat
+
+  partition "L1 — Narrative" {
+    :Update or refine user scenario\n(personas, workflow steps);
+  }
+
+  partition "L2 — Operational" {
+    :Revise process maps\nand data-element definitions;
+  }
+
+  partition "L3 — Machine-readable" {
+    :Update data dictionary\n(CSV / Excel);
+    :Map elements to FHIR profiles\nand terminology;
+  }
+
+  partition "L4 — Executable" {
+    :Generate / update FSH instances\nand profiles;
+    :Compile IG with SUSHI\n+ IG Publisher;
+  }
+
+  partition "L5 — Dynamic" {
+    :Validate examples against\nFHIR server;
+    :Publish draft IG\n(CI build → /dev/);
+  }
+
+  #FCE4EC:Present L5 outputs\nto stakeholders|
+  note right
+    **Review gate**
+    ----
+    • Walk through published IG
+    • Verify examples match
+      real-world practice
+    • Collect feedback for
+      next iteration
+  end note
+
+  if (Feedback requires\nanother cycle?) then (yes)
+    :Incorporate feedback\ninto scope;
+  else (no)
+  endif
+
+repeat while (more iterations needed?) is (yes) not (no)
+
+:Tag release (vX.Y.Z)\nand publish immutable version;
+
+stop
+
+@enduml
