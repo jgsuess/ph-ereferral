@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="medicationadministration-ifa-ex"/>
+  <meta>
+    <tag>
+      <system value="https://example.com/peref-dd"/>
+      <code value="REF-38"/>
+      <display value="REF-38"/>
+    </tag>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MedicationAdministration medicationadministration-ifa-ex</b></p><a name="medicationadministration-ifa-ex"> </a><a name="hcmedicationadministration-ifa-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Tag: REF-38 (Details: peref-dd code REF-38)</p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <span title="Codes:{http://snomed.info/sct 74935002}">Iron and Folic Acid (IFA) tablets</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>context</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal initial visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24</p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></td></tr></table><h3>Dosages</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Text</b></td><td><b>Route</b></td></tr><tr><td style="display: none">*</td><td>1 tablet daily</td><td><span title="Codes:{http://snomed.info/sct 26643006}">Oral route</span></td></tr></table></div>
+  </text>
+  <status value="completed"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="74935002"/>
+      <display value="Product containing iron and folic acid"/>
+    </coding>
+    <text value="Iron and Folic Acid (IFA) tablets"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+  </subject>
+  <context>
+    <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+  </context>
+  <effectiveDateTime value="2026-02-24"/>
+  <performer>
+    <actor>
+      <reference value="urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"/>
+    </actor>
+  </performer>
+  <dosage>
+    <text value="1 tablet daily"/>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+        <display value="Oral route"/>
+      </coding>
+    </route>
+  </dosage>
+</MedicationAdministration>

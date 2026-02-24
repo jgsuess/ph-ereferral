@@ -1,0 +1,212 @@
+PHeReferralImplementationGuide : Validation Results
+=========================================
+
+err = 27, warn = 25, info = 100
+IG Publisher Version: 2.1.1
+Generated Tue Feb 24 04:25:26 UTC 2026. FHIR version 4.0.1 for example.fhir.ph.ereferral#0.2.0 (canonical = https://jgsuess.github.io/ph-ereferral)
+ Build Errors : 1 / 4 / 0
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Bundle-anc-contact-transaction-ex : 13 / 18 / 85
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Bundle-registration-transaction-ex : 4 / 0 / 32
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Condition-condition-pregnancy-ex : 0 / 0 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Encounter-encounter-anc-ex : 1 / 0 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Encounter-encounter-registration-ex : 0 / 0 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ImplementationGuide-example.fhir.ph.ereferral : 1 / 0 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/MedicationAdministration-medicationadministration-ifa-ex : 2 / 0 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Observation-observation-blood-pressure-ex : 0 / 0 / 8
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Observation-observation-chief-complaint-ex : 1 / 1 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Observation-observation-heart-rate-ex : 0 / 0 / 6
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Observation-observation-oxygen-saturation-ex : 1 / 0 / 6
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Observation-observation-respiratory-rate-ex : 0 / 0 / 6
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Observation-observation-temperature-ex : 0 / 0 / 6
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Observation-observation-weight-ex : 0 / 0 / 6
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Organization-organization-receiving-facility-ex : 0 / 0 / 3
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Organization-organization-sending-facility-ex : 0 / 0 / 5
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Patient-patient-charity-ex : 2 / 0 / 10
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Practitioner-practitioner-abraham-ex : 0 / 0 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Practitioner-practitioner-jane-ex : 0 / 0 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/PractitionerRole-practitionerrole-abraham-ex : 1 / 0 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/PractitionerRole-practitionerrole-jane-ex : 0 / 0 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/RelatedPerson-relatedperson-companion-ex : 0 / 0 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ServiceRequest-servicerequest-lab-orders-ex : 0 / 0 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ServiceRequest-servicerequest-ultrasound-ex : 1 / 1 / 5
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Task-task-referral-ex : 0 / 1 / 3
+</table>
+== n/a ==
+ERROR: index.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 199, column 157: The link 'dev/' for "development preview" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/Bundle-anc-contact-transaction-ex.json ==
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[0].resource/*Practitioner/practitioner-jane-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[1].resource/*PractitionerRole/practitionerrole-jane-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[1].resource/*PractitionerRole/practitionerrole-jane-ex*/.organization: URN reference is not locally contained within the bundle urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[2].resource/*Organization/organization-receiving-facility-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[2].resource/*Organization/organization-receiving-facility-ex*/.meta.tag[1].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[3].resource/*Encounter/encounter-anc-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[3].resource/*Encounter/encounter-anc-ex*/.type[0].coding[0].display: Wrong Display Name 'Prenatal initial visit' for http://snomed.info/sct#424619006. Valid display is one of 2 choices: 'Prenatal visit (regime/therapy)' (en) or 'Prenatal visit' (en) (for the language(s) 'en')
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[3].resource/*Encounter/encounter-anc-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[3].resource/*Encounter/encounter-anc-ex*/.serviceProvider: URN reference is not locally contained within the bundle urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[4].resource/*Condition/condition-pregnancy-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[4].resource/*Condition/condition-pregnancy-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[4].resource/*Condition/condition-pregnancy-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[5].resource/*Observation/observation-chief-complaint-ex*/: Best Practice Recommendation: In general, all observations should have a performer
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[5].resource/*Observation/observation-chief-complaint-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[5].resource/*Observation/observation-chief-complaint-ex*/.code.coding[0].display: Wrong Display Name 'Chief complaint - Reported' for http://loinc.org#10154-3. Valid display is one of 3 choices: 'Chief complaint Narrative - Reported' (en-US), 'Chief complaint Narrative - Reported' (en-US) or 'Chief complaint Reported' (en-US) (for the language(s) 'en')
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[5].resource/*Observation/observation-chief-complaint-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[5].resource/*Observation/observation-chief-complaint-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[5].resource/*Observation/observation-chief-complaint-ex*/.encounter: Unable to find a profile match for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[5].resource/*Observation/observation-chief-complaint-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter|0.1.0
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[6].resource/*Observation/observation-blood-pressure-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[6].resource/*Observation/observation-blood-pressure-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[6].resource/*Observation/observation-blood-pressure-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[6].resource/*Observation/observation-blood-pressure-ex*/.encounter: Unable to find a profile match for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[6].resource/*Observation/observation-blood-pressure-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter|0.1.0
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[7].resource/*Observation/observation-heart-rate-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[7].resource/*Observation/observation-heart-rate-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[7].resource/*Observation/observation-heart-rate-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[7].resource/*Observation/observation-heart-rate-ex*/.encounter: Unable to find a profile match for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[7].resource/*Observation/observation-heart-rate-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter|0.1.0
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[8].resource/*Observation/observation-respiratory-rate-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[8].resource/*Observation/observation-respiratory-rate-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[8].resource/*Observation/observation-respiratory-rate-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[8].resource/*Observation/observation-respiratory-rate-ex*/.encounter: Unable to find a profile match for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[8].resource/*Observation/observation-respiratory-rate-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter|0.1.0
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[9].resource/*Observation/observation-oxygen-saturation-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[9].resource/*Observation/observation-oxygen-saturation-ex*/.code: OxygenSatCode: magic LOINC code 2708-6 required, but not found (from http://hl7.org/fhir/StructureDefinition/oxygensat|4.0.1). Note that other Observation codes are allowed in addition to this required magic code
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[9].resource/*Observation/observation-oxygen-saturation-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[9].resource/*Observation/observation-oxygen-saturation-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[9].resource/*Observation/observation-oxygen-saturation-ex*/.encounter: Unable to find a profile match for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[9].resource/*Observation/observation-oxygen-saturation-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter|0.1.0
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[10].resource/*Observation/observation-temperature-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[10].resource/*Observation/observation-temperature-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[10].resource/*Observation/observation-temperature-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[10].resource/*Observation/observation-temperature-ex*/.encounter: Unable to find a profile match for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[10].resource/*Observation/observation-temperature-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter|0.1.0
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[11].resource/*Observation/observation-weight-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[11].resource/*Observation/observation-weight-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[11].resource/*Observation/observation-weight-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[11].resource/*Observation/observation-weight-ex*/.encounter: Unable to find a profile match for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[11].resource/*Observation/observation-weight-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter|0.1.0
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[12].resource/*MedicationAdministration/medicationadministration-ifa-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[12].resource/*MedicationAdministration/medicationadministration-ifa-ex*/.medication.ofType(CodeableConcept).coding[0].code: Unknown code '74935002' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[12].resource/*MedicationAdministration/medicationadministration-ifa-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[12].resource/*MedicationAdministration/medicationadministration-ifa-ex*/.context: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[12].resource/*MedicationAdministration/medicationadministration-ifa-ex*/.dosage: Constraint failed: mad-1: 'SHALL have at least one of dosage.dose or dosage.rate[x] (dose.exists() or rate.exists())'
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[13].resource/*ServiceRequest/servicerequest-ultrasound-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[13].resource/*ServiceRequest/servicerequest-ultrasound-ex*/.meta.tag[1].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[13].resource/*ServiceRequest/servicerequest-ultrasound-ex*/.meta.tag[2].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[13].resource/*ServiceRequest/servicerequest-ultrasound-ex*/.meta.tag[3].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[13].resource/*ServiceRequest/servicerequest-ultrasound-ex*/.category[0].coding[0]: The concept '103693007' has a status of inactive and its use should be reviewed
+ERROR: Bundle/anc-contact-transaction-ex: Bundle.entry[13].resource/*ServiceRequest/servicerequest-ultrasound-ex*/.code.coding[0].display: Wrong Display Name 'Ultrasound scan - Loss of pregnancy' for http://snomed.info/sct#268445003. Valid display is one of 3 choices: 'Ultrasound scan - obstetric' (en), 'Obstetric US scan' (en) or 'Ultrasound scan - obstetric (procedure)' (en) (for the language(s) 'en')
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[13].resource/*ServiceRequest/servicerequest-ultrasound-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[13].resource/*ServiceRequest/servicerequest-ultrasound-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[14].resource/*ServiceRequest/servicerequest-lab-orders-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[14].resource/*ServiceRequest/servicerequest-lab-orders-ex*/.subject: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[14].resource/*ServiceRequest/servicerequest-lab-orders-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[15].resource/*Task/task-referral-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[15].resource/*Task/task-referral-ex*/.meta.tag[1].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[15].resource/*Task/task-referral-ex*/.businessStatus.coding[0].system: A definition for CodeSystem 'https://example.com/peref/CodeSystem/referral-disposition' could not be found, so the code cannot be validated
+WARNING: Bundle/anc-contact-transaction-ex: Bundle.entry[15].resource/*Task/task-referral-ex*/.for: URN reference is not locally contained within the bundle urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479
+INFORMATION: Bundle/anc-contact-transaction-ex: Bundle.entry[15].resource/*Task/task-referral-ex*/.encounter: Details for urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901 matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+== fsh-generated/resources/Bundle-registration-transaction-ex.json ==
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[0].resource/*Patient/patient-charity-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[0].resource/*Patient/patient-charity-ex*/.meta.tag[1].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[0].resource/*Patient/patient-charity-ex*/.meta.tag[2].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[0].resource/*Patient/patient-charity-ex*/.meta.tag[3].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[0].resource/*Patient/patient-charity-ex*/.meta.tag[4].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[0].resource/*Patient/patient-charity-ex*/.meta.tag[5].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[0].resource/*Patient/patient-charity-ex*/.meta.tag[6].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[0].resource/*Patient/patient-charity-ex*/.identifier[0]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[0].resource/*Patient/patient-charity-ex*/.identifier[1]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+ERROR: Bundle/registration-transaction-ex: Bundle.entry[0].resource/*Patient/patient-charity-ex*/: Patient.extension: minimum required = 1, but only found 0 (from http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0)
+ERROR: Bundle/registration-transaction-ex: Bundle.entry[0].resource/*Patient/patient-charity-ex*/: Slice 'Patient.extension:indigenousPeople' for extension 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-people': a matching slice is required, but not found (from http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0). Note that other slices are allowed in addition to this required slice
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[1].resource/*RelatedPerson/relatedperson-companion-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[1].resource/*RelatedPerson/relatedperson-companion-ex*/.patient: Details for urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479 matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[2].resource/*Organization/organization-sending-facility-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[2].resource/*Organization/organization-sending-facility-ex*/.meta.tag[1].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[2].resource/*Organization/organization-sending-facility-ex*/.meta.tag[2].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[2].resource/*Organization/organization-sending-facility-ex*/.meta.tag[3].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[3].resource/*Practitioner/practitioner-abraham-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[4].resource/*PractitionerRole/practitionerrole-abraham-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+ERROR: Bundle/registration-transaction-ex: Bundle.entry[4].resource/*PractitionerRole/practitionerrole-abraham-ex*/.code[0].coding[0].code: Unknown code 'clerk' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/practitioner-role' version '1.0.1'
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[5].resource/*Encounter/encounter-registration-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[5].resource/*Encounter/encounter-registration-ex*/.subject: Details for urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479 matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[5].resource/*Encounter/encounter-registration-ex*/.participant[0].individual: Details for urn:uuid:3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a matching against profile http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+ERROR: Bundle/registration-transaction-ex: Bundle.entry[5].resource/*Encounter/encounter-registration-ex*/.subject: Unable to find a profile match for urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479 among choices: http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient
+INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[5].resource/*Encounter/encounter-registration-ex*/.subject: Details for urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479 matching against profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0
+== fsh-generated/resources/Condition-condition-pregnancy-ex.json ==
+INFORMATION: Condition/condition-pregnancy-ex: Condition.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/Encounter-encounter-anc-ex.json ==
+INFORMATION: Encounter/encounter-anc-ex: Encounter.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+ERROR: Encounter/encounter-anc-ex: Encounter.type[0].coding[0].display: Wrong Display Name 'Prenatal initial visit' for http://snomed.info/sct#424619006. Valid display is one of 2 choices: 'Prenatal visit (regime/therapy)' (en) or 'Prenatal visit' (en) (for the language(s) 'en')
+== fsh-generated/resources/Encounter-encounter-registration-ex.json ==
+INFORMATION: Encounter/encounter-registration-ex: Encounter.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/ImplementationGuide-example.fhir.ph.ereferral.json ==
+INFORMATION: ImplementationGuide/example.fhir.ph.ereferral: ImplementationGuide.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021
+ERROR: ImplementationGuide/example.fhir.ph.ereferral: ImplementationGuide.jurisdiction[0].coding[0].code: Unknown code 'PH' in the CodeSystem 'urn:iso:std:iso:3166:-2' version '2021'
+== fsh-generated/resources/MedicationAdministration-medicationadministration-ifa-ex.json ==
+INFORMATION: MedicationAdministration/medicationadministration-ifa-ex: MedicationAdministration.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+ERROR: MedicationAdministration/medicationadministration-ifa-ex: MedicationAdministration.medication.ofType(CodeableConcept).coding[0].code: Unknown code '74935002' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)
+ERROR: MedicationAdministration/medicationadministration-ifa-ex: MedicationAdministration.dosage: Constraint failed: mad-1: 'SHALL have at least one of dosage.dose or dosage.rate[x] (dose.exists() or rate.exists())'
+== fsh-generated/resources/Observation-observation-blood-pressure-ex.json ==
+INFORMATION: Observation/observation-blood-pressure-ex: Observation.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/Observation-observation-chief-complaint-ex.json ==
+INFORMATION: Observation/observation-chief-complaint-ex: Observation.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+ERROR: Observation/observation-chief-complaint-ex: Observation.code.coding[0].display: Wrong Display Name 'Chief complaint - Reported' for http://loinc.org#10154-3. Valid display is one of 3 choices: 'Chief complaint Narrative - Reported' (en-US), 'Chief complaint Narrative - Reported' (en-US) or 'Chief complaint Reported' (en-US) (for the language(s) 'en')
+WARNING: Observation/observation-chief-complaint-ex: Observation: Best Practice Recommendation: In general, all observations should have a performer
+== fsh-generated/resources/Observation-observation-heart-rate-ex.json ==
+INFORMATION: Observation/observation-heart-rate-ex: Observation.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/Observation-observation-oxygen-saturation-ex.json ==
+INFORMATION: Observation/observation-oxygen-saturation-ex: Observation.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+ERROR: Observation/observation-oxygen-saturation-ex: Observation.code: OxygenSatCode: magic LOINC code 2708-6 required, but not found (from http://hl7.org/fhir/StructureDefinition/oxygensat|4.0.1). Note that other Observation codes are allowed in addition to this required magic code
+== fsh-generated/resources/Observation-observation-respiratory-rate-ex.json ==
+INFORMATION: Observation/observation-respiratory-rate-ex: Observation.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/Observation-observation-temperature-ex.json ==
+INFORMATION: Observation/observation-temperature-ex: Observation.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/Observation-observation-weight-ex.json ==
+INFORMATION: Observation/observation-weight-ex: Observation.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/Organization-organization-receiving-facility-ex.json ==
+INFORMATION: Organization/organization-receiving-facility-ex: Organization.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Organization/organization-receiving-facility-ex: Organization.meta.tag[1].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/Organization-organization-sending-facility-ex.json ==
+INFORMATION: Organization/organization-sending-facility-ex: Organization.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Organization/organization-sending-facility-ex: Organization.meta.tag[1].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Organization/organization-sending-facility-ex: Organization.meta.tag[2].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Organization/organization-sending-facility-ex: Organization.meta.tag[3].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/Patient-patient-charity-ex.json ==
+INFORMATION: Patient/patient-charity-ex: Patient.identifier[0]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Patient/patient-charity-ex: Patient.identifier[1]: This element does not match any known slice defined in the profile http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+ERROR: Patient/patient-charity-ex: Patient: Patient.extension: minimum required = 1, but only found 0 (from http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0)
+ERROR: Patient/patient-charity-ex: Patient: Slice 'Patient.extension:indigenousPeople' for extension 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/indigenous-people': a matching slice is required, but not found (from http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient|0.1.0). Note that other slices are allowed in addition to this required slice
+INFORMATION: Patient/patient-charity-ex: Patient.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Patient/patient-charity-ex: Patient.meta.tag[1].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Patient/patient-charity-ex: Patient.meta.tag[2].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Patient/patient-charity-ex: Patient.meta.tag[3].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Patient/patient-charity-ex: Patient.meta.tag[4].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Patient/patient-charity-ex: Patient.meta.tag[5].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Patient/patient-charity-ex: Patient.meta.tag[6].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/Practitioner-practitioner-abraham-ex.json ==
+INFORMATION: Practitioner/practitioner-abraham-ex: Practitioner.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/Practitioner-practitioner-jane-ex.json ==
+INFORMATION: Practitioner/practitioner-jane-ex: Practitioner.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/PractitionerRole-practitionerrole-abraham-ex.json ==
+INFORMATION: PractitionerRole/practitionerrole-abraham-ex: PractitionerRole.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+ERROR: PractitionerRole/practitionerrole-abraham-ex: PractitionerRole.code[0].coding[0].code: Unknown code 'clerk' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/practitioner-role' version '1.0.1'
+== fsh-generated/resources/PractitionerRole-practitionerrole-jane-ex.json ==
+INFORMATION: PractitionerRole/practitionerrole-jane-ex: PractitionerRole.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/RelatedPerson-relatedperson-companion-ex.json ==
+INFORMATION: RelatedPerson/relatedperson-companion-ex: RelatedPerson.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/ServiceRequest-servicerequest-lab-orders-ex.json ==
+INFORMATION: ServiceRequest/servicerequest-lab-orders-ex: ServiceRequest.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+== fsh-generated/resources/ServiceRequest-servicerequest-ultrasound-ex.json ==
+INFORMATION: ServiceRequest/servicerequest-ultrasound-ex: ServiceRequest.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: ServiceRequest/servicerequest-ultrasound-ex: ServiceRequest.meta.tag[1].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: ServiceRequest/servicerequest-ultrasound-ex: ServiceRequest.meta.tag[2].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: ServiceRequest/servicerequest-ultrasound-ex: ServiceRequest.meta.tag[3].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: ServiceRequest/servicerequest-ultrasound-ex: ServiceRequest.category[0].coding[0]: The concept '103693007' has a status of inactive and its use should be reviewed
+ERROR: ServiceRequest/servicerequest-ultrasound-ex: ServiceRequest.code.coding[0].display: Wrong Display Name 'Ultrasound scan - Loss of pregnancy' for http://snomed.info/sct#268445003. Valid display is one of 3 choices: 'Ultrasound scan - obstetric' (en), 'Obstetric US scan' (en) or 'Ultrasound scan - obstetric (procedure)' (en) (for the language(s) 'en')
+== fsh-generated/resources/Task-task-referral-ex.json ==
+INFORMATION: Task/task-referral-ex: Task.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+INFORMATION: Task/task-referral-ex: Task.meta.tag[1].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
+WARNING: Task/task-referral-ex: Task.businessStatus.coding[0].system: A definition for CodeSystem 'https://example.com/peref/CodeSystem/referral-disposition' could not be found, so the code cannot be validated

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="patient-charity-ex"/>
+  <meta>
+    <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"/>
+    <tag>
+      <system value="https://example.com/peref-dd"/>
+      <code value="REF-20"/>
+      <display value="REF-20"/>
+    </tag>
+    <tag>
+      <system value="https://example.com/peref-dd"/>
+      <code value="REF-21"/>
+      <display value="REF-21"/>
+    </tag>
+    <tag>
+      <system value="https://example.com/peref-dd"/>
+      <code value="REF-22"/>
+      <display value="REF-22"/>
+    </tag>
+    <tag>
+      <system value="https://example.com/peref-dd"/>
+      <code value="REF-24"/>
+      <display value="REF-24"/>
+    </tag>
+    <tag>
+      <system value="https://example.com/peref-dd"/>
+      <code value="REF-25"/>
+      <display value="REF-25"/>
+    </tag>
+    <tag>
+      <system value="https://example.com/peref-dd"/>
+      <code value="REF-26"/>
+      <display value="REF-26"/>
+    </tag>
+    <tag>
+      <system value="https://example.com/peref-dd"/>
+      <code value="REF-27"/>
+      <display value="REF-27"/>
+    </tag>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient patient-charity-ex</b></p><a name="patient-charity-ex"> </a><a name="hcpatient-charity-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/UP-Manila-SILab/ph-core/StructureDefinition-ph-core-patient.html">PH Core Patient</a></p><p style="margin-bottom: 0px">Tags: REF-20 (Details: peref-dd code REF-20), REF-21 (Details: peref-dd code REF-21), REF-22 (Details: peref-dd code REF-22), REF-24 (Details: peref-dd code REF-24), REF-25 (Details: peref-dd code REF-25), REF-26 (Details: peref-dd code REF-26), REF-27 (Details: peref-dd code REF-27)</p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3"><code>http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns</code>/12-345678901-2</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="tel:+63-917-123-4567">+63-917-123-4567</a></li><li>456 Rizal Street Barangay Malusog Quezon City 1100 PH (home)</li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns"/>
+    <value value="1234-5678901-2"/>
+  </identifier>
+  <identifier>
+    <system value="http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns"/>
+    <value value="12-345678901-2"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <family value="Santos"/>
+    <given value="Charity"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63-917-123-4567"/>
+    <use value="mobile"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="2001-08-15"/>
+  <address>
+    <use value="home"/>
+    <line value="456 Rizal Street"/>
+    <line value="Barangay Malusog"/>
+    <city value="Quezon City"/>
+    <district value="NCR"/>
+    <postalCode value="1100"/>
+    <country value="PH"/>
+  </address>
+</Patient>
