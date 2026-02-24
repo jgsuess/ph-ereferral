@@ -3,7 +3,7 @@ PHeReferralImplementationGuide : Validation Results
 
 err = 27, warn = 25, info = 100
 IG Publisher Version: 2.1.1
-Generated Tue Feb 24 07:22:27 UTC 2026. FHIR version 4.0.1 for example.fhir.ph.ereferral#0.3.0-draft (canonical = https://jgsuess.github.io/ph-ereferral)
+Generated Tue Feb 24 07:43:02 UTC 2026. FHIR version 4.0.1 for example.fhir.ph.ereferral#0.3.0-draft (canonical = https://jgsuess.github.io/ph-ereferral)
  Build Errors : 1 / 4 / 0
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Bundle-anc-contact-transaction-ex : 13 / 18 / 85
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Bundle-registration-transaction-ex : 4 / 0 / 32
