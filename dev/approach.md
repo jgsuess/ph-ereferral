@@ -56,6 +56,20 @@ Plus logistics (REF-41), referral decision (REF-42), encounter context (REF-43 �
 
 -------
 
+#### Agile Iteration through the SMART Layers
+
+Rather than treating the five WHO SMART layers as a strict waterfall sequence, this project works through them in **short, incremental cycles**. Each iteration takes a small slice of scope — a handful of new data elements, a scenario extension, or a set of stakeholder corrections — and pushes it through all five layers from narrative (L1) to validated outputs (L5) before circling back.
+
+**Key principles:**
+
+* **Artefacts at every layer are accepted as imperfect.** A first-pass data dictionary will have gaps; initial FSH instances will carry placeholder codes; validation will surface issues. This is expected and welcomed — each cycle tightens the artefacts rather than attempting perfection up front.
+* **Every iteration closes with a stakeholder review of L5 outputs.** The published development IG (`/dev/`) is walked through with domain experts, clinicians, and implementers. Concrete examples — not abstract specifications — form the basis of discussion, making it easier to spot misunderstandings and missing elements.
+* **Feedback is the fuel for the next cycle.** Observations from the review are captured as scoped items for the following iteration, keeping the loop short and focused.
+
+This approach aligns with agile delivery practices: deliver working software (a published IG with validated examples) frequently, welcome changing requirements, and rely on close collaboration with stakeholders over exhaustive up-front specification.
+
+-------
+
 #### Technical Pipeline
 
 The diagram below summarises the end-to-end data flow from source artefacts to a published IG.
