@@ -2,17 +2,21 @@
 !theme plain
 title User Scenario 3.1 — First Antenatal Care Contact
 
+|#E3F2FD| Abraham (Clerk) |
+|#E8F5E9| Jane (Nurse) |
 |#FFF3E0| Charity (Client) |
+
+| Charity (Client) |
 start
 :Arrives at health centre\n(missed cycle, nausea);
 
-|#E3F2FD| Abraham (Clerk) |
+| Abraham (Clerk) |
 :Check existing records\n→ no record found;
 
-|Charity (Client)|
+| Charity (Client) |
 :Provides demographic info\n(name, DOB, address, phone,\nPhilSys ID, PhilHealth ID);
 
-|Abraham (Clerk)|
+| Abraham (Clerk) |
 :Register patient in system;
 note right
   **Bundle A — Registration**
@@ -25,10 +29,10 @@ note right
 end note
 :Generate QR code\nfor return visits;
 
-|Charity (Client)|
+| Charity (Client) |
 :Wait in queue;
 
-|#E8F5E9| Jane (Nurse) |
+| Jane (Nurse) |
 :Call Charity into\ncounselling room;
 :Close door, lower shade\n(ensure privacy);
 
@@ -92,7 +96,7 @@ end note
 
 :Schedule next ANC contact;
 
-|Charity (Client)|
+| Charity (Client) |
 :Receive referral slip\nfor imaging centre;
 :Receive SMS reminder\n(if consent given);
 
