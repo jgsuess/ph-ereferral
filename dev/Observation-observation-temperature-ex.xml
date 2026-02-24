@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation-temperature-ex"/>
+  <meta>
+    <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+    <tag>
+      <system value="https://example.com/peref-dd"/>
+      <code value="REF-36"/>
+      <display value="REF-36"/>
+    </tag>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation observation-temperature-ex</b></p><a name="observation-temperature-ex"> </a><a name="hcobservation-temperature-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="https://build.fhir.org/ig/UP-Manila-SILab/ph-core/StructureDefinition-ph-core-observation.html">PH Core Observation</a>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a></p><p style="margin-bottom: 0px">Tag: REF-36 (Details: peref-dd code REF-36)</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8310-5}">Body temperature</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal initial visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>value</b>: 36.8 °C<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeCel = 'Cel')</span></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="8310-5"/>
+      <display value="Body temperature"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+  </encounter>
+  <effectiveDateTime value="2026-02-24T09:00:00+08:00"/>
+  <performer>
+    <reference value="urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"/>
+  </performer>
+  <valueQuantity>
+    <value value="36.8"/>
+    <unit value="°C"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="Cel"/>
+  </valueQuantity>
+</Observation>
