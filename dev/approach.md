@@ -11,7 +11,7 @@ This page documents the methodology used to produce the FHIR example resources i
 
 -------
 
-#### 1 Source Artefacts and the WHO SMART Guidelines Framework
+#### Source Artefacts and the WHO SMART Guidelines Framework
 
 The [WHO SMART Guidelines](https://www.who.int/teams/digital-health-and-innovation/smart-guidelines) define five layers for turning clinical recommendations into computable health content:
 
@@ -23,7 +23,7 @@ The [WHO SMART Guidelines](https://www.who.int/teams/digital-health-and-innovati
 | **L4 – Executable** | FHIR profiles, FSH source, IG content | This Implementation Guide (`input/fsh/`) |
 | **L5 – Dynamic** | Tests, examples, validation results | The 22 FHIR example instances and 2 transaction bundles documented below |
 
-##### 1.1 The User Scenario (scenario.xml)
+##### The User Scenario (scenario.xml)
 
 The scenario describes **Charity**, a 24-year-old pregnant woman visiting a government health centre for the first time. Three personas interact across two business processes:
 
@@ -32,7 +32,7 @@ The scenario describes **Charity**, a 24-year-old pregnant woman visiting a gove
 
 The scenario is modelled after the WHO ANC Digital Adaptation Kit (DAK) user-scenario format and provides the narrative context for every example resource.
 
-##### 1.2 The Data Dictionary (Excel Workbook)
+##### The Data Dictionary (Excel Workbook)
 
 The **DRAFT Working Copy CDG Consensus – PeRef Logical Information Model (Data Dictionary)** is the authoritative source for data-element definitions. Key sheets include:
 
@@ -56,11 +56,11 @@ Plus logistics (REF-41), referral decision (REF-42), encounter context (REF-43 �
 
 -------
 
-#### 2 Technical Pipeline
+#### Technical Pipeline
 
 The diagram below summarises the end-to-end data flow from source artefacts to a published IG.
 
-##### 2.1 Step-by-step
+##### Step-by-step
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -74,7 +74,7 @@ The diagram below summarises the end-to-end data flow from source artefacts to a
 | **8. Compile IG** | `sushi .` | All FSH sources + ph-core dependency | `fsh-generated/resources/*.json`(24 resources) |
 | **9. Publish IG** | `_genonce.sh`→ IG Publisher | SUSHI output +`publisher.jar` | `output/`(HTML site) |
 
-##### 2.2 DD Coverage Tracking
+##### DD Coverage Tracking
 
 Every JSON example resource is annotated with `meta.tag` entries that reference the data dictionary element IDs it satisfies:
 
@@ -101,11 +101,11 @@ A companion script (`utils/update-dd-coverage.py`) scans all JSON examples and r
 
 -------
 
-#### 3 Resource Architecture
+#### Resource Architecture
 
 The diagram below shows the FHIR resource types used and their relationships.
 
-##### 3.1 Bundle A — Registration (Process A)
+##### Bundle A — Registration (Process A)
 
 | | | |
 | :--- | :--- | :--- |
@@ -116,7 +116,7 @@ The diagram below shows the FHIR resource types used and their relationships.
 | PractitionerRole | `practitionerrole-abraham-ex` | REF-1 |
 | Encounter | `encounter-registration-ex` | REF-43 |
 
-##### 3.2 Bundle B — ANC Contact (Process B)
+##### Bundle B — ANC Contact (Process B)
 
 | | | |
 | :--- | :--- | :--- |
@@ -132,27 +132,27 @@ The diagram below shows the FHIR resource types used and their relationships.
 
 -------
 
-#### 4 Scenario Activity Flow
+#### Scenario Activity Flow
 
 The following activity diagram traces the clinical workflow through the two business processes.
 
 -------
 
-#### 5 Data Dictionary to FHIR Mapping
+#### Data Dictionary to FHIR Mapping
 
 The mapping diagram below shows how the seven clinical information groups in the data dictionary map to FHIR resource types.
 
 -------
 
-#### 6 AI-Assisted Reasoning
+#### AI-Assisted Reasoning
 
 An AI coding assistant (GitHub Copilot) was used throughout this project to accelerate the conversion pipeline. The following decisions were made by the AI, reviewed and confirmed by the IG author:
 
-##### 6.1 Scenario Analysis → Resource Identification
+##### Scenario Analysis → Resource Identification
 
 The AI parsed `scenario.xml` and identified the personas (Charity, Abraham, Jane), the two business processes, and the clinical actions described in the narrative. From this it proposed the initial list of FHIR resource types needed (Patient, Practitioner, Organization, Encounter, Observation, Condition, ServiceRequest, Task, MedicationAdministration, RelatedPerson).
 
-##### 6.2 Data Dictionary Extraction and Mapping
+##### Data Dictionary Extraction and Mapping
 
 Since the data dictionary is an Excel workbook that tooling cannot read directly, the AI created a Python extraction script (`extract-data-dictionary.py`) to dump all sheets to CSV. It then analysed the 46 REF-* elements, their **FHIR Profile** and **FHIR Element (R4)** columns, and mapped each to a concrete resource instance.
 
@@ -164,9 +164,9 @@ Key reasoning steps:
 * **REF-39 (lab results)** was marked **partial** because the scenario describes ordering tests, not receiving results — so `ServiceRequest` is appropriate now, with `DiagnosticReport` deferred.
 * **REF-42 (response)** uses `Task.businessStatus` (not `Task.status`) per the DD's own recommendation to separate human-meaningful state from the technical state machine.
 
-##### 6.3 Terminology Selection
+##### Terminology Selection
 
-The AI selected LOINC codes for observations and SNOMED CT codes for conditions and procedures based on the codes specified in the DD's **Value Set** column where available, falling back to widely-used international codes where the DD had placeholders:
+The AI selected LOINC codes for observations and SNOMED CT codes for conditions based on the codes specified in the DD's **Value Set** column where available, falling back to widely-used international codes where the DD had placeholders:
 
 | | | |
 | :--- | :--- | :--- |
@@ -178,7 +178,7 @@ The AI selected LOINC codes for observations and SNOMED CT codes for conditions 
 | Temperature | 8310-5 | LOINC |
 | Weight | 29463-7 | LOINC |
 
-##### 6.4 Synthetic Data Values
+##### Synthetic Data Values
 
 Realistic Filipino-context values were generated for the example data:
 
@@ -186,13 +186,13 @@ Realistic Filipino-context values were generated for the example data:
 * **Vital signs**: BP 110/70 mmHg, HR 78 bpm, RR 18/min, SpO₂ 98%, temp 36.8°C, weight 55 kg
 * **Facility**: "Barangay Malusog Health Centre" with a synthetic NHFR code
 
-##### 6.5 Pipeline Automation
+##### Pipeline Automation
 
 The AI created the full script pipeline (`generate-json-from-dd.py` → `validate-all.sh` → `convert-to-fsh.sh` → `update-dd-coverage.py`) so that changes to the data dictionary or scenario can be propagated through to FSH with a single re-run.
 
 -------
 
-#### 7 Version Management & Publication
+#### Version Management & Publication
 
 The IG follows a **two-lane publication model** aligned with HL7 IG publishing guidance:
 
@@ -215,7 +215,7 @@ The workflows are defined in:
 * `.github/workflows/ig-ci-dev.yml` — CI lane (push to `main`)
 * `.github/workflows/ig-release.yml` — Release lane (tag `v*`)
 
-##### 7.1 Publication URLs
+##### Publication URLs
 
 | | |
 | :--- | :--- |
@@ -224,7 +224,7 @@ The workflows are defined in:
 | `https://jgsuess.github.io/ph-ereferral/current/` | Redirect to latest release |
 | `https://jgsuess.github.io/ph-ereferral/history.html` | Publication history |
 
-##### 7.2 How to Cut a Release
+##### How to Cut a Release
 
 1. Ensure all changes are merged to`main`.
 1. Create an annotated tag:`git tag -a v0.1.0 -m "First draft release"`
@@ -234,7 +234,7 @@ The workflows are defined in:
 
 -------
 
-#### 8 Limitations and Future Work
+#### Limitations and Future Work
 
 1. **Signature / Provenance**(REF-2, REF-3) — deferred to a future release per CDG consensus.
 1. **HCPN**(REF-11) — on hold pending CDG decision on whether it should be computed or manually entered.
