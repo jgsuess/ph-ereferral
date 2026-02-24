@@ -77,7 +77,12 @@ dependencies:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Approach: approach.html
+  Approach:
+    Overview: approach.html
+    Technical Pipeline: technical-pipeline.html
+    Resource Architecture: resource-architecture.html
+    AI-Assisted Reasoning: ai-reasoning.html
+    Version Management: version-management.html
   DD Mapping: dd-mapping.html
   Artifacts: artifacts.html
 

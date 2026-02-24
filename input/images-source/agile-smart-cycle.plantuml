@@ -31,7 +31,7 @@ repeat
     :Publish draft IG\n(CI build → /dev/);
   }
 
-  #FCE4EC:Present L5 outputs\nto stakeholders|
+  #FCE4EC:Present L5 outputs\nto stakeholders;
   note right
     **Review gate**
     ----
