@@ -53,7 +53,7 @@ Plus logistics (REF-41), referral decision (REF-42), encounter context (REF-43 â
 
 The diagram below summarises the end-to-end data flow from source artefacts to a published IG.
 
-![Data-flow pipeline diagram](pipeline-dataflow.png){: width="100%"}
+{% include pipeline-dataflow.svg %}
 
 ##### 2.1  Step-by-step
 
@@ -97,7 +97,7 @@ A companion script (`utils/update-dd-coverage.py`) scans all JSON examples and r
 
 The diagram below shows the FHIR resource types used and their relationships.
 
-![FHIR resource object diagram](resource-class-diagram.png){: width="100%"}
+{% include resource-class-diagram.svg %}
 
 ##### 3.1  Bundle A â€” Registration (Process A)
 
@@ -130,7 +130,7 @@ The diagram below shows the FHIR resource types used and their relationships.
 
 The following activity diagram traces the clinical workflow through the two business processes.
 
-![Scenario activity diagram](scenario-activity.png){: width="100%"}
+{% include scenario-activity.svg %}
 
 ---
 
@@ -138,7 +138,7 @@ The following activity diagram traces the clinical workflow through the two busi
 
 The mapping diagram below shows how the seven clinical information groups in the data dictionary map to FHIR resource types.
 
-![DD-to-FHIR mapping diagram](dd-fhir-mapping.png){: width="100%"}
+{% include dd-fhir-mapping.svg %}
 
 ---
 
