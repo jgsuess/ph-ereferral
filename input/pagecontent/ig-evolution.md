@@ -87,3 +87,5 @@ When the IG reaches evaluation readiness, the natural next steps are:
 The HL7 framework provides a proven path from a well-evaluated draft to a published standard. The agile phase builds the foundation that makes that path navigable.
 
 *For the full detail of each HL7 stage, the FHIR Maturity Model, and the evidence required at each transition, see the [HL7 Standards Lifecycle](hl7-lifecycle.html) page.*
+
+*For the CI-based automated testing approach that supports Phase 2 adoption, see [Interoperability Matrix Testing](interop-testing.html).*

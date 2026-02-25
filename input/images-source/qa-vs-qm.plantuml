@@ -1,0 +1,40 @@
+@startuml qa-vs-qm
+!pragma layout smetana
+!theme plain
+title Quality Assurance vs Quality Management in IG Development
+
+skinparam rectangle {
+  FontSize 11
+  BorderColor #888888
+}
+
+rectangle "**Quality Management (QM)**\n— the navigation system —" as QM #E3F2FD {
+  rectangle "Define maturity criteria\n(FMM 0–5)" as QM1 #DDEEFF
+  rectangle "Govern stage transitions\n(WG · FMG · TSC)" as QM2 #DDEEFF
+  rectangle "Establish ballot and\npublication processes" as QM3 #DDEEFF
+  rectangle "Maintain backward-\ncompatibility policy" as QM4 #DDEEFF
+}
+
+rectangle "**Quality Assurance (QA)**\n— the navigation device in use —" as QA #E8F5E9 {
+  rectangle "CI-based interoperability\nmatrix testing (automated)" as QA1 #DDFBE8
+  rectangle "Connectathon evidence\n(≥ 3 independent systems)" as QA2 #DDFBE8
+  rectangle "FHIR validator checks\n(every build)" as QA3 #DDFBE8
+  rectangle "Published test results\nby IG version" as QA4 #DDFBE8
+}
+
+QM -[hidden]right-> QA
+
+note bottom of QA
+  CI matrix testing lives here.
+  It eliminates issues findable
+  by automation — before they
+  reach formal compliance gates.
+end note
+
+note bottom of QM
+  Formal compliance testing
+  and normative balloting
+  live here.
+end note
+
+@enduml

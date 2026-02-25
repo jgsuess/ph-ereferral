@@ -219,3 +219,10 @@ Many national IGs — including AU Base, AU Core, and US Core — **intentionall
 **Normative is a governance commitment, not just a technical milestone.** If an IG still expects semantic churn, evolving slices, or frequent cardinality changes, it is not Normative-ready — and that is entirely appropriate for a maturing standard.
 
 Most successful IGs spend years at STU by design. The PH eReferral IG, currently in agile draft, has a long and productive journey ahead before Normative is the right conversation.
+
+---
+
+#### Related Pages
+
+- [IG Evolution](ig-evolution.html) — the two-phase development model and when to engage with the HL7 formal process.
+- [Interoperability Matrix Testing](interop-testing.html) — CI-based automated testing between registered implementations; the quality assurance activity that feeds the formal QM gates described on this page.

@@ -94,3 +94,4 @@ The following pages provide in-depth coverage of each aspect of the project:
 * **[DD Mapping](dd-mapping.html)** — the element-by-element mapping between the data dictionary and the FHIR example resources.
 * **[IG Evolution](ig-evolution.html)** — how the IG graduates from rapid agile drafting to the HL7 formal process, and what signals indicate readiness to transition.
 * **[HL7 Standards Lifecycle](hl7-lifecycle.html)** — the HL7 ballot and publication stages, the FHIR Maturity Model (FMM 0–5), Connectathon requirements, and the evidence needed to move from STU to Normative.
+* **[Interoperability Matrix Testing](interop-testing.html)** — CI-based automated testing of registered implementation endpoints against each other, the distinction between quality assurance and quality management, and how to subscribe an endpoint.

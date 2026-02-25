@@ -1,0 +1,40 @@
+@startuml interop-ci-pipeline
+!pragma layout smetana
+!theme plain
+title CI-Based Interoperability Matrix Testing Pipeline
+
+|"Implementer"|
+start
+:Register stable endpoint\n(URL, credentials, capability statement);
+
+|"IG Project (CI)"|
+:Store endpoint registry\nin repository;
+
+:Scheduled CI job triggers\n(e.g. nightly or on IG change);
+
+repeat
+
+  :Select next sender / receiver pair\nfrom endpoint registry;
+
+  :Execute test scenario\nagainst live endpoints\n(FHIR transaction, query, subscription);
+
+  :Record result:\n✓ Pass / ✗ Fail / ⚠ Warning;
+
+repeat while (All pairs tested?) is (no) not (yes)
+
+:Aggregate results\ninto matrix report;
+
+:Publish matrix report\nto /dev/interop-matrix/\n(current IG version);
+
+|"Implementer"|
+:Review published results;
+
+if (Issues found?) then (yes)
+  :Raise issue against IG\nor own implementation;
+else (no)
+  :No action required;
+endif
+
+stop
+
+@enduml

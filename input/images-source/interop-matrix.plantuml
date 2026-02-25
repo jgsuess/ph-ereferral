@@ -1,0 +1,61 @@
+@startuml interop-matrix
+!pragma layout smetana
+!theme plain
+title CI Interoperability Matrix — Endpoint × Endpoint
+
+skinparam component {
+  BackgroundColor<<impl>> #E3F2FD
+  BackgroundColor<<result-pass>> #DCEDC8
+  BackgroundColor<<result-fail>> #FFCDD2
+  BackgroundColor<<result-pending>> #FFF9C4
+  BorderColor #888888
+  FontSize 11
+}
+
+skinparam rectangle {
+  FontSize 11
+  BorderColor #888888
+}
+
+rectangle "**Registered Endpoints (Implementations)**" {
+  component "Impl A\n(Sender)" <<impl>> as A
+  component "Impl B\n(Sender)" <<impl>> as B
+  component "Impl C\n(Sender)" <<impl>> as C
+}
+
+rectangle "**Tested Against (Receivers)**" {
+  component "Impl A\n(Receiver)" <<impl>> as RA
+  component "Impl B\n(Receiver)" <<impl>> as RB
+  component "Impl C\n(Receiver)" <<impl>> as RC
+}
+
+rectangle "**CI Test Results**" {
+  component "A → B\n✓ Pass" <<result-pass>> as AB
+  component "A → C\n✓ Pass" <<result-pass>> as AC
+  component "B → A\n✗ Fail" <<result-fail>> as BA
+  component "B → C\n✓ Pass" <<result-pass>> as BC
+  component "C → A\n✓ Pass" <<result-pass>> as CA
+  component "C → B\n⏳ Pending" <<result-pending>> as CB
+}
+
+A --> AB
+A --> AC
+B --> BA
+B --> BC
+C --> CA
+C --> CB
+
+AB --> RB
+AC --> RC
+BA --> RA
+BC --> RC
+CA --> RA
+CB --> RB
+
+note bottom of BA
+  Failure triggers
+  automated issue report
+  linked to IG version
+end note
+
+@enduml
