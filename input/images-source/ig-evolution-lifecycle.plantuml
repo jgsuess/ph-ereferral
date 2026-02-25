@@ -1,0 +1,43 @@
+@startuml ig-evolution-lifecycle
+!theme plain
+title IG Evolution — Agile Draft Phase to HL7 Formal Process
+
+|"Phase 1 — Agile Draft"|
+start
+
+:CI Build — Initial Draft;
+note right
+  FMM 0 — breaking changes
+  expected and welcomed
+end note
+
+repeat
+  :Agile iteration across SMART layers L1–L5;
+  :Publish to /dev/ for stakeholder review;
+  :Collect and incorporate feedback;
+repeat while (Evaluation-ready?) is (no) not (yes)
+
+:Tag draft release;
+
+|"Transition — Readiness Gate"|
+#FFF9C4:Assess readiness:\n• Semantic stability?\n• Pilot implementations?\n• Stakeholder consensus?\n• Clean CI build?;
+
+|"Phase 2 — HL7 Formal Process"|
+
+:Engage HL7 Work Group;
+
+:Connectathon / interoperability test\n(≥ 3 independent systems — FMM 2);
+
+:File Draft or STU Ballot;
+
+repeat
+  :Ballot cycle\n(collect comments → reconcile negatives);
+  :STU publication (FMM 3–4);
+  :Gather production implementation evidence;
+repeat while (FMM 5 evidence reached?) is (no) not (yes)
+
+:Normative Ballot (WG + FMG + TSC);
+:Normative Publication — specification locked;
+
+stop
+@enduml

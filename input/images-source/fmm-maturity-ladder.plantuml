@@ -1,0 +1,25 @@
+@startuml fmm-maturity-ladder
+!theme plain
+title FHIR Maturity Model — Progression for a FHIR IG
+
+state "FMM 0" as s0 #FFECB3 : CI build only.\nArtifact exists and builds cleanly.
+
+state "FMM 1" as s1 #FFF9C4 : CI build / draft ballot eligible.\nWork Group considers substantially complete.\nNo unresolved blocking issues.
+
+state "FMM 2" as s2 #E8F5E9 : STU ballot eligible.\nInteroperability demonstrated in ≥ 3 independent systems.\nConnectathon results accepted by FMG.
+
+state "FMM 3" as s3 #DCEDC8 : STU Release 1.\nPassed STU ballot.\nBroad review with non-trivial changes from external feedback.
+
+state "FMM 4" as s4 #C8E6C9 : STU Release 2+.\nEvidence of broad review.\nMultiple independent implementations.\nBreaking changes slowing significantly.
+
+state "FMM 5" as s5 #B2EBF2 : Normative ballot eligible.\n≥ 2 formal release cycles at FMM 1+.\n≥ 5 independent production systems.\nFor international IGs: implementations in > 1 country.
+
+[*] --> s0
+s0 --> s1 : artifact matures
+s1 --> s2 : Connectathon\nevidence accepted
+s2 --> s3 : STU ballot passed
+s3 --> s4 : subsequent STU cycles
+s4 --> s5 : production evidence\n+ semantic stability
+s5 --> [*] : Normative ballot\n+ publication
+
+@enduml

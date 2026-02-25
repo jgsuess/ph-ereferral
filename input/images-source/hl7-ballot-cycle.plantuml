@@ -1,0 +1,39 @@
+@startuml hl7-ballot-cycle
+!theme plain
+title HL7 Ballot and Publication Lifecycle for a FHIR IG
+
+skinparam state {
+  FontSize 11
+  BorderColor #888888
+}
+
+[*] --> CIBuild
+
+state CIBuild #FFECB3 : **CI Build — Draft**\nFMM 0–1 · Active development\nBreaking changes at any time
+
+state DraftBallot #FFF9C4 : **Draft Ballot**\nFirst formal HL7 review\nFMM 1–2 · High change tolerance
+
+state Connectathon #E8F5E9 : **Connectathon / Interop Test**\n≥ 3 independent systems\nResults reported to FMG (FMM 2)
+
+state STUBallot #FFF9C4 : **STU Ballot**\nFMM 2 required\nCommunity ballot — negatives reconciled
+
+state STU1 #DCEDC8 : **STU Release 1**\nFMM 3 · Official HL7 standard\nReady for production trial use
+
+state STUn #C8E6C9 : **STU Release 2+**\nFMM 3–4 · Implementations accumulate\nAdditional ballot cycles as needed
+
+state NormBallot #FFE0B2 : **Normative Ballot**\nFMM 5 required\nWG + FMG + TSC approval
+
+state Normative #B2EBF2 : **Normative Publication**\nFMM 5 · Specification locked\nSafe for regulated infrastructure
+
+CIBuild --> DraftBallot : project matures
+DraftBallot --> Connectathon : feedback incorporated\n(FMM 1 reached)
+Connectathon --> STUBallot : interop evidence\ndocumented (FMM 2)
+STUBallot --> STU1 : ballot passed
+STU1 --> STUn : further feedback\n+ implementations
+STUn -right-> STUn : additional STU cycles\n(common for national IGs)
+STUn --> NormBallot : FMM 5 evidence\n+ governance decision
+NormBallot --> Normative : ballot passed
+
+Normative --> [*]
+
+@enduml
