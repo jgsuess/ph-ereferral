@@ -1,0 +1,42 @@
+@startuml sdc-extraction-flow
+!pragma layout smetana
+!theme plain
+title SDC Questionnaire — Interactive Preview and Data Extraction Flow
+
+|"FHIR Server"|
+start
+:Existing FHIR resources\n(Patient, Encounter, Practitioner…);
+
+|"SDC Form Renderer"|
+:Load SDC Questionnaire\nfrom Companion IG;
+
+:Pre-populate form fields\nfrom existing FHIR resources\n(population expressions);
+
+|"End User"|
+:Review and interact\nwith rendered form;
+note right
+  User sees a familiar
+  referral form — not
+  raw JSON or XML
+end note
+
+:Complete or correct\nmissing fields;
+
+|"SDC Form Renderer"|
+:Apply extraction rules\n(item extraction context,\nDefinition-based extraction);
+
+:Produce extracted\nFHIR resources\n(Bundle of profiles);
+
+|"FHIR Server / Validator"|
+:Validate extracted Bundle\nagainst main IG profiles;
+
+if (Valid?) then (yes)
+  :Accept resources\ninto FHIR server;
+  :Demonstrate successful\nround-trip extraction;
+else (no)
+  :Report validation errors\nas IG feedback;
+endif
+
+stop
+
+@enduml

@@ -1,0 +1,47 @@
+@startuml companion-container-stack
+!pragma layout smetana
+!theme plain
+title Testing Companion — Containerised Local Stack (docker-compose)
+
+skinparam rectangle {
+  FontSize 11
+  BorderColor #888888
+}
+skinparam component {
+  FontSize 10
+  BorderColor #888888
+}
+
+rectangle "**docker-compose stack**\n(runs locally with a single command)" as STACK {
+
+  rectangle "**Data Layer**" as DATA #FFF9C4 {
+    component "HAPI FHIR Server\n(R4)\nHosts loaded IG packages\nand test resources" as HAPI #FFFDE7
+  }
+
+  rectangle "**Interaction Layer**" as INTERACT #E8F5E9 {
+    component "SDC Form Renderer\n(e.g. LHC-Forms / NLM)\nRenders Questionnaires,\nruns population + extraction" as RENDERER #DDFBE8
+    component "Test Data Seeder\n(shell script / Python)\nLoads Companion IG examples\ninto FHIR server on startup" as SEEDER #DDFBE8
+  }
+
+  rectangle "**Validation Layer**" as VALID #E3F2FD {
+    component "IG Validator\n(publisher.jar -validate)\nValidates extracted resources\nagainst main IG profiles" as VALIDATOR #DDEEFF
+  }
+
+  rectangle "**Tooling**" as TOOLS #FCE4EC {
+    component "Demo scripts\n(bash / Python)\nReplay end-to-end scenarios\nagainst local stack" as SCRIPTS #FFEBEE
+  }
+}
+
+SEEDER --> HAPI : seed test data\non startup
+RENDERER --> HAPI : FHIR REST\n(read/write)
+VALIDATOR --> HAPI : fetch resources\nfor validation
+SCRIPTS --> HAPI : drive scenarios\nvia FHIR API
+SCRIPTS --> RENDERER : open forms\nfor walkthrough
+
+note bottom of STACK
+  Start with:
+  docker-compose up
+  Browse to http://localhost:8080
+end note
+
+@enduml

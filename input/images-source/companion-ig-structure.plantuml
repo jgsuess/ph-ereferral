@@ -1,0 +1,45 @@
+@startuml companion-ig-structure
+!pragma layout smetana
+!theme plain
+title Main IG and Testing Companion IG — Relationship and Contents
+
+skinparam rectangle {
+  FontSize 11
+  BorderColor #888888
+}
+skinparam component {
+  FontSize 11
+  BorderColor #888888
+}
+
+rectangle "**PH eReferral IG** (main)" as MAIN #E3F2FD {
+  component "Profiles & extensions\n(structural constraints)" as PROF #DDEEFF
+  component "Terminology\n(value sets, code systems)" as TERM #DDEEFF
+  component "Mainline examples\n(one clear instance per concept)" as EX #DDEEFF
+  component "Narrative pages\n(approach, architecture, lifecycle)" as NAR #DDEEFF
+}
+
+rectangle "**PH eReferral Testing Companion IG**" as COMP #E8F5E9 {
+  component "Bulk test examples\n(edge cases, boundary values,\nvariant scenarios)" as BULK #DDFBE8
+  component "SDC Questionnaires\n(interactive referral forms\nwith data extraction rules)" as SDC #DDFBE8
+  component "Demo scripts\n(scenario playback,\nautomated walkthroughs)" as SCRIPTS #DDFBE8
+  component "Containerised test stack\n(docker-compose: FHIR server,\nSDC renderer, test data seeder)" as DOCKER #DDFBE8
+}
+
+MAIN <|-- COMP : depends on\n(canonical reference)
+
+note right of EX
+  Kept intentionally small.
+  One worked example per
+  key concept — no bulk data.
+end note
+
+note right of BULK
+  Hundreds of instances for
+  matrix testing, edge case
+  coverage, and load testing.
+  Does not pollute main IG
+  rendering.
+end note
+
+@enduml

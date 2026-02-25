@@ -118,3 +118,4 @@ Endpoints that become unreachable for more than two consecutive weeks will be ma
 - **[IG Evolution](ig-evolution.html)** — when and why matrix testing becomes relevant (Phase 2 transition).
 - **[HL7 Standards Lifecycle](hl7-lifecycle.html)** — the formal FMM and ballot process that CI testing feeds into but does not replace.
 - **[Version Management & Publication](version-management.html)** — how IG versions are tagged; matrix results are pinned to the version current at test time.
+- **[Testing Companion IG](testing-companion.html)** — the companion IG that supplies bulk test fixtures and SDC forms used to seed and exercise the matrix test endpoints.
