@@ -1,4 +1,5 @@
 @startuml hl7-ballot-cycle
+!pragma layout smetana
 !theme plain
 title HL7 Ballot and Publication Lifecycle for a FHIR IG
 

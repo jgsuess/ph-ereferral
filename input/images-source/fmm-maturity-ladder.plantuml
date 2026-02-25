@@ -1,4 +1,5 @@
 @startuml fmm-maturity-ladder
+!pragma layout smetana
 !theme plain
 title FHIR Maturity Model — Progression for a FHIR IG
 

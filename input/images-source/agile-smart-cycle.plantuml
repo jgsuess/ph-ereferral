@@ -1,4 +1,5 @@
 @startuml agile-smart-cycle
+!pragma layout smetana
 !theme plain
 title Agile Iteration through WHO SMART Guideline Layers
 

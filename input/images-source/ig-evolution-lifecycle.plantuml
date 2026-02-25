@@ -1,4 +1,5 @@
 @startuml ig-evolution-lifecycle
+!pragma layout smetana
 !theme plain
 title IG Evolution — Agile Draft Phase to HL7 Formal Process
 

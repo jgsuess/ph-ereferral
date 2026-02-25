@@ -1,4 +1,5 @@
 @startuml scenario-activity
+!pragma layout smetana
 !theme plain
 title User Scenario 3.1 — First Antenatal Care Contact
 
