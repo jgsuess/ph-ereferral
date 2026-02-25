@@ -48,6 +48,9 @@ jobs:
       - name: Install Jekyll
         run: gem install jekyll
 
+      - name: Install Graphviz (for PlantUML dot renderer)
+        run: sudo apt-get install -y graphviz
+
       - name: Run IG Publisher (includes SUSHI)
         run: java -jar input-cache/publisher.jar ig.ini
 
