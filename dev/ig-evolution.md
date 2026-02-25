@@ -93,3 +93,5 @@ The HL7 framework provides a proven path from a well-evaluated draft to a publis
 
 **For the full detail of each HL7 stage, the FHIR Maturity Model, and the evidence required at each transition, see the [HL7 Standards Lifecycle](hl7-lifecycle.md) page.**
 
+**For the CI-based automated testing approach that supports Phase 2 adoption, see [Interoperability Matrix Testing](interop-testing.md).**
+

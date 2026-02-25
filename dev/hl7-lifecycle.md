@@ -222,3 +222,10 @@ Many national IGs — including AU Base, AU Core, and US Core — **intentionall
 
 Most successful IGs spend years at STU by design. The PH eReferral IG, currently in agile draft, has a long and productive journey ahead before Normative is the right conversation.
 
+-------
+
+#### Related Pages
+
+* [IG Evolution](ig-evolution.md) — the two-phase development model and when to engage with the HL7 formal process.
+* [Interoperability Matrix Testing](interop-testing.md) — CI-based automated testing between registered implementations; the quality assurance activity that feeds the formal QM gates described on this page.
+

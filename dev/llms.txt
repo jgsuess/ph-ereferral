@@ -12,6 +12,7 @@
 * [Hl 7 Lifecycle](hl7-lifecycle.md)
 * [Resource Architecture](resource-architecture.md)
 * [Ai Reasoning](ai-reasoning.md)
+* [Interop Testing](interop-testing.md)
 
 ## Resources
 
