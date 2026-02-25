@@ -3,13 +3,15 @@
 ## Pages
 
 * [Home](index.md)
-* [Ai Reasoning](ai-reasoning.md)
-* [Version Management](version-management.md)
-* [Artifacts Summary](artifacts.md)
-* [Resource Architecture](resource-architecture.md)
-* [Technical Pipeline](technical-pipeline.md)
 * [Approach](approach.md)
 * [Dd Mapping](dd-mapping.md)
+* [Technical Pipeline](technical-pipeline.md)
+* [Version Management](version-management.md)
+* [Artifacts Summary](artifacts.md)
+* [Ig Evolution](ig-evolution.md)
+* [Hl 7 Lifecycle](hl7-lifecycle.md)
+* [Resource Architecture](resource-architecture.md)
+* [Ai Reasoning](ai-reasoning.md)
 
 ## Resources
 

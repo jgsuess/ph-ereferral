@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Ig Evolution - PH eReferral Implementation Guide v0.3.0-draft</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0-draft - draft
+
+
+
+  Philippines
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Approach
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="approach.html">Overview</a>
+      </li>
+      <li>
+        <a href="technical-pipeline.html">Technical Pipeline</a>
+      </li>
+      <li>
+        <a href="resource-architecture.html">Resource Architecture</a>
+      </li>
+      <li>
+        <a href="ai-reasoning.html">AI-Assisted Reasoning</a>
+      </li>
+      <li>
+        <a href="version-management.html">Version Management</a>
+      </li>
+      <li>
+        <a href="ig-evolution.html">IG Evolution</a>
+      </li>
+      <li>
+        <a href="hl7-lifecycle.html">HL7 Standards Lifecycle</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="dd-mapping.html">DD Mapping</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Ig Evolution</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.3.0-draft) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://jgsuess.github.io/ph-ereferral/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Ig Evolution</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="ig-evolution-from-agile-draft-to-hl7-standard">IG Evolution: From Agile Draft to HL7 Standard</h3>
+
+<p>An Implementation Guide does not emerge complete. It evolves — first rapidly and informally, then more deliberately and with formal governance as it matures. Understanding that evolution helps teams invest the right energy at each stage: moving quickly when the goal is to produce something evaluable, then slowing down to build evidence when the goal is to produce something durable.</p>
+
+<hr />
+
+<h4 id="two-phases-of-ig-development">Two Phases of IG Development</h4>
+
+<p>IG development naturally falls into two broad phases, each with a distinct purpose and operating rhythm.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="ACTIVITY" height="1191px" preserveAspectRatio="none" style="width:1080px;height:1191px;background:#FFFFFF;" version="1.1" viewBox="0 0 1080 1191" width="1080px" zoomAndPan="magnify"><title>IG Evolution &#8212; Agile Draft Phase to HL7 Formal Process</title><defs /><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="691.0771" x="193.1675" y="35.4209">IG Evolution &#8212; Agile Draft Phase to HL7 Formal Process</text><rect fill="#FFFFFF" height="20.9531" style="stroke:#FFFFFF;stroke-width:1;" width="1057.4121" x="10" y="54.3545" /><ellipse cx="150.7754" cy="90.3076" fill="#FFFFFF" rx="10" ry="10" style="stroke:#000000;stroke-width:1;" /><path d="M247.2559,117.1592 L247.2559,133.292 L227.2559,137.292 L247.2559,141.292 L247.2559,157.4248 A0,0 0 0 0 247.2559,157.4248 L447.7739,157.4248 A0,0 0 0 0 447.7739,157.4248 L447.7739,127.1592 L437.7739,117.1592 L247.2559,117.1592 A0,0 0 0 0 247.2559,117.1592" fill="#FFFFFF" style="stroke:#000000;stroke-width:1;" /><path d="M437.7739,117.1592 L437.7739,127.1592 L447.7739,127.1592 L437.7739,117.1592" fill="#FFFFFF" style="stroke:#000000;stroke-width:1;" /><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="179.5181" x="253.2559" y="134.2261">FMM 0 &#8212; breaking changes</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="159.415" x="253.2559" y="149.3589">expected and welcomed</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="152.9609" x="74.2949" y="120.3076" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="132.9609" x="84.2949" y="141.4463">CI Build &#8212; Initial Draft</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="269.5508" x="16" y="221.4248" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="249.5508" x="26" y="242.5635">Agile iteration across SMART layers L1-L5</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="251.5977" x="24.9766" y="275.3936" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="231.5977" x="34.9766" y="296.5322">Publish to /dev/ for stakeholder review</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="219.3652" x="41.0928" y="329.3623" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="199.3652" x="51.0928" y="350.501">Collect and incorporate feedback</text><polygon fill="#FFFFFF" points="150.7754,177.4248,162.7754,189.4248,150.7754,201.4248,138.7754,189.4248,150.7754,177.4248" style="stroke:#000000;stroke-width:1;" /><polygon fill="#FFFFFF" points="101.0901,383.3311,200.4607,383.3311,212.4607,395.3311,200.4607,407.3311,101.0901,407.3311,89.0901,395.3311,101.0901,383.3311" style="stroke:#000000;stroke-width:1;" /><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="19.0083" x="154.7754" y="417.5415">yes</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="99.3706" x="101.0901" y="399.1392">Evaluation-ready?</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="13.7017" x="212.4607" y="392.7368">no</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="122.7852" x="89.3828" y="439.0415" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="102.7852" x="99.3828" y="460.1802">Tag draft release</text><line style="stroke:#000000;stroke-width:1;" x1="10" x2="10" y1="54.3545" y2="1184.252" /><rect fill="#FFF9C4" height="89.8438" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="176.1934" x="509.0786" y="493.0103" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="106.5703" x="519.0786" y="514.1489">Assess readiness:</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="125.0977" x="519.0786" y="528.1177">&#8226; Semantic stability?</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="148.3594" x="519.0786" y="542.0864">&#8226; Pilot implementations?</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="156.1934" x="519.0786" y="556.0552">&#8226; Stakeholder consensus?</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="100.3711" x="519.0786" y="570.0239">&#8226; Clean CI build?</text><line style="stroke:#000000;stroke-width:1;" x1="452.7739" x2="452.7739" y1="54.3545" y2="1184.252" /><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="167.832" x="807.1821" y="602.854" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="147.832" x="817.1821" y="623.9927">Engage HL7 Work Group</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="242.6738" x="769.7612" y="656.8228" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="214.7754" x="779.7612" y="677.9614">Connectathon / interoperability test</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="222.6738" x="779.7612" y="691.9302">(&#8805; 3 independent systems &#8212; FMM 2)</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="156.9746" x="812.6108" y="724.7603" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="136.9746" x="822.6108" y="745.8989">File Draft or STU Ballot</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="270.4766" x="755.8599" y="822.729" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="69.1289" x="765.8599" y="843.8677">Ballot cycle</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="250.4766" x="765.8599" y="857.8364">(collect comments &#8594; reconcile negatives)</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="178.1914" x="802.0024" y="890.6665" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="158.1914" x="812.0024" y="911.8052">STU publication (FMM 3-4)</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="286.9063" x="747.645" y="944.6353" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="266.9063" x="757.645" y="965.7739">Gather production implementation evidence</text><polygon fill="#FFFFFF" points="891.0981,778.729,903.0981,790.729,891.0981,802.729,879.0981,790.729,891.0981,778.729" style="stroke:#000000;stroke-width:1;" /><polygon fill="#FFFFFF" points="819.4451,998.604,962.7512,998.604,974.7512,1010.604,962.7512,1022.604,819.4451,1022.604,807.4451,1010.604,819.4451,998.604" style="stroke:#000000;stroke-width:1;" /><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="19.0083" x="895.0981" y="1032.8145">yes</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="143.3062" x="819.4451" y="1014.4121">FMM 5 evidence reached?</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="13.7017" x="974.7512" y="1008.0098">no</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="240.5234" x="770.8364" y="1054.3145" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="220.5234" x="780.8364" y="1075.4531">Normative Ballot (WG + FMG + TSC)</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1;" width="291.043" x="745.5767" y="1108.2832" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="271.043" x="755.5767" y="1129.4219">Normative Publication &#8212; specification locked</text><ellipse cx="891.0981" cy="1173.252" fill="none" rx="11" ry="11" style="stroke:#000000;stroke-width:1;" /><ellipse cx="891.0981" cy="1173.252" fill="#FFFFFF" rx="6" ry="6" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="739.5767" x2="739.5767" y1="54.3545" y2="1184.252" /><line style="stroke:#000000;stroke-width:1;" x1="1065.5513" x2="1065.5513" y1="54.3545" y2="1184.252" /><line style="stroke:#000000;stroke-width:1;" x1="150.7754" x2="150.7754" y1="100.3076" y2="120.3076" /><polygon fill="#000000" points="146.7754,110.3076,150.7754,120.3076,154.7754,110.3076,150.7754,114.3076" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="150.7754" x2="150.7754" y1="255.3936" y2="275.3936" /><polygon fill="#000000" points="146.7754,265.3936,150.7754,275.3936,154.7754,265.3936,150.7754,269.3936" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="150.7754" x2="150.7754" y1="309.3623" y2="329.3623" /><polygon fill="#000000" points="146.7754,319.3623,150.7754,329.3623,154.7754,319.3623,150.7754,323.3623" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="150.7754" x2="150.7754" y1="201.4248" y2="221.4248" /><polygon fill="#000000" points="146.7754,211.4248,150.7754,221.4248,154.7754,211.4248,150.7754,215.4248" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="212.4607" x2="297.5508" y1="395.3311" y2="395.3311" /><polygon fill="#000000" points="293.5508,302.3779,297.5508,292.3779,301.5508,302.3779,297.5508,298.3779" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="297.5508" x2="297.5508" y1="189.4248" y2="395.3311" /><line style="stroke:#000000;stroke-width:1;" x1="297.5508" x2="162.7754" y1="189.4248" y2="189.4248" /><polygon fill="#000000" points="172.7754,185.4248,162.7754,189.4248,172.7754,193.4248,168.7754,189.4248" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="150.7754" x2="150.7754" y1="363.3311" y2="383.3311" /><polygon fill="#000000" points="146.7754,373.3311,150.7754,383.3311,154.7754,373.3311,150.7754,377.3311" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="150.7754" x2="150.7754" y1="154.2764" y2="177.4248" /><polygon fill="#000000" points="146.7754,167.4248,150.7754,177.4248,154.7754,167.4248,150.7754,171.4248" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="150.7754" x2="150.7754" y1="407.3311" y2="439.0415" /><polygon fill="#000000" points="146.7754,429.0415,150.7754,439.0415,154.7754,429.0415,150.7754,433.0415" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="891.0981" x2="891.0981" y1="636.8228" y2="656.8228" /><polygon fill="#000000" points="887.0981,646.8228,891.0981,656.8228,895.0981,646.8228,891.0981,650.8228" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="891.0981" x2="891.0981" y1="704.7603" y2="724.7603" /><polygon fill="#000000" points="887.0981,714.7603,891.0981,724.7603,895.0981,714.7603,891.0981,718.7603" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="891.0981" x2="891.0981" y1="870.6665" y2="890.6665" /><polygon fill="#000000" points="887.0981,880.6665,891.0981,890.6665,895.0981,880.6665,891.0981,884.6665" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="891.0981" x2="891.0981" y1="924.6353" y2="944.6353" /><polygon fill="#000000" points="887.0981,934.6353,891.0981,944.6353,895.0981,934.6353,891.0981,938.6353" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="891.0981" x2="891.0981" y1="802.729" y2="822.729" /><polygon fill="#000000" points="887.0981,812.729,891.0981,822.729,895.0981,812.729,891.0981,816.729" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="974.7512" x2="1046.5513" y1="1010.604" y2="1010.604" /><polygon fill="#000000" points="1042.5513,910.6665,1046.5513,900.6665,1050.5513,910.6665,1046.5513,906.6665" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="1046.5513" x2="1046.5513" y1="790.729" y2="1010.604" /><line style="stroke:#000000;stroke-width:1;" x1="1046.5513" x2="903.0981" y1="790.729" y2="790.729" /><polygon fill="#000000" points="913.0981,786.729,903.0981,790.729,913.0981,794.729,909.0981,790.729" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="891.0981" x2="891.0981" y1="978.604" y2="998.604" /><polygon fill="#000000" points="887.0981,988.604,891.0981,998.604,895.0981,988.604,891.0981,992.604" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="891.0981" x2="891.0981" y1="758.729" y2="778.729" /><polygon fill="#000000" points="887.0981,768.729,891.0981,778.729,895.0981,768.729,891.0981,772.729" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="891.0981" x2="891.0981" y1="1022.604" y2="1054.3145" /><polygon fill="#000000" points="887.0981,1044.3145,891.0981,1054.3145,895.0981,1044.3145,891.0981,1048.3145" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="891.0981" x2="891.0981" y1="1088.2832" y2="1108.2832" /><polygon fill="#000000" points="887.0981,1098.2832,891.0981,1108.2832,895.0981,1098.2832,891.0981,1102.2832" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="891.0981" x2="891.0981" y1="1142.252" y2="1162.252" /><polygon fill="#000000" points="887.0981,1152.252,891.0981,1162.252,895.0981,1152.252,891.0981,1156.252" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="150.7754" x2="150.7754" y1="473.0103" y2="478.0103" /><line style="stroke:#000000;stroke-width:1;" x1="150.7754" x2="597.1753" y1="478.0103" y2="478.0103" /><line style="stroke:#000000;stroke-width:1;" x1="597.1753" x2="597.1753" y1="478.0103" y2="493.0103" /><polygon fill="#000000" points="593.1753,483.0103,597.1753,493.0103,601.1753,483.0103,597.1753,487.0103" style="stroke:#000000;stroke-width:1;" /><line style="stroke:#000000;stroke-width:1;" x1="597.1753" x2="597.1753" y1="582.854" y2="587.854" /><line style="stroke:#000000;stroke-width:1;" x1="597.1753" x2="891.0981" y1="587.854" y2="587.854" /><line style="stroke:#000000;stroke-width:1;" x1="891.0981" x2="891.0981" y1="587.854" y2="602.854" /><polygon fill="#000000" points="887.0981,592.854,891.0981,602.854,895.0981,592.854,891.0981,596.854" style="stroke:#000000;stroke-width:1;" /><text fill="#000000" font-family="Verdana" font-size="18" lengthAdjust="spacing" textLength="213.1436" x="124.8152" y="71.0625">"Phase 1 &#8212; Agile Draft"</text><text fill="#000000" font-family="Verdana" font-size="18" lengthAdjust="spacing" textLength="276.8027" x="457.7739" y="71.0625">"Transition &#8212; Readiness Gate"</text><text fill="#000000" font-family="Verdana" font-size="18" lengthAdjust="spacing" textLength="294.7061" x="755.2109" y="71.0625">"Phase 2 &#8212; HL7 Formal Process"</text></g></svg>
+
+<hr />
+
+<h4 id="phase-1--agile-draft">Phase 1 — Agile Draft</h4>
+
+<p>The early life of an IG is best served by a <strong>rapid, iterative process</strong>. The goal is not a polished specification but something concrete enough to evaluate: a working, published guide with realistic examples that stakeholders can read, query, and critique.</p>
+
+<p>Short cycles through the WHO SMART Guideline layers (L1–L5) — as described on the <a href="approach.html">Approach</a> page — allow the team to surface ambiguities early, incorporate domain-expert feedback, and converge on a model that reflects real-world practice. At this stage:</p>
+
+<ul>
+  <li>The IG is published as a <strong>CI build</strong> (<code class="language-plaintext highlighter-rouge">/dev/</code>) after every push to <code class="language-plaintext highlighter-rouge">main</code>.</li>
+  <li><strong>Breaking changes are expected and welcomed</strong> — each iteration tightens the artefacts rather than locking them prematurely.</li>
+  <li>Stakeholder reviews are based on <strong>concrete examples</strong>, not abstract specifications, making it easier to spot misunderstandings and missing elements.</li>
+  <li>Feedback is captured as scoped items for the following iteration, keeping the loop short and focused.</li>
+</ul>
+
+<p>This is where the PH eReferral IG currently stands.</p>
+
+<hr />
+
+<h4 id="when-is-a-draft-ready-to-graduate">When Is a Draft Ready to Graduate?</h4>
+
+<p>The transition from Phase 1 to Phase 2 is not triggered by a calendar date or a version number. It is triggered by <strong>evidence of stability and stakeholder alignment</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Signal</th>
+      <th>What to look for</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Semantic stability</strong></td>
+      <td>Iterations produce clarifications and refinements, not fundamental redesigns</td>
+    </tr>
+    <tr>
+      <td><strong>Stakeholder consensus</strong></td>
+      <td>Domain experts, clinicians, and implementers agree the model reflects real-world practice</td>
+    </tr>
+    <tr>
+      <td><strong>Pilot implementation</strong></td>
+      <td>At least one system has consumed or produced examples, even in a test environment</td>
+    </tr>
+    <tr>
+      <td><strong>Tooling maturity</strong></td>
+      <td>The IG builds cleanly, examples validate, and the CI pipeline is reliable</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>When these signals converge, the project is ready to engage with a broader process — one designed to test the IG against a wider community and produce a specification stable enough to build on.</p>
+
+<hr />
+
+<h4 id="phase-2--hl7-formal-process">Phase 2 — HL7 Formal Process</h4>
+
+<p>Once the draft IG is sufficiently stable, the operating rhythm changes. Iterations slow down; governance becomes more structured; and the reviewer community expands well beyond the core project team.</p>
+
+<p>At this stage, <strong>HL7 International offers a well-established framework</strong> for advancing the IG through successive maturity levels. The framework includes:</p>
+
+<ul>
+  <li>A <strong>naming convention</strong> for each stage of the lifecycle** — from Draft through Standard for Trial Use (STU) to Normative — so that every published version carries an unambiguous signal about its stability and change tolerance.</li>
+  <li>A <strong>FHIR Maturity Model (FMM)</strong> that defines objective, evidence-based criteria for each stage transition. Moving up the FMM requires documented interoperability testing, demonstrated implementations, and formal review results — not just author judgement.</li>
+  <li><strong>Ballot and governance processes</strong> that route the IG through HL7 Work Groups, the FHIR Management Group (FMG), and, for Normative publications, the Technical Steering Committee (TSC).</li>
+</ul>
+
+<p>The HL7 process is not a replacement for agile thinking; it adds <strong>governance checkpoints</strong> that ensure each stage transition is evidence-based and community-validated.</p>
+
+<hr />
+
+<h4 id="what-changes-in-phase-2">What Changes in Phase 2?</h4>
+
+<p>Moving into the HL7 formal process introduces practices that are not needed — and would be counterproductive — during the rapid draft phase:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Practice</th>
+      <th>Phase 1 — Agile Draft</th>
+      <th>Phase 2 — HL7 Formal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Iteration speed</strong></td>
+      <td>Rapid (days to weeks)</td>
+      <td>Slower (months per ballot cycle)</td>
+    </tr>
+    <tr>
+      <td><strong>Breaking changes</strong></td>
+      <td>Expected and welcomed</td>
+      <td>Progressively restricted</td>
+    </tr>
+    <tr>
+      <td><strong>Reviewers</strong></td>
+      <td>Core team + domain experts</td>
+      <td>HL7 work groups, independent implementers</td>
+    </tr>
+    <tr>
+      <td><strong>Interoperability testing</strong></td>
+      <td>Informal demos and pilots</td>
+      <td>Formal Connectathon evidence (≥ 3 systems)</td>
+    </tr>
+    <tr>
+      <td><strong>Publication</strong></td>
+      <td>CI build + tagged draft releases</td>
+      <td>Formal HL7 publications with ballot status</td>
+    </tr>
+    <tr>
+      <td><strong>Governance</strong></td>
+      <td>Project team decision</td>
+      <td>HL7 WG + FMG + TSC approval chain</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The transition is gradual rather than abrupt. A team may begin engaging with HL7 Work Groups and conducting interoperability tests while still iterating on content — the formal ballot submission is the point of no return, not the first conversation.</p>
+
+<hr />
+
+<h4 id="the-ph-ereferral-ig-on-the-evolution-path">The PH eReferral IG on the Evolution Path</h4>
+
+<p>This IG is currently in <strong>Phase 1</strong>. The agile approach described on the <a href="approach.html">Approach</a> page is the right tool for this stage — it produces working, evaluated content quickly and keeps the cost of change low.</p>
+
+<p>When the IG reaches evaluation readiness, the natural next steps are:</p>
+
+<ol>
+  <li>Engage with the relevant HL7 Work Group (e.g. through HL7 Philippines or an affiliate).</li>
+  <li>Conduct a Connectathon or equivalent interoperability test with ≥ 3 independent systems.</li>
+  <li>File a Draft Ballot or STU Ballot, depending on the FMM level reached.</li>
+  <li>Progress through STU releases based on accumulated implementation evidence.</li>
+</ol>
+
+<p>The HL7 framework provides a proven path from a well-evaluated draft to a published standard. The agile phase builds the foundation that makes that path navigable.</p>
+
+<p><em>For the full detail of each HL7 stage, the FHIR Maturity Model, and the evidence required at each transition, see the <a href="hl7-lifecycle.html">HL7 Standards Lifecycle</a> page.</em></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">UP Manila SILab</a>.  Package example.fhir.ph.ereferral#0.3.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 25, 2026 23:10+0000">2026-02-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

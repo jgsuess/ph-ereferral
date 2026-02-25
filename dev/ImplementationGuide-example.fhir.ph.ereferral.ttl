@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHeReferralImplementationGuide"] ; # 
   fhir:title [ fhir:v "PH eReferral Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-24T11:20:17+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-25T23:10:08+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila SILab"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila SILab" ] ;
@@ -1900,6 +1900,44 @@
            fhir:l fhir:dd-mapping.html
          ] ;
          fhir:title [ fhir:v "Dd Mapping" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
+             fhir:v "hl7-lifecycle.html"^^xsd:anyURI ;
+             fhir:l fhir:hl7-lifecycle.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "hl7-lifecycle.html"^^xsd:anyURI ;
+           fhir:l fhir:hl7-lifecycle.html
+         ] ;
+         fhir:title [ fhir:v "Hl 7 Lifecycle" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
+             fhir:v "ig-evolution.html"^^xsd:anyURI ;
+             fhir:l fhir:ig-evolution.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "ig-evolution.html"^^xsd:anyURI ;
+           fhir:l fhir:ig-evolution.html
+         ] ;
+         fhir:title [ fhir:v "Ig Evolution" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

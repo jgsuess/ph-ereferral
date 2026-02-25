@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Hl 7 Lifecycle - PH eReferral Implementation Guide v0.3.0-draft</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0-draft - draft
+
+
+
+  Philippines
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Approach
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="approach.html">Overview</a>
+      </li>
+      <li>
+        <a href="technical-pipeline.html">Technical Pipeline</a>
+      </li>
+      <li>
+        <a href="resource-architecture.html">Resource Architecture</a>
+      </li>
+      <li>
+        <a href="ai-reasoning.html">AI-Assisted Reasoning</a>
+      </li>
+      <li>
+        <a href="version-management.html">Version Management</a>
+      </li>
+      <li>
+        <a href="ig-evolution.html">IG Evolution</a>
+      </li>
+      <li>
+        <a href="hl7-lifecycle.html">HL7 Standards Lifecycle</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="dd-mapping.html">DD Mapping</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Hl 7 Lifecycle</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.3.0-draft) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://jgsuess.github.io/ph-ereferral/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Hl 7 Lifecycle</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="hl7-standards-lifecycle">HL7 Standards Lifecycle</h3>
+
+<p>Once an Implementation Guide has moved past the rapid agile draft phase, HL7 International provides a well-established framework for developing it further. This framework defines the stages an IG passes through as it gains maturity, the evidence required at each stage transition, and the governance processes that validate progress. Understanding it is essential for planning a realistic path from an initial draft to a published standard.</p>
+
+<p>For context on where this fits in the overall IG evolution, see <a href="ig-evolution.html">IG Evolution</a>.</p>
+
+<hr />
+
+<h4 id="two-dimensions-of-ig-maturity">Two Dimensions of IG Maturity</h4>
+
+<p>IG development progress is tracked along two related but distinct axes:</p>
+
+<ol>
+  <li><strong>Ballot / publication status</strong> — the formal HL7 designation assigned to a published version: Draft, STU (Standard for Trial Use), or Normative.</li>
+  <li><strong>FHIR Maturity Model (FMM) level</strong> — a 0–5 scale that defines <em>objective, evidence-based criteria</em> a specification must meet before advancing to the next stage.</li>
+</ol>
+
+<p>An IG progresses by accumulating FMM evidence, and at certain FMM thresholds it becomes eligible for the next ballot status. The two axes are related but not identical: an IG at a given FMM level may or may not yet have gone through the corresponding ballot process.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="STATE" height="258px" preserveAspectRatio="none" style="width:644px;height:258px;background:#FFFFFF;" version="1.1" viewBox="0 0 644 258" width="644px" zoomAndPan="magnify"><title>HL7 Ballot and Publication Lifecycle for a FHIR IG</title><defs /><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="611.0586" x="15" y="35.4209">HL7 Ballot and Publication Lifecycle for a FHIR IG</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="264.9541" x="175.2358" y="70.6094">Dot Executable: /opt/local/bin/dot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="236.2637" x="175.2358" y="86.9063">Dot executable does not exist</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="291.5869" x="175.2358" y="103.2031">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="175.2358" y="119.5">&#160;</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="81.4229" x="175.2358" y="135.7969">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57.5449" x="175.2358" y="152.0938">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="72.8369" x="175.2358" y="168.3906">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="175.2358" y="184.6875">&#160;</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="16.5225" x="180.1099" y="200.9844">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="175.2358" y="217.2813">&#160;</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="234.5068" x="175.2358" y="233.5781">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="175.2358" y="249.875">&#160;</text></g></svg>
+
+<hr />
+
+<h4 id="stage-1--early-development-pre-ballot">Stage 1 — Early Development (pre-ballot)</h4>
+
+<p><strong>Ballot status:</strong> CI build only (no formal HL7 status)
+<strong>FMM level:</strong> 0–1</p>
+
+<p>At this stage the IG is under active development, published only as a continuous-integration (CI) build. Breaking changes are expected at any time and no formal HL7 approval has been sought.</p>
+
+<p><em>FMM criteria:</em></p>
+<ul>
+  <li><strong>FMM 0</strong>: The artifact exists and builds cleanly.</li>
+  <li><strong>FMM 1</strong>: The responsible Work Group considers the artifact substantially complete; no unresolved blocking issues remain.</li>
+</ul>
+
+<p><em>Who uses this?</em> Project teams, early adopters, pilots, and teams preparing for Connectathon participation.</p>
+
+<hr />
+
+<h4 id="stage-2--ballot">Stage 2 — Ballot</h4>
+
+<p><strong>Ballot status:</strong> Draft ballot or STU ballot
+<strong>FMM level:</strong> 2 required for STU ballot</p>
+
+<p>The first formal HL7 community review. Balloting:</p>
+
+<ul>
+  <li>Collects structured comments from HL7 members.</li>
+  <li>Requires reconciliation of all negative votes before publication.</li>
+  <li>Is mandatory before any official HL7 publication.</li>
+</ul>
+
+<p>A ballot can be a <strong>Draft ballot</strong> (earlier, higher change tolerance) or an <strong>STU ballot</strong> (more mature, intended for real-world trial use). To file an STU ballot the IG must have reached at least <strong>FMM 2</strong>.</p>
+
+<p><em>FMM 2 criteria:</em></p>
+<ul>
+  <li>Successful interoperability demonstrated among at least <strong>three independently developed systems</strong>.</li>
+  <li>Testing conducted using realistic scenarios — typically at a <strong>FHIR Connectathon</strong> or equivalent event.</li>
+  <li>Results reported to and accepted by the <strong>FHIR Management Group (FMG)</strong>.</li>
+</ul>
+
+<blockquote>
+  <p><em>"Testing must occur one cycle before ballot."</em> — HL7 IG process guidance.</p>
+</blockquote>
+
+<hr />
+
+<h4 id="connectathons-in-the-stu-pathway">Connectathons in the STU Pathway</h4>
+
+<p>Connectathons are not optional polish — for FHIR artifacts, interoperability testing is a <strong>formal gating criterion</strong> for FMM advancement, not a post-publication nicety.</p>
+
+<p>A typical STU path looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Draft IG
+  ↓
+Connectathon testing (FMM 2)
+  ↓
+STU Ballot
+  ↓
+STU Publication
+</code></pre></div></div>
+
+<p>Connectathon evidence that HL7 accepts:</p>
+
+<ul>
+  <li><strong>≥ 3 independent implementations</strong> exercising the declared scope (≈80% coverage is the guideline).</li>
+  <li>Semi-realistic data and workflows — not just synthetic test cases.</li>
+  <li>Results <strong>documented and accepted by FMG</strong>.</li>
+</ul>
+
+<p>For IGs that go through multiple STU cycles, early Connectathons prove basic feasibility; later ones demonstrate stability, convergence, and cross-vendor consistency. This accumulating evidence directly feeds the case for Normative readiness.</p>
+
+<hr />
+
+<h4 id="stage-3--stu-standard-for-trial-use">Stage 3 — STU (Standard for Trial Use)</h4>
+
+<p><strong>Ballot status:</strong> STU
+<strong>FMM level:</strong> 3–4</p>
+
+<p>STU is the most common "production-ready" state for a FHIR IG. It signals:</p>
+
+<ul>
+  <li><strong>Official HL7 standard</strong> — the IG has passed ballot and is formally published.</li>
+  <li><strong>Ready for production trial use</strong> — real-world implementations are explicitly invited.</li>
+  <li><strong>Breaking changes still allowed</strong> — later STU releases may introduce incompatible changes.</li>
+  <li><strong>Real-world feedback expected</strong> — the trial use period is a deliberate mechanism for collecting implementation evidence.</li>
+</ul>
+
+<p>An IG commonly goes through multiple STU releases (STU 1, STU 2, STU 3…), each through a new ballot cycle. This is by design: each cycle allows the IG to absorb implementation feedback before the semantic model is locked.</p>
+
+<p><em>FMM criteria:</em></p>
+<ul>
+  <li><strong>FMM 3</strong>: Passed STU ballot; evidence of broad review with non-trivial changes resulting from external feedback.</li>
+  <li><strong>FMM 4</strong>: Evidence of broad review and multiple independent implementations; breaking changes slowing significantly.</li>
+</ul>
+
+<blockquote>
+  <p><strong>Important rule:</strong> An IG cannot be more mature than the least mature core artifact it depends on.</p>
+</blockquote>
+
+<hr />
+
+<h4 id="stage-4--normative-ballot">Stage 4 — Normative Ballot</h4>
+
+<p><strong>Ballot status:</strong> Normative ballot in progress
+<strong>FMM level:</strong> 5 required</p>
+
+<p>A Normative ballot signals intent to <strong>lock down the specification</strong>. It requires:</p>
+
+<ul>
+  <li>Multiple completed STU cycles with demonstrated real-world adoption.</li>
+  <li>Strong backward-compatibility confidence — the semantic model is stable.</li>
+  <li>Governance willingness to commit to long-term stewardship of a locked specification.</li>
+</ul>
+
+<p>The ballot process at this stage is more stringent: all negative votes must be resolved, and final approval passes through the sponsoring Work Group, the FMG, and the Technical Steering Committee (TSC).</p>
+
+<hr />
+
+<h4 id="stage-5--normative-publication">Stage 5 — Normative Publication</h4>
+
+<p><strong>Ballot status:</strong> Normative
+<strong>FMM level:</strong> 5</p>
+
+<p>The highest stability level in the HL7/FHIR ecosystem. A Normative IG:</p>
+
+<ul>
+  <li>Has changes <strong>tightly constrained</strong> by HL7 inter-version compatibility rules.</li>
+  <li>Establishes <strong>backward compatibility</strong> as the default expectation.</li>
+  <li>Is approved through an <strong>ANSI-accredited process</strong>.</li>
+  <li>Is safe to build long-lived, regulated, or national infrastructure on.</li>
+</ul>
+
+<p>Normative IGs are rare and slow to emerge — intentionally so. The bar is high because the governance commitment to maintain backward compatibility is real and long-lived.</p>
+
+<hr />
+
+<h4 id="the-fmm-maturity-ladder">The FMM Maturity Ladder</h4>
+
+<p>The table below maps each FMM level to its corresponding ballot status and the evidence required to reach it.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="STATE" height="258px" preserveAspectRatio="none" style="width:639px;height:258px;background:#FFFFFF;" version="1.1" viewBox="0 0 639 258" width="639px" zoomAndPan="magnify"><title>FHIR Maturity Model &#8212; Progression for a FHIR IG</title><defs /><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="606.5254" x="15" y="35.4209">FHIR Maturity Model &#8212; Progression for a FHIR IG</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="264.9541" x="172.9692" y="70.6094">Dot Executable: /opt/local/bin/dot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="236.2637" x="172.9692" y="86.9063">Dot executable does not exist</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="291.5869" x="172.9692" y="103.2031">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="172.9692" y="119.5">&#160;</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="81.4229" x="172.9692" y="135.7969">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57.5449" x="172.9692" y="152.0938">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="72.8369" x="172.9692" y="168.3906">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="172.9692" y="184.6875">&#160;</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="16.5225" x="177.8433" y="200.9844">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="172.9692" y="217.2813">&#160;</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="234.5068" x="172.9692" y="233.5781">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="172.9692" y="249.875">&#160;</text></g></svg>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phase</th>
+      <th>Ballot / Publication Status</th>
+      <th>FMM Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Early development</td>
+      <td>Draft (CI build only)</td>
+      <td>FMM 0–1</td>
+    </tr>
+    <tr>
+      <td>First review</td>
+      <td>Draft ballot / STU ballot</td>
+      <td>FMM 2</td>
+    </tr>
+    <tr>
+      <td>Trial use</td>
+      <td>STU</td>
+      <td>FMM 3–4</td>
+    </tr>
+    <tr>
+      <td>Locked specification</td>
+      <td>Normative</td>
+      <td>FMM 5</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h4 id="evidence-required-to-move-from-stu-to-normative">Evidence Required to Move from STU to Normative</h4>
+
+<p>Moving to Normative is not just another ballot. It is a <strong>governance decision to lock the specification</strong> permanently. HL7 expects credible, documented evidence across four areas:</p>
+
+<p><strong>1. Production implementation</strong></p>
+
+<ul>
+  <li>Named production deployments (not pilots or test environments).</li>
+  <li>Public implementation statements, regulator references, or national programme mandates.</li>
+  <li>Downstream IGs or certification programmes that depend on this IG.</li>
+</ul>
+
+<p>This evidence is specifically required for the FMM 4 → FMM 5 transition.</p>
+
+<p><strong>2. Stability across STU cycles</strong></p>
+
+<ul>
+  <li>Multiple STU releases with evidence that breaking changes have slowed dramatically.</li>
+  <li>Issues are predominantly clarifications or edge cases — not redesigns.</li>
+  <li>Alignment with the distinction between Trial Use (which allows incompatible changes) and Normative (which severely restricts them).</li>
+</ul>
+
+<p><strong>3. Broad and diverse review</strong></p>
+
+<ul>
+  <li>Comments from multiple independent organisations.</li>
+  <li>Non-trivial changes made as a result of external feedback.</li>
+  <li>Evidence that feedback came from actual implementers, not just the authoring team.</li>
+</ul>
+
+<p>This expectation is stated explicitly at FMM 3 and above, and carries forward to Normative decisions.</p>
+
+<p><strong>4. Interoperability history</strong></p>
+
+<ul>
+  <li>Repeated Connectathon participation with stable, consistent results across vendors.</li>
+  <li>No unresolved interoperability-blocking issues.</li>
+</ul>
+
+<p>While not always phrased as "attend X Connectathons", the interoperability evidence requirement persists through FMM 4–5.</p>
+
+<p><strong>Hard prerequisite: FMM 5</strong> requires all of the following:</p>
+
+<ul>
+  <li>Published in ≥ 2 formal release cycles at FMM 1+.</li>
+  <li>Implemented in ≥ 5 independent production systems.</li>
+  <li>For international IGs: implementations in more than one country.</li>
+</ul>
+
+<p>Even with FMM 5 evidence in hand, a Normative ballot is still required, all negatives must be resolved per ANSI rules, and final approval passes through the WG, FMG, and TSC.</p>
+
+<hr />
+
+<h4 id="governance-ballot-and-approval-chain">Governance: Ballot and Approval Chain</h4>
+
+<p>Every formal HL7 publication involves a layered governance chain:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>Approving body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Draft / STU ballot submission</td>
+      <td>Sponsoring Work Group</td>
+    </tr>
+    <tr>
+      <td>Ballot reconciliation</td>
+      <td>Work Group + HL7 members</td>
+    </tr>
+    <tr>
+      <td>STU / Normative publication</td>
+      <td>FHIR Management Group (FMG)</td>
+    </tr>
+    <tr>
+      <td>Normative publication (final)</td>
+      <td>+ Technical Steering Committee (TSC)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The FMG is the body that accepts Connectathon evidence and adjudicates FMM advancement claims. The TSC provides the final governance gate for Normative publications.</p>
+
+<hr />
+
+<h4 id="a-practical-note-for-national-igs">A Practical Note for National IGs</h4>
+
+<p>Many national IGs — including AU Base, AU Core, and US Core — <strong>intentionally remain at STU for extended periods</strong> to:</p>
+
+<ul>
+  <li>Absorb ecosystem feedback and align with evolving regulation.</li>
+  <li>Avoid premature lock-in that would constrain implementers.</li>
+  <li>Build the production evidence base required for a credible Normative claim.</li>
+</ul>
+
+<p><strong>Normative is a governance commitment, not just a technical milestone.</strong> If an IG still expects semantic churn, evolving slices, or frequent cardinality changes, it is not Normative-ready — and that is entirely appropriate for a maturing standard.</p>
+
+<p>Most successful IGs spend years at STU by design. The PH eReferral IG, currently in agile draft, has a long and productive journey ahead before Normative is the right conversation.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">UP Manila SILab</a>.  Package example.fhir.ph.ereferral#0.3.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 25, 2026 23:10+0000">2026-02-25</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

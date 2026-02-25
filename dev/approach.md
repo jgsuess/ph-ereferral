@@ -98,4 +98,6 @@ The following pages provide in-depth coverage of each aspect of the project:
 * **[AI-Assisted Reasoning](ai-reasoning.md)** — how an AI coding assistant was used to accelerate resource identification, terminology selection, and pipeline automation.
 * **[Version Management & Publication](version-management.md)** — the two-lane CI/release publication model, how to cut a release, and known limitations.
 * **[DD Mapping](dd-mapping.md)** — the element-by-element mapping between the data dictionary and the FHIR example resources.
+* **[IG Evolution](ig-evolution.md)** — how the IG graduates from rapid agile drafting to the HL7 formal process, and what signals indicate readiness to transition.
+* **[HL7 Standards Lifecycle](hl7-lifecycle.md)** — the HL7 ballot and publication stages, the FHIR Maturity Model (FMM 0–5), Connectathon requirements, and the evidence needed to move from STU to Normative.
 
