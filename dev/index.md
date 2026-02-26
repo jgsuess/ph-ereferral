@@ -36,7 +36,7 @@ This is a
   "name" : "PHeReferralImplementationGuide",
   "title" : "PH eReferral Implementation Guide",
   "status" : "draft",
-  "date" : "2026-02-25T23:45:35+00:00",
+  "date" : "2026-02-25T23:59:54+00:00",
   "publisher" : "UP Manila SILab",
   "contact" : [{
     "name" : "UP Manila SILab",
@@ -1012,6 +1012,15 @@ This is a
         }],
         "nameUrl" : "technical-pipeline.html",
         "title" : "Technical Pipeline",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "testing-companion.html"
+        }],
+        "nameUrl" : "testing-companion.html",
+        "title" : "Testing Companion",
         "generation" : "markdown"
       },
       {

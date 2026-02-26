@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PHeReferralImplementationGuide"] ; # 
   fhir:title [ fhir:v "PH eReferral Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-25T23:45:35+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-25T23:59:54+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UP Manila SILab"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UP Manila SILab" ] ;
@@ -1995,6 +1995,25 @@
            fhir:l fhir:technical-pipeline.html
          ] ;
          fhir:title [ fhir:v "Technical Pipeline" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
+             fhir:v "testing-companion.html"^^xsd:anyURI ;
+             fhir:l fhir:testing-companion.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "testing-companion.html"^^xsd:anyURI ;
+           fhir:l fhir:testing-companion.html
+         ] ;
+         fhir:title [ fhir:v "Testing Companion" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

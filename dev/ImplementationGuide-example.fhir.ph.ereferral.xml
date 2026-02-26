@@ -12,7 +12,7 @@
   <name value="PHeReferralImplementationGuide"/>
   <title value="PH eReferral Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-02-25T23:45:35+00:00"/>
+  <date value="2026-02-25T23:59:54+00:00"/>
   <publisher value="UP Manila SILab"/>
   <contact>
     <name value="UP Manila SILab"/>
@@ -798,6 +798,14 @@
         </extension>
         <nameUrl value="technical-pipeline.html"/>
         <title value="Technical Pipeline"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="testing-companion.html"/>
+        </extension>
+        <nameUrl value="testing-companion.html"/>
+        <title value="Testing Companion"/>
         <generation value="markdown"/>
       </page>
       <page>
