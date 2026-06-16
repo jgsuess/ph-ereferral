@@ -17,6 +17,7 @@ Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation
 Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $v3-roleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $sht = https://icd.who.int/browse10/2019/en#
 Alias: $request-priority = http://hl7.org/fhir/request-priority
 Alias: $servicerequest-status-reason = http://hl7.org/fhir/service-request-status-reason
@@ -34,3 +35,9 @@ Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
 Alias: $server = https://fhir.doh.gov.ph/phcore/ActorDefinition/Server
 Alias: $consumer = https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer
 Alias: $creator = https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator
+
+// Local code systems used in examples
+Alias: $peref-dd = https://example.com/peref-dd
+Alias: $practitioner-role = http://terminology.hl7.org/CodeSystem/practitioner-role
+Alias: $referral-disposition = https://example.com/peref/CodeSystem/referral-disposition
+Alias: $v3-DataOperation = http://terminology.hl7.org/CodeSystem/v3-DataOperation

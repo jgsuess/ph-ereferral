@@ -8,7 +8,8 @@ Description: "Charity's peripheral oxygen saturation at 98 percent, confirming a
 * meta.tag = $peref-dd#REF-35 "REF-35"
 * status = #final
 * category = $observation-category#vital-signs "Vital Signs"
-* code = $loinc#59408-5 "Oxygen saturation in Arterial blood by Pulse oximetry"
+* code.coding[0] = $loinc#2708-6 "Oxygen saturation in Arterial blood"
+* code.coding[1] = $loinc#59408-5 "Oxygen saturation in Arterial blood by Pulse oximetry"
 * subject = Reference(urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479)
 * encounter = Reference(urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901)
 * effectiveDateTime = "2026-02-24T09:00:00+08:00"

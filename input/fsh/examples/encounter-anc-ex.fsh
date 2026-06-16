@@ -7,7 +7,7 @@ Description: "The counselling session (08:30–10:00) in which nurse Jane confir
 * meta.tag = $peref-dd#REF-43 "REF-43"
 * status = #finished
 * class = $v3-ActCode#AMB "ambulatory"
-* type = $sct#424619006 "Prenatal initial visit"
+* type = $sct#424619006 "Prenatal visit"
 * type.text = "First antenatal care contact"
 * reasonCode = $sct#77386006 "Pregnant"
 * subject = Reference(urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479)

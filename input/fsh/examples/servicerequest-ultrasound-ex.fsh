@@ -12,7 +12,7 @@ Description: "Jane refers Charity to Metro Imaging Centre for an obstetric ultra
 * priority = #routine
 * category = $sct#103693007 "Diagnostic procedure"
 * category.text = "Diagnostics"
-* code = $sct#268445003 "Ultrasound scan - Loss of pregnancy"
+* code = $sct#268445003 "Ultrasound scan - obstetric"
 * code.text = "Obstetric ultrasound to estimate gestational age"
 * subject = Reference(urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479)
 * encounter = Reference(urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901)
