@@ -379,7 +379,7 @@ Must-Support: 4 elements
   "title" : "EReferral RelatedPerson",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T22:56:55+00:00",
+  "date" : "2026-06-16T23:15:28+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",

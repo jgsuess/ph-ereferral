@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ERefCondition"] ; # 
   fhir:title [ fhir:v "EReferral Condition"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-06-16T22:56:55+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-16T23:15:28+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "SILab CoP IG Accelerator (eReferral)"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "SILab CoP IG Accelerator (eReferral)" ] ;
