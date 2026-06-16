@@ -118,7 +118,7 @@ jobs:
               fs.writeFileSync(p, JSON.stringify(pkg, null, 2));
             "
             tar -czf repacked.tgz package/
-            npm publish repacked.tgz --access restricted
+            npm publish repacked.tgz --access public
             cd -
             rm -rf "$work"
           }
