@@ -1,0 +1,149 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "ExampleERefEncounter",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter ExampleERefEncounter</b></p><a name=\"ExampleERefEncounter\"> </a><a name=\"hcExampleERefEncounter\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-encounter.html\">ERefEncounter</a></p></div><p><b>identifier</b>: <code>https://pgh.gov.ph/fhir/encounter-id</code>/ENC-2025-001234</p><p><b>status</b>: Finished</p><blockquote><p><b>statusHistory</b></p><p><b>status</b>: Planned</p><p><b>period</b>: 2025-03-15 09:30:00+0800 --&gt; 2025-03-16 07:59:00+0800</p></blockquote><blockquote><p><b>statusHistory</b></p><p><b>status</b>: Arrived</p><p><b>period</b>: 2025-03-16 08:00:00+0800 --&gt; 2025-03-16 08:15:00+0800</p></blockquote><blockquote><p><b>statusHistory</b></p><p><b>status</b>: In Progress</p><p><b>period</b>: 2025-03-16 08:15:00+0800 --&gt; 2025-03-16 10:30:00+0800</p></blockquote><blockquote><p><b>statusHistory</b></p><p><b>status</b>: Finished</p><p><b>period</b>: 2025-03-16 10:30:00+0800 --&gt; 2025-03-16 10:30:00+0800</p></blockquote><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><h3>ClassHistories</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Class</b></td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</td><td>2025-03-16 08:00:00+0800 --&gt; 2025-03-16 10:30:00+0800</td></tr></table><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 11429006}\">Consultation</span></p><p><b>priority</b>: <span title=\"Codes:{http://snomed.info/sct 25876001}\">Emergency</span></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>basedOn</b>: <a href=\"ServiceRequest-ExampleERefServiceRequest.html\">ServiceRequest Referral to cardiology service</a></p><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType CON}\">consultant</span></p><p><b>period</b>: 2025-03-16 08:15:00+0800 --&gt; 2025-03-16 10:30:00+0800</p><p><b>individual</b>: <a href=\"PractitionerRole-ExampleERefPractitionerRole.html\">PractitionerRole Medical practitioner</a></p></blockquote><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}\">attender</span></p><p><b>period</b>: 2025-03-16 08:00:00+0800 --&gt; 2025-03-16 10:30:00+0800</p><p><b>individual</b>: Mrs. Dela Cruz</p></blockquote><p><b>period</b>: 2025-03-16 08:00:00+0800 --&gt; 2025-03-16 10:30:00+0800</p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 29857009}\">Chest pain on exertion, suspected unstable angina</span></p><p><b>reasonReference</b>: <a href=\"Condition-ExampleERefConditionChestPain.html\">Condition Chest pain</a></p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Condition</b></td><td><b>Use</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Condition-ExampleERefConditionChestPain.html\">Condition Chest pain</a></td><td><span title=\"Codes:{http://snomed.info/sct 89100005}\">Final diagnosis (discharge)</span></td></tr></table><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td><td><b>Status</b></td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>Cardiology Outpatient Clinic</td><td>Completed</td><td>2025-03-16 08:00:00+0800 --&gt; 2025-03-16 10:30:00+0800</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "https://pgh.gov.ph/fhir/encounter-id",
+    "value" : "ENC-2025-001234"
+  }],
+  "status" : "finished",
+  "statusHistory" : [{
+    "status" : "planned",
+    "period" : {
+      "start" : "2025-03-15T09:30:00+08:00",
+      "end" : "2025-03-16T07:59:00+08:00"
+    }
+  },
+  {
+    "status" : "arrived",
+    "period" : {
+      "start" : "2025-03-16T08:00:00+08:00",
+      "end" : "2025-03-16T08:15:00+08:00"
+    }
+  },
+  {
+    "status" : "in-progress",
+    "period" : {
+      "start" : "2025-03-16T08:15:00+08:00",
+      "end" : "2025-03-16T10:30:00+08:00"
+    }
+  },
+  {
+    "status" : "finished",
+    "period" : {
+      "start" : "2025-03-16T10:30:00+08:00",
+      "end" : "2025-03-16T10:30:00+08:00"
+    }
+  }],
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "AMB",
+    "display" : "ambulatory"
+  },
+  "classHistory" : [{
+    "class" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "AMB",
+      "display" : "ambulatory"
+    },
+    "period" : {
+      "start" : "2025-03-16T08:00:00+08:00",
+      "end" : "2025-03-16T10:30:00+08:00"
+    }
+  }],
+  "type" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "11429006",
+      "display" : "Consultation"
+    }]
+  }],
+  "priority" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "25876001",
+      "display" : "Emergency"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleERefPatient"
+  },
+  "basedOn" : [{
+    "reference" : "ServiceRequest/ExampleERefServiceRequest"
+  }],
+  "participant" : [{
+    "type" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+        "code" : "CON",
+        "display" : "consultant"
+      }]
+    }],
+    "period" : {
+      "start" : "2025-03-16T08:15:00+08:00",
+      "end" : "2025-03-16T10:30:00+08:00"
+    },
+    "individual" : {
+      "reference" : "PractitionerRole/ExampleERefPractitionerRole"
+    }
+  },
+  {
+    "type" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+        "code" : "ATND",
+        "display" : "attender"
+      }]
+    }],
+    "period" : {
+      "start" : "2025-03-16T08:00:00+08:00",
+      "end" : "2025-03-16T10:30:00+08:00"
+    },
+    "individual" : {
+      "display" : "Mrs. Dela Cruz"
+    }
+  }],
+  "period" : {
+    "start" : "2025-03-16T08:00:00+08:00",
+    "end" : "2025-03-16T10:30:00+08:00"
+  },
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "29857009",
+      "display" : "Chest pain"
+    }],
+    "text" : "Chest pain on exertion, suspected unstable angina"
+  }],
+  "reasonReference" : [{
+    "reference" : "Condition/ExampleERefConditionChestPain"
+  }],
+  "diagnosis" : [{
+    "condition" : {
+      "reference" : "Condition/ExampleERefConditionChestPain"
+    },
+    "use" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "89100005",
+        "display" : "Final diagnosis (discharge)"
+      }]
+    }
+  }],
+  "location" : [{
+    "location" : {
+      "display" : "Cardiology Outpatient Clinic"
+    },
+    "status" : "completed",
+    "period" : {
+      "start" : "2025-03-16T08:00:00+08:00",
+      "end" : "2025-03-16T10:30:00+08:00"
+    }
+  }]
+}

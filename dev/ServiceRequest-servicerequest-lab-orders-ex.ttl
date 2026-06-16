@@ -7,32 +7,26 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://jgsuess.github.io/ph-ereferral/ServiceRequest/servicerequest-lab-orders-ex> a fhir:ServiceRequest ;
+<https://fhir.doh.gov.ph/pheref/ServiceRequest/servicerequest-lab-orders-ex> a fhir:ServiceRequest ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "servicerequest-lab-orders-ex"] ; # 
   fhir:meta [
      fhir:tag ( [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-39" ] ;
        fhir:display [ fhir:v "REF-39" ]
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest servicerequest-lab-orders-ex</b></p><a name=\"servicerequest-lab-orders-ex\"> </a><a name=\"hcservicerequest-lab-orders-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Tag: REF-39 (Details: peref-dd code REF-39)</p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 15220000}\">Diabetes screen, Hepatitis B surface antigen, HIV test</span></p><p><b>subject</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal initial visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>authoredOn</b>: 2026-02-24</p><p><b>requester</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d\">PractitionerRole Nurse</a></p><p><b>reasonReference</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-c3d4e5f6-a7b8-9012-cdef-123456789012\">Condition Pregnant</a></p><p><b>note</b>: </p><blockquote><div><p>Ordered during first ANC contact: diabetes screening, hepatitis B, HIV.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest servicerequest-lab-orders-ex</b></p><a name=\"servicerequest-lab-orders-ex\"> </a><a name=\"hcservicerequest-lab-orders-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 15220000}\">Diabetes screen, Hepatitis B surface antigen, HIV test</span></p><p><b>subject</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>authoredOn</b>: 2026-02-24</p><p><b>requester</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d\">PractitionerRole Nurse</a></p><p><b>reasonReference</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-c3d4e5f6-a7b8-9012-cdef-123456789012\">Condition Pregnant</a></p><p><b>note</b>: </p><blockquote><div><p>Ordered during first ANC contact: diabetes screening, hepatitis B, HIV.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:intent [ fhir:v "order"] ; # 
   fhir:category ( [
      fhir:coding ( [
        a sct:108252007 ;
-       fhir:system [
-         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-         fhir:l <http://snomed.info/sct>
-       ] ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "108252007" ] ;
        fhir:display [ fhir:v "Laboratory procedure" ]
      ] ) ;
@@ -42,30 +36,23 @@
   fhir:code [
      fhir:coding ( [
        a sct:15220000 ;
-       fhir:system [
-         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-         fhir:l <http://snomed.info/sct>
-       ] ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "15220000" ] ;
        fhir:display [ fhir:v "Laboratory test" ]
      ] ) ;
      fhir:text [ fhir:v "Diabetes screen, Hepatitis B surface antigen, HIV test" ]
   ] ; # 
   fhir:subject [
-     fhir:l <urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479> ;
      fhir:reference [ fhir:v "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479" ]
   ] ; # 
   fhir:encounter [
-     fhir:l <urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901> ;
      fhir:reference [ fhir:v "urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901" ]
   ] ; # 
   fhir:authoredOn [ fhir:v "2026-02-24"^^xsd:date] ; # 
   fhir:requester [
-     fhir:l <urn:uuid:5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d> ;
      fhir:reference [ fhir:v "urn:uuid:5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d" ]
   ] ; # 
   fhir:reasonReference ( [
-     fhir:l <urn:uuid:c3d4e5f6-a7b8-9012-cdef-123456789012> ;
      fhir:reference [ fhir:v "urn:uuid:c3d4e5f6-a7b8-9012-cdef-123456789012" ]
   ] ) ; # 
   fhir:note ( [

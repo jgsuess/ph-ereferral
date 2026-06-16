@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/MedicationAdministration/ExampleERefMedicationAdministrationAntibiotic> a fhir:MedicationAdministration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleERefMedicationAdministrationAntibiotic"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration"^^xsd:anyURI ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration ExampleERefMedicationAdministrationAntibiotic</b></p><a name=\"ExampleERefMedicationAdministrationAntibiotic\"> </a><a name=\"hcExampleERefMedicationAdministrationAntibiotic\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-medication-administration.html\">EReferral MedicationAdministration</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <a href=\"Medication-ExampleERefMedicationAntibiotic.html\">Medication Substance</a></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>effective</b>: 2025-03-15 08:00:00+0800 --&gt; 2025-03-15 08:30:00+0800</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></td><td><a href=\"Practitioner-ExampleERefPractitioner.html\">Practitioner Dr. Maria Cruz Santos(official)</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Administered as part of pre-referral treatment for suspected sepsis. Patient to continue oral antibiotics at receiving facility.</p>\n</div></blockquote><h3>Dosages</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Site</b></td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 49852007}\">Structure of median cubital vein</span></td><td><span title=\"Codes:{http://snomed.info/sct 47625008}\">Intravenous route</span></td><td>750 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:link <https://fhir.doh.gov.ph/pheref/Medication/ExampleERefMedicationAntibiotic> ;
+     fhir:reference [ fhir:v "Medication/ExampleERefMedicationAntibiotic" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatient> ;
+     fhir:reference [ fhir:v "Patient/ExampleERefPatient" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2025-03-15T08:00:00+08:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2025-03-15T08:30:00+08:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:function [
+       fhir:coding ( [
+         a sct:158965000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "158965000" ] ;
+         fhir:display [ fhir:v "Medical practitioner" ]
+       ] )
+     ] ;
+     fhir:actor [
+       fhir:link <https://fhir.doh.gov.ph/pheref/Practitioner/ExampleERefPractitioner> ;
+       fhir:reference [ fhir:v "Practitioner/ExampleERefPractitioner" ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Administered as part of pre-referral treatment for suspected sepsis. Patient to continue oral antibiotics at receiving facility." ]
+  ] ) ; # 
+  fhir:dosage [
+     fhir:site [
+       fhir:coding ( [
+         a sct:49852007 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "49852007" ] ;
+         fhir:display [ fhir:v "Structure of median cubital vein" ]
+       ] )
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:47625008 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "47625008" ] ;
+         fhir:display [ fhir:v "Intravenous route" ]
+       ] )
+     ] ;
+     fhir:dose [
+       fhir:value [ fhir:v "750"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "mg" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

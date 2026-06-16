@@ -11,7 +11,7 @@
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-chief-complaint-ex</b></p><a name=\"observation-chief-complaint-ex\"> </a><a name=\"hcobservation-chief-complaint-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UP-Manila-SILab/ph-core/StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p><p style=\"margin-bottom: 0px\">Tag: REF-30 (Details: peref-dd code REF-30)</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category exam}\">Exam</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 10154-3}\">Chief complaint - Reported</span></p><p><b>subject</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal initial visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24</p><p><b>value</b>: Missed menstrual cycle and nausea</p></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-chief-complaint-ex</b></p><a name=\"observation-chief-complaint-ex\"> </a><a name=\"hcobservation-chief-complaint-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code></p><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category exam}\">Exam</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 10154-3}\">Chief complaint Narrative - Reported</span></p><p><b>subject</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24</p><p><b>value</b>: Missed menstrual cycle and nausea</p></div>"
   },
   "status" : "final",
   "category" : [{
@@ -25,7 +25,7 @@
     "coding" : [{
       "system" : "http://loinc.org",
       "code" : "10154-3",
-      "display" : "Chief complaint - Reported"
+      "display" : "Chief complaint Narrative - Reported"
     }]
   },
   "subject" : {

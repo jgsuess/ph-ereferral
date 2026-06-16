@@ -1,0 +1,57 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ereferral-service-category",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ereferral-service-category</b></p><a name=\"ereferral-service-category\"> </a><a name=\"hcereferral-service-category\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/108252007\">108252007</a></td><td>Laboratory procedure</td></tr><tr><td><a href=\"http://snomed.info/id/363679005\">363679005</a></td><td>Imaging</td></tr><tr><td><a href=\"http://snomed.info/id/409063005\">409063005</a></td><td>Counselling</td></tr><tr><td><a href=\"http://snomed.info/id/409073007\">409073007</a></td><td>Education</td></tr><tr><td><a href=\"http://snomed.info/id/387713003\">387713003</a></td><td>Surgical procedure</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-service-category",
+  "version" : "0.1.0",
+  "name" : "EReferralServiceCategory",
+  "title" : "eReferral Service Category",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-16T22:56:55+00:00",
+  "publisher" : "SILab CoP IG Accelerator (eReferral)",
+  "contact" : [{
+    "name" : "SILab CoP IG Accelerator (eReferral)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-Manila-SILab"
+    }]
+  }],
+  "description" : "Categories of services that can be requested through eReferral",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "108252007",
+        "display" : "Laboratory procedure"
+      },
+      {
+        "code" : "363679005",
+        "display" : "Imaging"
+      },
+      {
+        "code" : "409063005",
+        "display" : "Counselling"
+      },
+      {
+        "code" : "409073007",
+        "display" : "Education"
+      },
+      {
+        "code" : "387713003",
+        "display" : "Surgical procedure"
+      }]
+    }]
+  }
+}

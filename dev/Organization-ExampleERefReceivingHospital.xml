@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefReceivingHospital"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization ExampleERefReceivingHospital</b></p><a name="ExampleERefReceivingHospital"> </a><a name="hcExampleERefReceivingHospital"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-organization.html">PH Core Organization</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.1</code>/HOSP-QC-001</p><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}">Healthcare Provider</span></p><p><b>name</b>: Philippine Heart Center</p><p><b>address</b>: East Avenue Quezon City Metro Manila 1100 PH </p></div>
+  </text>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.9.4.1.1"/>
+    <value value="HOSP-QC-001"/>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+      <display value="Healthcare Provider"/>
+    </coding>
+  </type>
+  <name value="Philippine Heart Center"/>
+  <address>
+    <line value="East Avenue"/>
+    <city value="Quezon City"/>
+    <state value="Metro Manila"/>
+    <postalCode value="1100"/>
+    <country value="PH"/>
+  </address>
+</Organization>

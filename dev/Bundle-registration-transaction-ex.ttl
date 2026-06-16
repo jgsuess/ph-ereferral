@@ -7,88 +7,52 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://jgsuess.github.io/ph-ereferral/Bundle/registration-transaction-ex> a fhir:Bundle ;
+<https://fhir.doh.gov.ph/pheref/Bundle/registration-transaction-ex> a fhir:Bundle ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "registration-transaction-ex"] ; # 
   fhir:type [ fhir:v "transaction"] ; # 
   fhir:timestamp [ fhir:v "2026-02-24T08:15:00+08:00"^^xsd:dateTime] ; # 
   fhir:entry ( [
-     fhir:fullUrl [
-       fhir:v "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"^^xsd:anyURI ;
-       fhir:l <urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479>
-     ] ;
+     fhir:fullUrl [ fhir:v "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"^^xsd:anyURI ] ;
      fhir:resource ( <urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479> ) ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
-       fhir:url [
-         fhir:v "Patient"^^xsd:anyURI ;
-         fhir:l fhir:Patient
-       ]
+       fhir:url [ fhir:v "Patient"^^xsd:anyURI ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "urn:uuid:6ba7b810-9dad-11d1-80b4-00c04fd430c8"^^xsd:anyURI ;
-       fhir:l <urn:uuid:6ba7b810-9dad-11d1-80b4-00c04fd430c8>
-     ] ;
+     fhir:fullUrl [ fhir:v "urn:uuid:6ba7b810-9dad-11d1-80b4-00c04fd430c8"^^xsd:anyURI ] ;
      fhir:resource ( <urn:uuid:6ba7b810-9dad-11d1-80b4-00c04fd430c8> ) ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
-       fhir:url [
-         fhir:v "RelatedPerson"^^xsd:anyURI ;
-         fhir:l fhir:RelatedPerson
-       ]
+       fhir:url [ fhir:v "RelatedPerson"^^xsd:anyURI ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7"^^xsd:anyURI ;
-       fhir:l <urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7>
-     ] ;
+     fhir:fullUrl [ fhir:v "urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7"^^xsd:anyURI ] ;
      fhir:resource ( <urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7> ) ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
-       fhir:url [
-         fhir:v "Organization"^^xsd:anyURI ;
-         fhir:l fhir:Organization
-       ]
+       fhir:url [ fhir:v "Organization"^^xsd:anyURI ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "urn:uuid:2c6d4f8a-3e5b-4a1c-9f8d-7b6e5d4c3a2b"^^xsd:anyURI ;
-       fhir:l <urn:uuid:2c6d4f8a-3e5b-4a1c-9f8d-7b6e5d4c3a2b>
-     ] ;
+     fhir:fullUrl [ fhir:v "urn:uuid:2c6d4f8a-3e5b-4a1c-9f8d-7b6e5d4c3a2b"^^xsd:anyURI ] ;
      fhir:resource ( <urn:uuid:2c6d4f8a-3e5b-4a1c-9f8d-7b6e5d4c3a2b> ) ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
-       fhir:url [
-         fhir:v "Practitioner"^^xsd:anyURI ;
-         fhir:l fhir:Practitioner
-       ]
+       fhir:url [ fhir:v "Practitioner"^^xsd:anyURI ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "urn:uuid:3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a"^^xsd:anyURI ;
-       fhir:l <urn:uuid:3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a>
-     ] ;
+     fhir:fullUrl [ fhir:v "urn:uuid:3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a"^^xsd:anyURI ] ;
      fhir:resource ( <urn:uuid:3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a> ) ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
-       fhir:url [
-         fhir:v "PractitionerRole"^^xsd:anyURI ;
-         fhir:l fhir:PractitionerRole
-       ]
+       fhir:url [ fhir:v "PractitionerRole"^^xsd:anyURI ]
      ]
   ] [
-     fhir:fullUrl [
-       fhir:v "urn:uuid:a1b2c3d4-e5f6-7890-abcd-ef1234567890"^^xsd:anyURI ;
-       fhir:l <urn:uuid:a1b2c3d4-e5f6-7890-abcd-ef1234567890>
-     ] ;
+     fhir:fullUrl [ fhir:v "urn:uuid:a1b2c3d4-e5f6-7890-abcd-ef1234567890"^^xsd:anyURI ] ;
      fhir:resource ( <urn:uuid:a1b2c3d4-e5f6-7890-abcd-ef1234567890> ) ;
      fhir:request [
        fhir:method [ fhir:v "POST" ] ;
-       fhir:url [
-         fhir:v "Encounter"^^xsd:anyURI ;
-         fhir:l fhir:Encounter
-       ]
+       fhir:url [ fhir:v "Encounter"^^xsd:anyURI ]
      ]
   ] ) . # 
 
@@ -97,74 +61,47 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"^^xsd:anyURI ;
-       fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient>
+       fhir:link <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient>
      ] ) ;
      fhir:tag ( [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-20" ] ;
        fhir:display [ fhir:v "REF-20" ]
      ] [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-21" ] ;
        fhir:display [ fhir:v "REF-21" ]
      ] [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-22" ] ;
        fhir:display [ fhir:v "REF-22" ]
      ] [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-24" ] ;
        fhir:display [ fhir:v "REF-24" ]
      ] [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-25" ] ;
        fhir:display [ fhir:v "REF-25" ]
      ] [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-26" ] ;
        fhir:display [ fhir:v "REF-26" ]
      ] [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-27" ] ;
        fhir:display [ fhir:v "REF-27" ]
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_patient-charity-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient patient-charity-ex</b></p><a name=\"patient-charity-ex\"> </a><a name=\"hcpatient-charity-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UP-Manila-SILab/ph-core/StructureDefinition-ph-core-patient.html\">PH Core Patient</a></p><p style=\"margin-bottom: 0px\">Tags: REF-20 (Details: peref-dd code REF-20), REF-21 (Details: peref-dd code REF-21), REF-22 (Details: peref-dd code REF-22), REF-24 (Details: peref-dd code REF-24), REF-25 (Details: peref-dd code REF-25), REF-26 (Details: peref-dd code REF-26), REF-27 (Details: peref-dd code REF-27)</p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns</code>/12-345678901-2</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"tel:+63-917-123-4567\">+63-917-123-4567</a></li><li>456 Rizal Street Barangay Malusog Quezon City 1100 PH (home)</li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_patient-charity-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient patient-charity-ex</b></p><a name=\"patient-charity-ex\"> </a><a name=\"hcpatient-charity-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient</code></p><p style=\"margin-bottom: 0px\">Tags: , , , , , , </p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns</code>/12-345678901-2</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"tel:+63-917-123-4567\">+63-917-123-4567</a></li><li>456 Rizal Street Barangay Malusog Quezon City 1100 PH (home)</li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
-     fhir:system [
-       fhir:v "http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns"^^xsd:anyURI ;
-       fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns>
-     ] ;
+     fhir:system [ fhir:v "http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "1234-5678901-2" ]
   ] [
-     fhir:system [
-       fhir:v "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns"^^xsd:anyURI ;
-       fhir:l <http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns>
-     ] ;
+     fhir:system [ fhir:v "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "12-345678901-2" ]
   ] ) ; # 
   fhir:active [ fhir:v true] ; # 
@@ -194,31 +131,24 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"^^xsd:anyURI ;
-       fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson>
+       fhir:link <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson>
      ] ) ;
      fhir:tag ( [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-28" ] ;
        fhir:display [ fhir:v "REF-28" ]
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_relatedperson-companion-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson relatedperson-companion-ex</b></p><a name=\"relatedperson-companion-ex\"> </a><a name=\"hcrelatedperson-companion-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UP-Manila-SILab/ph-core/StructureDefinition-ph-core-relatedperson.html\">PH Core RelatedPerson</a></p><p style=\"margin-bottom: 0px\">Tag: REF-28 (Details: peref-dd code REF-28)</p></div><p><b>patient</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\">Mother</span></p><p><b>name</b>: Maria Santos </p><p><b>telecom</b>: <a href=\"tel:+63-917-765-4321\">+63-917-765-4321</a></p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_relatedperson-companion-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson relatedperson-companion-ex</b></p><a name=\"relatedperson-companion-ex\"> </a><a name=\"hcrelatedperson-companion-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson</code></p><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>patient</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\">Mother</span></p><p><b>name</b>: Maria Santos </p><p><b>telecom</b>: <a href=\"tel:+63-917-765-4321\">+63-917-765-4321</a></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:patient [
-     fhir:l <urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479> ;
      fhir:reference [ fhir:v "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479" ]
   ] ; # 
   fhir:relationship ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
-       ] ;
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "MTH" ] ;
        fhir:display [ fhir:v "Mother" ]
      ] )
@@ -238,57 +168,39 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"^^xsd:anyURI ;
-       fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization>
+       fhir:link <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization>
      ] ) ;
      fhir:tag ( [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-4" ] ;
        fhir:display [ fhir:v "REF-4" ]
      ] [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-5" ] ;
        fhir:display [ fhir:v "REF-5" ]
      ] [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-6" ] ;
        fhir:display [ fhir:v "REF-6" ]
      ] [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-7" ] ;
        fhir:display [ fhir:v "REF-7" ]
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_organization-sending-facility-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization organization-sending-facility-ex</b></p><a name=\"organization-sending-facility-ex\"> </a><a name=\"hcorganization-sending-facility-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UP-Manila-SILab/ph-core/StructureDefinition-ph-core-organization.html\">PH Core Organization</a></p><p style=\"margin-bottom: 0px\">Tags: REF-4 (Details: peref-dd code REF-4), REF-5 (Details: peref-dd code REF-5), REF-6 (Details: peref-dd code REF-6), REF-7 (Details: peref-dd code REF-7)</p></div><p><b>identifier</b>: Facility ID/DOH000-OO-0-0000123 (use: official, )</p><p><b>name</b>: Barangay Malusog Health Centre</p><p><b>telecom</b>: <a href=\"tel:+63-2-1234-5678\">+63-2-1234-5678</a></p><p><b>address</b>: 123 Health Centre Road Quezon City NCR 1100 PH (work)</p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_organization-sending-facility-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization organization-sending-facility-ex</b></p><a name=\"organization-sending-facility-ex\"> </a><a name=\"hcorganization-sending-facility-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization</code></p><p style=\"margin-bottom: 0px\">Tags: , , , </p></div><p><b>identifier</b>: Facility ID/DOH000-OO-0-0000123 (use: official, )</p><p><b>name</b>: Barangay Malusog Health Centre</p><p><b>telecom</b>: <a href=\"tel:+63-2-1234-5678\">+63-2-1234-5678</a></p><p><b>address</b>: 123 Health Centre Road Quezon City NCR 1100 PH (work)</p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:type [
        fhir:coding ( [
-         fhir:system [
-           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
-           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
-         ] ;
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "FI" ]
        ] )
      ] ;
-     fhir:system [
-       fhir:v "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"^^xsd:anyURI ;
-       fhir:l <http://doh.gov.ph/fhir/Identifier/doh-nhfr-code>
-     ] ;
+     fhir:system [ fhir:v "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "DOH000-OO-0-0000123" ]
   ] ) ; # 
   fhir:name [ fhir:v "Barangay Malusog Health Centre"] ; # 
@@ -310,17 +222,14 @@
   fhir:id [ fhir:v "practitioner-abraham-ex"] ; # 
   fhir:meta [
      fhir:tag ( [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-1" ] ;
        fhir:display [ fhir:v "REF-1" ]
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_practitioner-abraham-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner practitioner-abraham-ex</b></p><a name=\"practitioner-abraham-ex\"> </a><a name=\"hcpractitioner-abraham-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Tag: REF-1 (Details: peref-dd code REF-1)</p></div><p><b>name</b>: Abraham Reyes </p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_practitioner-abraham-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner practitioner-abraham-ex</b></p><a name=\"practitioner-abraham-ex\"> </a><a name=\"hcpractitioner-abraham-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>name</b>: Abraham Reyes </p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:name ( [
      fhir:family [ fhir:v "Reyes" ] ;
@@ -331,34 +240,27 @@
   fhir:id [ fhir:v "practitionerrole-abraham-ex"] ; # 
   fhir:meta [
      fhir:tag ( [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-1" ] ;
        fhir:display [ fhir:v "REF-1" ]
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_practitionerrole-abraham-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole practitionerrole-abraham-ex</b></p><a name=\"practitionerrole-abraham-ex\"> </a><a name=\"hcpractitionerrole-abraham-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Tag: REF-1 (Details: peref-dd code REF-1)</p></div><p><b>practitioner</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-2c6d4f8a-3e5b-4a1c-9f8d-7b6e5d4c3a2b\">Practitioner Abraham Reyes </a></p><p><b>organization</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-7c9e6679-7425-40de-944b-e07fc1f90ae7\">Organization Barangay Malusog Health Centre</a></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role clerk}\">Registration Clerk</span></p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_practitionerrole-abraham-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole practitionerrole-abraham-ex</b></p><a name=\"practitionerrole-abraham-ex\"> </a><a name=\"hcpractitionerrole-abraham-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>practitioner</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-2c6d4f8a-3e5b-4a1c-9f8d-7b6e5d4c3a2b\">Practitioner Abraham Reyes </a></p><p><b>organization</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-7c9e6679-7425-40de-944b-e07fc1f90ae7\">Organization Barangay Malusog Health Centre</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 106331006}\">Registration Clerk</span></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:practitioner [
-     fhir:l <urn:uuid:2c6d4f8a-3e5b-4a1c-9f8d-7b6e5d4c3a2b> ;
      fhir:reference [ fhir:v "urn:uuid:2c6d4f8a-3e5b-4a1c-9f8d-7b6e5d4c3a2b" ]
   ] ; # 
   fhir:organization [
-     fhir:l <urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7> ;
      fhir:reference [ fhir:v "urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7" ]
   ] ; # 
   fhir:code ( [
      fhir:coding ( [
-       fhir:system [
-         fhir:v "http://terminology.hl7.org/CodeSystem/practitioner-role"^^xsd:anyURI ;
-         fhir:l <http://terminology.hl7.org/CodeSystem/practitioner-role>
-       ] ;
-       fhir:code [ fhir:v "clerk" ] ;
-       fhir:display [ fhir:v "Clerk" ]
+       a sct:106331006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "106331006" ] ;
+       fhir:display [ fhir:v "Administrative/managerial worker" ]
      ] ) ;
      fhir:text [ fhir:v "Registration Clerk" ]
   ] ) . # 
@@ -368,49 +270,38 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter"^^xsd:anyURI ;
-       fhir:l <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter>
+       fhir:link <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter>
      ] ) ;
      fhir:tag ( [
-       fhir:system [
-         fhir:v "https://example.com/peref-dd"^^xsd:anyURI ;
-         fhir:l <https://example.com/peref-dd>
-       ] ;
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "REF-43" ] ;
        fhir:display [ fhir:v "REF-43" ]
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_encounter-registration-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter encounter-registration-ex</b></p><a name=\"encounter-registration-ex\"> </a><a name=\"hcencounter-registration-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UP-Manila-SILab/ph-core/StructureDefinition-ph-core-encounter.html\">PH Core Encounter</a></p><p style=\"margin-bottom: 0px\">Tag: REF-43 (Details: peref-dd code REF-43)</p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.1/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 185349003}\">Registration</span></p><p><b>subject</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Bundle-registration-transaction-ex.html#urn-uuid-3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a\">PractitionerRole Clerk</a></td></tr></table><p><b>period</b>: 2026-02-24 08:00:00+0800 --&gt; 2026-02-24 08:15:00+0800</p><p><b>serviceProvider</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-7c9e6679-7425-40de-944b-e07fc1f90ae7\">Organization Barangay Malusog Health Centre</a></p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_encounter-registration-ex\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter encounter-registration-ex</b></p><a name=\"encounter-registration-ex\"> </a><a name=\"hcencounter-registration-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter</code></p><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 185349003}\">Registration</span></p><p><b>subject</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Bundle-registration-transaction-ex.html#urn-uuid-3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a\">PractitionerRole Administrative/managerial worker</a></td></tr></table><p><b>period</b>: 2026-02-24 08:00:00+0800 --&gt; 2026-02-24 08:15:00+0800</p><p><b>serviceProvider</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-7c9e6679-7425-40de-944b-e07fc1f90ae7\">Organization Barangay Malusog Health Centre</a></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "finished"] ; # 
   fhir:class [
-     fhir:system [
-       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
-       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
-     ] ;
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
      fhir:code [ fhir:v "AMB" ] ;
      fhir:display [ fhir:v "ambulatory" ]
   ] ; # 
   fhir:type ( [
      fhir:coding ( [
        a sct:185349003 ;
-       fhir:system [
-         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-         fhir:l <http://snomed.info/sct>
-       ] ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "185349003" ] ;
        fhir:display [ fhir:v "Encounter for check up" ]
      ] ) ;
      fhir:text [ fhir:v "Registration" ]
   ] ) ; # 
   fhir:subject [
-     fhir:l <urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479> ;
      fhir:reference [ fhir:v "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479" ]
   ] ; # 
   fhir:participant ( [
      fhir:individual [
-       fhir:l <urn:uuid:3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a> ;
        fhir:reference [ fhir:v "urn:uuid:3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a" ]
      ]
   ] ) ; # 
@@ -419,7 +310,6 @@
      fhir:end [ fhir:v "2026-02-24T08:15:00+08:00"^^xsd:dateTime ]
   ] ; # 
   fhir:serviceProvider [
-     fhir:l <urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7> ;
      fhir:reference [ fhir:v "urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7" ]
   ] . # 
 

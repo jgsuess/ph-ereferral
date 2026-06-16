@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="ERefPatientExample"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Juan Dela Cruz is a male patient born on 15 June 1985, residing in Barangay Malinis, Quezon City, NCR, Philippines. Contact: +639****4567. Father contact: Roberto Dela Cruz.</div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+    <extension url="code">
+      <valueCodeableConcept>
+        <coding>
+          <system value="urn:iso:std:iso:3166"/>
+          <code value="PH"/>
+          <display value="Philippines"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+        <code value="1025"/>
+        <display value="Jehovah's Witnesses"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/race">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-Race"/>
+        <code value="2036-2"/>
+        <display value="Filipino"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-pwd-disability">
+    <extension url="pwdId">
+      <valueString value="PWD-NCR-QC-123456"/>
+    </extension>
+    <extension url="disabilityType">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+          <code value="physical"/>
+          <display value="Physical/Orthopedic Disability"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="idExpirationDate">
+      <valueDate value="2027-03-15"/>
+    </extension>
+  </extension>
+  <identifier>
+    <system value="http://philhealth.gov.ph/fhir/Identifier/philhealth-id"/>
+    <value value="63-584789845-5"/>
+  </identifier>
+  <identifier>
+    <system value="http://philsys.gov.ph/fhir/Identifier/philsys-id"/>
+    <value value="1234-5678-9012-3456"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <family value="Dela Cruz"/>
+    <given value="Juan"/>
+    <given value="Dela Fuente"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+639171234567"/>
+    <use value="mobile"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="juandelacruz@example.com"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1985-06-15"/>
+  <address>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1380100001"/>
+        <display value="Barangay 1"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1380200000"/>
+        <display value="City of Las Piñas"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/province">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="0402100000"/>
+        <display value="Cavite"/>
+      </valueCoding>
+    </extension>
+    <use value="home"/>
+    <type value="physical"/>
+    <line value="123 Mabini Street"/>
+    <postalCode value="1100"/>
+    <country value="PH"/>
+  </address>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+        <code value="FTH"/>
+        <display value="Father"/>
+      </coding>
+    </relationship>
+    <name>
+      <use value="official"/>
+      <family value="Dela Cruz"/>
+      <given value="Roberto"/>
+    </name>
+    <telecom>
+      <system value="phone"/>
+      <value value="+639189876543"/>
+      <use value="mobile"/>
+    </telecom>
+  </contact>
+</Patient>

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Version Management - PH eReferral Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style type="text/css">
+  /* ─────────────────────────────────────────────────────────────
+     Class-based Table Styling — only affects tables with classes
+     ───────────────────────────────────────────────────────────── */
+
+  /* Table Responsive (missing from Bootstrap 3 base template) */
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Dark header */
+  .thead-dark th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    background-color: #e8e8e8;
+  }
+
+  /* Global table enhancements */
+  .table-bordered {
+    border: 1px solid #dee2e6;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6;
+  }
+
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     .ph-table wrapper — for markdown tables in narrative pages
+     Wrap your markdown table in <div class="ph-table" markdown="1">
+     ───────────────────────────────────────────────────────────── */
+  .ph-table table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    color: #333;
+    background-color: #e8e8e8;
+  }
+
+  .ph-table td {
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table td:first-child {
+    font-weight: bold;
+  }
+
+  .ph-table tr:nth-of-type(odd) {
+    background-color: transparent;
+  }
+
+  .ph-table tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     Data-Dictionary-specific scrollable wrapper
+     ───────────────────────────────────────────────────────────── */
+  .data-dictionary-wrapper {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"18"}
+    h3,h4,h5,h6{--heading-prefix:"18"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Version Management</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Version Management</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="version-management--publication">Version Management &amp; Publication</h3>
+
+<p>This page describes how the IG is versioned, published, and released. For the broader project methodology, see the <a href="approach.html">Approach</a> page.</p>
+
+<hr />
+
+<h4 id="publication-model">Publication Model</h4>
+
+<p>The IG follows a <strong>two-lane publication model</strong> aligned with HL7 IG publishing guidance:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lane</th>
+      <th>Trigger</th>
+      <th>Output URL</th>
+      <th>Mutable?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>CI (dev)</strong></td>
+      <td>Push to <code class="language-plaintext highlighter-rouge">main</code></td>
+      <td><code class="language-plaintext highlighter-rouge">…/dev/</code></td>
+      <td>Yes — always-fresh preview</td>
+    </tr>
+    <tr>
+      <td><strong>Release</strong></td>
+      <td>Git tag <code class="language-plaintext highlighter-rouge">vX.Y.Z</code></td>
+      <td><code class="language-plaintext highlighter-rouge">…/X.Y.Z/</code></td>
+      <td>No — immutable once published</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Key rules:</strong></p>
+
+<ol>
+  <li>The <code class="language-plaintext highlighter-rouge">main</code> branch always carries the <em>next</em> development version with a <code class="language-plaintext highlighter-rouge">-draft</code> suffix (e.g. <code class="language-plaintext highlighter-rouge">0.2.0-draft</code>).</li>
+  <li>Release versions are derived from <strong>Git tags</strong> — tagging <code class="language-plaintext highlighter-rouge">v0.1.0</code> produces IG version <code class="language-plaintext highlighter-rouge">0.1.0</code>.</li>
+  <li>The release workflow patches <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> at build time only; the source on <code class="language-plaintext highlighter-rouge">main</code> is never modified by the pipeline.</li>
+  <li>Published version directories (<code class="language-plaintext highlighter-rouge">/X.Y.Z/</code>) are <strong>never overwritten</strong> — the workflow refuses to proceed if the directory already exists.</li>
+  <li><code class="language-plaintext highlighter-rouge">/current/</code> redirects to the latest release; <code class="language-plaintext highlighter-rouge">/dev/</code> always reflects the latest CI build from <code class="language-plaintext highlighter-rouge">main</code>.</li>
+  <li>A <code class="language-plaintext highlighter-rouge">history.html</code> page and <code class="language-plaintext highlighter-rouge">package-list.json</code> feed are maintained automatically on the <code class="language-plaintext highlighter-rouge">gh-pages</code> branch.</li>
+</ol>
+
+<p>The workflows are defined in:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.github/workflows/ig-ci-dev.yml</code> — CI lane (push to <code class="language-plaintext highlighter-rouge">main</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">.github/workflows/ig-release.yml</code> — Release lane (tag <code class="language-plaintext highlighter-rouge">v*</code>)</li>
+</ul>
+
+<h4 id="publication-urls">Publication URLs</h4>
+
+<p>The table below lists the key URLs for accessing published content.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>URL</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">https://jgsuess.github.io/ph-ereferral/dev/</code></td>
+      <td>Development build (latest CI from <code class="language-plaintext highlighter-rouge">main</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">https://jgsuess.github.io/ph-ereferral/X.Y.Z/</code></td>
+      <td>Immutable release</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">https://jgsuess.github.io/ph-ereferral/current/</code></td>
+      <td>Redirect to latest release</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">https://jgsuess.github.io/ph-ereferral/history.html</code></td>
+      <td>Publication history</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="how-to-cut-a-release">How to Cut a Release</h4>
+
+<p>Follow these steps to publish a new tagged release:</p>
+
+<ol>
+  <li>Ensure all changes are merged to <code class="language-plaintext highlighter-rouge">main</code>.</li>
+  <li>Create an annotated tag: <code class="language-plaintext highlighter-rouge">git tag -a v0.1.0 -m "First draft release"</code></li>
+  <li>Push the tag: <code class="language-plaintext highlighter-rouge">git push origin v0.1.0</code></li>
+  <li>The <code class="language-plaintext highlighter-rouge">ig-release.yml</code> workflow runs automatically: builds the IG with version <code class="language-plaintext highlighter-rouge">0.1.0</code>, publishes to <code class="language-plaintext highlighter-rouge">/0.1.0/</code>, updates <code class="language-plaintext highlighter-rouge">history.html</code>, <code class="language-plaintext highlighter-rouge">package-list.json</code>, and <code class="language-plaintext highlighter-rouge">/current/</code>.</li>
+  <li>After the release, bump the version on <code class="language-plaintext highlighter-rouge">main</code> to the next draft (e.g. <code class="language-plaintext highlighter-rouge">0.2.0-draft</code>).</li>
+</ol>
+
+<hr />
+
+<h4 id="limitations-and-future-work">Limitations and Future Work</h4>
+
+<p>The following items are known gaps or deferred scope. Each is tied back to a specific data-dictionary element where applicable.</p>
+
+<ol>
+  <li><strong>Signature / Provenance</strong> (REF-2, REF-3) — deferred to a future release per CDG consensus.</li>
+  <li><strong>HCPN</strong> (REF-11) — on hold pending CDG decision on whether it should be computed or manually entered.</li>
+  <li><strong>Return referral slip</strong> (REF-18) — excluded from MVP; requires DocumentReference modelling.</li>
+  <li><strong>Lab results</strong> (REF-39) — currently modelled as ServiceRequest (orders); DiagnosticReport will be added when results are available.</li>
+  <li><strong>Receiving encounter</strong> (REF-44) — belongs to the receiving facility's workflow, not the sending scenario.</li>
+  <li><strong>Pregnancy-specific elements</strong> — the DD notes a placeholder row for gravidity, parity, fundal height, and immunisation history; these should be added as structured Observations in a future iteration.</li>
+</ol>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-16 22:56:00 +0000">
+    2026-06-16
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
