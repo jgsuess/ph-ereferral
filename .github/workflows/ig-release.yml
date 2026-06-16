@@ -4,6 +4,12 @@ on:
   push:
     tags:
       - "v*"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to release (without v prefix, e.g. 1.2.3)"
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -17,20 +23,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout (tag)
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          lfs: true
-
-      - name: Derive version from tag
+      - name: Derive version
         id: v
         run: |
-          TAG="${GITHUB_REF_NAME}"
-          VERSION="${TAG#v}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ inputs.version }}"
+            TAG="v${VERSION}"
+          else
+            TAG="${GITHUB_REF_NAME}"
+            VERSION="${TAG#v}"
+          fi
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "Release version: $VERSION"
+
+      - name: Checkout (tag)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && format('refs/tags/v{0}', inputs.version) || github.ref }}
+          fetch-depth: 0
+          lfs: true
 
       - name: Setup Node (for SUSHI + npm publish)
         uses: actions/setup-node@v4
@@ -114,7 +126,7 @@ jobs:
               const pkg = JSON.parse(fs.readFileSync(p, 'utf8'));
               pkg.name = '$scoped_name';
               pkg.version = '$RELEASE_VERSION';
-              pkg.publishConfig = { registry: 'https://npm.pkg.github.com', access: 'restricted' };
+              pkg.publishConfig = { registry: 'https://npm.pkg.github.com', access: 'public' };
               fs.writeFileSync(p, JSON.stringify(pkg, null, 2));
             "
             tar -czf repacked.tgz package/

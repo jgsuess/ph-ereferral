@@ -83,14 +83,14 @@ jobs:
         run: |
           if [ -f "output/qa.json" ]; then
             python3 - <<'PY'
-          import json, pathlib
+          import json, pathlib, os
 
           qa = json.loads(pathlib.Path("output/qa.json").read_text())
           errs  = qa.get("errs",  0)
           warns = qa.get("warnings", 0)
           hints = qa.get("hints",  0)
 
-          with open("$GITHUB_STEP_SUMMARY", "a") as f:
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
               f.write("## IG Publisher QA Results\n\n")
               f.write(f"| Errors | Warnings | Hints |\n")
               f.write(f"|--------|----------|-------|\n")
@@ -101,8 +101,6 @@ jobs:
                   f.write("> :white_check_mark: No errors.\n")
           PY
           fi
-        env:
-          GITHUB_STEP_SUMMARY: ${{ env.GITHUB_STEP_SUMMARY }}
 
       - name: Fail if QA errors
         run: |
