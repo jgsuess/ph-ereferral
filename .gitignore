@@ -8,6 +8,4 @@ Thumbs.db
 /.asciidoctorconfig.adoc
 .vscode/settings.json
 .gitignore
-.venv/
-# Plaintext data dictionary — only the PGP-encrypted version (.xlsx.gpg) is committed
-*.xlsx
+/mcp folder

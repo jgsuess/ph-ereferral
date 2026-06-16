@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: FHIR Authoring Pattern Language
+    url: https://fhirpatterns.net/fhir-authoring-patterns/
+    about: Comprehensive FHIR authoring patterns and best practices
+  - name: IG Authoring Pattern Language
+    url: https://fhirpatterns.net/ig-authoring-patterns/
+    about: Implementation Guide authoring patterns and workflows
+  - name: Definition-of-Done per Artifact
+    url: https://fhirpatterns.net/fhir-authoring-patterns/patterns/pl-05/
+    about: Artifact-specific completion criteria and checklists

@@ -3,20 +3,20 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: example.fhir.ph.ereferral
-canonical: https://jgsuess.github.io/ph-ereferral
+id: fhir.ph.ereferral
+canonical: https://fhir.doh.gov.ph/pheref
 name: PHeReferralImplementationGuide
 title: PH eReferral Implementation Guide
 description: This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH eReferral profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.
 status: draft # draft | active | retired | unknown
-version: 0.3.0-draft
+version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
-releaseLabel: draft
+releaseLabel: ci-build
 license: CC-BY-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#PH "Philippines" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: UP Manila SILab
+  name: SILab CoP IG Accelerator (eReferral)
   url: https://github.com/UP-Manila-SILab
   # email: test@example.org
 
@@ -25,10 +25,10 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  fhir.ph.core:
-    id: phcore
-    uri: http://doh.gov.ph/fhir/ph-core/ImplementationGuide/fhir.ph.core
-    version: dev
+  fhir.ph.core: dev
+#   hl7.fhir.us.core: 3.1.0
+#   hl7.fhir.us.mcode:
+#     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
 #
@@ -77,18 +77,17 @@ dependencies:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Approach:
-    Overview: approach.html
-    Technical Pipeline: technical-pipeline.html
-    Resource Architecture: resource-architecture.html
-    AI-Assisted Reasoning: ai-reasoning.html
-    Version Management: version-management.html
-    IG Evolution: ig-evolution.html
-    HL7 Standards Lifecycle: hl7-lifecycle.html
-    Interop Matrix Testing: interop-testing.html
-    Testing Companion IG: testing-companion.html
-  DD Mapping: dd-mapping.html
+  Guidance:
+    WHO SMART L1 Basis: who-smart-l1.html
+    Referral Workflow: referral-workflow.html
+    Connectathon Readiness: connectathon-readiness.html
+    Scope and Release Notes: v01-scope.html
+    Coverage Map: coverage-map.html
+    Decision Log: decision-log.html
   Artifacts: artifacts.html
+  References:
+    Documents: references.html
+    Data Dictionary: data-dictionary.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
