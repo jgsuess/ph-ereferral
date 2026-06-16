@@ -1,0 +1,7 @@
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-priority,0.1.0,draft,,EReferralPriority,eReferral Priority,"Priority levels for eReferral requests. Uses standard FHIR RequestPriority values.",,"hl7.fhir.r4.core"
+https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-reason,0.1.0,draft,,EReferralReason,eReferral Reason,"Clinical reasons for eReferral requests. Uses SNOMED CT clinical findings and diagnoses.",,"SCT"
+https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response,0.1.0,draft,,EReferralReceivingResponse,eReferral Receiving Facility Response,"Response states used by a receiving facility after referral receipt in the PH eReferral workflow.",,"Internal"
+https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type,0.1.0,draft,,EReferralRelationshipType,eReferral Relationship Type,"Relationship roles used for patient contacts, next of kin, emergency contacts, guardians, and accompanying persons in Philippine eReferral.",,"THO (V3)"
+https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-service-category,0.1.0,draft,,EReferralServiceCategory,eReferral Service Category,"Categories of services that can be requested through eReferral",,"SCT"
+https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs,0.1.0,draft,,PWDDisabilityTypeVS,PWD Disability Type Value Set,"Value set for types of disability as defined by the Philippine government for PWD registration.",,"Internal"

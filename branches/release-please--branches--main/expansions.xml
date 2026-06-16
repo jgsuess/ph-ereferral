@@ -1,0 +1,3111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="76c9a6da-6e07-4f28-93e0-9b13d6aca3cc"/>
+  <meta>
+    <lastUpdated value="2026-06-16T23:54:18.647+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-priority"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html">codesystem RequestPriority v4.0.1 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://hl7.org/fhir/request-priority|4.0.1" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 3 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/request-priority-routine"> </a>
+                  <code>http://hl7.org/fhir/request-priority</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-routine">routine</a>
+                </td>
+                <td>Routine</td>
+                <td>The request has normal priority.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/request-priority&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;routine&quot;, &quot;display&quot;: &quot;Routine&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/request-priority&quot;&gt;&lt;version value=&quot;4.0.1&quot;&gt;&lt;code value=&quot;routine&quot;&gt;&lt;display value=&quot;Routine&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/request-priority-urgent"> </a>
+                  <code>http://hl7.org/fhir/request-priority</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-urgent">urgent</a>
+                </td>
+                <td>Urgent</td>
+                <td>The request should be actioned promptly - higher priority than routine.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/request-priority&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;urgent&quot;, &quot;display&quot;: &quot;Urgent&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/request-priority&quot;&gt;&lt;version value=&quot;4.0.1&quot;&gt;&lt;code value=&quot;urgent&quot;&gt;&lt;display value=&quot;Urgent&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/request-priority-stat"> </a>
+                  <code>http://hl7.org/fhir/request-priority</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-stat">stat</a>
+                </td>
+                <td>STAT</td>
+                <td>The request should be actioned immediately - highest possible priority.  E.g. an emergency.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/request-priority&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;stat&quot;, &quot;display&quot;: &quot;STAT&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/request-priority&quot;&gt;&lt;version value=&quot;4.0.1&quot;&gt;&lt;code value=&quot;stat&quot;&gt;&lt;display value=&quot;STAT&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-priority"/>
+        <version value="0.1.0"/>
+        <name value="EReferralPriority"/>
+        <title value="eReferral Priority"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:72c8ae26-03f5-41a2-92bd-099c9460cbb7"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="3"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/request-priority|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/request-priority"/>
+            <code value="routine"/>
+            <display value="Routine"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-priority"/>
+            <code value="urgent"/>
+            <display value="Urgent"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-priority"/>
+            <code value="stat"/>
+            <display value="STAT"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-priority"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html">codesystem RequestPriority v4.0.1 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://hl7.org/fhir/request-priority|4.0.1" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 3 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/request-priority-routine"> </a>
+                  <code>http://hl7.org/fhir/request-priority</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-routine">routine</a>
+                </td>
+                <td>Routine</td>
+                <td>The request has normal priority.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/request-priority&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;routine&quot;, &quot;display&quot;: &quot;Routine&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/request-priority&quot;&gt;&lt;version value=&quot;4.0.1&quot;&gt;&lt;code value=&quot;routine&quot;&gt;&lt;display value=&quot;Routine&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/request-priority-urgent"> </a>
+                  <code>http://hl7.org/fhir/request-priority</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-urgent">urgent</a>
+                </td>
+                <td>Urgent</td>
+                <td>The request should be actioned promptly - higher priority than routine.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/request-priority&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;urgent&quot;, &quot;display&quot;: &quot;Urgent&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/request-priority&quot;&gt;&lt;version value=&quot;4.0.1&quot;&gt;&lt;code value=&quot;urgent&quot;&gt;&lt;display value=&quot;Urgent&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/request-priority-stat"> </a>
+                  <code>http://hl7.org/fhir/request-priority</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html#request-priority-stat">stat</a>
+                </td>
+                <td>STAT</td>
+                <td>The request should be actioned immediately - highest possible priority.  E.g. an emergency.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/request-priority&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;stat&quot;, &quot;display&quot;: &quot;STAT&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/request-priority&quot;&gt;&lt;version value=&quot;4.0.1&quot;&gt;&lt;code value=&quot;stat&quot;&gt;&lt;display value=&quot;STAT&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-priority"/>
+        <version value="0.1.0"/>
+        <name value="EReferralPriority"/>
+        <title value="eReferral Priority"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:72c8ae26-03f5-41a2-92bd-099c9460cbb7"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="3"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/request-priority|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/request-priority"/>
+            <code value="routine"/>
+            <display value="Routine"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-priority"/>
+            <code value="urgent"/>
+            <display value="Urgent"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/request-priority"/>
+            <code value="stat"/>
+            <display value="STAT"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-reason"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 8 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-267036007"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/267036007">267036007</a>
+                </td>
+                <td>Dyspnea</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;267036007&quot;, &quot;display&quot;: &quot;Dyspnea&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;267036007&quot;&gt;&lt;display value=&quot;Dyspnea&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-29857009"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/29857009">29857009</a>
+                </td>
+                <td>Chest pain</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;29857009&quot;, &quot;display&quot;: &quot;Chest pain&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;29857009&quot;&gt;&lt;display value=&quot;Chest pain&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-414545008"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/414545008">414545008</a>
+                </td>
+                <td>Ischemic heart disease</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;414545008&quot;, &quot;display&quot;: &quot;Ischemic heart disease&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;414545008&quot;&gt;&lt;display value=&quot;Ischemic heart disease&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-42343007"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/42343007">42343007</a>
+                </td>
+                <td>Congestive heart failure</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;42343007&quot;, &quot;display&quot;: &quot;Congestive heart failure&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;42343007&quot;&gt;&lt;display value=&quot;Congestive heart failure&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-49436004"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/49436004">49436004</a>
+                </td>
+                <td>Atrial fibrillation</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;49436004&quot;, &quot;display&quot;: &quot;Atrial fibrillation&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;49436004&quot;&gt;&lt;display value=&quot;Atrial fibrillation&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-59621000"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/59621000">59621000</a>
+                </td>
+                <td>Essential hypertension</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;59621000&quot;, &quot;display&quot;: &quot;Essential hypertension&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;59621000&quot;&gt;&lt;display value=&quot;Essential hypertension&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-73211009"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/73211009">73211009</a>
+                </td>
+                <td>Diabetes mellitus</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;73211009&quot;, &quot;display&quot;: &quot;Diabetes mellitus&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;73211009&quot;&gt;&lt;display value=&quot;Diabetes mellitus&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-109006"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/109006">109006</a>
+                </td>
+                <td>Anxiety disorder of childhood OR adolescence</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;109006&quot;, &quot;display&quot;: &quot;Anxiety disorder of childhood OR adolescence&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;109006&quot;&gt;&lt;display value=&quot;Anxiety disorder of childhood OR adolescence&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-reason"/>
+        <version value="0.1.0"/>
+        <name value="EReferralReason"/>
+        <title value="eReferral Reason"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:63ac0ace-1875-4a59-9c94-4b0ab8dd5530"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="8"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="267036007"/>
+            <display value="Dyspnea"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="29857009"/>
+            <display value="Chest pain"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="414545008"/>
+            <display value="Ischemic heart disease"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="42343007"/>
+            <display value="Congestive heart failure"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="49436004"/>
+            <display value="Atrial fibrillation"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="59621000"/>
+            <display value="Essential hypertension"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="73211009"/>
+            <display value="Diabetes mellitus"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="109006"/>
+            <display value="Anxiety disorder of childhood OR adolescence"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-reason"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 8 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-267036007"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/267036007">267036007</a>
+                </td>
+                <td>Dyspnea</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;267036007&quot;, &quot;display&quot;: &quot;Dyspnea&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;267036007&quot;&gt;&lt;display value=&quot;Dyspnea&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-29857009"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/29857009">29857009</a>
+                </td>
+                <td>Chest pain</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;29857009&quot;, &quot;display&quot;: &quot;Chest pain&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;29857009&quot;&gt;&lt;display value=&quot;Chest pain&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-414545008"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/414545008">414545008</a>
+                </td>
+                <td>Ischemic heart disease</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;414545008&quot;, &quot;display&quot;: &quot;Ischemic heart disease&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;414545008&quot;&gt;&lt;display value=&quot;Ischemic heart disease&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-42343007"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/42343007">42343007</a>
+                </td>
+                <td>Congestive heart failure</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;42343007&quot;, &quot;display&quot;: &quot;Congestive heart failure&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;42343007&quot;&gt;&lt;display value=&quot;Congestive heart failure&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-49436004"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/49436004">49436004</a>
+                </td>
+                <td>Atrial fibrillation</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;49436004&quot;, &quot;display&quot;: &quot;Atrial fibrillation&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;49436004&quot;&gt;&lt;display value=&quot;Atrial fibrillation&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-59621000"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/59621000">59621000</a>
+                </td>
+                <td>Essential hypertension</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;59621000&quot;, &quot;display&quot;: &quot;Essential hypertension&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;59621000&quot;&gt;&lt;display value=&quot;Essential hypertension&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-73211009"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/73211009">73211009</a>
+                </td>
+                <td>Diabetes mellitus</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;73211009&quot;, &quot;display&quot;: &quot;Diabetes mellitus&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;73211009&quot;&gt;&lt;display value=&quot;Diabetes mellitus&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-109006"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/109006">109006</a>
+                </td>
+                <td>Anxiety disorder of childhood OR adolescence</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;109006&quot;, &quot;display&quot;: &quot;Anxiety disorder of childhood OR adolescence&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;109006&quot;&gt;&lt;display value=&quot;Anxiety disorder of childhood OR adolescence&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-reason"/>
+        <version value="0.1.0"/>
+        <name value="EReferralReason"/>
+        <title value="eReferral Reason"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:63ac0ace-1875-4a59-9c94-4b0ab8dd5530"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="8"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="267036007"/>
+            <display value="Dyspnea"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="29857009"/>
+            <display value="Chest pain"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="414545008"/>
+            <display value="Ischemic heart disease"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="42343007"/>
+            <display value="Congestive heart failure"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="49436004"/>
+            <display value="Atrial fibrillation"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="59621000"/>
+            <display value="Essential hypertension"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="73211009"/>
+            <display value="Diabetes mellitus"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="109006"/>
+            <display value="Anxiety disorder of childhood OR adolescence"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-ereferral-workflow.html">codesystem eReferral Workflow Code System v0.1.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 4 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-received"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ereferral-workflow.html#ereferral-workflow-received">received</a>
+                </td>
+                <td>Received</td>
+                <td>The receiving facility has acknowledged receipt of the referral and is reviewing whether it can take the case.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;received&quot;, &quot;display&quot;: &quot;Received&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;received&quot;&gt;&lt;display value=&quot;Received&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-accepted"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ereferral-workflow.html#ereferral-workflow-accepted">accepted</a>
+                </td>
+                <td>Accepted</td>
+                <td>The receiving facility can take the case and has given a positive transfer or service response.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;accepted&quot;, &quot;display&quot;: &quot;Accepted&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;accepted&quot;&gt;&lt;display value=&quot;Accepted&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-rejected"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ereferral-workflow.html#ereferral-workflow-rejected">rejected</a>
+                </td>
+                <td>Rejected</td>
+                <td>The receiving facility cannot take the case and no onward receiving facility is identified in the same response.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;rejected&quot;, &quot;display&quot;: &quot;Rejected&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;rejected&quot;&gt;&lt;display value=&quot;Rejected&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-referred-onward"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ereferral-workflow.html#ereferral-workflow-referred-onward">referred-onward</a>
+                </td>
+                <td>Referred onward</td>
+                <td>The receiving facility cannot take the case and directs the patient or referral to another specified facility.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;referred-onward&quot;, &quot;display&quot;: &quot;Referred onward&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;referred-onward&quot;&gt;&lt;display value=&quot;Referred onward&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response"/>
+        <version value="0.1.0"/>
+        <name value="EReferralReceivingResponse"/>
+        <title value="eReferral Receiving Facility Response"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:e9e40015-c7c5-4428-82ab-a32e409aa34e"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="4"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"/>
+            <code value="received"/>
+            <display value="Received"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"/>
+            <code value="accepted"/>
+            <display value="Accepted"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"/>
+            <code value="rejected"/>
+            <display value="Rejected"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"/>
+            <code value="referred-onward"/>
+            <display value="Referred onward"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-ereferral-workflow.html">codesystem eReferral Workflow Code System v0.1.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 4 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-received"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ereferral-workflow.html#ereferral-workflow-received">received</a>
+                </td>
+                <td>Received</td>
+                <td>The receiving facility has acknowledged receipt of the referral and is reviewing whether it can take the case.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;received&quot;, &quot;display&quot;: &quot;Received&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;received&quot;&gt;&lt;display value=&quot;Received&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-accepted"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ereferral-workflow.html#ereferral-workflow-accepted">accepted</a>
+                </td>
+                <td>Accepted</td>
+                <td>The receiving facility can take the case and has given a positive transfer or service response.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;accepted&quot;, &quot;display&quot;: &quot;Accepted&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;accepted&quot;&gt;&lt;display value=&quot;Accepted&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-rejected"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ereferral-workflow.html#ereferral-workflow-rejected">rejected</a>
+                </td>
+                <td>Rejected</td>
+                <td>The receiving facility cannot take the case and no onward receiving facility is identified in the same response.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;rejected&quot;, &quot;display&quot;: &quot;Rejected&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;rejected&quot;&gt;&lt;display value=&quot;Rejected&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-referred-onward"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ereferral-workflow.html#ereferral-workflow-referred-onward">referred-onward</a>
+                </td>
+                <td>Referred onward</td>
+                <td>The receiving facility cannot take the case and directs the patient or referral to another specified facility.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;referred-onward&quot;, &quot;display&quot;: &quot;Referred onward&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;referred-onward&quot;&gt;&lt;display value=&quot;Referred onward&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response"/>
+        <version value="0.1.0"/>
+        <name value="EReferralReceivingResponse"/>
+        <title value="eReferral Receiving Facility Response"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:e9e40015-c7c5-4428-82ab-a32e409aa34e"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="4"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"/>
+            <code value="received"/>
+            <display value="Received"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"/>
+            <code value="accepted"/>
+            <display value="Accepted"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"/>
+            <code value="rejected"/>
+            <display value="Rejected"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"/>
+            <code value="referred-onward"/>
+            <display value="Referred onward"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html">codesystem RoleCode v4.0.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://terminology.hl7.org/CodeSystem/v3-RoleCode|4.0.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 10 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-NOK"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-NOK">NOK</a>
+                </td>
+                <td>next of kin</td>
+                <td>
+                  <div>
+                    <p>Played by an individual who is designated as the next of kin for another individual which scopes the role.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;NOK&quot;, &quot;display&quot;: &quot;next of kin&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;NOK&quot;&gt;&lt;display value=&quot;next of kin&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-ECON"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-ECON">ECON</a>
+                </td>
+                <td>emergency contact</td>
+                <td>
+                  <div>
+                    <p>A contact designated for contact in emergent situations.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;ECON&quot;, &quot;display&quot;: &quot;emergency contact&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;ECON&quot;&gt;&lt;display value=&quot;emergency contact&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-GUARD"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-GUARD">GUARD</a>
+                </td>
+                <td>guardian</td>
+                <td>
+                  <div>
+                    <p>The role played by a person or institution legally empowered with responsibility for the care of a ward.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;GUARD&quot;, &quot;display&quot;: &quot;guardian&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;GUARD&quot;&gt;&lt;display value=&quot;guardian&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FAMMEMB"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FAMMEMB">FAMMEMB</a>
+                </td>
+                <td>family member</td>
+                <td>
+                  <div>
+                    <p>A relationship between two people characterizing their &quot;familial&quot; relationship</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FAMMEMB&quot;, &quot;display&quot;: &quot;family member&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FAMMEMB&quot;&gt;&lt;display value=&quot;family member&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-PRN"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-PRN">PRN</a>
+                </td>
+                <td>parent</td>
+                <td>
+                  <div>
+                    <p>The player of the role is one who begets, gives birth to, or nurtures and raises the scoping entity (child).</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;PRN&quot;, &quot;display&quot;: &quot;parent&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;PRN&quot;&gt;&lt;display value=&quot;parent&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FTH"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FTH">FTH</a>
+                </td>
+                <td>father</td>
+                <td>
+                  <div>
+                    <p>The player of the role is a male who begets or raises or nurtures the scoping entity (child).</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FTH&quot;, &quot;display&quot;: &quot;father&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FTH&quot;&gt;&lt;display value=&quot;father&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-MTH"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-MTH">MTH</a>
+                </td>
+                <td>mother</td>
+                <td>
+                  <div>
+                    <p>The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;MTH&quot;, &quot;display&quot;: &quot;mother&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;MTH&quot;&gt;&lt;display value=&quot;mother&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-SPS"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-SPS">SPS</a>
+                </td>
+                <td>spouse</td>
+                <td>
+                  <div>
+                    <p>The player of the role is a marriage partner of the scoping person.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;SPS&quot;, &quot;display&quot;: &quot;spouse&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;SPS&quot;&gt;&lt;display value=&quot;spouse&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-CHILD"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-CHILD">CHILD</a>
+                </td>
+                <td>child</td>
+                <td>
+                  <div>
+                    <p>The player of the role is a child of the scoping entity.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;CHILD&quot;, &quot;display&quot;: &quot;child&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;CHILD&quot;&gt;&lt;display value=&quot;child&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FRND"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FRND">FRND</a>
+                </td>
+                <td>unrelated friend</td>
+                <td>
+                  <div>
+                    <p>The player of the role is a person who is known, liked, and trusted by the scoping person.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FRND&quot;, &quot;display&quot;: &quot;unrelated friend&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FRND&quot;&gt;&lt;display value=&quot;unrelated friend&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type"/>
+        <version value="0.1.0"/>
+        <name value="EReferralRelationshipType"/>
+        <title value="eReferral Relationship Type"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:5e0a373c-4461-49df-b005-e3bc9742e3e3"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="10"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/v3-RoleCode|4.0.0"/>
+          </parameter>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="NOK"/>
+            <display value="next of kin"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="ECON"/>
+            <display value="emergency contact"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="GUARD"/>
+            <display value="guardian"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="FAMMEMB"/>
+            <display value="family member"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="PRN"/>
+            <display value="parent"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="FTH"/>
+            <display value="father"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="MTH"/>
+            <display value="mother"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="SPS"/>
+            <display value="spouse"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="CHILD"/>
+            <display value="child"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="FRND"/>
+            <display value="unrelated friend"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html">codesystem RoleCode v4.0.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://terminology.hl7.org/CodeSystem/v3-RoleCode|4.0.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 10 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-NOK"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-NOK">NOK</a>
+                </td>
+                <td>next of kin</td>
+                <td>
+                  <div>
+                    <p>Played by an individual who is designated as the next of kin for another individual which scopes the role.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;NOK&quot;, &quot;display&quot;: &quot;next of kin&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;NOK&quot;&gt;&lt;display value=&quot;next of kin&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-ECON"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-ECON">ECON</a>
+                </td>
+                <td>emergency contact</td>
+                <td>
+                  <div>
+                    <p>A contact designated for contact in emergent situations.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;ECON&quot;, &quot;display&quot;: &quot;emergency contact&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;ECON&quot;&gt;&lt;display value=&quot;emergency contact&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-GUARD"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-GUARD">GUARD</a>
+                </td>
+                <td>guardian</td>
+                <td>
+                  <div>
+                    <p>The role played by a person or institution legally empowered with responsibility for the care of a ward.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;GUARD&quot;, &quot;display&quot;: &quot;guardian&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;GUARD&quot;&gt;&lt;display value=&quot;guardian&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FAMMEMB"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FAMMEMB">FAMMEMB</a>
+                </td>
+                <td>family member</td>
+                <td>
+                  <div>
+                    <p>A relationship between two people characterizing their &quot;familial&quot; relationship</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FAMMEMB&quot;, &quot;display&quot;: &quot;family member&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FAMMEMB&quot;&gt;&lt;display value=&quot;family member&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-PRN"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-PRN">PRN</a>
+                </td>
+                <td>parent</td>
+                <td>
+                  <div>
+                    <p>The player of the role is one who begets, gives birth to, or nurtures and raises the scoping entity (child).</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;PRN&quot;, &quot;display&quot;: &quot;parent&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;PRN&quot;&gt;&lt;display value=&quot;parent&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FTH"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FTH">FTH</a>
+                </td>
+                <td>father</td>
+                <td>
+                  <div>
+                    <p>The player of the role is a male who begets or raises or nurtures the scoping entity (child).</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FTH&quot;, &quot;display&quot;: &quot;father&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FTH&quot;&gt;&lt;display value=&quot;father&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-MTH"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-MTH">MTH</a>
+                </td>
+                <td>mother</td>
+                <td>
+                  <div>
+                    <p>The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;MTH&quot;, &quot;display&quot;: &quot;mother&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;MTH&quot;&gt;&lt;display value=&quot;mother&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-SPS"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-SPS">SPS</a>
+                </td>
+                <td>spouse</td>
+                <td>
+                  <div>
+                    <p>The player of the role is a marriage partner of the scoping person.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;SPS&quot;, &quot;display&quot;: &quot;spouse&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;SPS&quot;&gt;&lt;display value=&quot;spouse&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-CHILD"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-CHILD">CHILD</a>
+                </td>
+                <td>child</td>
+                <td>
+                  <div>
+                    <p>The player of the role is a child of the scoping entity.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;CHILD&quot;, &quot;display&quot;: &quot;child&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;CHILD&quot;&gt;&lt;display value=&quot;child&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FRND"> </a>
+                  <code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FRND">FRND</a>
+                </td>
+                <td>unrelated friend</td>
+                <td>
+                  <div>
+                    <p>The player of the role is a person who is known, liked, and trusted by the scoping person.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FRND&quot;, &quot;display&quot;: &quot;unrelated friend&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FRND&quot;&gt;&lt;display value=&quot;unrelated friend&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type"/>
+        <version value="0.1.0"/>
+        <name value="EReferralRelationshipType"/>
+        <title value="eReferral Relationship Type"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:5e0a373c-4461-49df-b005-e3bc9742e3e3"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="10"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/v3-RoleCode|4.0.0"/>
+          </parameter>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="NOK"/>
+            <display value="next of kin"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="ECON"/>
+            <display value="emergency contact"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="GUARD"/>
+            <display value="guardian"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="FAMMEMB"/>
+            <display value="family member"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="PRN"/>
+            <display value="parent"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="FTH"/>
+            <display value="father"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="MTH"/>
+            <display value="mother"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="SPS"/>
+            <display value="spouse"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="CHILD"/>
+            <display value="child"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="FRND"/>
+            <display value="unrelated friend"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-service-category"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 5 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-108252007"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/108252007">108252007</a>
+                </td>
+                <td>Laboratory procedure</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;108252007&quot;, &quot;display&quot;: &quot;Laboratory procedure&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;108252007&quot;&gt;&lt;display value=&quot;Laboratory procedure&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-363679005"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/363679005">363679005</a>
+                </td>
+                <td>Imaging</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;363679005&quot;, &quot;display&quot;: &quot;Imaging&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;363679005&quot;&gt;&lt;display value=&quot;Imaging&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-409063005"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/409063005">409063005</a>
+                </td>
+                <td>Counselling</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;409063005&quot;, &quot;display&quot;: &quot;Counselling&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;409063005&quot;&gt;&lt;display value=&quot;Counselling&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-409073007"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/409073007">409073007</a>
+                </td>
+                <td>Education</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;409073007&quot;, &quot;display&quot;: &quot;Education&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;409073007&quot;&gt;&lt;display value=&quot;Education&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-387713003"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/387713003">387713003</a>
+                </td>
+                <td>Surgical procedure</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;387713003&quot;, &quot;display&quot;: &quot;Surgical procedure&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;387713003&quot;&gt;&lt;display value=&quot;Surgical procedure&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-service-category"/>
+        <version value="0.1.0"/>
+        <name value="EReferralServiceCategory"/>
+        <title value="eReferral Service Category"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:b1bb8a8a-5c9f-4a66-8769-a25267895770"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="5"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="108252007"/>
+            <display value="Laboratory procedure"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="363679005"/>
+            <display value="Imaging"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="409063005"/>
+            <display value="Counselling"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="409073007"/>
+            <display value="Education"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-service-category"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 5 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-108252007"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/108252007">108252007</a>
+                </td>
+                <td>Laboratory procedure</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;108252007&quot;, &quot;display&quot;: &quot;Laboratory procedure&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;108252007&quot;&gt;&lt;display value=&quot;Laboratory procedure&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-363679005"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/363679005">363679005</a>
+                </td>
+                <td>Imaging</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;363679005&quot;, &quot;display&quot;: &quot;Imaging&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;363679005&quot;&gt;&lt;display value=&quot;Imaging&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-409063005"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/409063005">409063005</a>
+                </td>
+                <td>Counselling</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;409063005&quot;, &quot;display&quot;: &quot;Counselling&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;409063005&quot;&gt;&lt;display value=&quot;Counselling&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-409073007"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/409073007">409073007</a>
+                </td>
+                <td>Education</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;409073007&quot;, &quot;display&quot;: &quot;Education&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;409073007&quot;&gt;&lt;display value=&quot;Education&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://snomed.info/sct-387713003"> </a>
+                  <code>http://snomed.info/sct</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://snomed.info/id/387713003">387713003</a>
+                </td>
+                <td>Surgical procedure</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;387713003&quot;, &quot;display&quot;: &quot;Surgical procedure&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;387713003&quot;&gt;&lt;display value=&quot;Surgical procedure&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-service-category"/>
+        <version value="0.1.0"/>
+        <name value="EReferralServiceCategory"/>
+        <title value="eReferral Service Category"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:b1bb8a8a-5c9f-4a66-8769-a25267895770"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="5"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="108252007"/>
+            <display value="Laboratory procedure"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="363679005"/>
+            <display value="Imaging"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="409063005"/>
+            <display value="Counselling"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="409073007"/>
+            <display value="Education"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="387713003"/>
+            <display value="Surgical procedure"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-pwd-disability-type-cs.html">codesystem PWD Disability Type Code System v0.1.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 9 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual">visual</a>
+                </td>
+                <td>Visual Disability</td>
+                <td>Complete or partial loss of sight/visual function.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual&quot;, &quot;display&quot;: &quot;Visual Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual&quot;&gt;&lt;display value=&quot;Visual Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-hearing"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-hearing">hearing</a>
+                </td>
+                <td>Hearing Disability</td>
+                <td>Complete or partial loss of hearing/hearing function.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;hearing&quot;, &quot;display&quot;: &quot;Hearing Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;hearing&quot;&gt;&lt;display value=&quot;Hearing Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-speech"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-speech">speech</a>
+                </td>
+                <td>Speech Impairment</td>
+                <td>Complete or partial loss of speech or communication function.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;speech&quot;, &quot;display&quot;: &quot;Speech Impairment&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;speech&quot;&gt;&lt;display value=&quot;Speech Impairment&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-physical"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-physical">physical</a>
+                </td>
+                <td>Physical/Orthopedic Disability</td>
+                <td>Impairment in physical/orthopedic function including locomotor disabilities.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;physical&quot;, &quot;display&quot;: &quot;Physical/Orthopedic Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;physical&quot;&gt;&lt;display value=&quot;Physical/Orthopedic Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-intellectual"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-intellectual">intellectual</a>
+                </td>
+                <td>Intellectual Disability</td>
+                <td>Significant limitations in intellectual functioning and adaptive behavior.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;intellectual&quot;, &quot;display&quot;: &quot;Intellectual Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;intellectual&quot;&gt;&lt;display value=&quot;Intellectual Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-learning"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-learning">learning</a>
+                </td>
+                <td>Learning Disability</td>
+                <td>Neurological disorders affecting acquisition and use of listening, speaking, reading, writing, reasoning, or mathematical abilities.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;learning&quot;, &quot;display&quot;: &quot;Learning Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;learning&quot;&gt;&lt;display value=&quot;Learning Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-psychosocial"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-psychosocial">psychosocial</a>
+                </td>
+                <td>Psychosocial Disability</td>
+                <td>Mental health conditions and psychosocial impairments.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;psychosocial&quot;, &quot;display&quot;: &quot;Psychosocial Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;psychosocial&quot;&gt;&lt;display value=&quot;Psychosocial Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual-low-vision"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual-low-vision">visual-low-vision</a>
+                </td>
+                <td>Low Vision</td>
+                <td>Significant visual impairment not correctable by standard glasses/contact lenses.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual-low-vision&quot;, &quot;display&quot;: &quot;Low Vision&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual-low-vision&quot;&gt;&lt;display value=&quot;Low Vision&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual-blindness"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual-blindness">visual-blindness</a>
+                </td>
+                <td>Blindness</td>
+                <td>Complete loss of vision or light perception.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual-blindness&quot;, &quot;display&quot;: &quot;Blindness&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual-blindness&quot;&gt;&lt;display value=&quot;Blindness&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs"/>
+        <version value="0.1.0"/>
+        <name value="PWDDisabilityTypeVS"/>
+        <title value="PWD Disability Type Value Set"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:241b25b4-b2a3-42ba-9bf8-10b39b084f4d"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="9"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="visual"/>
+            <display value="Visual Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="hearing"/>
+            <display value="Hearing Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="speech"/>
+            <display value="Speech Impairment"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="physical"/>
+            <display value="Physical/Orthopedic Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="intellectual"/>
+            <display value="Intellectual Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="learning"/>
+            <display value="Learning Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="psychosocial"/>
+            <display value="Psychosocial Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="visual-low-vision"/>
+            <display value="Low Vision"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="visual-blindness"/>
+            <display value="Blindness"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-pwd-disability-type-cs.html">codesystem PWD Disability Type Code System v0.1.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 9 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual">visual</a>
+                </td>
+                <td>Visual Disability</td>
+                <td>Complete or partial loss of sight/visual function.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual&quot;, &quot;display&quot;: &quot;Visual Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual&quot;&gt;&lt;display value=&quot;Visual Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-hearing"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-hearing">hearing</a>
+                </td>
+                <td>Hearing Disability</td>
+                <td>Complete or partial loss of hearing/hearing function.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;hearing&quot;, &quot;display&quot;: &quot;Hearing Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;hearing&quot;&gt;&lt;display value=&quot;Hearing Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-speech"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-speech">speech</a>
+                </td>
+                <td>Speech Impairment</td>
+                <td>Complete or partial loss of speech or communication function.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;speech&quot;, &quot;display&quot;: &quot;Speech Impairment&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;speech&quot;&gt;&lt;display value=&quot;Speech Impairment&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-physical"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-physical">physical</a>
+                </td>
+                <td>Physical/Orthopedic Disability</td>
+                <td>Impairment in physical/orthopedic function including locomotor disabilities.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;physical&quot;, &quot;display&quot;: &quot;Physical/Orthopedic Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;physical&quot;&gt;&lt;display value=&quot;Physical/Orthopedic Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-intellectual"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-intellectual">intellectual</a>
+                </td>
+                <td>Intellectual Disability</td>
+                <td>Significant limitations in intellectual functioning and adaptive behavior.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;intellectual&quot;, &quot;display&quot;: &quot;Intellectual Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;intellectual&quot;&gt;&lt;display value=&quot;Intellectual Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-learning"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-learning">learning</a>
+                </td>
+                <td>Learning Disability</td>
+                <td>Neurological disorders affecting acquisition and use of listening, speaking, reading, writing, reasoning, or mathematical abilities.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;learning&quot;, &quot;display&quot;: &quot;Learning Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;learning&quot;&gt;&lt;display value=&quot;Learning Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-psychosocial"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-psychosocial">psychosocial</a>
+                </td>
+                <td>Psychosocial Disability</td>
+                <td>Mental health conditions and psychosocial impairments.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;psychosocial&quot;, &quot;display&quot;: &quot;Psychosocial Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;psychosocial&quot;&gt;&lt;display value=&quot;Psychosocial Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual-low-vision"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual-low-vision">visual-low-vision</a>
+                </td>
+                <td>Low Vision</td>
+                <td>Significant visual impairment not correctable by standard glasses/contact lenses.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual-low-vision&quot;, &quot;display&quot;: &quot;Low Vision&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual-low-vision&quot;&gt;&lt;display value=&quot;Low Vision&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual-blindness"> </a>
+                  <code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual-blindness">visual-blindness</a>
+                </td>
+                <td>Blindness</td>
+                <td>Complete loss of vision or light perception.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual-blindness&quot;, &quot;display&quot;: &quot;Blindness&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual-blindness&quot;&gt;&lt;display value=&quot;Blindness&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs"/>
+        <version value="0.1.0"/>
+        <name value="PWDDisabilityTypeVS"/>
+        <title value="PWD Disability Type Value Set"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2026-06-16T23:54:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="PH"/>
+            <display value="Philippines"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:241b25b4-b2a3-42ba-9bf8-10b39b084f4d"/>
+          <timestamp value="2026-06-16T23:56:27+00:00"/>
+          <total value="9"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="visual"/>
+            <display value="Visual Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="hearing"/>
+            <display value="Hearing Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="speech"/>
+            <display value="Speech Impairment"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="physical"/>
+            <display value="Physical/Orthopedic Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="intellectual"/>
+            <display value="Intellectual Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="learning"/>
+            <display value="Learning Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="psychosocial"/>
+            <display value="Psychosocial Disability"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="visual-low-vision"/>
+            <display value="Low Vision"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"/>
+            <code value="visual-blindness"/>
+            <display value="Blindness"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

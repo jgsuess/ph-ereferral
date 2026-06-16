@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefConditionHypertensiveEmergency"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Condition ExampleERefConditionHypertensiveEmergency</b></p><a name="ExampleERefConditionHypertensiveEmergency"> </a><a name="hcExampleERefConditionHypertensiveEmergency"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ereferral-condition.html">EReferral Condition</a></p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}">Encounter Diagnosis</span></p><p><b>severity</b>: <span title="Codes:{http://snomed.info/sct 24484000}">Severe</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 132721000119104}">Hypertensive emergency with suspected acute end-organ damage</span></p><p><b>subject</b>: <a href="Patient-ExampleERefPatient.html">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>onset</b>: 2025-03-15 07:45:00+0800</p><p><b>recordedDate</b>: 2025-03-15 08:05:00+0800</p><p><b>note</b>: </p><blockquote><div><p>Blood pressure remained above 180/120 mmHg with severe headache and visual symptoms. Referred for emergency evaluation and management.</p>
+</div></blockquote></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="encounter-diagnosis"/>
+      <display value="Encounter Diagnosis"/>
+    </coding>
+  </category>
+  <severity>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="24484000"/>
+      <display value="Severe"/>
+    </coding>
+  </severity>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="132721000119104"/>
+      <display value="Hypertensive emergency"/>
+    </coding>
+    <text value="Hypertensive emergency with suspected acute end-organ damage"/>
+  </code>
+  <subject>
+    <reference value="Patient/ExampleERefPatient"/>
+  </subject>
+  <onsetDateTime value="2025-03-15T07:45:00+08:00"/>
+  <recordedDate value="2025-03-15T08:05:00+08:00"/>
+  <note>
+    <text value="Blood pressure remained above 180/120 mmHg with severe headache and visual symptoms. Referred for emergency evaluation and management."/>
+  </note>
+</Condition>

@@ -1,0 +1,56 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-priority",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "EReferralPriority",
+    "title" : "eReferral Priority",
+    "description" : "Priority levels for eReferral requests. Uses standard FHIR RequestPriority values.",
+    "systems" : ["http://hl7.org/fhir/request-priority"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-reason",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "EReferralReason",
+    "title" : "eReferral Reason",
+    "description" : "Clinical reasons for eReferral requests. Uses SNOMED CT clinical findings and diagnoses.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "EReferralReceivingResponse",
+    "title" : "eReferral Receiving Facility Response",
+    "description" : "Response states used by a receiving facility after referral receipt in the PH eReferral workflow.",
+    "systems" : ["https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "EReferralRelationshipType",
+    "title" : "eReferral Relationship Type",
+    "description" : "Relationship roles used for patient contacts, next of kin, emergency contacts, guardians, and accompanying persons in Philippine eReferral.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-service-category",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "EReferralServiceCategory",
+    "title" : "eReferral Service Category",
+    "description" : "Categories of services that can be requested through eReferral",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PWDDisabilityTypeVS",
+    "title" : "PWD Disability Type Value Set",
+    "description" : "Value set for types of disability as defined by the Philippine government for PWD registration.",
+    "systems" : ["https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"]
+  }]
+}

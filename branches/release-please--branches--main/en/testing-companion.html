@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Testing Companion - PH eReferral Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style type="text/css">
+  /* ─────────────────────────────────────────────────────────────
+     Class-based Table Styling — only affects tables with classes
+     ───────────────────────────────────────────────────────────── */
+
+  /* Table Responsive (missing from Bootstrap 3 base template) */
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Dark header */
+  .thead-dark th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    background-color: #e8e8e8;
+  }
+
+  /* Global table enhancements */
+  .table-bordered {
+    border: 1px solid #dee2e6;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6;
+  }
+
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     .ph-table wrapper — for markdown tables in narrative pages
+     Wrap your markdown table in <div class="ph-table" markdown="1">
+     ───────────────────────────────────────────────────────────── */
+  .ph-table table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    color: #333;
+    background-color: #e8e8e8;
+  }
+
+  .ph-table td {
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table td:first-child {
+    font-weight: bold;
+  }
+
+  .ph-table tr:nth-of-type(odd) {
+    background-color: transparent;
+  }
+
+  .ph-table tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     Data-Dictionary-specific scrollable wrapper
+     ───────────────────────────────────────────────────────────── */
+  .data-dictionary-wrapper {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"16"}
+    h3,h4,h5,h6{--heading-prefix:"16"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Testing Companion</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Testing Companion</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="testing-companion-ig">Testing Companion IG</h3>
+
+<p>The PH eReferral Testing Companion is a separate FHIR Implementation Guide that <em>depends on</em> the main IG. It exists to keep the main IG focused, clean, and fast to render, while providing a rich set of testing, demonstration, and experimentation artefacts alongside it.</p>
+
+<hr />
+
+<h4 id="why-a-separate-ig">Why a Separate IG?</h4>
+
+<p>A FHIR IG that tries to serve two purposes at once — communicating the standard clearly <em>and</em> exercising it thoroughly — ends up doing neither well. Bulk test data inflates page count, slows the IG Publisher, and buries the handful of carefully constructed mainline examples that implementers actually need to understand the model.</p>
+
+<p>The solution is a clean separation:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>The main IG contains…</th>
+      <th>The companion IG contains…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>One clear example per key concept</td>
+      <td>Hundreds of examples for edge cases, boundary values, and variant scenarios</td>
+    </tr>
+    <tr>
+      <td>Narrative pages explaining the standard</td>
+      <td>Scripts and forms for hands-on experimentation</td>
+    </tr>
+    <tr>
+      <td>Profiles, value sets, and canonical definitions</td>
+      <td>Bulk test fixtures for matrix testing and load testing</td>
+    </tr>
+    <tr>
+      <td>A fast, readable rendered site</td>
+      <td>Containerised tooling that runs locally</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The companion depends on the main IG (declared via <code class="language-plaintext highlighter-rouge">dependsOn</code> in its <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>), so all companion instances and questionnaires are validated against the same profiles and terminology. It is not a fork — it is an extension.</p>
+
+<p>&lt;?xml version="1.0" encoding="us-ascii" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="411px" preserveAspectRatio="none" style="width:1591px;height:411px;background:#FFFFFF;" version="1.1" viewBox="0 0 1591 411" width="1591px" zoomAndPan="magnify"><defs></defs><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="806" x="391.5" y="35.4209">Main IG and Testing Companion IG &#8212; Relationship and Contents</text><!--cluster MAIN--><g id="cluster_MAIN"><rect fill="#E3F2FD" height="230" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="677" x="223" y="55.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="97" x="490.5" y="67.8198">PH eReferral IG</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="41" x="591.5" y="67.8198">(main)</text></g><!--cluster COMP--><g id="cluster_COMP"><rect fill="#E8F5E9" height="213" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="677" x="908" y="192.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="225" x="1134" y="204.8198">PH eReferral Testing Companion IG</text></g><g id="elem_GMN13"><path d="M11,79.1094 L11,134.5078 A0,0 0 0 0 11,134.5078 L213,134.5078 A0,0 0 0 0 213,134.5078 L213,89.1094 L203,79.1094 L157.3144,79.1094 L697.9813,78.5846 L149.3144,79.1094 L11,79.1094 A0,0 0 0 0 11,79.1094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><path d="M203,79.1094 L203,89.1094 L213,89.1094 L203,79.1094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="152" x="17" y="96.1763">Kept intentionally small.</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="159" x="17" y="111.3091">One worked example per</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="181" x="17" y="126.4419">key concept &#8212; no bulk data.</text></g><g id="elem_GMN16"><path d="M18.5,206.6094 L18.5,292.2734 A0,0 0 0 0 18.5,292.2734 L213.5,292.2734 A0,0 0 0 0 213.5,292.2734 L213.5,216.6094 L203.5,206.6094 L162.2917,206.6094 L1431.9258,215.4415 L154.2917,206.6094 L18.5,206.6094 A0,0 0 0 0 18.5,206.6094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><path d="M203.5,206.6094 L203.5,216.6094 L213.5,216.6094 L203.5,206.6094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="164" x="24.5" y="223.6763">Hundreds of instances for</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="163" x="24.5" y="238.8091">matrix testing, edge case</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="174" x="24.5" y="253.9419">coverage, and load testing.</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="158" x="24.5" y="269.0747">Does not pollute main IG</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="65" x="24.5" y="284.2075">rendering.</text></g><!--entity PROF--><g id="elem_PROF"><rect fill="#DDEEFF" height="55.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="171" x="231.5" y="78.6094"></rect><rect fill="#DDEEFF" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="382.5" y="83.6094"></rect><rect fill="#DDEEFF" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="380.5" y="85.6094"></rect><rect fill="#DDEEFF" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="380.5" y="89.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="123" x="246.5" y="108.8198">Profiles &amp; extensions</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="131" x="246.5" y="121.6245">(structural constraints)</text></g><!--entity TERM--><g id="elem_TERM"><rect fill="#DDEEFF" height="55.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="195" x="420.5" y="78.6094"></rect><rect fill="#DDEEFF" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="595.5" y="83.6094"></rect><rect fill="#DDEEFF" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="593.5" y="85.6094"></rect><rect fill="#DDEEFF" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="593.5" y="89.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="70" x="435.5" y="108.8198">Terminology</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="155" x="435.5" y="121.6245">(value sets, code systems)</text></g><!--entity EX--><g id="elem_EX"><rect fill="#DDEEFF" height="55.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="224" x="634" y="78.6094"></rect><rect fill="#DDEEFF" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="838" y="83.6094"></rect><rect fill="#DDEEFF" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="836" y="85.6094"></rect><rect fill="#DDEEFF" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="836" y="89.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="105" x="649" y="108.8198">Mainline examples</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="184" x="649" y="121.6245">(one clear instance per concept)</text></g><!--entity NAR--><g id="elem_NAR"><rect fill="#DDEEFF" height="55.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="230" x="232" y="221.6094"></rect><rect fill="#DDEEFF" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="442" y="226.6094"></rect><rect fill="#DDEEFF" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="440" y="228.6094"></rect><rect fill="#DDEEFF" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="440" y="232.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="91" x="247" y="251.8198">Narrative pages</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="190" x="247" y="264.6245">(approach, architecture, lifecycle)</text></g><!--entity BULK--><g id="elem_BULK"><rect fill="#DDFBE8" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="216" x="1361" y="215.6094"></rect><rect fill="#DDFBE8" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="1557" y="220.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="1555" y="222.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="1555" y="226.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="109" x="1376" y="245.8198">Bulk test examples</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="176" x="1376" y="258.6245">(edge cases, boundary values,</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="103" x="1376" y="271.4292">variant scenarios)</text></g><!--entity SDC--><g id="elem_SDC"><rect fill="#DDFBE8" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="189" x="950.5" y="215.6094"></rect><rect fill="#DDFBE8" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="1119.5" y="220.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="1117.5" y="222.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="1117.5" y="226.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="115" x="965.5" y="245.8198">SDC Questionnaires</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="148" x="965.5" y="258.6245">(interactive referral forms</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="149" x="965.5" y="271.4292">with data extraction rules)</text></g><!--entity SCRIPTS--><g id="elem_SCRIPTS"><rect fill="#DDFBE8" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="185" x="1157.5" y="215.6094"></rect><rect fill="#DDFBE8" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="1322.5" y="220.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="1320.5" y="222.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="1320.5" y="226.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="76" x="1172.5" y="245.8198">Demo scripts</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="110" x="1172.5" y="258.6245">(scenario playback,</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="145" x="1172.5" y="271.4292">automated walkthroughs)</text></g><!--entity DOCKER--><g id="elem_DOCKER"><rect fill="#DDFBE8" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="225" x="932.5" y="329.6094"></rect><rect fill="#DDFBE8" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="1137.5" y="334.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="1135.5" y="336.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="1135.5" y="340.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="139" x="947.5" y="359.8198">Containerised test stack</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="175" x="947.5" y="372.6245">(docker-compose: FHIR server,</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="185" x="947.5" y="385.4292">SDC renderer, test data seeder)</text></g><path d="M900.0347,164.1317 C900.1355,164.487 900.2364,164.8428 900.3375,165.199 C900.7417,166.624 901.148,168.0562 901.5557,169.4933 C902.3711,172.3675 903.192,175.2611 904.0128,178.1546 C904.8337,181.048 905.6545,183.9414 906.4697,186.8152 C906.8774,188.2521 907.2836,189.6841 907.6878,191.1087 C907.7888,191.4649 907.8897,191.8206 907.9905,192.1758 C908.0157,192.2646 908.0409,192.3534 908.066,192.4421 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#FFFFFF" points="900.0347,164.1317,898.6292,181.1618,910.1736,177.8868,900.0347,164.1317" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="75" x="937" y="165.6763">depends on</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="135" x="907" y="180.8091">(canonical reference)</text></g></svg></p>
+
+<hr />
+
+<h4 id="bulk-test-examples">Bulk Test Examples</h4>
+
+<p>The companion's primary purpose is to hold the test data that would otherwise clutter the main IG. This includes:</p>
+
+<ul>
+  <li><strong>Scenario variants</strong> — alternative pathways through the referral workflow: referral declined, referral redirected, referral completed with feedback, referral for a non-pregnant patient.</li>
+  <li><strong>Edge cases</strong> — instances with optional elements populated to their boundaries, unusual but valid code combinations, and minimal-conformant instances with only required fields.</li>
+  <li><strong>Negative test cases</strong> — intentionally invalid instances used to verify that validators correctly reject non-conformant data.</li>
+  <li><strong>Volume fixtures</strong> — larger sets of patients, encounters, and referrals used for load testing and matrix test seeding.</li>
+</ul>
+
+<p>Keeping this material in the companion means the main IG remains focused on the handful of examples that matter for understanding the standard — and the companion can grow without any impact on main IG build times or readability.</p>
+
+<hr />
+
+<h4 id="interactive-demonstration-artefacts">Interactive Demonstration Artefacts</h4>
+
+<p>Beyond bulk data, the companion provides artefacts designed for <strong>hands-on exploration</strong> by clinicians, business analysts, and implementers who want to understand the IG's behaviour without reading raw FHIR JSON.</p>
+
+<h5 id="demo-scripts">Demo Scripts</h5>
+
+<p>Executable scripts (shell or Python) that replay end-to-end scenarios against a live FHIR server. A single command can:</p>
+
+<ol>
+  <li>Load the eReferral test data into a local FHIR server.</li>
+  <li>Submit a referral transaction bundle.</li>
+  <li>Query the resulting <code class="language-plaintext highlighter-rouge">Task</code> resource for its current status.</li>
+  <li>Simulate a status update from the receiving facility.</li>
+  <li>Print a human-readable summary of the outcome.</li>
+</ol>
+
+<p>Scripts serve two audiences: developers who want to understand the API surface, and project managers who want to see a live walkthrough without writing a line of code.</p>
+
+<h5 id="sdc-questionnaires">SDC Questionnaires</h5>
+
+<p>The most important interactive artefact is a set of <strong>Structured Data Capture (SDC) Questionnaires</strong> — FHIR <code class="language-plaintext highlighter-rouge">Questionnaire</code> resources built to the <a href="https://build.fhir.org/ig/HL7/sdc/">FHIR SDC specification</a> that render as familiar data-entry forms and automate the extraction of completed data into conformant FHIR resources.</p>
+
+<p>&lt;?xml version="1.0" encoding="us-ascii" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="938px" preserveAspectRatio="none" style="width:1177px;height:938px;background:#FFFFFF;" version="1.1" viewBox="0 0 1177 938" width="1177px" zoomAndPan="magnify"><defs></defs><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="843" x="165.5" y="35.4209">SDC Questionnaire &#8212; Interactive Preview and Data Extraction Flow</text><rect fill="#FFFFFF" height="20.9531" style="stroke:#FFFFFF;stroke-width:1.0;" width="1154" x="10" y="54.3545"></rect><ellipse cx="136.5" cy="90.3076" fill="#FFFFFF" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;"></ellipse><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="241" x="16" y="120.3076"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="146" x="26" y="141.4463">Existing FHIR resources</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="221" x="26" y="155.415">(Patient, Encounter, Practitioner&#8230;)</text><line style="stroke:#000000;stroke-width:1.0;" x1="10" x2="10" y1="54.3545" y2="931.3193"></line><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="171" x="280.5" y="188.2451"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="151" x="290.5" y="209.3838">Load SDC Questionnaire</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="118" x="290.5" y="223.3525">from Companion IG</text><rect fill="#FFFFFF" height="61.9063" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="198" x="267" y="256.1826"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="150" x="277" y="277.3213">Pre-populate form fields</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="178" x="277" y="291.29">from existing FHIR resources</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="156" x="277" y="305.2588">(population expressions)</text><rect fill="#FFFFFF" height="61.9063" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="194" x="269" y="477.6943"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="135" x="279" y="498.833">Apply extraction rules</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="154" x="279" y="512.8018">(item extraction context,</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="174" x="279" y="526.7705">Definition-based extraction)</text><rect fill="#FFFFFF" height="61.9063" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="139" x="296.5" y="559.6006"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="116" x="306.5" y="580.7393">Produce extracted</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="94" x="306.5" y="594.708">FHIR resources</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="119" x="306.5" y="608.6768">(Bundle of profiles)</text><line style="stroke:#000000;stroke-width:1.0;" x1="261" x2="261" y1="54.3545" y2="931.3193"></line><path d="M639,334.3584 L639,358.0576 L619,362.0576 L639,366.0576 L639,389.7568 A0,0 0 0 0 639,389.7568 L787,389.7568 A0,0 0 0 0 787,389.7568 L787,344.3584 L777,334.3584 L639,334.3584 A0,0 0 0 0 639,334.3584 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><path d="M777,334.3584 L777,344.3584 L787,344.3584 L777,334.3584 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="127" x="645" y="351.4253">User sees a familiar</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="122" x="645" y="366.5581">referral form &#8212; not</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="105" x="645" y="381.6909">raw JSON or XML</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="143" x="476" y="338.0889"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="123" x="486" y="359.2275">Review and interact</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="119" x="486" y="373.1963">with rendered form</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="145" x="475" y="409.7568"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="125" x="485" y="430.8955">Complete or correct</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="84" x="485" y="444.8643">missing fields</text><line style="stroke:#000000;stroke-width:1.0;" x1="469" x2="469" y1="54.3545" y2="931.3193"></line><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="182" x="888" y="641.5068"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="162" x="898" y="662.6455">Validate extracted Bundle</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="147" x="898" y="676.6143">against main IG profiles</text><polygon fill="#FFFFFF" points="962.5,709.4443,995.5,709.4443,1007.5,721.4443,995.5,733.4443,962.5,733.4443,950.5,721.4443,962.5,709.4443" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="33" x="962.5" y="725.2524">Valid?</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="20" x="930.5" y="718.8501">yes</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="14" x="1007.5" y="718.8501">no</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="130" x="819" y="743.4443"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="110" x="829" y="764.583">Accept resources</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="98" x="829" y="778.5518">into FHIR server</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="172" x="798" y="811.3818"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="152" x="808" y="832.5205">Demonstrate successful</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="129" x="808" y="846.4893">round-trip extraction</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="168" x="990" y="743.4443"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="148" x="1000" y="764.583">Report validation errors</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="93" x="1000" y="778.5518">as IG feedback</text><polygon fill="#FFFFFF" points="979,865.3193,991,877.3193,979,889.3193,967,877.3193,979,865.3193" style="stroke:#000000;stroke-width:1.0;"></polygon><ellipse cx="979" cy="920.3193" fill="#FFFFFF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"></ellipse><ellipse cx="979" cy="920.3193" fill="#000000" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;"></ellipse><line style="stroke:#000000;stroke-width:1.0;" x1="792" x2="792" y1="54.3545" y2="931.3193"></line><line style="stroke:#000000;stroke-width:1.0;" x1="1162" x2="1162" y1="54.3545" y2="931.3193"></line><line style="stroke:#000000;stroke-width:1.0;" x1="136.5" x2="136.5" y1="100.3076" y2="120.3076"></line><polygon fill="#000000" points="132.5,110.3076,136.5,120.3076,140.5,110.3076,136.5,114.3076" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="366" x2="366" y1="236.1826" y2="256.1826"></line><polygon fill="#000000" points="362,246.1826,366,256.1826,370,246.1826,366,250.1826" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="366" x2="366" y1="539.6006" y2="559.6006"></line><polygon fill="#000000" points="362,549.6006,366,559.6006,370,549.6006,366,553.6006" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="547.5" x2="547.5" y1="386.0264" y2="409.7568"></line><polygon fill="#000000" points="543.5,399.7568,547.5,409.7568,551.5,399.7568,547.5,403.7568" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="884" x2="884" y1="791.3818" y2="811.3818"></line><polygon fill="#000000" points="880,801.3818,884,811.3818,888,801.3818,884,805.3818" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="950.5" x2="884" y1="721.4443" y2="721.4443"></line><line style="stroke:#000000;stroke-width:1.0;" x1="884" x2="884" y1="721.4443" y2="743.4443"></line><polygon fill="#000000" points="880,733.4443,884,743.4443,888,733.4443,884,737.4443" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="1007.5" x2="1074" y1="721.4443" y2="721.4443"></line><line style="stroke:#000000;stroke-width:1.0;" x1="1074" x2="1074" y1="721.4443" y2="743.4443"></line><polygon fill="#000000" points="1070,733.4443,1074,743.4443,1078,733.4443,1074,737.4443" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="884" x2="884" y1="859.3193" y2="877.3193"></line><line style="stroke:#000000;stroke-width:1.0;" x1="884" x2="967" y1="877.3193" y2="877.3193"></line><polygon fill="#000000" points="957,873.3193,967,877.3193,957,881.3193,961,877.3193" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="1074" x2="1074" y1="791.3818" y2="877.3193"></line><line style="stroke:#000000;stroke-width:1.0;" x1="1074" x2="991" y1="877.3193" y2="877.3193"></line><polygon fill="#000000" points="1001,873.3193,991,877.3193,1001,881.3193,997,877.3193" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="979" x2="979" y1="689.4443" y2="709.4443"></line><polygon fill="#000000" points="975,699.4443,979,709.4443,983,699.4443,979,703.4443" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="979" x2="979" y1="889.3193" y2="909.3193"></line><polygon fill="#000000" points="975,899.3193,979,909.3193,983,899.3193,979,903.3193" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="136.5" x2="136.5" y1="168.2451" y2="173.2451"></line><line style="stroke:#000000;stroke-width:1.0;" x1="136.5" x2="366" y1="173.2451" y2="173.2451"></line><line style="stroke:#000000;stroke-width:1.0;" x1="366" x2="366" y1="173.2451" y2="188.2451"></line><polygon fill="#000000" points="362,178.2451,366,188.2451,370,178.2451,366,182.2451" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="366" x2="366" y1="318.0889" y2="323.0889"></line><line style="stroke:#000000;stroke-width:1.0;" x1="366" x2="547.5" y1="323.0889" y2="323.0889"></line><line style="stroke:#000000;stroke-width:1.0;" x1="547.5" x2="547.5" y1="323.0889" y2="338.0889"></line><polygon fill="#000000" points="543.5,328.0889,547.5,338.0889,551.5,328.0889,547.5,332.0889" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="547.5" x2="547.5" y1="457.6943" y2="462.6943"></line><line style="stroke:#000000;stroke-width:1.0;" x1="547.5" x2="366" y1="462.6943" y2="462.6943"></line><line style="stroke:#000000;stroke-width:1.0;" x1="366" x2="366" y1="462.6943" y2="477.6943"></line><polygon fill="#000000" points="362,467.6943,366,477.6943,370,467.6943,366,471.6943" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="366" x2="366" y1="621.5068" y2="626.5068"></line><line style="stroke:#000000;stroke-width:1.0;" x1="366" x2="979" y1="626.5068" y2="626.5068"></line><line style="stroke:#000000;stroke-width:1.0;" x1="979" x2="979" y1="626.5068" y2="641.5068"></line><polygon fill="#000000" points="975,631.5068,979,641.5068,983,631.5068,979,635.5068" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="18" lengthAdjust="spacing" textLength="125" x="73" y="71.0625">"FHIR Server"</text><text fill="#000000" font-family="Verdana" font-size="18" lengthAdjust="spacing" textLength="196" x="267" y="71.0625">"SDC Form Renderer"</text><text fill="#000000" font-family="Verdana" font-size="18" lengthAdjust="spacing" textLength="96" x="582.5" y="71.0625">"End User"</text><text fill="#000000" font-family="Verdana" font-size="18" lengthAdjust="spacing" textLength="222" x="866" y="71.0625">"FHIR Server / Validator"</text></g></svg></p>
+
+<p>Each SDC Questionnaire in the companion does three things:</p>
+
+<ol>
+  <li>
+    <p><strong>Renders a form</strong> — a clinician or analyst sees a familiar referral form with labelled fields, dropdowns, and date pickers rather than raw FHIR structure. No technical knowledge is required to interact with it.</p>
+  </li>
+  <li>
+    <p><strong>Pre-populates from existing data</strong> — using SDC population expressions, the form can draw existing <code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Practitioner</code>, and <code class="language-plaintext highlighter-rouge">Encounter</code> data from a connected FHIR server to pre-fill fields, simulating how the form would behave in a real system.</p>
+  </li>
+  <li>
+    <p><strong>Extracts to FHIR resources</strong> — when the form is submitted, SDC extraction rules (definition-based or <code class="language-plaintext highlighter-rouge">questionnaire-itemExtractionContext</code>) transform the answers into a <code class="language-plaintext highlighter-rouge">Bundle</code> of profiled FHIR resources conformant with the main IG. This round-trip — from blank form to valid FHIR bundle — demonstrates that the IG's data model is practically implementable in a form-driven system.</p>
+  </li>
+</ol>
+
+<p>The extraction output is validated against the main IG profiles, making SDC forms a powerful tool for identifying ambiguities: if a clinician's natural way of completing the form cannot be mapped cleanly to a valid FHIR bundle, that is a signal the data model needs refinement.</p>
+
+<p><strong>SDC forms in the companion are specifically intended to be shared with domain experts</strong> — clinicians, DOH reviewers, and programme managers — as a non-technical way to verify that the IG captures the right information in the right way.</p>
+
+<hr />
+
+<h4 id="containerised-local-stack">Containerised Local Stack</h4>
+
+<p>To make experimentation as frictionless as possible, the companion includes a <code class="language-plaintext highlighter-rouge">docker-compose</code> configuration that spins up a complete local testing environment with a single command.</p>
+
+<p>&lt;?xml version="1.0" encoding="us-ascii" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="529px" preserveAspectRatio="none" style="width:1007px;height:529px;background:#FFFFFF;" version="1.1" viewBox="0 0 1007 529" width="1007px" zoomAndPan="magnify"><defs></defs><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="838" x="79.25" y="35.4209">Testing Companion &#8212; Containerised Local Stack (docker-compose)</text><!--cluster STACK--><g id="cluster_STACK"><rect fill="#FFFFFF" height="468" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="754" x="19" y="55.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="143" x="324.5" y="67.8198">docker-compose stack</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="236" x="278" y="80.6245">(runs locally with a single command)</text></g><!--cluster DATA--><g id="cluster_DATA"><rect fill="#FFF9C4" height="108" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="182" x="234" y="407.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="69" x="290.5" y="419.8198">Data Layer</text></g><!--cluster INTERACT--><g id="cluster_INTERACT"><rect fill="#E8F5E9" height="108" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="404" x="153" y="249.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="109" x="300.5" y="261.8198">Interaction Layer</text></g><!--cluster VALID--><g id="cluster_VALID"><rect fill="#E3F2FD" height="108" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="200" x="565" y="249.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="104" x="613" y="261.8198">Validation Layer</text></g><!--cluster TOOLS--><g id="cluster_TOOLS"><rect fill="#FCE4EC" height="108" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="194" x="58" y="91.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="48" x="131" y="103.8198">Tooling</text></g><g id="elem_GMN17"><path d="M781.5,283.6094 L781.5,339.0078 L1000.5,339.0078 L1000.5,293.6094 L990.5,283.6094 L781.5,283.6094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><path d="M990.5,283.6094 L990.5,293.6094 L1000.5,293.6094 L990.5,283.6094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="65" x="787.5" y="300.6763">Start with:</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="127" x="787.5" y="315.8091">docker-compose up</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="198" x="787.5" y="330.9419">Browse to http://localhost:8080</text></g><!--entity HAPI--><g id="elem_HAPI"><rect fill="#FFFDE7" height="76.5625" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="165" x="242.5" y="430.6094"></rect><rect fill="#FFFDE7" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="387.5" y="435.6094"></rect><rect fill="#FFFDE7" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="385.5" y="437.6094"></rect><rect fill="#FFFDE7" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="385.5" y="441.6094"></rect><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="88" x="257.5" y="459.8916">HAPI FHIR Server</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="21" x="257.5" y="471.5322">(R4)</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="125" x="257.5" y="483.1729">Hosts loaded IG packages</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="90" x="257.5" y="494.8135">and test resources</text></g><!--entity RENDERER--><g id="elem_RENDERER"><rect fill="#DDFBE8" height="76.5625" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="177" x="161.5" y="272.6094"></rect><rect fill="#DDFBE8" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="318.5" y="277.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="316.5" y="279.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="316.5" y="283.6094"></rect><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="100" x="176.5" y="301.8916">SDC Form Renderer</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="118" x="176.5" y="313.5322">(e.g. LHC-Forms / NLM)</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="118" x="176.5" y="325.1729">Renders Questionnaires,</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="137" x="176.5" y="336.8135">runs population + extraction</text></g><!--entity SEEDER--><g id="elem_SEEDER"><rect fill="#DDFBE8" height="76.5625" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="192" x="357" y="272.6094"></rect><rect fill="#DDFBE8" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="529" y="277.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="527" y="279.6094"></rect><rect fill="#DDFBE8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="527" y="283.6094"></rect><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="85" x="372" y="301.8916">Test Data Seeder</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="102" x="372" y="313.5322">(shell script / Python)</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="152" x="372" y="325.1729">Loads Companion IG examples</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="132" x="372" y="336.8135">into FHIR server on startup</text></g><!--entity VALIDATOR--><g id="elem_VALIDATOR"><rect fill="#DDEEFF" height="76.5625" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="184" x="573" y="272.6094"></rect><rect fill="#DDEEFF" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="737" y="277.6094"></rect><rect fill="#DDEEFF" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="735" y="279.6094"></rect><rect fill="#DDEEFF" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="735" y="283.6094"></rect><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="57" x="588" y="301.8916">IG Validator</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="111" x="588" y="313.5322">(publisher.jar -validate)</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="144" x="588" y="325.1729">Validates extracted resources</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="114" x="588" y="336.8135">against main IG profiles</text></g><!--entity SCRIPTS--><g id="elem_SCRIPTS"><rect fill="#FFEBEE" height="76.5625" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="178" x="66" y="114.6094"></rect><rect fill="#FFEBEE" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="224" y="119.6094"></rect><rect fill="#FFEBEE" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="222" y="121.6094"></rect><rect fill="#FFEBEE" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="222" y="125.6094"></rect><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="64" x="81" y="143.8916">Demo scripts</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="75" x="81" y="155.5322">(bash / Python)</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="138" x="81" y="167.1729">Replay end-to-end scenarios</text><text fill="#000000" font-family="Verdana" font-size="10" lengthAdjust="spacing" textLength="87" x="81" y="178.8135">against local stack</text></g><path d="M422.0148,349.8726 C401.964,374.3095 375.9596,406.0023 355.9215,430.4238 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="355.9215,430.4238,364.7226,426.0034,359.093,426.5585,358.538,420.9289,355.9215,430.4238" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="93" x="405" y="380.6763">seed test data</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="66" x="418.5" y="395.8091">on startup</text><path d="M268.1554,349.8726 C279.9039,374.3095 295.1408,406.0023 306.882,430.4238 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="306.882,430.4238,306.5873,420.5794,304.7155,425.9176,299.3773,424.0457,306.882,430.4238" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="64" x="296.5" y="380.6763">FHIR REST</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="73" x="292" y="395.8091">(read/write)</text><path d="M599.7627,349.8132 C570.5958,366.0239 535.5227,384.6428 503,399.6094 C472.469,413.6594 438.1665,427.3364 407.8827,438.7275 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="407.8827,438.7275,417.7148,439.3029,412.5626,436.9672,414.8983,431.8151,407.8827,438.7275" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="99" x="567" y="380.6763">fetch resources</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="82" x="575.5" y="395.8091">for validation</text><path d="M97.744,191.8153 C79.2483,207.2963 60.9594,226.9426 51,249.6094 C31.6913,293.5545 24.1461,317.8241 51,357.6094 C93.3979,420.4237 178.1256,447.5392 242.1991,459.2395 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="242.1991,459.2395,234.064,453.6878,237.2804,458.3413,232.6269,461.5577,242.1991,459.2395" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="96" x="52" y="308.1763">drive scenarios</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="74" x="63" y="323.3091">via FHIR API</text><path d="M177.9969,191.8726 C192.8783,216.3095 212.1784,248.0023 227.0505,272.4238 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="227.0505,272.4238,225.7858,262.6565,224.4499,268.1534,218.953,266.8175,227.0505,272.4238" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="73" x="222.5" y="222.6763">open forms</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="98" x="210" y="237.8091">for walkthrough</text><path d="M773.0909,172.8421 C773.5057,173.325 773.9269,173.8153 774.3541,174.3127 C777.7723,178.2921 781.5833,182.7287 785.6824,187.5009 C793.8808,197.0453 803.2323,207.932 812.9009,219.188 C832.2382,241.7001 852.8443,265.6893 868.0324,283.371 " fill="none" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"></path></g></svg></p>
+
+<p>The stack includes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>HAPI FHIR Server (R4)</strong></td>
+      <td>Hosts the loaded IG packages and test resources; provides the FHIR REST API for all other services</td>
+    </tr>
+    <tr>
+      <td><strong>SDC Form Renderer</strong> (e.g. LHC-Forms)</td>
+      <td>Renders <code class="language-plaintext highlighter-rouge">Questionnaire</code> resources from the companion as interactive web forms; handles population and extraction</td>
+    </tr>
+    <tr>
+      <td><strong>Test Data Seeder</strong></td>
+      <td>On startup, loads a curated set of companion examples into the FHIR server — patients, practitioners, organisations — so forms have data to pre-populate from</td>
+    </tr>
+    <tr>
+      <td><strong>IG Validator</strong></td>
+      <td>Runs <code class="language-plaintext highlighter-rouge">publisher.jar -validate</code> to validate extracted bundles against the main IG profiles on demand</td>
+    </tr>
+    <tr>
+      <td><strong>Demo scripts</strong></td>
+      <td>Drives end-to-end scenario replays against the local stack</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Starting the stack requires only Docker and one command:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up
+</code></pre></div></div>
+
+<p>Once running, an implementer can open the SDC form renderer in a browser, complete a referral form, and see the extracted FHIR bundle validated against the IG — all without deploying anything to a shared environment or requiring access to a test server.</p>
+
+<p>This is particularly valuable for:</p>
+
+<ul>
+  <li><strong>Connectathon preparation</strong> — participants can develop and test locally before the event.</li>
+  <li><strong>Stakeholder demonstrations</strong> — project teams can run a live walkthrough on a laptop.</li>
+  <li><strong>IG authoring feedback loops</strong> — authors can immediately see whether a profile change breaks existing SDC extraction rules.</li>
+</ul>
+
+<hr />
+
+<h4 id="relationship-to-other-testing-approaches">Relationship to Other Testing Approaches</h4>
+
+<p>The companion IG and its artefacts occupy a specific position in the overall testing landscape:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Approach</th>
+      <th>Where it lives</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Mainline examples</strong></td>
+      <td>Main IG</td>
+      <td>Communicate the standard clearly to implementers</td>
+    </tr>
+    <tr>
+      <td><strong>Bulk test examples</strong></td>
+      <td>Companion IG</td>
+      <td>Exercise edge cases; feed matrix and load testing</td>
+    </tr>
+    <tr>
+      <td><strong>SDC forms</strong></td>
+      <td>Companion IG</td>
+      <td>Interactive demonstration; domain expert validation</td>
+    </tr>
+    <tr>
+      <td><strong>CI matrix testing</strong></td>
+      <td><a href="interop-testing.html">Interop Testing</a> page</td>
+      <td>Automated N×N endpoint testing between live implementations</td>
+    </tr>
+    <tr>
+      <td><strong>Connectathon</strong></td>
+      <td>HL7 process (see <a href="hl7-lifecycle.html">HL7 Lifecycle</a>)</td>
+      <td>Formal interoperability evidence for FMM advancement</td>
+    </tr>
+    <tr>
+      <td><strong>Formal compliance</strong></td>
+      <td>Accredited bodies</td>
+      <td>Regulatory or contractual certification</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The companion does not replace any of these — it makes the earlier stages cheaper and more effective by giving implementers a working, explorable environment before they commit to building production systems.</p>
+
+<hr />
+
+<h4 id="status-and-roadmap">Status and Roadmap</h4>
+
+<p>The Testing Companion IG is planned as a follow-on artefact to the main IG. The current priorities for its development are:</p>
+
+<ol>
+  <li><strong>SDC Questionnaire for the referral request</strong> — covering the core REF-11 to REF-19 data elements.</li>
+  <li><strong>Registration form</strong> — covering the patient demographics elements (REF-20 to REF-29).</li>
+  <li><strong>Bulk scenario fixtures</strong> — at least five scenario variants covering the most common referral pathways.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">docker-compose</code> stack</strong> — HAPI FHIR + LHC-Forms renderer + seeder.</li>
+  <li><strong>Connectathon prep package</strong> — scripts and fixtures specifically structured for use at a FHIR Connectathon event.</li>
+</ol>
+
+<p>For the current state of the main IG artefacts on which the companion will depend, see the <a href="resource-architecture.html">Resource Architecture</a> and <a href="dd-mapping.html">DD Mapping</a> pages.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-16 23:54:00 +0000">
+    2026-06-16
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

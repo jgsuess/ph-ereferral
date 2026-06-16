@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="anc-contact-transaction-ex"/>
+  <language value="en"/>
+  <type value="transaction"/>
+  <timestamp value="2026-02-24T10:00:00+08:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"/>
+    <resource>
+      <Practitioner>
+        <id value="practitioner-jane-ex"/>
+        <meta>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-1"/>
+            <display value="REF-1"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_practitioner-jane-ex"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner practitioner-jane-ex</b></p><a name="practitioner-jane-ex"> </a><a name="hcpractitioner-jane-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Tag: </p></div><p><b>name</b>: Jane Dela Cruz </p></div>
+        </text>
+        <name>
+          <family value="Dela Cruz"/>
+          <given value="Jane"/>
+        </name>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d"/>
+    <resource>
+      <PractitionerRole>
+        <id value="practitionerrole-jane-ex"/>
+        <meta>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-1"/>
+            <display value="REF-1"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_practitionerrole-jane-ex"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole practitionerrole-jane-ex</b></p><a name="practitionerrole-jane-ex"> </a><a name="hcpractitionerrole-jane-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Tag: </p></div><p><b>practitioner</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>organization</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-7c9e6679-7425-40de-944b-e07fc1f90ae7">Organization Barangay Malusog Health Centre</a></p><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role nurse}">Nurse</span></p></div>
+        </text>
+        <practitioner>
+          <reference value="urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"/>
+        </practitioner>
+        <organization>
+          <reference value="urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/practitioner-role"/>
+            <code value="nurse"/>
+            <display value="Nurse"/>
+          </coding>
+          <text value="Nurse"/>
+        </code>
+      </PractitionerRole>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="PractitionerRole"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed"/>
+    <resource>
+      <Organization>
+        <id value="organization-receiving-facility-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-9"/>
+            <display value="REF-9"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-10"/>
+            <display value="REF-10"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_organization-receiving-facility-ex"> </a><p class="res-header-id"><b>Generated Narrative: Organization organization-receiving-facility-ex</b></p><a name="organization-receiving-facility-ex"> </a><a name="hcorganization-receiving-facility-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization</code></p><p style="margin-bottom: 0px">Tags: , </p></div><p><b>identifier</b>: Facility ID/DOH000-OO-0-0000456 (use: official, )</p><p><b>name</b>: Metro Imaging Centre</p></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="FI"/>
+            </coding>
+          </type>
+          <system value="http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"/>
+          <value value="DOH000-OO-0-0000456"/>
+        </identifier>
+        <name value="Metro Imaging Centre"/>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+    <resource>
+      <Encounter>
+        <id value="encounter-anc-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-43"/>
+            <display value="REF-43"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Encounter_encounter-anc-ex"> </a><p class="res-header-id"><b>Generated Narrative: Encounter encounter-anc-ex</b></p><a name="encounter-anc-ex"> </a><a name="hcencounter-anc-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter</code></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 424619006}">First antenatal care contact</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Individual</b></td></tr><tr><td style="display: none">*</td><td><a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d">PractitionerRole Nurse</a></td></tr></table><p><b>period</b>: 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800</p><p><b>reasonCode</b>: <span title="Codes:{http://snomed.info/sct 77386006}">Pregnant</span></p><p><b>serviceProvider</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-7c9e6679-7425-40de-944b-e07fc1f90ae7">Organization Barangay Malusog Health Centre</a></p></div>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="424619006"/>
+            <display value="Prenatal visit"/>
+          </coding>
+          <text value="First antenatal care contact"/>
+        </type>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <participant>
+          <individual>
+            <reference value="urn:uuid:5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d"/>
+          </individual>
+        </participant>
+        <period>
+          <start value="2026-02-24T08:30:00+08:00"/>
+          <end value="2026-02-24T10:00:00+08:00"/>
+        </period>
+        <reasonCode>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="77386006"/>
+            <display value="Pregnant"/>
+          </coding>
+        </reasonCode>
+        <serviceProvider>
+          <reference value="urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7"/>
+        </serviceProvider>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c3d4e5f6-a7b8-9012-cdef-123456789012"/>
+    <resource>
+      <Condition>
+        <id value="condition-pregnancy-ex"/>
+        <meta>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-40"/>
+            <display value="REF-40"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_condition-pregnancy-ex"> </a><p class="res-header-id"><b>Generated Narrative: Condition condition-pregnancy-ex</b></p><a name="condition-pregnancy-ex"> </a><a name="hccondition-pregnancy-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Tag: </p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status provisional}">Provisional</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 77386006}">Pregnant</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>onset</b>: 2026-01-01</p><p><b>note</b>: </p><blockquote><div><p>LMP approximately around the New Year holiday; gestational age estimated 12–15 weeks.</p>
+</div></blockquote></div>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="provisional"/>
+            <display value="Provisional"/>
+          </coding>
+        </verificationStatus>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="77386006"/>
+            <display value="Pregnant"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </encounter>
+        <onsetDateTime value="2026-01-01"/>
+        <note>
+          <text value="LMP approximately around the New Year holiday; gestational age estimated 12–15 weeks."/>
+        </note>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d4e5f6a7-b8c9-0123-defa-234567890123"/>
+    <resource>
+      <Observation>
+        <id value="observation-chief-complaint-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-30"/>
+            <display value="REF-30"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-chief-complaint-ex"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-chief-complaint-ex</b></p><a name="observation-chief-complaint-ex"> </a><a name="hcobservation-chief-complaint-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category exam}">Exam</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 10154-3}">Chief complaint Narrative - Reported</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24</p><p><b>value</b>: Missed menstrual cycle and nausea</p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="exam"/>
+            <display value="Exam"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="10154-3"/>
+            <display value="Chief complaint Narrative - Reported"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </encounter>
+        <effectiveDateTime value="2026-02-24"/>
+        <valueString value="Missed menstrual cycle and nausea"/>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:e5f6a7b8-c9d0-1234-efab-345678901234"/>
+    <resource>
+      <Observation>
+        <id value="observation-blood-pressure-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+          <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+          <profile value="http://hl7.org/fhir/StructureDefinition/bp"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-32"/>
+            <display value="REF-32"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-blood-pressure-ex"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-blood-pressure-ex</b></p><a name="observation-blood-pressure-ex"> </a><a name="hcobservation-blood-pressure-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a>, <a href="http://hl7.org/fhir/R4/bp.html">Observation Blood Pressure Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 85354-9}">Blood pressure systolic &amp; diastolic</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8480-6}">Systolic blood pressure</span></p><p><b>value</b>: 110 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8462-4}">Diastolic blood pressure</span></p><p><b>value</b>: 70 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85354-9"/>
+            <display value="Blood pressure panel with all children optional"/>
+          </coding>
+          <text value="Blood pressure systolic &amp; diastolic"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </encounter>
+        <effectiveDateTime value="2026-02-24T09:00:00+08:00"/>
+        <performer>
+          <reference value="urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"/>
+        </performer>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="8480-6"/>
+              <display value="Systolic blood pressure"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="110"/>
+            <unit value="mmHg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+          </valueQuantity>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="8462-4"/>
+              <display value="Diastolic blood pressure"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="70"/>
+            <unit value="mmHg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+          </valueQuantity>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f6a7b8c9-d0e1-2345-fabc-456789012345"/>
+    <resource>
+      <Observation>
+        <id value="observation-heart-rate-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+          <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-33"/>
+            <display value="REF-33"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-heart-rate-ex"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-heart-rate-ex</b></p><a name="observation-heart-rate-ex"> </a><a name="hcobservation-heart-rate-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8867-4}">Heart rate</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>value</b>: 78 beats/minute<span style="background: LightGoldenRodYellow"> (Details: UCUM  code/min = '/min')</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="8867-4"/>
+            <display value="Heart rate"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </encounter>
+        <effectiveDateTime value="2026-02-24T09:00:00+08:00"/>
+        <performer>
+          <reference value="urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"/>
+        </performer>
+        <valueQuantity>
+          <value value="78"/>
+          <unit value="beats/minute"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/min"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:a7b8c9d0-e1f2-3456-abcd-567890123456"/>
+    <resource>
+      <Observation>
+        <id value="observation-respiratory-rate-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+          <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-34"/>
+            <display value="REF-34"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-respiratory-rate-ex"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-respiratory-rate-ex</b></p><a name="observation-respiratory-rate-ex"> </a><a name="hcobservation-respiratory-rate-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 9279-1}">Respiratory rate</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>value</b>: 18 breaths/minute<span style="background: LightGoldenRodYellow"> (Details: UCUM  code/min = '/min')</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="9279-1"/>
+            <display value="Respiratory rate"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </encounter>
+        <effectiveDateTime value="2026-02-24T09:00:00+08:00"/>
+        <performer>
+          <reference value="urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"/>
+        </performer>
+        <valueQuantity>
+          <value value="18"/>
+          <unit value="breaths/minute"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/min"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b8c9d0e1-f2a3-4567-bcde-678901234567"/>
+    <resource>
+      <Observation>
+        <id value="observation-oxygen-saturation-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+          <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-35"/>
+            <display value="REF-35"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-oxygen-saturation-ex"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-oxygen-saturation-ex</b></p><a name="observation-oxygen-saturation-ex"> </a><a name="hcobservation-oxygen-saturation-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 2708-6}, {http://loinc.org 59408-5}">Oxygen saturation in Arterial blood</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>value</b>: 98 %<span style="background: LightGoldenRodYellow"> (Details: UCUM  code% = '%')</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="2708-6"/>
+            <display value="Oxygen saturation in Arterial blood"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="59408-5"/>
+            <display value="Oxygen saturation in Arterial blood by Pulse oximetry"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </encounter>
+        <effectiveDateTime value="2026-02-24T09:00:00+08:00"/>
+        <performer>
+          <reference value="urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"/>
+        </performer>
+        <valueQuantity>
+          <value value="98"/>
+          <unit value="%"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c9d0e1f2-a3b4-5678-cdef-789012345678"/>
+    <resource>
+      <Observation>
+        <id value="observation-temperature-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+          <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-36"/>
+            <display value="REF-36"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-temperature-ex"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-temperature-ex</b></p><a name="observation-temperature-ex"> </a><a name="hcobservation-temperature-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8310-5}">Body temperature</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>value</b>: 36.8 °C<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeCel = 'Cel')</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="8310-5"/>
+            <display value="Body temperature"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </encounter>
+        <effectiveDateTime value="2026-02-24T09:00:00+08:00"/>
+        <performer>
+          <reference value="urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"/>
+        </performer>
+        <valueQuantity>
+          <value value="36.8"/>
+          <unit value="°C"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="Cel"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d0e1f2a3-b4c5-6789-defa-890123456789"/>
+    <resource>
+      <Observation>
+        <id value="observation-weight-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"/>
+          <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-37"/>
+            <display value="REF-37"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-weight-ex"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-weight-ex</b></p><a name="observation-weight-ex"> </a><a name="hcobservation-weight-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 29463-7}">Body weight</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>value</b>: 55 kg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codekg = 'kg')</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="29463-7"/>
+            <display value="Body weight"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </encounter>
+        <effectiveDateTime value="2026-02-24T09:00:00+08:00"/>
+        <performer>
+          <reference value="urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"/>
+        </performer>
+        <valueQuantity>
+          <value value="55"/>
+          <unit value="kg"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kg"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:e1f2a3b4-c5d6-7890-efab-901234567890"/>
+    <resource>
+      <MedicationAdministration>
+        <id value="medicationadministration-ifa-ex"/>
+        <meta>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-38"/>
+            <display value="REF-38"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationAdministration_medicationadministration-ifa-ex"> </a><p class="res-header-id"><b>Generated Narrative: MedicationAdministration medicationadministration-ifa-ex</b></p><a name="medicationadministration-ifa-ex"> </a><a name="hcmedicationadministration-ifa-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <span title="Codes:{http://snomed.info/sct 776023009}">Iron and Folic Acid (IFA) tablets</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>context</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24</p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></td></tr></table><h3>Dosages</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Text</b></td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style="display: none">*</td><td>1 tablet daily</td><td><span title="Codes:{http://snomed.info/sct 26643006}">Oral route</span></td><td>1 tablet<span style="background: LightGoldenRodYellow"> (Details: UCUM  code{tablet} = '{tablet}')</span></td></tr></table></div>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="776023009"/>
+            <display value="Folic acid and iron only product"/>
+          </coding>
+          <text value="Iron and Folic Acid (IFA) tablets"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <context>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </context>
+        <effectiveDateTime value="2026-02-24"/>
+        <performer>
+          <actor>
+            <reference value="urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"/>
+          </actor>
+        </performer>
+        <dosage>
+          <text value="1 tablet daily"/>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="26643006"/>
+              <display value="Oral route"/>
+            </coding>
+          </route>
+          <dose>
+            <value value="1"/>
+            <unit value="tablet"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="{tablet}"/>
+          </dose>
+        </dosage>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f2a3b4c5-d6e7-8901-fabc-012345678901"/>
+    <resource>
+      <ServiceRequest>
+        <id value="servicerequest-ultrasound-ex"/>
+        <meta>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-12"/>
+            <display value="REF-12"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-13"/>
+            <display value="REF-13"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-15"/>
+            <display value="REF-15"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-31"/>
+            <display value="REF-31"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="ServiceRequest_servicerequest-ultrasound-ex"> </a><p class="res-header-id"><b>Generated Narrative: ServiceRequest servicerequest-ultrasound-ex</b></p><a name="servicerequest-ultrasound-ex"> </a><a name="hcservicerequest-ultrasound-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Tags: , , , </p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 103693007}">Diagnostics</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 268445003}">Obstetric ultrasound to estimate gestational age</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>authoredOn</b>: 2026-02-24</p><p><b>requester</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d">PractitionerRole Nurse</a></p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed">Organization Metro Imaging Centre</a></p><p><b>reasonReference</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-c3d4e5f6-a7b8-9012-cdef-123456789012">Condition Pregnant</a></p><p><b>note</b>: </p><blockquote><div><p>First ANC contact. LMP approximately New Year 2026; gestational age estimated 12–15 weeks. Ultrasound needed before 24 weeks to confirm dates and due date.</p>
+</div></blockquote></div>
+        </text>
+        <status value="active"/>
+        <intent value="order"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="103693007"/>
+            <display value="Diagnostic procedure"/>
+          </coding>
+          <text value="Diagnostics"/>
+        </category>
+        <priority value="routine"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="268445003"/>
+            <display value="Ultrasound scan - obstetric"/>
+          </coding>
+          <text value="Obstetric ultrasound to estimate gestational age"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </encounter>
+        <authoredOn value="2026-02-24"/>
+        <requester>
+          <reference value="urn:uuid:5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d"/>
+        </requester>
+        <performer>
+          <reference value="urn:uuid:1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed"/>
+        </performer>
+        <reasonReference>
+          <reference value="urn:uuid:c3d4e5f6-a7b8-9012-cdef-123456789012"/>
+        </reasonReference>
+        <note>
+          <text value="First ANC contact. LMP approximately New Year 2026; gestational age estimated 12–15 weeks. Ultrasound needed before 24 weeks to confirm dates and due date."/>
+        </note>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ServiceRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:a3b4c5d6-e7f8-9012-abcd-123456789012"/>
+    <resource>
+      <ServiceRequest>
+        <id value="servicerequest-lab-orders-ex"/>
+        <meta>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-39"/>
+            <display value="REF-39"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="ServiceRequest_servicerequest-lab-orders-ex"> </a><p class="res-header-id"><b>Generated Narrative: ServiceRequest servicerequest-lab-orders-ex</b></p><a name="servicerequest-lab-orders-ex"> </a><a name="hcservicerequest-lab-orders-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 108252007}">Laboratory</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 15220000}">Diabetes screen, Hepatitis B surface antigen, HIV test</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>authoredOn</b>: 2026-02-24</p><p><b>requester</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d">PractitionerRole Nurse</a></p><p><b>reasonReference</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-c3d4e5f6-a7b8-9012-cdef-123456789012">Condition Pregnant</a></p><p><b>note</b>: </p><blockquote><div><p>Ordered during first ANC contact: diabetes screening, hepatitis B, HIV.</p>
+</div></blockquote></div>
+        </text>
+        <status value="active"/>
+        <intent value="order"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="108252007"/>
+            <display value="Laboratory procedure"/>
+          </coding>
+          <text value="Laboratory"/>
+        </category>
+        <priority value="routine"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="15220000"/>
+            <display value="Laboratory test"/>
+          </coding>
+          <text value="Diabetes screen, Hepatitis B surface antigen, HIV test"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </encounter>
+        <authoredOn value="2026-02-24"/>
+        <requester>
+          <reference value="urn:uuid:5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d"/>
+        </requester>
+        <reasonReference>
+          <reference value="urn:uuid:c3d4e5f6-a7b8-9012-cdef-123456789012"/>
+        </reasonReference>
+        <note>
+          <text value="Ordered during first ANC contact: diabetes screening, hepatitis B, HIV."/>
+        </note>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="ServiceRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b4c5d6e7-f8a9-0123-bcde-234567890123"/>
+    <resource>
+      <Task>
+        <id value="task-referral-ex"/>
+        <meta>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-16"/>
+            <display value="REF-16"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-42"/>
+            <display value="REF-42"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Task_task-referral-ex"> </a><p class="res-header-id"><b>Generated Narrative: Task task-referral-ex</b></p><a name="task-referral-ex"> </a><a name="hctask-referral-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Tags: , </p></div><p><b>status</b>: Requested</p><p><b>businessStatus</b>: <span title="Codes:{https://example.com/peref/CodeSystem/referral-disposition requested}">Requested</span></p><p><b>intent</b>: order</p><p><b>focus</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-f2a3b4c5-d6e7-8901-fabc-012345678901">ServiceRequest Ultrasound scan - obstetric</a></p><p><b>for</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>authoredOn</b>: 2026-02-24</p><p><b>requester</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d">PractitionerRole Nurse</a></p><p><b>owner</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed">Organization Metro Imaging Centre</a></p></div>
+        </text>
+        <status value="requested"/>
+        <businessStatus>
+          <coding>
+            <system value="https://example.com/peref/CodeSystem/referral-disposition"/>
+            <code value="requested"/>
+            <display value="Requested"/>
+          </coding>
+        </businessStatus>
+        <intent value="order"/>
+        <focus>
+          <reference value="urn:uuid:f2a3b4c5-d6e7-8901-fabc-012345678901"/>
+        </focus>
+        <for>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </for>
+        <encounter>
+          <reference value="urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+        </encounter>
+        <authoredOn value="2026-02-24"/>
+        <requester>
+          <reference value="urn:uuid:5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d"/>
+        </requester>
+        <owner>
+          <reference value="urn:uuid:1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed"/>
+        </owner>
+      </Task>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Task"/>
+    </request>
+  </entry>
+</Bundle>

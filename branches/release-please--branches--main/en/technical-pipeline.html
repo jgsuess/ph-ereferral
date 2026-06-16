@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Technical Pipeline - PH eReferral Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style type="text/css">
+  /* ─────────────────────────────────────────────────────────────
+     Class-based Table Styling — only affects tables with classes
+     ───────────────────────────────────────────────────────────── */
+
+  /* Table Responsive (missing from Bootstrap 3 base template) */
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Dark header */
+  .thead-dark th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    background-color: #e8e8e8;
+  }
+
+  /* Global table enhancements */
+  .table-bordered {
+    border: 1px solid #dee2e6;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6;
+  }
+
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     .ph-table wrapper — for markdown tables in narrative pages
+     Wrap your markdown table in <div class="ph-table" markdown="1">
+     ───────────────────────────────────────────────────────────── */
+  .ph-table table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    color: #333;
+    background-color: #e8e8e8;
+  }
+
+  .ph-table td {
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table td:first-child {
+    font-weight: bold;
+  }
+
+  .ph-table tr:nth-of-type(odd) {
+    background-color: transparent;
+  }
+
+  .ph-table tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     Data-Dictionary-specific scrollable wrapper
+     ───────────────────────────────────────────────────────────── */
+  .data-dictionary-wrapper {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"15"}
+    h3,h4,h5,h6{--heading-prefix:"15"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Technical Pipeline</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Technical Pipeline</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="technical-pipeline">Technical Pipeline</h3>
+
+<p>This page describes the end-to-end data flow from source artefacts to a published Implementation Guide. For context on the source artefacts and the WHO SMART framework layers, see the <a href="approach.html">Approach</a> page.</p>
+
+<p>The diagram below summarises the pipeline.</p>
+
+<p>&lt;?xml version="1.0" encoding="us-ascii" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="897px" preserveAspectRatio="none" style="width:681px;height:897px;background:#FFFFFF;" version="1.1" viewBox="0 0 681 897" width="681px" zoomAndPan="magnify"><defs></defs><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="445" x="113" y="35.4209">PeRef Example Generation Pipeline</text><!--cluster **Source Artefacts**--><g id="cluster_**Source Artefacts**"><rect fill="#E8F5E9" height="90" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="518" x="157" y="55.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="65" x="383.5" y="70.6045">&#171;source&#187;</text><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="134" x="349" y="86.9014">Source Artefacts</text></g><!--cluster **Extraction & Generation**--><g id="cluster_**Extraction &amp; Generation**"><rect fill="#E3F2FD" height="90" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="424" x="142" y="153.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="44" x="332" y="168.6045">&#171;tool&#187;</text><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="190" x="259" y="184.9014">Extraction &amp; Generation</text></g><!--cluster **Intermediate Artefacts**--><g id="cluster_**Intermediate Artefacts**"><rect fill="#FFF3E0" height="90" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="438" x="119" y="251.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="64" x="306" y="266.6045">&#171;output&#187;</text><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="178" x="249" y="282.9014">Intermediate Artefacts</text></g><!--cluster **Validation**--><g id="cluster_**Validation**"><rect fill="#E3F2FD" height="90" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="242" x="286" y="349.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="44" x="385" y="364.6045">&#171;tool&#187;</text><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="77" x="368.5" y="380.9014">Validation</text></g><!--cluster **Conversion & Bundling**--><g id="cluster_**Conversion &amp; Bundling**"><rect fill="#E3F2FD" height="90" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="352" x="225" y="447.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="44" x="379" y="462.6045">&#171;tool&#187;</text><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="181" x="310.5" y="478.9014">Conversion &amp; Bundling</text></g><!--cluster **FSH Source**--><g id="cluster_**FSH Source**"><rect fill="#FFF3E0" height="90" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="426" x="163" y="553.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="64" x="344" y="568.6045">&#171;output&#187;</text><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="91" x="330.5" y="584.9014">FSH Source</text></g><!--cluster **Compilation & Publishing**--><g id="cluster_**Compilation &amp; Publishing**"><rect fill="#FCE4EC" height="240" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="212" x="394" y="651.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="45" x="477.5" y="666.6045">&#171;final&#187;</text><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="196" x="402" y="682.9014">Compilation &amp; Publishing</text></g><!--cluster **Coverage Tracking**--><g id="cluster_**Coverage Tracking**"><rect fill="#E3F2FD" height="188.5" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="198" x="19" y="357.1094"></rect><text fill="#000000" font-family="Verdana" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="44" x="96" y="372.1045">&#171;tool&#187;</text><text fill="#000000" font-family="Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="149" x="43.5" y="388.4014">Coverage Tracking</text></g><!--entity DD--><g id="elem_DD"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="164" x="369" y="98.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="144" x="379" y="114.6045">Excel Data Dictionary</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="140" x="379" y="130.9014">(46 REF-* elements)</text></g><!--entity SC--><g id="elem_SC"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="185" x="165.5" y="98.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="86" x="175.5" y="114.6045">scenario.xml</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="165" x="175.5" y="130.9014">(ANC User Scenario 3.1)</text></g><!--entity PHC--><g id="elem_PHC"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="115" x="551.5" y="98.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="75" x="561.5" y="114.6045">PH-Core IG</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="95" x="561.5" y="130.9014">(FHIR profiles)</text></g><!--entity EXT--><g id="elem_EXT"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="193" x="364.5" y="196.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="173" x="374.5" y="212.6045">extract-data-dictionary.py</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="72" x="374.5" y="228.9014">(openpyxl)</text></g><!--entity GEN--><g id="elem_GEN"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="196" x="150" y="196.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="176" x="160" y="212.6045">generate-json-from-dd.py</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="58" x="160" y="228.9014">(Python)</text></g><!--entity CSV--><g id="elem_CSV"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="176" x="373" y="294.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="59" x="383" y="310.6045">CSV files</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="156" x="383" y="326.9014">(input/data-dictionary/)</text></g><!--entity JSON--><g id="elem_JSON"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="228" x="127" y="294.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125" x="137" y="310.6045">22 JSON examples</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="208" x="137" y="326.9014">(input/examples-json-source/)</text></g><!--entity VAL--><g id="elem_VAL"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="226" x="294" y="392.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="92" x="304" y="408.6045">validate-all.sh</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="206" x="304" y="424.9014">(fhir-validate.py &#8594; FHIR server)</text></g><!--entity GOFSH--><g id="elem_GOFSH"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="138" x="431" y="490.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="118" x="441" y="506.6045">convert-to-fsh.sh</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="90" x="441" y="522.9014">(GoFSH v2.6)</text></g><!--entity BUNDLE--><g id="elem_BUNDLE"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="180" x="233" y="490.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="150" x="243" y="506.6045">Manual FSH authoring</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="160" x="243" y="522.9014">(2 transaction bundles)</text></g><!--entity FSH_INST--><g id="elem_FSH_INST"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="161" x="419.5" y="596.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="141" x="429.5" y="612.6045">22 instance .fsh files</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="88" x="429.5" y="628.9014">+ aliases.fsh</text></g><!--entity FSH_BUND--><g id="elem_FSH_BUND"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="230" x="171" y="596.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="206" x="181" y="612.6045">registration-transaction-ex.fsh</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="210" x="181" y="628.9014">anc-contact-transaction-ex.fsh</text></g><!--entity SUSHI--><g id="elem_SUSHI"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="167" x="416.5" y="694.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="83" x="426.5" y="710.6045">SUSHI v3.17</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="147" x="426.5" y="726.9014">(0 errors, 0 warnings)</text></g><!--entity PUB--><g id="elem_PUB"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="114" x="443" y="769.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="82" x="453" y="785.6045">IG Publisher</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="94" x="453" y="801.9014">(publisher.jar)</text></g><!--entity IG--><g id="elem_IG"><rect fill="#FFFFFF" height="38.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="157" x="421.5" y="844.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="86" x="431.5" y="860.6045">Published IG</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="137" x="431.5" y="876.9014">(24 FHIR resources)</text></g><!--entity COV--><g id="elem_COV"><rect fill="#FFFFFF" height="22.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="181" x="27.5" y="400.1094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="161" x="37.5" y="416.1045">update-dd-coverage.py</text></g><!--entity COVRPT--><g id="elem_COVRPT"><rect fill="#FFFFFF" height="54.8906" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1.0;" width="169" x="33.5" y="482.6094"></rect><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="114" x="43.5" y="498.6045">dd-coverage.csv</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="149" x="43.5" y="514.9014">(31 covered, 1 partial,</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="131" x="43.5" y="531.1982">4 deferred, 10 N/A)</text></g><path d="M452.9281,137.6191 C454.6875,154.5096 457.2755,179.3541 459.0437,196.3289 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="459.0437,196.3289,462.0897,186.9629,458.5257,191.3558,454.1328,187.7917,459.0437,196.3289" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M461,235.6191 C461,252.5096 461,277.3541 461,294.3289 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="461,294.3289,465,285.3289,461,289.3289,457,285.3289,461,294.3289" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M435.7569,294.3613 C416.7974,280.9769 389.7714,263.3374 364,251.6094 C350.6135,245.5174 335.8746,240.1775 321.5239,235.6339 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="321.5239,235.6339,328.8967,242.1639,326.2907,237.1431,331.3115,234.5371,321.5239,235.6339" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M256.0719,137.6191 C254.3125,154.5096 251.7245,179.3541 249.9563,196.3289 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="249.9563,196.3289,254.8672,187.7917,250.4743,191.3558,246.9103,186.9629,249.9563,196.3289" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M246.6503,235.6191 C245.4187,252.5096 243.6072,277.3541 242.3694,294.3289 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="242.3694,294.3289,247.0133,285.6436,242.733,289.3421,239.0345,285.0618,242.3694,294.3289" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M273.0065,333.6191 C302.3071,350.5641 345.4505,375.5145 374.809,392.4929 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="374.809,392.4929,369.0205,384.5246,370.4807,389.9898,365.0155,391.4499,374.809,392.4929" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M424.9313,431.6191 C441.294,448.5096 465.3621,473.3541 481.8064,490.3289 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="481.8064,490.3289,478.4172,481.0815,478.3274,486.7377,472.6713,486.6479,481.8064,490.3289" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M500,529.7025 C500,548.5156 500,577.4458 500,596.3266 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="500,596.3266,504,587.3266,500,591.3266,496,587.3266,500,596.3266" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M475.0343,596.6029 C457.3164,583.8321 432.737,566.8378 410,553.6094 C395.4702,545.1559 379.0166,536.8217 364.3593,529.8035 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="364.3593,529.8035,370.7493,537.298,368.869,531.9628,374.2042,530.0825,364.3593,529.8035" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M316.3851,529.7025 C309.692,548.5156 299.3996,577.4458 292.6823,596.3266 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="292.6823,596.3266,299.4676,589.188,294.3583,591.6158,291.9304,586.5065,292.6823,596.3266" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M500,635.6191 C500,652.5096 500,677.3541 500,694.3289 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="500,694.3289,504,685.3289,500,689.3289,496,685.3289,500,694.3289" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M327.2614,635.6191 C365.0344,652.5641 420.653,677.5145 458.5008,694.4929 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="458.5008,694.4929,451.9264,687.1596,453.9388,692.4464,448.652,694.4588,458.5008,694.4929" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M609,137.8371 C609,172.4506 609,248.7795 609,313.1094 C609,313.1094 609,313.1094 609,511.1094 C609,570.4261 622.7095,592.2692 593,643.6094 C580.2796,665.5911 557.5518,682.7708 537.749,694.5505 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="537.749,694.5505,547.5289,693.3871,542.0462,691.9943,543.439,686.5116,537.749,694.5505" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M500,733.9087 C500,744.8079 500,758.4854 500,769.3738 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="500,769.3738,504,760.3738,500,764.3738,496,760.3738,500,769.3738" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M500,808.9087 C500,819.8079 500,833.4854 500,844.3738 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="500,844.3738,504,835.3738,500,839.3738,496,835.3738,500,844.3738" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M217.2844,333.6191 C192.153,353.2339 153.2779,383.5754 132.4108,399.8619 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="132.4108,399.8619,141.9667,397.4777,136.3524,396.7856,137.0446,391.1712,132.4108,399.8619" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M118,424.1218 C118,438.2073 118,463.0751 118,482.2843 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="118,482.2843,122,473.2843,118,477.2843,114,473.2843,118,482.2843" style="stroke:#000000;stroke-width:1.0;"></polygon></g></svg></p>
+
+<h4 id="step-by-step">Step-by-step</h4>
+
+<p>The table below lists each stage of the pipeline, the script or tool used, and the artefacts it consumes and produces.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>Script / Tool</th>
+      <th>Input</th>
+      <th>Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Extract data dictionary</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">utils/extract-data-dictionary.py</code> (Python + openpyxl)</td>
+      <td>Encrypted workbook (<code class="language-plaintext highlighter-rouge">.xlsx.gpg</code>) — auto-decrypted via <code class="language-plaintext highlighter-rouge">gpg</code></td>
+      <td>CSV files in <code class="language-plaintext highlighter-rouge">input/data-dictionary/</code></td>
+    </tr>
+    <tr>
+      <td><strong>2. Generate JSON skeletons</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">utils/generate-json-from-dd.py</code></td>
+      <td>CSV + scenario narrative</td>
+      <td>22 annotated FHIR R4 JSON files in <code class="language-plaintext highlighter-rouge">input/examples-json-source/</code></td>
+    </tr>
+    <tr>
+      <td><strong>3. Validate JSON</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">utils/validate-all.sh</code> → <code class="language-plaintext highlighter-rouge">utils/fhir-validate.py</code></td>
+      <td>JSON files + FHIR server</td>
+      <td>Validation result summaries</td>
+    </tr>
+    <tr>
+      <td><strong>4. Convert to FSH</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">utils/convert-to-fsh.sh</code> → <code class="language-plaintext highlighter-rouge">gofsh</code></td>
+      <td>Validated JSON files</td>
+      <td>22 FSH instance files in <code class="language-plaintext highlighter-rouge">input/fsh/examples/</code></td>
+    </tr>
+    <tr>
+      <td><strong>5. Author bundles</strong></td>
+      <td>Manual (FSH)</td>
+      <td>Individual FSH instances</td>
+      <td><code class="language-plaintext highlighter-rouge">registration-transaction-ex.fsh</code>, <code class="language-plaintext highlighter-rouge">anc-contact-transaction-ex.fsh</code></td>
+    </tr>
+    <tr>
+      <td><strong>6. Add narrative descriptions</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">utils/update-fsh-descriptions.py</code></td>
+      <td>FSH instance files</td>
+      <td>FSH files with <code class="language-plaintext highlighter-rouge">Title:</code> and <code class="language-plaintext highlighter-rouge">Description:</code> added</td>
+    </tr>
+    <tr>
+      <td><strong>7. Generate DD mapping page</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">utils/generate-dd-mapping-page.py</code></td>
+      <td><code class="language-plaintext highlighter-rouge">dd-coverage.csv</code></td>
+      <td><code class="language-plaintext highlighter-rouge">input/pagecontent/dd-mapping.md</code> (pivot tables + narrative)</td>
+    </tr>
+    <tr>
+      <td><strong>8. Compile IG</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">sushi .</code></td>
+      <td>All FSH sources + ph-core dependency</td>
+      <td><code class="language-plaintext highlighter-rouge">fsh-generated/resources/*.json</code> (24 resources)</td>
+    </tr>
+    <tr>
+      <td><strong>9. Publish IG</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">_genonce.sh</code> → IG Publisher</td>
+      <td>SUSHI output + <code class="language-plaintext highlighter-rouge">publisher.jar</code></td>
+      <td><code class="language-plaintext highlighter-rouge">output/</code> (HTML site)</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>Traceability requirement:</strong> Every input and output listed in the table above must be stored in this Git repository. If any artefact is maintained outside version control, the reproducibility of the pipeline is compromised and the link between data-dictionary elements and published FHIR resources cannot be verified. See <a href="approach.html#version-control--traceability">Approach — Version Control &amp; Traceability</a> for details.</p>
+</blockquote>
+
+<h4 id="dd-coverage-tracking">DD Coverage Tracking</h4>
+
+<p>To ensure every data-dictionary element is accounted for, each JSON example resource is annotated with <code class="language-plaintext highlighter-rouge">meta.tag</code> entries that reference the element IDs it satisfies:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"tag"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/peref-dd"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REF-20"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REF-20"</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/peref-dd"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REF-21"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REF-21"</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>A companion script (<code class="language-plaintext highlighter-rouge">utils/update-dd-coverage.py</code>) scans all JSON examples and regenerates <code class="language-plaintext highlighter-rouge">input/data-dictionary/dd-coverage.csv</code>, producing this summary:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Count</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Covered</strong></td>
+      <td>31</td>
+      <td>Fully represented in at least one example resource</td>
+    </tr>
+    <tr>
+      <td><strong>Partial</strong></td>
+      <td>1</td>
+      <td>REF-39 (lab results) — orders created but no DiagnosticReport yet</td>
+    </tr>
+    <tr>
+      <td><strong>Deferred</strong></td>
+      <td>4</td>
+      <td>REF-2, REF-3 (signature — Future Release), REF-11 (HCPN — On-Hold), REF-18 (return slip — Excluded from MVP)</td>
+    </tr>
+    <tr>
+      <td><strong>Not applicable</strong></td>
+      <td>10</td>
+      <td>Elements not relevant to this ANC scenario (e.g. transport mode, receiving encounter, navigators)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>100 % of applicable elements are covered.</strong></p>
+
+<p>For the element-by-element breakdown, see the <a href="dd-mapping.html">DD Mapping</a> page.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-16 23:54:00 +0000">
+    2026-06-16
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

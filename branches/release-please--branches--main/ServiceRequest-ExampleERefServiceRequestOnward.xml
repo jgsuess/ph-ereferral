@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefServiceRequestOnward"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest ExampleERefServiceRequestOnward</b></p><a name="ExampleERefServiceRequestOnward"> </a><a name="hcExampleERefServiceRequestOnward"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ereferral-service-request.html">EReferral ServiceRequest</a></p></div><p><b>replaces</b>: <a href="ServiceRequest-ExampleERefServiceRequestTask.html">ServiceRequest Referral to cardiology service</a></p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 183519002}">Referral to cardiology service</span></p><p><b>subject</b>: <a href="Patient-ExampleERefPatientTask.html">Juan Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>authoredOn</b>: 2025-03-15 10:15:00+0800</p><p><b>requester</b>: <a href="PractitionerRole-ExampleERefPractitionerRoleRequester.html">PractitionerRole Medical practitioner</a></p><p><b>performer</b>: <a href="Organization-ExampleERefOrganizationOnwardReceiving.html">Organization Eastern District Medical Center</a></p><p><b>reasonCode</b>: <span title="Codes:{http://snomed.info/sct 29857009}">Chest pain on exertion, suspected unstable angina</span></p><p><b>note</b>: </p><blockquote><div><p>Onward referral after Manila General Hospital reported capacity full and recommended Eastern District Medical Center.</p>
+</div></blockquote></div>
+  </text>
+  <replaces>
+    <reference value="ServiceRequest/ExampleERefServiceRequestTask"/>
+  </replaces>
+  <status value="active"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="183519002"/>
+      <display value="Referral to cardiology service"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ExampleERefPatientTask"/>
+  </subject>
+  <authoredOn value="2025-03-15T10:15:00+08:00"/>
+  <requester>
+    <reference value="PractitionerRole/ExampleERefPractitionerRoleRequester"/>
+  </requester>
+  <performer>
+    <reference value="Organization/ExampleERefOrganizationOnwardReceiving"/>
+  </performer>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="29857009"/>
+      <display value="Chest pain"/>
+    </coding>
+    <text value="Chest pain on exertion, suspected unstable angina"/>
+  </reasonCode>
+  <note>
+    <text value="Onward referral after Manila General Hospital reported capacity full and recommended Eastern District Medical Center."/>
+  </note>
+</ServiceRequest>

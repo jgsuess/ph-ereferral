@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefRelatedPersonNextOfKin"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Roberto Dela Cruz is the patient's father and next of kin. Contact: +639189876543.</div>
+  </text>
+  <active value="true"/>
+  <patient>
+    <reference value="Patient/ERefPatientExample"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="NOK"/>
+      <display value="next of kin"/>
+    </coding>
+  </relationship>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="FTH"/>
+      <display value="father"/>
+    </coding>
+  </relationship>
+  <name>
+    <use value="official"/>
+    <family value="Dela Cruz"/>
+    <given value="Roberto"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+639189876543"/>
+    <use value="mobile"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1958-04-12"/>
+  <address>
+    <use value="home"/>
+    <line value="456 Mabini Street"/>
+    <city value="Quezon City"/>
+    <state value="Metro Manila"/>
+    <postalCode value="1100"/>
+    <country value="PH"/>
+  </address>
+  <period>
+    <start value="2025-03-15"/>
+  </period>
+</RelatedPerson>

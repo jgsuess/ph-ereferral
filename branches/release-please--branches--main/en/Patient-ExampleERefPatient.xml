@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefPatient"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient ExampleERefPatient</b></p><a name="ExampleERefPatient"> </a><a name="hcExampleERefPatient"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-patient.html">PH Core Patient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="tel:+639123456789">+63 912 345 6789</a></li><li><a href="mailto:juan.delacruz@email.com">juan.delacruz@email.com</a></li><li>123 Mabini St Quezon City Metro Manila 1100 PH (home)</li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.9.4.3.2"/>
+    <value value="PH-123456789"/>
+  </identifier>
+  <name>
+    <family value="Dela Cruz"/>
+    <given value="Juan"/>
+    <given value="Miguel"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63 912 345 6789"/>
+    <use value="mobile"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="juan.delacruz@email.com"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1965-07-20"/>
+  <address>
+    <use value="home"/>
+    <line value="123 Mabini St"/>
+    <city value="Quezon City"/>
+    <state value="Metro Manila"/>
+    <postalCode value="1100"/>
+    <country value="PH"/>
+  </address>
+</Patient>

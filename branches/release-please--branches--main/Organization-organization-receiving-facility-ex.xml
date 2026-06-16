@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="organization-receiving-facility-ex"/>
+  <meta>
+    <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"/>
+    <tag>
+      <system value="https://example.com/peref-dd"/>
+      <code value="REF-9"/>
+      <display value="REF-9"/>
+    </tag>
+    <tag>
+      <system value="https://example.com/peref-dd"/>
+      <code value="REF-10"/>
+      <display value="REF-10"/>
+    </tag>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization organization-receiving-facility-ex</b></p><a name="organization-receiving-facility-ex"> </a><a name="hcorganization-receiving-facility-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization</code></p><p style="margin-bottom: 0px">Tags: , </p></div><p><b>identifier</b>: Facility ID/DOH000-OO-0-0000456 (use: official, )</p><p><b>name</b>: Metro Imaging Centre</p></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="FI"/>
+      </coding>
+    </type>
+    <system value="http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"/>
+    <value value="DOH000-OO-0-0000456"/>
+  </identifier>
+  <name value="Metro Imaging Centre"/>
+</Organization>

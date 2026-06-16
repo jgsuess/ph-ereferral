@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="registration-transaction-ex"/>
+  <type value="transaction"/>
+  <timestamp value="2026-02-24T08:15:00+08:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+    <resource>
+      <Patient>
+        <id value="patient-charity-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-20"/>
+            <display value="REF-20"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-21"/>
+            <display value="REF-21"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-22"/>
+            <display value="REF-22"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-24"/>
+            <display value="REF-24"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-25"/>
+            <display value="REF-25"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-26"/>
+            <display value="REF-26"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-27"/>
+            <display value="REF-27"/>
+          </tag>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_patient-charity-ex"> </a><p class="res-header-id"><b>Generated Narrative: Patient patient-charity-ex</b></p><a name="patient-charity-ex"> </a><a name="hcpatient-charity-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient</code></p><p style="margin-bottom: 0px">Tags: , , , , , , </p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3"><code>http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns</code>/12-345678901-2</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="tel:+63-917-123-4567">+63-917-123-4567</a></li><li>456 Rizal Street Barangay Malusog Quezon City 1100 PH (home)</li></ul></td></tr></table></div>
+        </text>
+        <identifier>
+          <system value="http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns"/>
+          <value value="1234-5678901-2"/>
+        </identifier>
+        <identifier>
+          <system value="http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns"/>
+          <value value="12-345678901-2"/>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="official"/>
+          <family value="Santos"/>
+          <given value="Charity"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="+63-917-123-4567"/>
+          <use value="mobile"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="2001-08-15"/>
+        <address>
+          <use value="home"/>
+          <line value="456 Rizal Street"/>
+          <line value="Barangay Malusog"/>
+          <city value="Quezon City"/>
+          <district value="NCR"/>
+          <postalCode value="1100"/>
+          <country value="PH"/>
+        </address>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:6ba7b810-9dad-11d1-80b4-00c04fd430c8"/>
+    <resource>
+      <RelatedPerson>
+        <id value="relatedperson-companion-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-28"/>
+            <display value="REF-28"/>
+          </tag>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="RelatedPerson_relatedperson-companion-ex"> </a><p class="res-header-id"><b>Generated Narrative: RelatedPerson relatedperson-companion-ex</b></p><a name="relatedperson-companion-ex"> </a><a name="hcrelatedperson-companion-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson</code></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>patient</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>relationship</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}">Mother</span></p><p><b>name</b>: Maria Santos </p><p><b>telecom</b>: <a href="tel:+63-917-765-4321">+63-917-765-4321</a></p></div>
+        </text>
+        <patient>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </patient>
+        <relationship>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="MTH"/>
+            <display value="Mother"/>
+          </coding>
+        </relationship>
+        <name>
+          <family value="Santos"/>
+          <given value="Maria"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="+63-917-765-4321"/>
+          <use value="mobile"/>
+        </telecom>
+      </RelatedPerson>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="RelatedPerson"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7"/>
+    <resource>
+      <Organization>
+        <id value="organization-sending-facility-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-4"/>
+            <display value="REF-4"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-5"/>
+            <display value="REF-5"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-6"/>
+            <display value="REF-6"/>
+          </tag>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-7"/>
+            <display value="REF-7"/>
+          </tag>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_organization-sending-facility-ex"> </a><p class="res-header-id"><b>Generated Narrative: Organization organization-sending-facility-ex</b></p><a name="organization-sending-facility-ex"> </a><a name="hcorganization-sending-facility-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization</code></p><p style="margin-bottom: 0px">Tags: , , , </p></div><p><b>identifier</b>: Facility ID/DOH000-OO-0-0000123 (use: official, )</p><p><b>name</b>: Barangay Malusog Health Centre</p><p><b>telecom</b>: <a href="tel:+63-2-1234-5678">+63-2-1234-5678</a></p><p><b>address</b>: 123 Health Centre Road Quezon City NCR 1100 PH (work)</p></div>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="FI"/>
+            </coding>
+          </type>
+          <system value="http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"/>
+          <value value="DOH000-OO-0-0000123"/>
+        </identifier>
+        <name value="Barangay Malusog Health Centre"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="+63-2-1234-5678"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <use value="work"/>
+          <line value="123 Health Centre Road"/>
+          <city value="Quezon City"/>
+          <state value="NCR"/>
+          <postalCode value="1100"/>
+          <country value="PH"/>
+        </address>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:2c6d4f8a-3e5b-4a1c-9f8d-7b6e5d4c3a2b"/>
+    <resource>
+      <Practitioner>
+        <id value="practitioner-abraham-ex"/>
+        <meta>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-1"/>
+            <display value="REF-1"/>
+          </tag>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_practitioner-abraham-ex"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner practitioner-abraham-ex</b></p><a name="practitioner-abraham-ex"> </a><a name="hcpractitioner-abraham-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Tag: </p></div><p><b>name</b>: Abraham Reyes </p></div>
+        </text>
+        <name>
+          <family value="Reyes"/>
+          <given value="Abraham"/>
+        </name>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a"/>
+    <resource>
+      <PractitionerRole>
+        <id value="practitionerrole-abraham-ex"/>
+        <meta>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-1"/>
+            <display value="REF-1"/>
+          </tag>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_practitionerrole-abraham-ex"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole practitionerrole-abraham-ex</b></p><a name="practitionerrole-abraham-ex"> </a><a name="hcpractitionerrole-abraham-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Tag: </p></div><p><b>practitioner</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-2c6d4f8a-3e5b-4a1c-9f8d-7b6e5d4c3a2b">Practitioner Abraham Reyes </a></p><p><b>organization</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-7c9e6679-7425-40de-944b-e07fc1f90ae7">Organization Barangay Malusog Health Centre</a></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 106331006}">Registration Clerk</span></p></div>
+        </text>
+        <practitioner>
+          <reference value="urn:uuid:2c6d4f8a-3e5b-4a1c-9f8d-7b6e5d4c3a2b"/>
+        </practitioner>
+        <organization>
+          <reference value="urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="106331006"/>
+            <display value="Administrative/managerial worker"/>
+          </coding>
+          <text value="Registration Clerk"/>
+        </code>
+      </PractitionerRole>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="PractitionerRole"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:a1b2c3d4-e5f6-7890-abcd-ef1234567890"/>
+    <resource>
+      <Encounter>
+        <id value="encounter-registration-ex"/>
+        <meta>
+          <profile value="http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter"/>
+          <tag>
+            <system value="https://example.com/peref-dd"/>
+            <code value="REF-43"/>
+            <display value="REF-43"/>
+          </tag>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Encounter_encounter-registration-ex"> </a><p class="res-header-id"><b>Generated Narrative: Encounter encounter-registration-ex</b></p><a name="encounter-registration-ex"> </a><a name="hcencounter-registration-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter</code></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 185349003}">Registration</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Individual</b></td></tr><tr><td style="display: none">*</td><td><a href="Bundle-registration-transaction-ex.html#urn-uuid-3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a">PractitionerRole Administrative/managerial worker</a></td></tr></table><p><b>period</b>: 2026-02-24 08:00:00+0800 --&gt; 2026-02-24 08:15:00+0800</p><p><b>serviceProvider</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-7c9e6679-7425-40de-944b-e07fc1f90ae7">Organization Barangay Malusog Health Centre</a></p></div>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="185349003"/>
+            <display value="Encounter for check up"/>
+          </coding>
+          <text value="Registration"/>
+        </type>
+        <subject>
+          <reference value="urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+        </subject>
+        <participant>
+          <individual>
+            <reference value="urn:uuid:3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a"/>
+          </individual>
+        </participant>
+        <period>
+          <start value="2026-02-24T08:00:00+08:00"/>
+          <end value="2026-02-24T08:15:00+08:00"/>
+        </period>
+        <serviceProvider>
+          <reference value="urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7"/>
+        </serviceProvider>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+</Bundle>
