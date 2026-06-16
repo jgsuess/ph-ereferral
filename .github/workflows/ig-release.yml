@@ -32,10 +32,12 @@ jobs:
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "Release version: $VERSION"
 
-      - name: Setup Node (for SUSHI)
+      - name: Setup Node (for SUSHI + npm publish)
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@${{ github.repository_owner }}"
 
       - name: Install SUSHI
         run: npm install -g fsh-sushi
@@ -46,7 +48,15 @@ jobs:
           distribution: "temurin"
           java-version: "21"
 
+      - name: Cache IG Publisher
+        id: cache-publisher
+        uses: actions/cache@v4
+        with:
+          path: input-cache/publisher.jar
+          key: ig-publisher-${{ hashFiles('ig.ini') }}
+
       - name: Download IG Publisher
+        if: steps.cache-publisher.outputs.cache-hit != 'true'
         run: |
           mkdir -p input-cache
           curl -L -o input-cache/publisher.jar \
@@ -79,6 +89,42 @@ jobs:
 
       - name: Run IG Publisher (includes SUSHI)
         run: java -jar input-cache/publisher.jar ig.ini
+
+      - name: Publish FHIR packages to GitHub npm registry
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_VERSION: ${{ steps.v.outputs.version }}
+          SCOPE: "@${{ github.repository_owner }}"
+        run: |
+          publish_package() {
+            local tgz="$1"
+            [ -f "$tgz" ] || { echo "Skipping $tgz (not found)"; return 0; }
+            local work
+            work=$(mktemp -d)
+            cp "$tgz" "$work/pkg.tgz"
+            cd "$work"
+            tar -xzf pkg.tgz
+            # Rename the package with org scope
+            local orig_name
+            orig_name=$(node -p "require('./package/package.json').name")
+            local scoped_name="${SCOPE}/$(echo "$orig_name" | sed 's|^@[^/]*/||')"
+            node -e "
+              const fs = require('fs');
+              const p = './package/package.json';
+              const pkg = JSON.parse(fs.readFileSync(p, 'utf8'));
+              pkg.name = '$scoped_name';
+              pkg.version = '$RELEASE_VERSION';
+              pkg.publishConfig = { registry: 'https://npm.pkg.github.com', access: 'restricted' };
+              fs.writeFileSync(p, JSON.stringify(pkg, null, 2));
+            "
+            tar -czf repacked.tgz package/
+            npm publish repacked.tgz --access restricted
+            cd -
+            rm -rf "$work"
+          }
+          publish_package output/package.tgz
+          publish_package output/package.r4.tgz
+          publish_package output/package.r4b.tgz
 
       - name: Checkout gh-pages branch into workspace
         run: |

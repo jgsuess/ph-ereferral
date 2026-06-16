@@ -1,0 +1,115 @@
+name: IG Validate PR
+
+on:
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
+concurrency:
+  group: ig-validate-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node (for SUSHI)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install SUSHI
+        run: npm install -g fsh-sushi
+
+      - name: Install Java (for IG Publisher)
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "21"
+
+      - name: Cache IG Publisher
+        id: cache-publisher
+        uses: actions/cache@v4
+        with:
+          path: input-cache/publisher.jar
+          key: ig-publisher-${{ hashFiles('ig.ini') }}
+
+      - name: Download IG Publisher
+        if: steps.cache-publisher.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p input-cache
+          curl -L -o input-cache/publisher.jar \
+            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+
+      - name: Install Ruby and Jekyll
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Install Jekyll
+        run: gem install jekyll
+
+      - name: Install Graphviz
+        run: sudo apt-get install -y graphviz
+
+      - name: Run IG Publisher
+        run: java -jar input-cache/publisher.jar ig.ini
+
+      - name: Emit QA annotations
+        if: always()
+        run: |
+          if [ -f "output/qa-eslintcompact.txt" ]; then
+            while IFS= read -r line; do
+              if echo "$line" | grep -q ': error '; then
+                echo "::error::$line"
+              elif echo "$line" | grep -q ': warning '; then
+                echo "::warning::$line"
+              fi
+            done < output/qa-eslintcompact.txt
+          fi
+
+      - name: Write QA summary
+        if: always()
+        run: |
+          if [ -f "output/qa.json" ]; then
+            python3 - <<'PY'
+          import json, pathlib
+
+          qa = json.loads(pathlib.Path("output/qa.json").read_text())
+          errs  = qa.get("errs",  0)
+          warns = qa.get("warnings", 0)
+          hints = qa.get("hints",  0)
+
+          with open("$GITHUB_STEP_SUMMARY", "a") as f:
+              f.write("## IG Publisher QA Results\n\n")
+              f.write(f"| Errors | Warnings | Hints |\n")
+              f.write(f"|--------|----------|-------|\n")
+              f.write(f"| {errs} | {warns} | {hints} |\n\n")
+              if errs > 0:
+                  f.write(f"> :x: Build has **{errs} error(s)** — see annotations above.\n")
+              else:
+                  f.write("> :white_check_mark: No errors.\n")
+          PY
+          fi
+        env:
+          GITHUB_STEP_SUMMARY: ${{ env.GITHUB_STEP_SUMMARY }}
+
+      - name: Fail if QA errors
+        run: |
+          if [ -f "output/qa.json" ]; then
+            ERRS=$(python3 -c "import json; print(json.load(open('output/qa.json')).get('errs', 0))")
+            if [ "$ERRS" -gt 0 ]; then
+              echo "::error::IG Publisher reported $ERRS error(s). See QA annotations."
+              exit 1
+            fi
+          fi
