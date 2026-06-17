@@ -84,6 +84,37 @@ jobs:
       - name: Install Graphviz (for PlantUML dot renderer)
         run: sudo apt-get install -y graphviz
 
+      - name: Pre-install custom FHIR packages (not on packages.fhir.org)
+        run: |
+          python3 - <<'PY'
+          import subprocess, pathlib, re, os
+
+          cfg = pathlib.Path("sushi-config.yaml").read_text(encoding="utf-8")
+          # Find custom packages: those whose version matches a semver (not "dev", "current", "latest")
+          custom_pkgs = {}
+          for m in re.finditer(r'^\s{2}(fhir\.ph\.[^:]+):\s*(\S+)', cfg, re.MULTILINE):
+              name, ver = m.group(1).strip(), m.group(2).strip()
+              if re.fullmatch(r'\d+\.\d+\.\d+.*', ver):
+                  custom_pkgs[name] = ver
+
+          cache_dir = pathlib.Path.home() / ".fhir" / "packages"
+
+          for pkg_name, version in custom_pkgs.items():
+              repo = pkg_name.replace("fhir.", "", 1).replace(".", "-")  # fhir.ph.core -> ph-core
+              url = f"https://jgsuess.github.io/{repo}/{version}/package.tgz"
+              dest = cache_dir / f"{pkg_name}#{version}"
+              if dest.exists():
+                  print(f"Already cached: {pkg_name}#{version}")
+                  continue
+              dest.mkdir(parents=True, exist_ok=True)
+              print(f"Installing {pkg_name}#{version} from {url}")
+              result = subprocess.run(
+                  f"curl -sL '{url}' | tar -xz --strip-components=1 -C '{dest}'",
+                  shell=True, check=True
+              )
+              print(f"  -> installed to {dest}")
+          PY
+
       - name: Patch version for release build (sushi-config.yaml)
         env:
           RELEASE_VERSION: ${{ steps.v.outputs.version }}
