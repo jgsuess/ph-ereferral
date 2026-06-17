@@ -1,0 +1,51 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "ExampleERefProcedureInitialManagement",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure ExampleERefProcedureInitialManagement</b></p><a name=\"ExampleERefProcedureInitialManagement\"> </a><a name=\"hcExampleERefProcedureInitialManagement\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-procedure.html\">EReferral Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:\">Therapeutic procedure</span></p><p><b>code</b>: <span title=\"Codes:\">Initial stabilization and symptom management</span></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>performed</b>: 2025-03-15 08:45:00+0800 --&gt; 2025-03-15 09:10:00+0800</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></td><td><a href=\"PractitionerRole-ExampleERefPractitionerRole.html\">PractitionerRole Medical practitioner</a></td></tr></table><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 29857009}\">Chest pain</span></p><p><b>reasonReference</b>: <a href=\"Condition-ExampleERefConditionChestPain.html\">Condition Chest pain</a></p><p><b>note</b>: </p><blockquote><div><p>Initial management was provided before referral, including monitoring, symptom control, and preparation for transfer.</p>\n</div></blockquote></div>"
+  },
+  "status" : "completed",
+  "category" : {
+    "text" : "Therapeutic procedure"
+  },
+  "code" : {
+    "text" : "Initial stabilization and symptom management"
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleERefPatient"
+  },
+  "performedPeriod" : {
+    "start" : "2025-03-15T08:45:00+08:00",
+    "end" : "2025-03-15T09:10:00+08:00"
+  },
+  "performer" : [{
+    "function" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "158965000",
+        "display" : "Medical practitioner"
+      }]
+    },
+    "actor" : {
+      "reference" : "PractitionerRole/ExampleERefPractitionerRole"
+    }
+  }],
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "29857009",
+      "display" : "Chest pain"
+    }]
+  }],
+  "reasonReference" : [{
+    "reference" : "Condition/ExampleERefConditionChestPain"
+  }],
+  "note" : [{
+    "text" : "Initial management was provided before referral, including monitoring, symptom control, and preparation for transfer."
+  }]
+}

@@ -1,0 +1,399 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>anc-contact-transaction-ex - PH eReferral Implementation Guide v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style type="text/css">
+  /* ─────────────────────────────────────────────────────────────
+     Class-based Table Styling — only affects tables with classes
+     ───────────────────────────────────────────────────────────── */
+
+  /* Table Responsive (missing from Bootstrap 3 base template) */
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Dark header */
+  .thead-dark th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    background-color: #e8e8e8;
+  }
+
+  /* Global table enhancements */
+  .table-bordered {
+    border: 1px solid #dee2e6;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6;
+  }
+
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     .ph-table wrapper — for markdown tables in narrative pages
+     Wrap your markdown table in <div class="ph-table" markdown="1">
+     ───────────────────────────────────────────────────────────── */
+  .ph-table table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    color: #333;
+    background-color: #e8e8e8;
+  }
+
+  .ph-table td {
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table td:first-child {
+    font-weight: bold;
+  }
+
+  .ph-table tr:nth-of-type(odd) {
+    background-color: transparent;
+  }
+
+  .ph-table tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     Data-Dictionary-specific scrollable wrapper
+     ───────────────────────────────────────────────────────────── */
+  .data-dictionary-wrapper {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"20.22"}
+    h3,h4,h5,h6{--heading-prefix:"20.22"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - release
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>anc-contact-transaction-ex</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-base -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-anc-contact-transaction-ex.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-anc-contact-transaction-ex.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-anc-contact-transaction-ex.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+
+  <a name="root"> </a>
+
+
+
+  <h2 id="root">Example Bundle: anc-contact-transaction-ex</h2>
+
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div data-fhir="generated"><p class="res-header-id"/><a name="anc-contact-transaction-ex"> </a><a name="hcanc-contact-transaction-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p></div><p>Bundle anc-contact-transaction-ex of type transaction</p><a name="urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"> </a><a name="Practitioner_practitioner-jane-ex"> </a><a name="hcPractitioner_practitioner-jane-ex"> </a><hr/><p>Entry 1 - fullUrl = urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c</p><p>Resource Practitioner:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/practitioner-jane-ex"> </a><a name="hcanc-contact-transaction-ex/practitioner-jane-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Tag: </p></div><p><b>name</b>: Jane Dela Cruz </p></blockquote><p>Request:</p><pre>POST Practitioner
+</pre><a name="urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d"> </a><a name="PractitionerRole_practitionerrole-jane-ex"> </a><a name="hcPractitionerRole_practitionerrole-jane-ex"> </a><hr/><p>Entry 2 - fullUrl = urn:uuid:5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d</p><p>Resource PractitionerRole:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/practitionerrole-jane-ex"> </a><a name="hcanc-contact-transaction-ex/practitionerrole-jane-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Tag: </p></div><p><b>practitioner</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>organization</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-7c9e6679-7425-40de-944b-e07fc1f90ae7">Organization Barangay Malusog Health Centre</a></p><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role nurse}">Nurse</span></p></blockquote><p>Request:</p><pre>POST PractitionerRole
+</pre><a name="urn-uuid-1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed"> </a><a name="Organization_organization-receiving-facility-ex"> </a><a name="hcOrganization_organization-receiving-facility-ex"> </a><hr/><p>Entry 3 - fullUrl = urn:uuid:1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed</p><p>Resource Organization:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/organization-receiving-facility-ex"> </a><a name="hcanc-contact-transaction-ex/organization-receiving-facility-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization</code></p><p style="margin-bottom: 0px">Tags: , </p></div><p><b>identifier</b>: Facility ID/DOH000-OO-0-0000456 (use: official, )</p><p><b>name</b>: Metro Imaging Centre</p></blockquote><p>Request:</p><pre>POST Organization
+</pre><a name="urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901"> </a><a name="Encounter_encounter-anc-ex"> </a><a name="hcEncounter_encounter-anc-ex"> </a><hr/><p>Entry 4 - fullUrl = urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901</p><p>Resource Encounter:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/encounter-anc-ex"> </a><a name="hcanc-contact-transaction-ex/encounter-anc-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter</code></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: completed</p><p><b>class</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">ambulatory</span></p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 424619006}">First antenatal care contact</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>serviceProvider</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-7c9e6679-7425-40de-944b-e07fc1f90ae7">Organization Barangay Malusog Health Centre</a></p><blockquote><p><b>participant</b></p></blockquote></blockquote><p>Request:</p><pre>POST Encounter
+</pre><a name="urn-uuid-c3d4e5f6-a7b8-9012-cdef-123456789012"> </a><a name="Condition_condition-pregnancy-ex"> </a><a name="hcCondition_condition-pregnancy-ex"> </a><hr/><p>Entry 5 - fullUrl = urn:uuid:c3d4e5f6-a7b8-9012-cdef-123456789012</p><p>Resource Condition:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/condition-pregnancy-ex"> </a><a name="hcanc-contact-transaction-ex/condition-pregnancy-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Tag: </p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status provisional}">Provisional</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 77386006}">Pregnant</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>onset</b>: 2026-01-01</p><p><b>note</b>: </p><blockquote><div><p>LMP approximately around the New Year holiday; gestational age estimated 12–15 weeks.</p>
+</div></blockquote></blockquote><p>Request:</p><pre>POST Condition
+</pre><a name="urn-uuid-d4e5f6a7-b8c9-0123-defa-234567890123"> </a><a name="Observation_observation-chief-complaint-ex"> </a><a name="hcObservation_observation-chief-complaint-ex"> </a><hr/><p>Entry 6 - fullUrl = urn:uuid:d4e5f6a7-b8c9-0123-defa-234567890123</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/observation-chief-complaint-ex"> </a><a name="hcanc-contact-transaction-ex/observation-chief-complaint-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category exam}">Exam</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 10154-3}">Chief complaint Narrative - Reported</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24</p><p><b>value</b>: Missed menstrual cycle and nausea</p></blockquote><p>Request:</p><pre>POST Observation
+</pre><a name="urn-uuid-e5f6a7b8-c9d0-1234-efab-345678901234"> </a><a name="Observation_observation-blood-pressure-ex"> </a><a name="hcObservation_observation-blood-pressure-ex"> </a><hr/><p>Entry 7 - fullUrl = urn:uuid:e5f6a7b8-c9d0-1234-efab-345678901234</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/observation-blood-pressure-ex"> </a><a name="hcanc-contact-transaction-ex/observation-blood-pressure-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a>, <a href="http://hl7.org/fhir/R4/bp.html">Observation Blood Pressure Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 85354-9}">Blood pressure systolic &amp; diastolic</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8480-6}">Systolic blood pressure</span></p><p><b>value</b>: 110 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8462-4}">Diastolic blood pressure</span></p><p><b>value</b>: 70 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote></blockquote><p>Request:</p><pre>POST Observation
+</pre><a name="urn-uuid-f6a7b8c9-d0e1-2345-fabc-456789012345"> </a><a name="Observation_observation-heart-rate-ex"> </a><a name="hcObservation_observation-heart-rate-ex"> </a><hr/><p>Entry 8 - fullUrl = urn:uuid:f6a7b8c9-d0e1-2345-fabc-456789012345</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/observation-heart-rate-ex"> </a><a name="hcanc-contact-transaction-ex/observation-heart-rate-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8867-4}">Heart rate</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>value</b>: 78 beats/minute<span style="background: LightGoldenRodYellow"> (Details: UCUM  code/min = '/min')</span></p></blockquote><p>Request:</p><pre>POST Observation
+</pre><a name="urn-uuid-a7b8c9d0-e1f2-3456-abcd-567890123456"> </a><a name="Observation_observation-respiratory-rate-ex"> </a><a name="hcObservation_observation-respiratory-rate-ex"> </a><hr/><p>Entry 9 - fullUrl = urn:uuid:a7b8c9d0-e1f2-3456-abcd-567890123456</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/observation-respiratory-rate-ex"> </a><a name="hcanc-contact-transaction-ex/observation-respiratory-rate-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 9279-1}">Respiratory rate</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>value</b>: 18 breaths/minute<span style="background: LightGoldenRodYellow"> (Details: UCUM  code/min = '/min')</span></p></blockquote><p>Request:</p><pre>POST Observation
+</pre><a name="urn-uuid-b8c9d0e1-f2a3-4567-bcde-678901234567"> </a><a name="Observation_observation-oxygen-saturation-ex"> </a><a name="hcObservation_observation-oxygen-saturation-ex"> </a><hr/><p>Entry 10 - fullUrl = urn:uuid:b8c9d0e1-f2a3-4567-bcde-678901234567</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/observation-oxygen-saturation-ex"> </a><a name="hcanc-contact-transaction-ex/observation-oxygen-saturation-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 2708-6}, {http://loinc.org 59408-5}">Oxygen saturation in Arterial blood</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>value</b>: 98 %<span style="background: LightGoldenRodYellow"> (Details: UCUM  code% = '%')</span></p></blockquote><p>Request:</p><pre>POST Observation
+</pre><a name="urn-uuid-c9d0e1f2-a3b4-5678-cdef-789012345678"> </a><a name="Observation_observation-temperature-ex"> </a><a name="hcObservation_observation-temperature-ex"> </a><hr/><p>Entry 11 - fullUrl = urn:uuid:c9d0e1f2-a3b4-5678-cdef-789012345678</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/observation-temperature-ex"> </a><a name="hcanc-contact-transaction-ex/observation-temperature-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8310-5}">Body temperature</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>value</b>: 36.8 °C<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeCel = 'Cel')</span></p></blockquote><p>Request:</p><pre>POST Observation
+</pre><a name="urn-uuid-d0e1f2a3-b4c5-6789-defa-890123456789"> </a><a name="Observation_observation-weight-ex"> </a><a name="hcObservation_observation-weight-ex"> </a><hr/><p>Entry 12 - fullUrl = urn:uuid:d0e1f2a3-b4c5-6789-defa-890123456789</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/observation-weight-ex"> </a><a name="hcanc-contact-transaction-ex/observation-weight-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href="http://hl7.org/fhir/R4/vitalsigns.html">Vital Signs Profile</a></p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 29463-7}">Body weight</span></p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c">Practitioner Jane Dela Cruz </a></p><p><b>value</b>: 55 kg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codekg = 'kg')</span></p></blockquote><p>Request:</p><pre>POST Observation
+</pre><a name="urn-uuid-e1f2a3b4-c5d6-7890-efab-901234567890"> </a><a name="MedicationAdministration_medicationadministration-ifa-ex"> </a><a name="hcMedicationAdministration_medicationadministration-ifa-ex"> </a><hr/><p>Entry 13 - fullUrl = urn:uuid:e1f2a3b4-c5d6-7890-efab-901234567890</p><p>Resource MedicationAdministration:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/medicationadministration-ifa-ex"> </a><a name="hcanc-contact-transaction-ex/medicationadministration-ifa-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: completed</p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td>No display for MedicationAdministration.performer.actor  (reference: -&gt;Practitioner Jane Dela Cruz )</td></tr></table><h3>Dosages</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Text</b></td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style="display: none">*</td><td>1 tablet daily</td><td><span title="Codes:{http://snomed.info/sct 26643006}">Oral route</span></td><td>1 tablet<span style="background: LightGoldenRodYellow"> (Details: UCUM  code{tablet} = '{tablet}')</span></td></tr></table></blockquote><p>Request:</p><pre>POST MedicationAdministration
+</pre><a name="urn-uuid-f2a3b4c5-d6e7-8901-fabc-012345678901"> </a><a name="ServiceRequest_servicerequest-ultrasound-ex"> </a><a name="hcServiceRequest_servicerequest-ultrasound-ex"> </a><hr/><p>Entry 14 - fullUrl = urn:uuid:f2a3b4c5-d6e7-8901-fabc-012345678901</p><p>Resource ServiceRequest:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/servicerequest-ultrasound-ex"> </a><a name="hcanc-contact-transaction-ex/servicerequest-ultrasound-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Tags: , , , </p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 103693007}">Diagnostics</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: No display for ServiceRequest.code  (concept: Ultrasound scan - obstetric)</p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>authoredOn</b>: 2026-02-24</p><p><b>requester</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d">PractitionerRole Nurse</a></p><p><b>performer</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed">Organization Metro Imaging Centre</a></p><p><b>note</b>: </p><blockquote><div><p>First ANC contact. LMP approximately New Year 2026; gestational age estimated 12–15 weeks. Ultrasound needed before 24 weeks to confirm dates and due date.</p>
+</div></blockquote></blockquote><p>Request:</p><pre>POST ServiceRequest
+</pre><a name="urn-uuid-a3b4c5d6-e7f8-9012-abcd-123456789012"> </a><a name="ServiceRequest_servicerequest-lab-orders-ex"> </a><a name="hcServiceRequest_servicerequest-lab-orders-ex"> </a><hr/><p>Entry 15 - fullUrl = urn:uuid:a3b4c5d6-e7f8-9012-abcd-123456789012</p><p>Resource ServiceRequest:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/servicerequest-lab-orders-ex"> </a><a name="hcanc-contact-transaction-ex/servicerequest-lab-orders-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Tag: </p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 108252007}">Laboratory</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: No display for ServiceRequest.code  (concept: Laboratory test)</p><p><b>subject</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>authoredOn</b>: 2026-02-24</p><p><b>requester</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d">PractitionerRole Nurse</a></p><p><b>note</b>: </p><blockquote><div><p>Ordered during first ANC contact: diabetes screening, hepatitis B, HIV.</p>
+</div></blockquote></blockquote><p>Request:</p><pre>POST ServiceRequest
+</pre><a name="urn-uuid-b4c5d6e7-f8a9-0123-bcde-234567890123"> </a><a name="Task_task-referral-ex"> </a><a name="hcTask_task-referral-ex"> </a><hr/><p>Entry 16 - fullUrl = urn:uuid:b4c5d6e7-f8a9-0123-bcde-234567890123</p><p>Resource Task:</p><blockquote><p class="res-header-id"/><a name="anc-contact-transaction-ex/task-referral-ex"> </a><a name="hcanc-contact-transaction-ex/task-referral-ex"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Tags: , </p></div><p><b>status</b>: Requested</p><p><b>businessStatus</b>: <span title="Codes:{https://example.com/peref/CodeSystem/referral-disposition requested}">Requested</span></p><p><b>intent</b>: Order</p><p><b>focus</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-f2a3b4c5-d6e7-8901-fabc-012345678901">ServiceRequest Ultrasound scan - obstetric</a></p><p><b>for</b>: <a href="Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>authoredOn</b>: 2026-02-24</p><p><b>requester</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d">PractitionerRole Nurse</a></p><p><b>owner</b>: <a href="Bundle-anc-contact-transaction-ex.html#urn-uuid-1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed">Organization Metro Imaging Centre</a></p></blockquote><p>Request:</p><pre>POST Task
+</pre></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-17 04:37:00 +0000">
+    2026-06-17
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

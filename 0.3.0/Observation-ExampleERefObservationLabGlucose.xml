@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefObservationLabGlucose"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation ExampleERefObservationLabGlucose</b></p><a name="ExampleERefObservationLabGlucose"> </a><a name="hcExampleERefObservationLabGlucose"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ereferral-observation.html">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 2339-0}">Glucose [Mass/volume] in Blood</span></p><p><b>subject</b>: <a href="Patient-ExampleERefPatient.html">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>effective</b>: 2025-03-15 08:30:00+0800</p><p><b>performer</b>: <a href="Practitioner-ExampleERefPractitioner.html">Practitioner Dr. Maria Cruz Santos(official)</a></p><p><b>value</b>: 95 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td>70 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>100 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>Normal range</td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="2339-0"/>
+      <display value="Glucose [Mass/volume] in Blood"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ExampleERefPatient"/>
+  </subject>
+  <effectiveDateTime value="2025-03-15T08:30:00+08:00"/>
+  <performer>
+    <reference value="Practitioner/ExampleERefPractitioner"/>
+  </performer>
+  <valueQuantity>
+    <value value="95"/>
+    <unit value="mg/dL"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="mg/dL"/>
+  </valueQuantity>
+  <referenceRange>
+    <low>
+      <value value="70"/>
+      <unit value="mg/dL"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/dL"/>
+    </low>
+    <high>
+      <value value="100"/>
+      <unit value="mg/dL"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/dL"/>
+    </high>
+    <text value="Normal range"/>
+  </referenceRange>
+</Observation>

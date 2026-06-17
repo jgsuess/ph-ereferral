@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/MedicationAdministration/ExampleERefMedicationAdministrationChronic> a fhir:MedicationAdministration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleERefMedicationAdministrationChronic"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration"^^xsd:anyURI ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration ExampleERefMedicationAdministrationChronic</b></p><a name=\"ExampleERefMedicationAdministrationChronic\"> </a><a name=\"hcExampleERefMedicationAdministrationChronic\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-medication-administration.html\">EReferral MedicationAdministration</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <a href=\"Medication-ExampleERefMedicationTwinact.html\">Medication Substance</a></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>context</b>: <a href=\"Encounter-ExampleERefEncounter.html\">Encounter: identifier = https://pgh.gov.ph/fhir/encounter-id#ENC-2025-001234; status = finished; class = ambulatory (ActCode#AMB); type = Consultation; priority = Emergency; period = 2025-03-16 08:00:00+0800 --&gt; 2025-03-16 10:30:00+0800; reasonCode = Chest pain</a></p><p><b>effective</b>: 2025-03-15 07:00:00+0800</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></td><td><a href=\"Practitioner-ExampleERefPractitioner.html\">Practitioner Dr. Maria Cruz Santos(official)</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Patient's regular morning antihypertensive medication given before referral. Patient has been compliant with daily dosing.</p>\n</div></blockquote><h3>Dosages</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 26643006}\">Oral route</span></td><td>1 tablet<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{tablet} = '{tablet}')</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:link <https://fhir.doh.gov.ph/pheref/Medication/ExampleERefMedicationTwinact> ;
+     fhir:reference [ fhir:v "Medication/ExampleERefMedicationTwinact" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatient> ;
+     fhir:reference [ fhir:v "Patient/ExampleERefPatient" ]
+  ] ; # 
+  fhir:context [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Encounter/ExampleERefEncounter> ;
+     fhir:reference [ fhir:v "Encounter/ExampleERefEncounter" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2025-03-15T07:00:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:function [
+       fhir:coding ( [
+         a sct:158965000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "158965000" ] ;
+         fhir:display [ fhir:v "Medical practitioner" ]
+       ] )
+     ] ;
+     fhir:actor [
+       fhir:link <https://fhir.doh.gov.ph/pheref/Practitioner/ExampleERefPractitioner> ;
+       fhir:reference [ fhir:v "Practitioner/ExampleERefPractitioner" ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient's regular morning antihypertensive medication given before referral. Patient has been compliant with daily dosing." ]
+  ] ) ; # 
+  fhir:dosage [
+     fhir:route [
+       fhir:coding ( [
+         a sct:26643006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "26643006" ] ;
+         fhir:display [ fhir:v "Oral route" ]
+       ] )
+     ] ;
+     fhir:dose [
+       fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "tablet" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "{tablet}" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

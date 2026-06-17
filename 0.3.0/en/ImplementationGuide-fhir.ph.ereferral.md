@@ -1,0 +1,2015 @@
+# Resource PH eReferral Implementation Guide
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "fhir.ph.ereferral",
+  "language" : "en",
+  "url" : "https://fhir.doh.gov.ph/pheref/ImplementationGuide/fhir.ph.ereferral",
+  "version" : "0.3.0",
+  "name" : "PHeReferralImplementationGuide",
+  "title" : "PH eReferral Implementation Guide",
+  "status" : "draft",
+  "date" : "2026-06-17T04:37:58+00:00",
+  "publisher" : "SILab CoP IG Accelerator (eReferral)",
+  "contact" : [{
+    "name" : "SILab CoP IG Accelerator (eReferral)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-Manila-SILab"
+    }]
+  }],
+  "description" : "This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH eReferral profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "packageId" : "fhir.ph.ereferral",
+  "license" : "CC-BY-1.0",
+  "fhirVersion" : ["4.0.1"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "7.2.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "5.3.0"
+  },
+  {
+    "id" : "fhir_ph_core",
+    "uri" : "https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core",
+    "packageId" : "fhir.ph.core",
+    "version" : "dev"
+  }],
+  "definition" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2025+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "release"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://fhir.doh.gov.ph/pheref/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "i18n-default-lang"
+      },
+      {
+        "url" : "value",
+        "valueString" : "en"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.2"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2025+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "release"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://fhir.doh.gov.ph/pheref/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "i18n-default-lang"
+      },
+      {
+        "url" : "value",
+        "valueString" : "en"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/anc-contact-transaction-ex"
+      },
+      "name" : "anc-contact-transaction-ex",
+      "description" : "Nurse Jane conducts Charity's first antenatal care visit at\nBarangay Malusog Health Centre. This bundle captures the full clinical\nencounter: pregnancy confirmation, vital signs, chief complaint,\niron-and-folic-acid dispensing, laboratory orders, and the ultrasound\nreferral to Metro Imaging Centre — along with the task that tracks the\nreferral outcome.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/condition-pregnancy-ex"
+      },
+      "name" : "Condition — Pregnancy",
+      "description" : "Charity's confirmed pregnancy, provisionally dated to a last menstrual period around New Year 2026, giving an estimated gestational age of 12–15 weeks.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/encounter-anc-ex"
+      },
+      "name" : "Encounter — First Antenatal Care Contact",
+      "description" : "The counselling session (08:30–10:00) in which nurse Jane confirms Charity's pregnancy, records vital signs and clinical history, and initiates the referral.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/encounter-registration-ex"
+      },
+      "name" : "Encounter — Registration",
+      "description" : "A brief ambulatory encounter (08:00–08:15) in which clerk Abraham collects Charity's demographic information and registers her in the system.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-encounter"
+      },
+      "name" : "ERefEncounter",
+      "description" : "Encounter profile for the Philippine eReferral system. Extends PHCoreEncounter to capture the clinical encounter context associated with a referral, including encounter status, classification, participants, and clinical information relevant to the referral workflow.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-condition"
+      },
+      "name" : "EReferral Condition",
+      "description" : "Condition profile for diagnoses, problems, or clinical conditions relevant to a Philippine eReferral request.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-medication-administration"
+      },
+      "name" : "EReferral MedicationAdministration",
+      "description" : "Profile for medications administered to patients in the Philippine eReferral context. Captures medications given as part of treatment (REF-39) and referenced via ServiceRequest.supportingInfo (REF-15) to provide clinical context for referrals.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-observation"
+      },
+      "name" : "EReferral Observation",
+      "description" : "Profile for clinical observations in the Philippine eReferral context. \nSupports vital signs, laboratory results, and clinical measurements included in \nreferral clinical summaries. Referenced via ServiceRequest.supportingInfo and \nServiceRequest.reasonReference.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ereferral-priority"
+      },
+      "name" : "eReferral Priority",
+      "description" : "Priority levels for eReferral requests. Uses standard FHIR RequestPriority values.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-procedure"
+      },
+      "name" : "EReferral Procedure",
+      "description" : "Procedure profile for procedures performed or documented as part of the clinical context of a Philippine eReferral.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-provenance"
+      },
+      "name" : "EReferral Provenance",
+      "description" : "Profile for tracking audit trail of eReferral actions including signatures and timestamps in the Philippine eReferral context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ereferral-reason"
+      },
+      "name" : "eReferral Reason",
+      "description" : "Clinical reasons for eReferral requests. Uses SNOMED CT clinical findings and diagnoses.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ereferral-receiving-response"
+      },
+      "name" : "eReferral Receiving Facility Response",
+      "description" : "Response states used by a receiving facility after referral receipt in the PH eReferral workflow.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-related-person"
+      },
+      "name" : "EReferral RelatedPerson",
+      "description" : "RelatedPerson profile for the Philippine eReferral system. This profile represents optional patient contacts used in referral workflows, including next of kin, emergency contacts, accompanying persons, and guardians. It extends PHCoreRelatedPerson and maps to TDG element REF-29.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ereferral-relationship-type"
+      },
+      "name" : "eReferral Relationship Type",
+      "description" : "Relationship roles used for patient contacts, next of kin, emergency contacts, guardians, and accompanying persons in Philippine eReferral.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ereferral-service-category"
+      },
+      "name" : "eReferral Service Category",
+      "description" : "Categories of services that can be requested through eReferral",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-service-request"
+      },
+      "name" : "EReferral ServiceRequest",
+      "description" : "Profile for ServiceRequest resource in the Philippine eReferral context. This profile defines the core referral request structure for referring patients between healthcare facilities.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-task"
+      },
+      "name" : "EReferral Task",
+      "description" : "Task profile for Philippine eReferral workflow management. Tracks referral state transitions from request through completion, supporting workflow coordination between sending and receiving facilities.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ereferral-workflow"
+      },
+      "name" : "eReferral Workflow Code System",
+      "description" : "Local workflow codes for Philippine eReferral receiving-facility responses and related referral coordination events.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-immunization"
+      },
+      "name" : "ERefImmunization",
+      "description" : "Immunization profile for the Philippine eReferral system. Extends PHCoreImmunization to define must-support elements for referral clinical context. Immunization records are referenced via ServiceRequest.supportingInfo to provide supporting clinical information about a patient's vaccination history.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Immunization"
+      }],
+      "reference" : {
+        "reference" : "Immunization/ExampleERefImmunizationRoutine"
+      },
+      "name" : "ERefImmunization Example - Routine Immunization (MMR)",
+      "description" : "Example immunization instance demonstrating routine vaccination (MMR - Measles-Mumps-Rubella) as supporting clinical information in an eReferral context via ServiceRequest.supportingInfo.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-immunization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-patient"
+      },
+      "name" : "ERefPatient",
+      "description" : "Patient profile for the Philippine eReferral system. Extends PHCorePatient with additional elements specific to referral workflows. This profile supports the patient demographic requirements defined in the eReferral TDG (Technical Development Group) mapping, elements REF-21 through REF-30.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/ERefPatientExample"
+      },
+      "name" : "ERefPatient Example - Juan Dela Cruz",
+      "description" : "Example patient instance demonstrating the ERefPatient profile with PhilHealth ID, PhilSys ID, and complete demographic information for eReferral.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/ExampleERefMedicationAdministrationAntibiotic"
+      },
+      "name" : "Example Antibiotic Administration",
+      "description" : "Example IV antibiotic administration for a patient with suspected infection. Demonstrates REF-39 Treatment Given data element.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleERefObservationBP"
+      },
+      "name" : "Example Blood Pressure Observation",
+      "description" : "Example blood pressure vital sign for eReferral (REF-33). Referenced via ServiceRequest.supportingInfo.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleERefObservationTemperature"
+      },
+      "name" : "Example Body Temperature Observation",
+      "description" : "Example body temperature vital sign for eReferral (REF-37). Referenced via ServiceRequest.supportingInfo.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleERefObservationWeight"
+      },
+      "name" : "Example Body Weight Observation",
+      "description" : "Example body weight vital sign for eReferral (REF-38). Referenced via ServiceRequest.supportingInfo.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/ExampleERefMedicationAntibiotic"
+      },
+      "name" : "Example Cefuroxime Medication",
+      "description" : "Example antibiotic medication resource for IV administration.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleERefObservationChiefComplaint"
+      },
+      "name" : "Example Chief Complaint Observation",
+      "description" : "Example chief complaint for eReferral (REF-31). Referenced via ServiceRequest.reasonReference to provide clinical context for referral.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/ExampleERefMedicationAdministrationChronic"
+      },
+      "name" : "Example Chronic Medication Administration",
+      "description" : "Example chronic medication administration (antihypertensive) demonstrating routine medication given to patient. Part of clinical summary (REF-15).",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/ExampleERefConditionChestPain"
+      },
+      "name" : "Example Condition - Chest Pain",
+      "description" : "Example chest pain condition for referral",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/ExampleERefConditionHypertensiveEmergency"
+      },
+      "name" : "Example Condition - Hypertensive Emergency",
+      "description" : "Example hypertensive emergency condition used as a clinical reason for referral.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleERefObservationECG"
+      },
+      "name" : "Example ECG Observation",
+      "description" : "Example ECG findings observation for eReferral. Referenced via ServiceRequest.supportingInfo for cardiac referrals.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/ExampleERefEncounter"
+      },
+      "name" : "Example eReferral Encounter",
+      "description" : "An example encounter for a cardiology referral, where a patient is received at a tertiary hospital based on a referral from a rural health unit.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/ExampleERefPatient"
+      },
+      "name" : "Example eReferral Patient",
+      "description" : "Example patient for eReferral demonstration",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/ExampleERefPatientTask"
+      },
+      "name" : "Example eReferral Patient (for Task)",
+      "description" : "Minimal patient instance for ERefTask demonstration.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/ExampleERefPatientMinimal"
+      },
+      "name" : "Example eReferral Patient (Minimal)",
+      "description" : "Minimal patient instance for Provenance demonstration.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Provenance"
+      }],
+      "reference" : {
+        "reference" : "Provenance/ExampleERefProvenanceUpdate"
+      },
+      "name" : "Example eReferral Provenance for Status Update",
+      "description" : "Provenance record documenting a referral status update without signature. Demonstrates REF-3 (Date & Time of activity).",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Provenance"
+      }],
+      "reference" : {
+        "reference" : "Provenance/ExampleERefProvenanceSignature"
+      },
+      "name" : "Example eReferral Provenance with Signature",
+      "description" : "Provenance record demonstrating professional signature attestation for a referral. Demonstrates REF-3 (Date & Time of Signature) and REF-4 (Professional Signature).",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ExampleERefServiceRequest"
+      },
+      "name" : "Example eReferral Service Request",
+      "description" : "An example referral request from a rural health unit to a tertiary hospital for cardiology consultation.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ExampleERefServiceRequestMinimal"
+      },
+      "name" : "Example eReferral Service Request (Minimal)",
+      "description" : "Minimal service request instance for Provenance demonstration.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/ExampleERefTaskAccepted"
+      },
+      "name" : "Example eReferral Task - Accepted State",
+      "description" : "Task representing an eReferral that has been accepted by the receiving facility. Demonstrates TDG REF-9 'Care Navigator' assignment with owner now populated.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/ExampleERefTaskCompleted"
+      },
+      "name" : "Example eReferral Task - Completed State",
+      "description" : "Task representing a completed eReferral. Demonstrates full workflow closure with execution period and completion output.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/ExampleERefTaskReceived"
+      },
+      "name" : "Example eReferral Task - Received State",
+      "description" : "Task representing an eReferral acknowledged by the receiving facility and under review for acceptance.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/ExampleERefTaskReferredOnward"
+      },
+      "name" : "Example eReferral Task - Referred Onward State",
+      "description" : "Task representing an eReferral response where the receiving facility cannot take the case and directs the referral to another facility.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/ExampleERefTaskRejected"
+      },
+      "name" : "Example eReferral Task - Rejected State",
+      "description" : "Task representing an eReferral response where the receiving facility cannot take the case and no onward facility is specified.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/ExampleERefTaskRequested"
+      },
+      "name" : "Example eReferral Task - Requested State",
+      "description" : "Task representing a newly created eReferral in 'requested' status. Demonstrates TDG REF-9 'Care Navigator' assignment pattern with requester populated but owner not yet assigned.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "RelatedPerson"
+      }],
+      "reference" : {
+        "reference" : "RelatedPerson/ExampleERefRelatedPersonAccompanying"
+      },
+      "name" : "Example ERefRelatedPerson - Accompanying Person",
+      "description" : "Example accompanying person for an eReferral patient.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "RelatedPerson"
+      }],
+      "reference" : {
+        "reference" : "RelatedPerson/ExampleERefRelatedPersonNextOfKin"
+      },
+      "name" : "Example ERefRelatedPerson - Next of Kin",
+      "description" : "Example next-of-kin RelatedPerson for an eReferral patient.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleERefObservationHeartRate"
+      },
+      "name" : "Example Heart Rate Observation",
+      "description" : "Example heart rate vital sign for eReferral (REF-34). Referenced via ServiceRequest.supportingInfo.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleERefObservationLabGlucose"
+      },
+      "name" : "Example Laboratory Glucose Observation",
+      "description" : "Example laboratory result observation for eReferral with reference range.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ExampleERefServiceRequestOnward"
+      },
+      "name" : "Example Onward eReferral ServiceRequest",
+      "description" : "ServiceRequest representing the onward referral created after the first receiving facility reports that capacity is full.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleERefOrganizationOnwardReceiving"
+      },
+      "name" : "Example Onward Receiving Facility (for Task)",
+      "description" : "Organization instance representing the alternate receiving facility for a referred-onward response.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleERefObservationOxygenSat"
+      },
+      "name" : "Example Oxygen Saturation Observation",
+      "description" : "Example oxygen saturation vital sign for eReferral (REF-36). Referenced via ServiceRequest.supportingInfo.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Procedure"
+      }],
+      "reference" : {
+        "reference" : "Procedure/ExampleERefProcedureECG"
+      },
+      "name" : "Example Procedure - Electrocardiogram",
+      "description" : "Example diagnostic procedure documented as supporting clinical information for referral.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Procedure"
+      }],
+      "reference" : {
+        "reference" : "Procedure/ExampleERefProcedureInitialManagement"
+      },
+      "name" : "Example Procedure - Initial Management",
+      "description" : "Example therapeutic procedure or intervention performed before referral.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleERefOrganizationReceiving"
+      },
+      "name" : "Example Receiving Facility (for Task)",
+      "description" : "Organization instance representing the receiving tertiary hospital.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleERefReceivingHospital"
+      },
+      "name" : "Example Receiving Hospital",
+      "description" : "Example tertiary hospital receiving facility",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleERefReferringFacility"
+      },
+      "name" : "Example Referring Facility",
+      "description" : "Example referring healthcare facility for the Philippines eReferral workflow.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleERefOrganizationRequester"
+      },
+      "name" : "Example Referring Facility (for Task)",
+      "description" : "Minimal organization instance representing the referring facility.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/ExampleERefOrganizationMinimal"
+      },
+      "name" : "Example Referring Facility (Minimal)",
+      "description" : "Minimal organization instance for Provenance demonstration.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/ExampleERefPractitioner"
+      },
+      "name" : "Example Referring Practitioner",
+      "description" : "Example referring practitioner demonstrating practitioner demographics for the Philippines eReferral workflow.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/ExampleERefPractitionerRequester"
+      },
+      "name" : "Example Referring Practitioner (for Task)",
+      "description" : "Minimal practitioner instance for ERefTask demonstration.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/ExampleERefPractitionerMinimal"
+      },
+      "name" : "Example Referring Practitioner (Minimal)",
+      "description" : "Minimal practitioner instance for Provenance demonstration.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/ExampleERefPractitionerRole"
+      },
+      "name" : "Example Referring Practitioner Role",
+      "description" : "Example referring practitioner role linking practitioner to facility for the Philippines eReferral workflow.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/ExampleERefPractitionerRoleRequester"
+      },
+      "name" : "Example Referring Practitioner Role (for Task)",
+      "description" : "Practitioner role linking referring practitioner to their facility.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/ExampleERefPractitionerRoleMinimal"
+      },
+      "name" : "Example Referring Practitioner Role (Minimal)",
+      "description" : "Minimal practitioner role instance for Provenance demonstration.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ExampleERefObservationRespiratoryRate"
+      },
+      "name" : "Example Respiratory Rate Observation",
+      "description" : "Example respiratory rate vital sign for eReferral (REF-35). Referenced via ServiceRequest.supportingInfo.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ExampleERefServiceRequestTask"
+      },
+      "name" : "Example ServiceRequest (for Task)",
+      "description" : "Minimal ServiceRequest instance referenced by Task examples.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/ExampleERefMedicationTwinact"
+      },
+      "name" : "Example Twinact Medication",
+      "description" : "Example medication resource for Twinact (Telmisartan + Amlodipine) used in chronic medication administration example.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/medicationadministration-ifa-ex"
+      },
+      "name" : "MedicationAdministration — Iron and Folic Acid",
+      "description" : "Jane dispenses iron and folic acid (IFA) tablets to Charity with instructions to take one tablet daily, following WHO ANC guidelines for nutritional supplementation.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-blood-pressure-ex"
+      },
+      "name" : "Observation — Blood Pressure",
+      "description" : "Charity's blood pressure measured during the physical exam: systolic 110 mmHg, diastolic 70 mmHg — within the normal range for pregnancy.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-temperature-ex"
+      },
+      "name" : "Observation — Body Temperature",
+      "description" : "Charity's body temperature of 36.8 degrees Celsius, a normal reading taken during the physical exam.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-weight-ex"
+      },
+      "name" : "Observation — Body Weight",
+      "description" : "Charity's weight of 55 kg, recorded as a baseline measurement at her first ANC contact.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-chief-complaint-ex"
+      },
+      "name" : "Observation — Chief Complaint",
+      "description" : "Charity's reason for visiting the health centre: a missed menstrual cycle and nausea, prompting her to seek antenatal care.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-heart-rate-ex"
+      },
+      "name" : "Observation — Heart Rate",
+      "description" : "Charity's resting heart rate of 78 beats per minute, recorded as part of her vital signs during the ANC contact.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-oxygen-saturation-ex"
+      },
+      "name" : "Observation — Oxygen Saturation",
+      "description" : "Charity's peripheral oxygen saturation at 98 percent, confirming adequate oxygenation.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-respiratory-rate-ex"
+      },
+      "name" : "Observation — Respiratory Rate",
+      "description" : "Charity's respiratory rate of 18 breaths per minute, within the normal adult range.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/organization-sending-facility-ex"
+      },
+      "name" : "Organization — Barangay Malusog Health Centre",
+      "description" : "The government health centre where Charity is registered and receives her first ANC contact. Identified by its NHFR code.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/organization-receiving-facility-ex"
+      },
+      "name" : "Organization — Metro Imaging Centre",
+      "description" : "The external imaging centre where Charity is referred for an obstetric ultrasound to confirm gestational age.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/patient-charity-ex"
+      },
+      "name" : "Patient — Charity Santos",
+      "description" : "Charity is a 24-year-old woman from Barangay Malusog, Quezon City, visiting the health centre for the first time during her pregnancy. Abraham registers her demographics, national IDs, and contact details.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-practitioner-role"
+      },
+      "name" : "PH eReferral PractitionerRole",
+      "description" : "Profile on PractitionerRole for the Philippines eReferral specification, extending PHCorePractitionerRole. This profile captures the role of the referring practitioner and care navigator within the eReferral workflow, linking practitioners to healthcare facilities.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/practitioner-abraham-ex"
+      },
+      "name" : "Practitioner — Abraham Reyes",
+      "description" : "Abraham is the registration clerk who creates Charity's patient record at the health centre front desk.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/practitioner-jane-ex"
+      },
+      "name" : "Practitioner — Jane Dela Cruz",
+      "description" : "Jane is the nurse who conducts Charity's first antenatal care counselling session, records vital signs, and creates the ultrasound referral.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/practitionerrole-abraham-ex"
+      },
+      "name" : "PractitionerRole — Clerk Abraham",
+      "description" : "Abraham's role as a registration clerk at Barangay Malusog Health Centre.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/practitionerrole-jane-ex"
+      },
+      "name" : "PractitionerRole — Nurse Jane",
+      "description" : "Jane's role as a nurse at Barangay Malusog Health Centre, linked to her practitioner record and the sending facility.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ereferral-pwd-disability"
+      },
+      "name" : "PWD Disability Registration",
+      "description" : "Extension for Person With Disability (PWD) registration information in the Philippine eReferral system. Captures PWD ID number, disability type, and ID expiration date.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/pwd-disability-type-cs"
+      },
+      "name" : "PWD Disability Type Code System",
+      "description" : "Code system for types of disability as defined by the Philippine government for PWD registration.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pwd-disability-type-vs"
+      },
+      "name" : "PWD Disability Type Value Set",
+      "description" : "Value set for types of disability as defined by the Philippine government for PWD registration.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/registration-transaction-ex"
+      },
+      "name" : "registration-transaction-ex",
+      "description" : "Clerk Abraham registers Charity at Barangay Malusog Health Centre.\nThis bundle captures everything recorded at the front desk: Charity's\ndemographic details, her national identifiers (PhilSys and PhilHealth),\nher home address and phone number, and her mother Maria as next-of-kin.\nIt also records Abraham's practitioner role and the registration encounter.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "RelatedPerson"
+      }],
+      "reference" : {
+        "reference" : "RelatedPerson/relatedperson-companion-ex"
+      },
+      "name" : "RelatedPerson — Maria Santos (Mother)",
+      "description" : "Charity's mother Maria, registered as her next-of-kin and alternative contact person during the registration process.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/servicerequest-lab-orders-ex"
+      },
+      "name" : "ServiceRequest — Laboratory Orders",
+      "description" : "Routine ANC laboratory tests ordered for Charity: diabetes screen, hepatitis B surface antigen, and HIV — in line with WHO recommended investigations.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/servicerequest-ultrasound-ex"
+      },
+      "name" : "ServiceRequest — Obstetric Ultrasound Referral",
+      "description" : "Jane refers Charity to Metro Imaging Centre for an obstetric ultrasound to confirm gestational age and due date, needed before 24 weeks of pregnancy.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/task-referral-ex"
+      },
+      "name" : "Task — Referral Tracking",
+      "description" : "Tracks the status of Charity's ultrasound referral. Currently in 'requested' state, awaiting acceptance by Metro Imaging Centre.",
+      "exampleBoolean" : true
+    }],
+    "page" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+        "valueUrl" : "toc.html"
+      }],
+      "nameUrl" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "index.html"
+        }],
+        "nameUrl" : "index.html",
+        "title" : "Home",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "ai-reasoning.html"
+        }],
+        "nameUrl" : "ai-reasoning.html",
+        "title" : "Ai Reasoning",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "approach.html"
+        }],
+        "nameUrl" : "approach.html",
+        "title" : "Approach",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "connectathon-readiness.html"
+        }],
+        "nameUrl" : "connectathon-readiness.html",
+        "title" : "Connectathon Readiness",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "coverage-map.html"
+        }],
+        "nameUrl" : "coverage-map.html",
+        "title" : "Coverage Map",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "data-dictionary.html"
+        }],
+        "nameUrl" : "data-dictionary.html",
+        "title" : "Data Dictionary",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "dd-mapping.html"
+        }],
+        "nameUrl" : "dd-mapping.html",
+        "title" : "Dd Mapping",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "decision-log.html"
+        }],
+        "nameUrl" : "decision-log.html",
+        "title" : "Decision Log",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "hl7-lifecycle.html"
+        }],
+        "nameUrl" : "hl7-lifecycle.html",
+        "title" : "Hl 7 Lifecycle",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "ig-evolution.html"
+        }],
+        "nameUrl" : "ig-evolution.html",
+        "title" : "Ig Evolution",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "interop-testing.html"
+        }],
+        "nameUrl" : "interop-testing.html",
+        "title" : "Interop Testing",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "references.html"
+        }],
+        "nameUrl" : "references.html",
+        "title" : "References",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "referral-workflow.html"
+        }],
+        "nameUrl" : "referral-workflow.html",
+        "title" : "Referral Workflow",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "resource-architecture.html"
+        }],
+        "nameUrl" : "resource-architecture.html",
+        "title" : "Resource Architecture",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "technical-pipeline.html"
+        }],
+        "nameUrl" : "technical-pipeline.html",
+        "title" : "Technical Pipeline",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "testing-companion.html"
+        }],
+        "nameUrl" : "testing-companion.html",
+        "title" : "Testing Companion",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "v01-scope.html"
+        }],
+        "nameUrl" : "v01-scope.html",
+        "title" : "V 01 Scope",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "version-management.html"
+        }],
+        "nameUrl" : "version-management.html",
+        "title" : "Version Management",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "who-smart-l1.html"
+        }],
+        "nameUrl" : "who-smart-l1.html",
+        "title" : "Who Smart L 1",
+        "generation" : "markdown"
+      }]
+    },
+    "parameter" : [{
+      "code" : "path-resource",
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/examples"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/extensions"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/models"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/operations"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/profiles"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/maps"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/testing"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/history"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "template/config"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/assets"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/images"
+    },
+    {
+      "code" : "path-tx-cache",
+      "value" : "input-cache/txcache"
+    }]
+  }
+}
+
+```

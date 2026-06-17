@@ -1,0 +1,168 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Encounter/ExampleERefEncounter> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleERefEncounter"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter"^^xsd:anyURI ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter ExampleERefEncounter</b></p><a name=\"ExampleERefEncounter\"> </a><a name=\"hcExampleERefEncounter\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-encounter.html\">ERefEncounter</a></p></div><p><b>identifier</b>: <code>https://pgh.gov.ph/fhir/encounter-id</code>/ENC-2025-001234</p><p><b>status</b>: Finished</p><blockquote><p><b>statusHistory</b></p><p><b>status</b>: Planned</p><p><b>period</b>: 2025-03-15 09:30:00+0800 --&gt; 2025-03-16 07:59:00+0800</p></blockquote><blockquote><p><b>statusHistory</b></p><p><b>status</b>: Arrived</p><p><b>period</b>: 2025-03-16 08:00:00+0800 --&gt; 2025-03-16 08:15:00+0800</p></blockquote><blockquote><p><b>statusHistory</b></p><p><b>status</b>: In Progress</p><p><b>period</b>: 2025-03-16 08:15:00+0800 --&gt; 2025-03-16 10:30:00+0800</p></blockquote><blockquote><p><b>statusHistory</b></p><p><b>status</b>: Finished</p><p><b>period</b>: 2025-03-16 10:30:00+0800 --&gt; 2025-03-16 10:30:00+0800</p></blockquote><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><h3>ClassHistories</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Class</b></td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</td><td>2025-03-16 08:00:00+0800 --&gt; 2025-03-16 10:30:00+0800</td></tr></table><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 11429006}\">Consultation</span></p><p><b>priority</b>: <span title=\"Codes:{http://snomed.info/sct 25876001}\">Emergency</span></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>basedOn</b>: <a href=\"ServiceRequest-ExampleERefServiceRequest.html\">ServiceRequest Referral to cardiology service</a></p><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType CON}\">consultant</span></p><p><b>period</b>: 2025-03-16 08:15:00+0800 --&gt; 2025-03-16 10:30:00+0800</p><p><b>individual</b>: <a href=\"PractitionerRole-ExampleERefPractitionerRole.html\">PractitionerRole Medical practitioner</a></p></blockquote><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}\">attender</span></p><p><b>period</b>: 2025-03-16 08:00:00+0800 --&gt; 2025-03-16 10:30:00+0800</p><p><b>individual</b>: Mrs. Dela Cruz</p></blockquote><p><b>period</b>: 2025-03-16 08:00:00+0800 --&gt; 2025-03-16 10:30:00+0800</p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 29857009}\">Chest pain on exertion, suspected unstable angina</span></p><p><b>reasonReference</b>: <a href=\"Condition-ExampleERefConditionChestPain.html\">Condition Chest pain</a></p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Condition</b></td><td><b>Use</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Condition-ExampleERefConditionChestPain.html\">Condition Chest pain</a></td><td><span title=\"Codes:{http://snomed.info/sct 89100005}\">Final diagnosis (discharge)</span></td></tr></table><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td><td><b>Status</b></td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>Cardiology Outpatient Clinic</td><td>Completed</td><td>2025-03-16 08:00:00+0800 --&gt; 2025-03-16 10:30:00+0800</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://pgh.gov.ph/fhir/encounter-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "ENC-2025-001234" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:statusHistory ( [
+     fhir:status [ fhir:v "planned" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2025-03-15T09:30:00+08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2025-03-16T07:59:00+08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:status [ fhir:v "arrived" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2025-03-16T08:00:00+08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2025-03-16T08:15:00+08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:status [ fhir:v "in-progress" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2025-03-16T08:15:00+08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2025-03-16T10:30:00+08:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:status [ fhir:v "finished" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2025-03-16T10:30:00+08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2025-03-16T10:30:00+08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:classHistory ( [
+     fhir:class [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "AMB" ] ;
+       fhir:display [ fhir:v "ambulatory" ]
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2025-03-16T08:00:00+08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2025-03-16T10:30:00+08:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       a sct:11429006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11429006" ] ;
+       fhir:display [ fhir:v "Consultation" ]
+     ] )
+  ] ) ; # 
+  fhir:priority [
+     fhir:coding ( [
+       a sct:25876001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "25876001" ] ;
+       fhir:display [ fhir:v "Emergency" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatient> ;
+     fhir:reference [ fhir:v "Patient/ExampleERefPatient" ]
+  ] ; # 
+  fhir:basedOn ( [
+     fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequest> ;
+     fhir:reference [ fhir:v "ServiceRequest/ExampleERefServiceRequest" ]
+  ] ) ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "CON" ] ;
+         fhir:display [ fhir:v "consultant" ]
+       ] )
+     ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2025-03-16T08:15:00+08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2025-03-16T10:30:00+08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:individual [
+       fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRole> ;
+       fhir:reference [ fhir:v "PractitionerRole/ExampleERefPractitionerRole" ]
+     ]
+  ] [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ATND" ] ;
+         fhir:display [ fhir:v "attender" ]
+       ] )
+     ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2025-03-16T08:00:00+08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2025-03-16T10:30:00+08:00"^^xsd:dateTime ]
+     ] ;
+     fhir:individual [
+       fhir:display [ fhir:v "Mrs. Dela Cruz" ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2025-03-16T08:00:00+08:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2025-03-16T10:30:00+08:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:29857009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "29857009" ] ;
+       fhir:display [ fhir:v "Chest pain" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chest pain on exertion, suspected unstable angina" ]
+  ] ) ; # 
+  fhir:reasonReference ( [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Condition/ExampleERefConditionChestPain> ;
+     fhir:reference [ fhir:v "Condition/ExampleERefConditionChestPain" ]
+  ] ) ; # 
+  fhir:diagnosis ( [
+     fhir:condition [
+       fhir:link <https://fhir.doh.gov.ph/pheref/Condition/ExampleERefConditionChestPain> ;
+       fhir:reference [ fhir:v "Condition/ExampleERefConditionChestPain" ]
+     ] ;
+     fhir:use [
+       fhir:coding ( [
+         a sct:89100005 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "89100005" ] ;
+         fhir:display [ fhir:v "Final diagnosis (discharge)" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:display [ fhir:v "Cardiology Outpatient Clinic" ]
+     ] ;
+     fhir:status [ fhir:v "completed" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2025-03-16T08:00:00+08:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2025-03-16T10:30:00+08:00"^^xsd:dateTime ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

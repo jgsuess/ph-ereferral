@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefPractitioner"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner ExampleERefPractitioner</b></p><a name="ExampleERefPractitioner"> </a><a name="hcExampleERefPractitioner"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitioner.html">PH Core Practitioner</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.3</code>/PRAC-12345</p><p><b>active</b>: true</p><p><b>name</b>: Dr. Maria Cruz Santos(Official)</p><p><b>telecom</b>: <a href="tel:+63281234567">+63 2 8123 4567</a>, <a href="mailto:mcsantos@hospital.ph">mcsantos@hospital.ph</a></p><p><b>gender</b>: Female</p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 158965000}">Medical practitioner</span></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.9.4.3.3"/>
+    <value value="PRAC-12345"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <text value="Dr. Maria Cruz Santos"/>
+    <family value="Santos"/>
+    <given value="Maria"/>
+    <given value="Cruz"/>
+    <prefix value="Dr."/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63 2 8123 4567"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="mcsantos@hospital.ph"/>
+    <use value="work"/>
+  </telecom>
+  <gender value="female"/>
+  <qualification>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="158965000"/>
+        <display value="Medical practitioner"/>
+      </coding>
+    </code>
+  </qualification>
+</Practitioner>

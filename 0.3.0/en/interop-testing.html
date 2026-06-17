@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Interop Testing - PH eReferral Implementation Guide v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style type="text/css">
+  /* ─────────────────────────────────────────────────────────────
+     Class-based Table Styling — only affects tables with classes
+     ───────────────────────────────────────────────────────────── */
+
+  /* Table Responsive (missing from Bootstrap 3 base template) */
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Dark header */
+  .thead-dark th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    background-color: #e8e8e8;
+  }
+
+  /* Global table enhancements */
+  .table-bordered {
+    border: 1px solid #dee2e6;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6;
+  }
+
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     .ph-table wrapper — for markdown tables in narrative pages
+     Wrap your markdown table in <div class="ph-table" markdown="1">
+     ───────────────────────────────────────────────────────────── */
+  .ph-table table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    color: #333;
+    background-color: #e8e8e8;
+  }
+
+  .ph-table td {
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table td:first-child {
+    font-weight: bold;
+  }
+
+  .ph-table tr:nth-of-type(odd) {
+    background-color: transparent;
+  }
+
+  .ph-table tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     Data-Dictionary-specific scrollable wrapper
+     ───────────────────────────────────────────────────────────── */
+  .data-dictionary-wrapper {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"11"}
+    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - release
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Interop Testing</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Interop Testing</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="interoperability-matrix-testing">Interoperability Matrix Testing</h3>
+
+<p>As the PH eReferral IG moves from an agile draft towards broader adoption — the Phase 2 described on the <a href="ig-evolution.html">IG Evolution</a> page — verifying that different implementations actually work together becomes as important as verifying that each implementation individually conforms to the specification. This page describes the approach: <strong>CI-based interoperability matrix testing</strong>.</p>
+
+<hr />
+
+<h4 id="why-matrix-testing">Why Matrix Testing?</h4>
+
+<p>A single implementation can be valid against the spec and still fail to interoperate with another valid implementation. The FHIR specification leaves room for interpretation, optional elements, and vendor-specific choices that all conform individually but diverge in practice. The only way to catch these issues is to test implementations <em>against each other</em>, not just against a validator.</p>
+
+<p>In Phase 2, when multiple organisations begin building on the IG, the number of untested combinations grows quickly. A matrix approach makes that coverage systematic and visible.</p>
+
+<hr />
+
+<h4 id="endpoint-subscriptions">Endpoint Subscriptions</h4>
+
+<p>The first requirement for matrix testing is a <strong>registry of stable, accessible endpoints</strong>. Any interested party — a hospital system, a vendor, a government programme — can subscribe by registering:</p>
+
+<ul>
+  <li>A stable FHIR server URL (accessible from CI infrastructure).</li>
+  <li>An authentication method (open, bearer token, mutual TLS, or similar).</li>
+  <li>A FHIR CapabilityStatement declaring which operations and profiles are supported.</li>
+  <li>A point of contact for issue notification.</li>
+</ul>
+
+<p>Registered endpoints are stored in the IG repository, and the project commits to including them in every scheduled test run. In return, endpoint owners commit to maintaining availability and notifying the project when their endpoint changes significantly.</p>
+
+<blockquote>
+  <p><strong>What "stable" means:</strong> The endpoint does not need to be a production system. It does need to be reliably available during scheduled CI windows and to reflect a genuine implementation of the IG — not a stub or mock that merely returns HTTP 200.</p>
+</blockquote>
+
+<hr />
+
+<h4 id="how-the-ci-matrix-works">How the CI Matrix Works</h4>
+
+<p>A scheduled CI job (running nightly, or triggered by a new IG build) executes a defined set of test scenarios against every registered sender/receiver pair. Results are aggregated into a matrix report and published alongside the IG at <code class="language-plaintext highlighter-rouge">/dev/interop-matrix/</code>, pinned to the IG version that was current when the tests ran.</p>
+
+<p>&lt;?xml version="1.0" encoding="us-ascii" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1006px" preserveAspectRatio="none" style="width:653px;height:1006px;background:#FFFFFF;" version="1.1" viewBox="0 0 653 1006" width="653px" zoomAndPan="magnify"><defs></defs><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="616" x="17" y="35.4209">CI-Based Interoperability Matrix Testing Pipeline</text><rect fill="#FFFFFF" height="20.9531" style="stroke:#FFFFFF;stroke-width:1.0;" width="630" x="10" y="54.3545"></rect><ellipse cx="182.5" cy="90.3076" fill="#FFFFFF" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;"></ellipse><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="267" x="49" y="120.3076"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="155" x="59" y="141.4463">Register stable endpoint</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="247" x="59" y="155.415">(URL, credentials, capability statement)</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="174" x="95.5" y="791.4556"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="154" x="105.5" y="812.5942">Review published results</text><polygon fill="#FFFFFF" points="142.5,845.4243,222.5,845.4243,234.5,857.4243,222.5,869.4243,142.5,869.4243,130.5,857.4243,142.5,845.4243" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="80" x="142.5" y="861.2324">Issues found?</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="20" x="110.5" y="854.8301">yes</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="14" x="234.5" y="854.8301">no</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="163" x="16" y="879.4243"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="138" x="26" y="900.563">Raise issue against IG</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="143" x="26" y="914.5317">or own implementation</text><rect fill="#FFFFFF" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="137" x="199" y="879.4243"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="117" x="209" y="900.563">No action required</text><polygon fill="#FFFFFF" points="182.5,933.3618,194.5,945.3618,182.5,957.3618,170.5,945.3618,182.5,933.3618" style="stroke:#000000;stroke-width:1.0;"></polygon><ellipse cx="182.5" cy="988.3618" fill="#FFFFFF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"></ellipse><ellipse cx="182.5" cy="988.3618" fill="#000000" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;"></ellipse><line style="stroke:#000000;stroke-width:1.0;" x1="10" x2="10" y1="54.3545" y2="999.3618"></line><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="165" x="394" y="188.2451"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="145" x="404" y="209.3838">Store endpoint registry</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="78" x="404" y="223.3525">in repository</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="203" x="375" y="256.1826"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="157" x="385" y="277.3213">Scheduled CI job triggers</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="183" x="385" y="291.29">(e.g. nightly or on IG change)</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="228" x="362.5" y="368.1201"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="208" x="372.5" y="389.2588">Select next sender / receiver pair</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="139" x="372.5" y="403.2275">from endpoint registry</text><rect fill="#FFFFFF" height="61.9063" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="261" x="346" y="436.0576"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="137" x="356" y="457.1963">Execute test scenario</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="138" x="356" y="471.165">against live endpoints</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="241" x="356" y="485.1338">(FHIR transaction, query, subscription)</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="189" x="382" y="517.9639"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="88" x="392" y="539.1025">Record result:</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="169" x="392" y="553.0713">&#10003; Pass / &#10007; Fail / &#9888; Warning</text><polygon fill="#FFFFFF" points="476.5,324.1201,488.5,336.1201,476.5,348.1201,464.5,336.1201,476.5,324.1201" style="stroke:#000000;stroke-width:1.0;"></polygon><polygon fill="#FFFFFF" points="430.5,585.9014,522.5,585.9014,534.5,597.9014,522.5,609.9014,430.5,609.9014,418.5,597.9014,430.5,585.9014" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="20" x="480.5" y="620.1118">yes</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="92" x="430.5" y="601.7095">All pairs tested?</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="14" x="534.5" y="595.3071">no</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="133" x="410" y="641.6118"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="113" x="420" y="662.7505">Aggregate results</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="109" x="420" y="676.7192">into matrix report</text><rect fill="#FFFFFF" height="61.9063" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="158" x="397.5" y="709.5493"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="130" x="407.5" y="730.688">Publish matrix report</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="138" x="407.5" y="744.6567">to /dev/interop-matrix/</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="121" x="407.5" y="758.6255">(current IG version)</text><line style="stroke:#000000;stroke-width:1.0;" x1="340" x2="340" y1="54.3545" y2="999.3618"></line><line style="stroke:#000000;stroke-width:1.0;" x1="638" x2="638" y1="54.3545" y2="999.3618"></line><line style="stroke:#000000;stroke-width:1.0;" x1="182.5" x2="182.5" y1="100.3076" y2="120.3076"></line><polygon fill="#000000" points="178.5,110.3076,182.5,120.3076,186.5,110.3076,182.5,114.3076" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="130.5" x2="97.5" y1="857.4243" y2="857.4243"></line><line style="stroke:#000000;stroke-width:1.0;" x1="97.5" x2="97.5" y1="857.4243" y2="879.4243"></line><polygon fill="#000000" points="93.5,869.4243,97.5,879.4243,101.5,869.4243,97.5,873.4243" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="234.5" x2="267.5" y1="857.4243" y2="857.4243"></line><line style="stroke:#000000;stroke-width:1.0;" x1="267.5" x2="267.5" y1="857.4243" y2="879.4243"></line><polygon fill="#000000" points="263.5,869.4243,267.5,879.4243,271.5,869.4243,267.5,873.4243" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="97.5" x2="97.5" y1="927.3618" y2="945.3618"></line><line style="stroke:#000000;stroke-width:1.0;" x1="97.5" x2="170.5" y1="945.3618" y2="945.3618"></line><polygon fill="#000000" points="160.5,941.3618,170.5,945.3618,160.5,949.3618,164.5,945.3618" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="267.5" x2="267.5" y1="913.3931" y2="945.3618"></line><line style="stroke:#000000;stroke-width:1.0;" x1="267.5" x2="194.5" y1="945.3618" y2="945.3618"></line><polygon fill="#000000" points="204.5,941.3618,194.5,945.3618,204.5,949.3618,200.5,945.3618" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="182.5" x2="182.5" y1="825.4243" y2="845.4243"></line><polygon fill="#000000" points="178.5,835.4243,182.5,845.4243,186.5,835.4243,182.5,839.4243" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="182.5" x2="182.5" y1="957.3618" y2="977.3618"></line><polygon fill="#000000" points="178.5,967.3618,182.5,977.3618,186.5,967.3618,182.5,971.3618" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="476.5" x2="476.5" y1="236.1826" y2="256.1826"></line><polygon fill="#000000" points="472.5,246.1826,476.5,256.1826,480.5,246.1826,476.5,250.1826" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="476.5" x2="476.5" y1="416.0576" y2="436.0576"></line><polygon fill="#000000" points="472.5,426.0576,476.5,436.0576,480.5,426.0576,476.5,430.0576" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="476.5" x2="476.5" y1="497.9639" y2="517.9639"></line><polygon fill="#000000" points="472.5,507.9639,476.5,517.9639,480.5,507.9639,476.5,511.9639" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="476.5" x2="476.5" y1="348.1201" y2="368.1201"></line><polygon fill="#000000" points="472.5,358.1201,476.5,368.1201,480.5,358.1201,476.5,362.1201" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="534.5" x2="619" y1="597.9014" y2="597.9014"></line><polygon fill="#000000" points="615,477.0107,619,467.0107,623,477.0107,619,473.0107" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="619" x2="619" y1="336.1201" y2="597.9014"></line><line style="stroke:#000000;stroke-width:1.0;" x1="619" x2="488.5" y1="336.1201" y2="336.1201"></line><polygon fill="#000000" points="498.5,332.1201,488.5,336.1201,498.5,340.1201,494.5,336.1201" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="476.5" x2="476.5" y1="565.9014" y2="585.9014"></line><polygon fill="#000000" points="472.5,575.9014,476.5,585.9014,480.5,575.9014,476.5,579.9014" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="476.5" x2="476.5" y1="304.1201" y2="324.1201"></line><polygon fill="#000000" points="472.5,314.1201,476.5,324.1201,480.5,314.1201,476.5,318.1201" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="476.5" x2="476.5" y1="609.9014" y2="641.6118"></line><polygon fill="#000000" points="472.5,631.6118,476.5,641.6118,480.5,631.6118,476.5,635.6118" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="476.5" x2="476.5" y1="689.5493" y2="709.5493"></line><polygon fill="#000000" points="472.5,699.5493,476.5,709.5493,480.5,699.5493,476.5,703.5493" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="182.5" x2="182.5" y1="168.2451" y2="173.2451"></line><line style="stroke:#000000;stroke-width:1.0;" x1="182.5" x2="476.5" y1="173.2451" y2="173.2451"></line><line style="stroke:#000000;stroke-width:1.0;" x1="476.5" x2="476.5" y1="173.2451" y2="188.2451"></line><polygon fill="#000000" points="472.5,178.2451,476.5,188.2451,480.5,178.2451,476.5,182.2451" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="476.5" x2="476.5" y1="771.4556" y2="776.4556"></line><line style="stroke:#000000;stroke-width:1.0;" x1="476.5" x2="182.5" y1="776.4556" y2="776.4556"></line><line style="stroke:#000000;stroke-width:1.0;" x1="182.5" x2="182.5" y1="776.4556" y2="791.4556"></line><polygon fill="#000000" points="178.5,781.4556,182.5,791.4556,186.5,781.4556,182.5,785.4556" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="18" lengthAdjust="spacing" textLength="131" x="109.5" y="71.0625">"Implementer"</text><text fill="#000000" font-family="Verdana" font-size="18" lengthAdjust="spacing" textLength="143" x="417.5" y="71.0625">"IG Project (CI)"</text></g></svg></p>
+
+<p><strong>Test scenarios</strong> cover the core IG workflows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>What is tested</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Submit referral</strong></td>
+      <td>Sender posts a referral <code class="language-plaintext highlighter-rouge">Bundle</code> (Transaction); receiver accepts and returns a response</td>
+    </tr>
+    <tr>
+      <td><strong>Query referral status</strong></td>
+      <td>Requester queries <code class="language-plaintext highlighter-rouge">Task</code> resource by identifier; responder returns current status</td>
+    </tr>
+    <tr>
+      <td><strong>Patient demographics lookup</strong></td>
+      <td>Sender queries <code class="language-plaintext highlighter-rouge">Patient</code> by PhilSys ID; responder matches and returns demographics</td>
+    </tr>
+    <tr>
+      <td><strong>Subscription notification</strong></td>
+      <td>Subscriber registers a FHIR Subscription; publisher fires a notification on referral status change</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Each scenario is defined as a reusable test script, versioned alongside the IG, so results are reproducible and comparable across IG versions.</p>
+
+<hr />
+
+<h4 id="the-interoperability-matrix">The Interoperability Matrix</h4>
+
+<p>The output of each test run is a matrix — implementations as both senders and receivers, with a pass/fail/pending result at each intersection.</p>
+
+<p>&lt;?xml version="1.0" encoding="us-ascii" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="374px" preserveAspectRatio="none" style="width:864px;height:374px;background:#FFFFFF;" version="1.1" viewBox="0 0 864 374" width="864px" zoomAndPan="magnify"><defs></defs><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="617" x="118" y="35.4209">CI Interoperability Matrix &#8212; Endpoint &#215; Endpoint</text><!--cluster **Registered Endpoints (Implementations)**--><g id="cluster_**Registered Endpoints (Implementations)**"><rect fill="#FFFFFF" height="99" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="320" x="280" y="55.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="258" x="311" y="67.8198">Registered Endpoints (Implementations)</text></g><!--cluster **Tested Against (Receivers)**--><g id="cluster_**Tested Against (Receivers)**"><rect fill="#FFFFFF" height="99" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="340" x="269" y="269.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="172" x="353" y="281.8198">Tested Against (Receivers)</text></g><!--cluster **CI Test Results**--><g id="cluster_**CI Test Results**"><rect fill="#FFFFFF" height="99" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="814" x="19" y="162.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="96" x="378" y="174.8198">CI Test Results</text></g><g id="elem_GMN29"><path d="M685,299.1094 L685,354.5078 A0,0 0 0 0 685,354.5078 L857,354.5078 A0,0 0 0 0 857,354.5078 L857,309.1094 L847,299.1094 L775,299.1094 L771,253.832 L767,299.1094 L685,299.1094 A0,0 0 0 0 685,299.1094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><path d="M847,299.1094 L847,309.1094 L857,309.1094 L847,299.1094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="95" x="691" y="316.1763">Failure triggers</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="151" x="691" y="331.3091">automated issue report</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="121" x="691" y="346.4419">linked to IG version</text></g><!--entity A--><g id="elem_A"><rect fill="#E3F2FD" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="89" x="288.5" y="78.6094"></rect><rect fill="#E3F2FD" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="357.5" y="83.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="355.5" y="85.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="355.5" y="89.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="38" x="309" y="108.8198">&#171;impl&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="35" x="303.5" y="121.6245">Impl A</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="49" x="303.5" y="134.4292">(Sender)</text></g><!--entity B--><g id="elem_B"><rect fill="#E3F2FD" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="89" x="502.5" y="78.6094"></rect><rect fill="#E3F2FD" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="571.5" y="83.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="569.5" y="85.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="569.5" y="89.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="38" x="523" y="108.8198">&#171;impl&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="36" x="517.5" y="121.6245">Impl B</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="49" x="517.5" y="134.4292">(Sender)</text></g><!--entity C--><g id="elem_C"><rect fill="#E3F2FD" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="89" x="395.5" y="78.6094"></rect><rect fill="#E3F2FD" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="464.5" y="83.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="462.5" y="85.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="462.5" y="89.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="38" x="416" y="108.8198">&#171;impl&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="36" x="410.5" y="121.6245">Impl C</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="49" x="410.5" y="134.4292">(Sender)</text></g><!--entity RA--><g id="elem_RA"><rect fill="#E3F2FD" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="96" x="505" y="292.6094"></rect><rect fill="#E3F2FD" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="581" y="297.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="579" y="299.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="579" y="303.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="38" x="529" y="322.8198">&#171;impl&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="35" x="520" y="335.6245">Impl A</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="56" x="520" y="348.4292">(Receiver)</text></g><!--entity RB--><g id="elem_RB"><rect fill="#E3F2FD" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="96" x="277" y="292.6094"></rect><rect fill="#E3F2FD" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="353" y="297.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="351" y="299.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="351" y="303.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="38" x="301" y="322.8198">&#171;impl&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="36" x="292" y="335.6245">Impl B</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="56" x="292" y="348.4292">(Receiver)</text></g><!--entity RC--><g id="elem_RC"><rect fill="#E3F2FD" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="96" x="391" y="292.6094"></rect><rect fill="#E3F2FD" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="467" y="297.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="465" y="299.6094"></rect><rect fill="#E3F2FD" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="465" y="303.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="38" x="415" y="322.8198">&#171;impl&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="36" x="406" y="335.6245">Impl C</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="56" x="406" y="348.4292">(Receiver)</text></g><!--entity AB--><g id="elem_AB"><rect fill="#DCEDC8" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="116" x="27" y="185.6094"></rect><rect fill="#DCEDC8" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="123" y="190.6094"></rect><rect fill="#DCEDC8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="121" y="192.6094"></rect><rect fill="#DCEDC8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="121" y="196.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="76" x="42" y="215.8198">&#171;result-pass&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="32" x="59.5" y="228.6245">A &#8594; B</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="41" x="59.5" y="241.4292">&#10003; Pass</text></g><!--entity AC--><g id="elem_AC"><rect fill="#DCEDC8" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="116" x="315" y="185.6094"></rect><rect fill="#DCEDC8" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="411" y="190.6094"></rect><rect fill="#DCEDC8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="409" y="192.6094"></rect><rect fill="#DCEDC8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="409" y="196.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="76" x="330" y="215.8198">&#171;result-pass&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="32" x="347.5" y="228.6245">A &#8594; C</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="41" x="347.5" y="241.4292">&#10003; Pass</text></g><!--entity BA--><g id="elem_BA"><rect fill="#FFCDD2" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="107" x="717.5" y="185.6094"></rect><rect fill="#FFCDD2" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="804.5" y="190.6094"></rect><rect fill="#FFCDD2" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="802.5" y="192.6094"></rect><rect fill="#FFCDD2" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="802.5" y="196.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="67" x="732.5" y="215.8198">&#171;result-fail&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="32" x="750" y="228.6245">B &#8594; A</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="32" x="750" y="241.4292">&#10007; Fail</text></g><!--entity BC--><g id="elem_BC"><rect fill="#DCEDC8" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="116" x="449" y="185.6094"></rect><rect fill="#DCEDC8" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="545" y="190.6094"></rect><rect fill="#DCEDC8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="543" y="192.6094"></rect><rect fill="#DCEDC8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="543" y="196.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="76" x="464" y="215.8198">&#171;result-pass&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="33" x="481.5" y="228.6245">B &#8594; C</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="41" x="481.5" y="241.4292">&#10003; Pass</text></g><!--entity CA--><g id="elem_CA"><rect fill="#DCEDC8" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="116" x="583" y="185.6094"></rect><rect fill="#DCEDC8" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="679" y="190.6094"></rect><rect fill="#DCEDC8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="677" y="192.6094"></rect><rect fill="#DCEDC8" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="677" y="196.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="76" x="598" y="215.8198">&#171;result-pass&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="32" x="615.5" y="228.6245">C &#8594; A</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="41" x="615.5" y="241.4292">&#10003; Pass</text></g><!--entity CB--><g id="elem_CB"><rect fill="#FFF9C4" height="68.4141" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="135" x="161.5" y="185.6094"></rect><rect fill="#FFF9C4" height="10" style="stroke:#888888;stroke-width:1.0;" width="15" x="276.5" y="190.6094"></rect><rect fill="#FFF9C4" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="274.5" y="192.6094"></rect><rect fill="#FFF9C4" height="2" style="stroke:#888888;stroke-width:1.0;" width="4" x="274.5" y="196.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="95" x="176.5" y="215.8198">&#171;result-pending&#187;</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="33" x="199.5" y="228.6245">C &#8594; B</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="49" x="199.5" y="241.4292">&#9203; Pending</text></g><path d="M288.2552,120.1821 C250.37,127.0159 195.4516,139.9718 152,162.6094 C140.3031,168.7033 128.8183,177.1229 118.7525,185.5836 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="118.7525,185.5836,128.2157,182.8547,122.58,182.3665,123.0682,176.7307,118.7525,185.5836" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M345.6563,146.832 C350.3712,159.2088 355.7185,173.2455 360.4261,185.6028 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="360.4261,185.6028,360.9601,175.7685,358.6461,180.9304,353.4842,178.6164,360.4261,185.6028" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M591.7623,121.8008 C625.2701,129.1903 671.43,142.1036 708,162.6094 C718.9772,168.7646 729.6889,177.1041 739.0747,185.4657 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="739.0747,185.4657,735.0154,176.4923,735.3413,182.1397,729.6938,182.4656,739.0747,185.4657" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M534.3438,146.832 C529.6288,159.2088 524.2815,173.2455 519.5739,185.6028 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="519.5739,185.6028,526.5158,178.6164,521.3539,180.9304,519.0399,175.7685,519.5739,185.6028" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M478.6025,146.732 C483.5566,149.809 488.7416,152.5423 494,154.6094 C527.2558,167.6819 541.0592,148.7623 574,162.6094 C586.7176,167.9554 598.8598,176.5768 609.2286,185.4694 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="609.2286,185.4694,605.001,176.5741,605.4333,182.2144,599.7929,182.6467,609.2286,185.4694" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M401.3975,146.732 C396.4434,149.809 391.2584,152.5423 386,154.6094 C352.7442,167.6819 339.3887,149.8802 306,162.6094 C291.9449,167.9678 278.1525,176.5928 266.2121,185.4849 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="266.2121,185.4849,275.8195,183.3175,270.2222,182.4985,271.0412,176.9012,266.2121,185.4849" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M136.7506,253.6267 C141.8321,256.4581 146.9697,259.1686 152,261.6094 C192.9126,281.4603 241.6661,298.9805 276.9741,310.648 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="276.9741,310.648,269.6836,304.0261,272.2266,309.0792,267.1736,311.6221,276.9741,310.648" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M393.8828,253.832 C401.6625,266.2088 410.4856,280.2455 418.253,292.6028 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="418.253,292.6028,416.85,282.8544,415.5922,288.3697,410.0769,287.1118,418.253,292.6028" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M723.7731,253.673 C718.5793,256.5991 713.2638,259.3156 708,261.6094 C694.5607,267.4658 689.8396,264.7743 676,269.6094 C650.7486,278.4313 623.5955,290.5012 601.2417,301.1769 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="601.2417,301.1769,611.0869,300.9078,605.7536,299.0221,607.6393,293.6888,601.2417,301.1769" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M485.4844,253.832 C477.4689,266.2088 468.3785,280.2455 460.3757,292.6028 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="460.3757,292.6028,468.6253,287.223,463.0936,288.4061,461.9105,282.8743,460.3757,292.6028" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M613.1563,253.832 C602.7833,266.2088 591.0192,280.2455 580.6626,292.6028 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="580.6626,292.6028,589.5093,288.2744,583.8743,288.7707,583.3779,283.1357,580.6626,292.6028" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M259.375,253.832 C270.6909,266.2088 283.5245,280.2455 294.8226,292.6028 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="294.8226,292.6028,291.7018,283.2615,291.4488,288.9127,285.7976,288.6597,294.8226,292.6028" style="stroke:#000000;stroke-width:1.0;"></polygon></g></svg></p>
+
+<p>The matrix is published openly. A failure is not a compliance finding — it is an <strong>early signal</strong> that prompts investigation: is the issue in the sender, the receiver, or an ambiguity in the IG itself? All three are valid outcomes and all three are valuable:</p>
+
+<ul>
+  <li>A sender bug → the sender fixes their implementation.</li>
+  <li>A receiver bug → the receiver fixes their implementation.</li>
+  <li>An IG ambiguity → the project team tightens the specification.</li>
+</ul>
+
+<p>This feedback loop is the point of the exercise.</p>
+
+<hr />
+
+<h4 id="quality-assurance-not-quality-management">Quality Assurance, Not Quality Management</h4>
+
+<p>It is important to be clear about what CI matrix testing is — and is not.</p>
+
+<p>&lt;?xml version="1.0" encoding="us-ascii" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="255px" preserveAspectRatio="none" style="width:1262px;height:255px;background:#FFFFFF;" version="1.1" viewBox="0 0 1262 255" width="1262px" zoomAndPan="magnify"><defs></defs><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="774" x="238.5" y="35.4209">Quality Assurance vs Quality Management in IG Development</text><!--cluster QM--><g id="cluster_QM"><rect fill="#E3F2FD" height="184.5" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="382" x="675" y="60.1094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="168" x="782" y="72.3198">Quality Management (QM)</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="172" x="780" y="85.1245">&#8212; the navigation system &#8212;</text></g><!--cluster QA--><g id="cluster_QA"><rect fill="#E8F5E9" height="184.5" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="416" x="19" y="60.1094"></rect><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="148" x="153" y="72.3198">Quality Assurance (QA)</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="212" x="121" y="85.1245">&#8212; the navigation device in use &#8212;</text></g><g id="elem_GMN13"><path d="M443.5,178.1094 L443.5,248.6406 L666.5,248.6406 L666.5,188.1094 L656.5,178.1094 L443.5,178.1094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><path d="M656.5,178.1094 L656.5,188.1094 L666.5,188.1094 L656.5,178.1094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="174" x="449.5" y="195.1763">CI matrix testing lives here.</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="176" x="449.5" y="210.3091">It eliminates issues findable</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="187" x="449.5" y="225.4419">by automation &#8212; before they</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="202" x="449.5" y="240.5747">reach formal compliance gates.</text></g><g id="elem_GMN16"><path d="M1065,186.1094 L1065,241.5078 L1255,241.5078 L1255,196.1094 L1245,186.1094 L1065,186.1094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><path d="M1245,186.1094 L1245,196.1094 L1255,196.1094 L1245,186.1094 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="169" x="1071" y="203.1763">Formal compliance testing</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="151" x="1071" y="218.3091">and normative balloting</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="58" x="1071" y="233.4419">live here.</text></g><!--entity QM1--><g id="elem_QM1"><rect fill="#DDEEFF" height="45.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="151" x="683.5" y="96.1094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="131" x="693.5" y="116.3198">Define maturity criteria</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="54" x="693.5" y="129.1245">(FMM 0-5)</text></g><!--entity QM2--><g id="elem_QM2"><rect fill="#DDEEFF" height="45.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="162" x="887" y="96.1094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="142" x="897" y="116.3198">Govern stage transitions</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="97" x="897" y="129.1245">(WG &#183; FMG &#183; TSC)</text></g><!--entity QM3--><g id="elem_QM3"><rect fill="#DDEEFF" height="45.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="145" x="686.5" y="190.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="112" x="696.5" y="210.8198">Establish ballot and</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="125" x="696.5" y="223.6245">publication processes</text></g><!--entity QM4--><g id="elem_QM4"><rect fill="#DDEEFF" height="45.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="129" x="849.5" y="190.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="109" x="859.5" y="210.8198">Maintain backward-</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="107" x="859.5" y="223.6245">compatibility policy</text></g><!--entity QA1--><g id="elem_QA1"><rect fill="#DDFBE8" height="45.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="172" x="27" y="96.1094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="139" x="37" y="116.3198">CI-based interoperability</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="152" x="37" y="129.1245">matrix testing (automated)</text></g><!--entity QA2--><g id="elem_QA2"><rect fill="#DDFBE8" height="45.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="175" x="251.5" y="96.1094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="132" x="261.5" y="116.3198">Connectathon evidence</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="155" x="261.5" y="129.1245">(&#8805; 3 independent systems)</text></g><!--entity QA3--><g id="elem_QA3"><rect fill="#DDFBE8" height="45.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="140" x="43" y="190.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="120" x="53" y="210.8198">FHIR validator checks</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="70" x="53" y="223.6245">(every build)</text></g><!--entity QA4--><g id="elem_QA4"><rect fill="#DDFBE8" height="45.6094" rx="2.5" ry="2.5" style="stroke:#888888;stroke-width:1.0;" width="145" x="201.5" y="190.6094"></rect><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="125" x="211.5" y="210.8198">Published test results</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="75" x="211.5" y="223.6245">by IG version</text></g><path d="M435.9782,177.4021 C436.3116,177.4784 436.6458,177.5554 436.9807,177.6332 C437.6507,177.7888 438.3237,177.9475 439,178.1094 C440.4304,178.4517 441.8692,178.8011 443.3151,179.1569 " fill="none" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"></path><path d="M1057.2843,177.1294 C1058.5115,177.4439 1059.7499,177.7704 1061,178.1094 C1069.6956,180.4672 1078.7299,183.2031 1087.6467,186.0827 " fill="none" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"></path></g></svg></p>
+
+<p>The distinction between <strong>Quality Assurance (QA)</strong> and <strong>Quality Management (QM)</strong> is well captured by Maren Behrendt in <a href="https://www.babtec.com/blog/difference-quality-management-quality-assurance"><em>Quality Management and Quality Assurance — What's the Difference?</em></a> (Babtec, 2021):</p>
+
+<blockquote>
+  <p>Quality Management acts as the <strong>navigation system</strong> — it develops the roadmap, specifications, processes, and rules. Quality Assurance acts as the <strong>navigation device in use</strong> — it implements the monitoring and control measures to verify that requirements are actually met.</p>
+</blockquote>
+
+<p>In IG development terms:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dimension</th>
+      <th>Quality Management</th>
+      <th>Quality Assurance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>What</strong></td>
+      <td>FMM stage criteria, ballot governance, normative policy</td>
+      <td>CI matrix tests, Connectathon evidence, FHIR validator runs</td>
+    </tr>
+    <tr>
+      <td><strong>Who decides</strong></td>
+      <td>HL7 Work Groups, FMG, TSC</td>
+      <td>Project CI, implementers</td>
+    </tr>
+    <tr>
+      <td><strong>When</strong></td>
+      <td>At stage-transition gates</td>
+      <td>Continuously, on every build or nightly</td>
+    </tr>
+    <tr>
+      <td><strong>Output</strong></td>
+      <td>Permission to advance to next maturity level</td>
+      <td>Pass/fail report pinned to IG version</td>
+    </tr>
+    <tr>
+      <td><strong>Nature</strong></td>
+      <td>Governance commitment</td>
+      <td>Automated verification</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>CI matrix testing is a QA activity.</strong> It eliminates the class of defects that automation can find — missing required elements, wrong status codes, incompatible date formats, malformed references — before those defects reach the formal QM gates. It is the difference between arriving at a Connectathon with known-good implementations versus arriving to discover basic incompatibilities that should have been found weeks earlier.</p>
+
+<p>This testing does <strong>not</strong> replace formal compliance testing. It does not grant any certification, badge, or maturity-level advancement. It is a continuous sanity check that reduces waste and improves the quality of evidence that later feeds the formal processes.</p>
+
+<hr />
+
+<h4 id="what-this-is-not">What This Is Not</h4>
+
+<p>To be explicit about scope:</p>
+
+<ul>
+  <li><strong>Not a certification programme.</strong> Passing all matrix tests carries no regulatory or contractual weight.</li>
+  <li><strong>Not a Connectathon substitute.</strong> Connectathon evidence (≥ 3 independent systems, accepted by FMG) remains the formal gate for FMM 2 advancement, as described on the <a href="hl7-lifecycle.html">HL7 Standards Lifecycle</a> page.</li>
+  <li><strong>Not a compliance audit.</strong> Formal compliance testing — against national or regulatory requirements — requires accredited processes that this project does not provide.</li>
+  <li><strong>Not exhaustive.</strong> Automated tests cover the scenarios they are programmed to cover. Edge cases, workflow nuances, and clinical correctness still require human review.</li>
+</ul>
+
+<hr />
+
+<h4 id="subscribing-your-endpoint">Subscribing Your Endpoint</h4>
+
+<p>If you are implementing or piloting the PH eReferral IG and would like your endpoint included in the matrix:</p>
+
+<ol>
+  <li>Open an issue in the <a href="https://github.com/jgsuess/ph-ereferral">project repository</a> with the label <code class="language-plaintext highlighter-rouge">interop-endpoint</code>.</li>
+  <li>Provide: endpoint URL, authentication details (shared privately via repository secrets), CapabilityStatement link, and contact email.</li>
+  <li>The project team will add the endpoint to the registry and include it in the next scheduled test run.</li>
+  <li>Results will appear in the published matrix at <code class="language-plaintext highlighter-rouge">/dev/interop-matrix/</code> within 24 hours of the next run.</li>
+</ol>
+
+<p>Endpoints that become unreachable for more than two consecutive weeks will be marked as <code class="language-plaintext highlighter-rouge">inactive</code> in the registry and excluded from results until restored.</p>
+
+<hr />
+
+<h4 id="relationship-to-the-rest-of-the-documentation">Relationship to the Rest of the Documentation</h4>
+
+<ul>
+  <li><strong><a href="approach.html">Approach</a></strong> — the agile development methodology that produces the IG content being tested.</li>
+  <li><strong><a href="ig-evolution.html">IG Evolution</a></strong> — when and why matrix testing becomes relevant (Phase 2 transition).</li>
+  <li><strong><a href="hl7-lifecycle.html">HL7 Standards Lifecycle</a></strong> — the formal FMM and ballot process that CI testing feeds into but does not replace.</li>
+  <li><strong><a href="version-management.html">Version Management &amp; Publication</a></strong> — how IG versions are tagged; matrix results are pinned to the version current at test time.</li>
+  <li><strong><a href="testing-companion.html">Testing Companion IG</a></strong> — the companion IG that supplies bulk test fixtures and SDC forms used to seed and exercise the matrix test endpoints.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-17 04:37:00 +0000">
+    2026-06-17
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefServiceRequest"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest ExampleERefServiceRequest</b></p><a name="ExampleERefServiceRequest"> </a><a name="hcExampleERefServiceRequest"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ereferral-service-request.html">EReferral ServiceRequest</a></p></div><p><b>requisition</b>: <code>urn:oid:1.2.840.113619.21.1.2</code>/REF-2025-001234</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 3457005}">Patient referral</span></p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 183519002}">Referral to cardiology service</span></p><p><b>subject</b>: <a href="Patient-ExampleERefPatient.html">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>occurrence</b>: 2025-03-16 08:00:00+0800</p><p><b>authoredOn</b>: 2025-03-15 09:30:00+0800</p><p><b>requester</b>: <a href="PractitionerRole-ExampleERefPractitionerRole.html">PractitionerRole Medical practitioner</a></p><p><b>performer</b>: <a href="Organization-ExampleERefReceivingHospital.html">Organization Philippine Heart Center</a></p><p><b>reasonCode</b>: <span title="Codes:{http://snomed.info/sct 29857009}">Chest pain on exertion, suspected unstable angina</span></p><p><b>reasonReference</b>: <a href="Condition-ExampleERefConditionChestPain.html">Condition Chest pain</a></p><p><b>supportingInfo</b>: </p><ul><li><a href="Observation-ExampleERefObservationBP.html">Observation Blood pressure panel with all children optional</a></li><li><a href="Observation-ExampleERefObservationECG.html">Observation EKG study</a></li></ul><p><b>note</b>: </p><blockquote><div><p>Patient reports chest pain on exertion for 3 days. ECG shows ST depression. Please evaluate for possible PCI. Patient has no known drug allergies.</p>
+</div></blockquote></div>
+  </text>
+  <requisition>
+    <system value="urn:oid:1.2.840.113619.21.1.2"/>
+    <value value="REF-2025-001234"/>
+  </requisition>
+  <status value="active"/>
+  <intent value="order"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="3457005"/>
+      <display value="Patient referral"/>
+    </coding>
+  </category>
+  <priority value="urgent"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="183519002"/>
+      <display value="Referral to cardiology service"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ExampleERefPatient"/>
+  </subject>
+  <occurrenceDateTime value="2025-03-16T08:00:00+08:00"/>
+  <authoredOn value="2025-03-15T09:30:00+08:00"/>
+  <requester>
+    <reference value="PractitionerRole/ExampleERefPractitionerRole"/>
+  </requester>
+  <performer>
+    <reference value="Organization/ExampleERefReceivingHospital"/>
+  </performer>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="29857009"/>
+      <display value="Chest pain"/>
+    </coding>
+    <text value="Chest pain on exertion, suspected unstable angina"/>
+  </reasonCode>
+  <reasonReference>
+    <reference value="Condition/ExampleERefConditionChestPain"/>
+  </reasonReference>
+  <supportingInfo>
+    <reference value="Observation/ExampleERefObservationBP"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="Observation/ExampleERefObservationECG"/>
+  </supportingInfo>
+  <note>
+    <text value="Patient reports chest pain on exertion for 3 days. ECG shows ST depression. Please evaluate for possible PCI. Patient has no known drug allergies."/>
+  </note>
+</ServiceRequest>

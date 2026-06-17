@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ereferral-reason"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet ereferral-reason</b></p><a name="ereferral-reason"> </a><a name="hcereferral-reason"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/267036007">267036007</a></td><td>Dyspnea</td></tr><tr><td><a href="http://snomed.info/id/29857009">29857009</a></td><td>Chest pain</td></tr><tr><td><a href="http://snomed.info/id/414545008">414545008</a></td><td>Suspected lung cancer</td></tr><tr><td><a href="http://snomed.info/id/42343007">42343007</a></td><td>Congestive heart failure</td></tr><tr><td><a href="http://snomed.info/id/49436004">49436004</a></td><td>Atrial fibrillation</td></tr><tr><td><a href="http://snomed.info/id/59621000">59621000</a></td><td>Essential hypertension</td></tr><tr><td><a href="http://snomed.info/id/73211009">73211009</a></td><td>Diabetes mellitus</td></tr><tr><td><a href="http://snomed.info/id/109006">109006</a></td><td>Anxiety disorder</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-reason"/>
+  <version value="0.3.0"/>
+  <name value="EReferralReason"/>
+  <title value="eReferral Reason"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-17T04:37:58+00:00"/>
+  <publisher value="SILab CoP IG Accelerator (eReferral)"/>
+  <contact>
+    <name value="SILab CoP IG Accelerator (eReferral)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-Manila-SILab"/>
+    </telecom>
+  </contact>
+  <description value="Clinical reasons for eReferral requests. Uses SNOMED CT clinical findings and diagnoses."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="267036007"/>
+        <display value="Dyspnea"/>
+      </concept>
+      <concept>
+        <code value="29857009"/>
+        <display value="Chest pain"/>
+      </concept>
+      <concept>
+        <code value="414545008"/>
+        <display value="Suspected lung cancer"/>
+      </concept>
+      <concept>
+        <code value="42343007"/>
+        <display value="Congestive heart failure"/>
+      </concept>
+      <concept>
+        <code value="49436004"/>
+        <display value="Atrial fibrillation"/>
+      </concept>
+      <concept>
+        <code value="59621000"/>
+        <display value="Essential hypertension"/>
+      </concept>
+      <concept>
+        <code value="73211009"/>
+        <display value="Diabetes mellitus"/>
+      </concept>
+      <concept>
+        <code value="109006"/>
+        <display value="Anxiety disorder"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

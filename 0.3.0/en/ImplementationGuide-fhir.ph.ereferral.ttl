@@ -1,0 +1,2929 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/ImplementationGuide/fhir.ph.ereferral> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fhir.ph.ereferral"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide fhir.ph.ereferral</b></p><a name=\"fhir.ph.ereferral\"> </a><a name=\"hcfhir.ph.ereferral\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><h2>PHeReferralImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>https://fhir.doh.gov.ph/pheref/ImplementationGuide/fhir.ph.ereferral</pre><div><p>This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH eReferral profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.</p>\n</div></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.doh.gov.ph/pheref/ImplementationGuide/fhir.ph.ereferral"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.3.0"] ; # 
+  fhir:name [ fhir:v "PHeReferralImplementationGuide"] ; # 
+  fhir:title [ fhir:v "PH eReferral Implementation Guide"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-06-17T04:37:58+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "SILab CoP IG Accelerator (eReferral)"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "SILab CoP IG Accelerator (eReferral)" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/UP-Manila-SILab" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH eReferral profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PH" ] ;
+       fhir:display [ fhir:v "Philippines" ]
+     ] )
+  ] ) ; # 
+  fhir:packageId [ fhir:v "fhir.ph.ereferral"] ; # 
+  fhir:license [ fhir:v "CC-BY-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+       ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
+     fhir:version [ fhir:v "7.2.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+       ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:version [ fhir:v "5.3.0" ]
+  ] [
+     fhir:id [ fhir:v "fhir_ph_core" ] ;
+     fhir:uri [
+       fhir:v "https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core"^^xsd:anyURI ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core>
+     ] ;
+     fhir:packageId [ fhir:v "fhir.ph.core" ] ;
+     fhir:version [ fhir:v "dev" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "copyrightyear"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "2025+"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "releaselabel"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "release"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "autoload-resources"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-liquid"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template/liquid"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-liquid"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/liquid"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-qa"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/qa"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-temp"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/pages"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-output"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "output"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-suppressed-warnings"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/ignoreWarnings.txt"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-history"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "https://fhir.doh.gov.ph/pheref/history.html"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-html"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page.html"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-md"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page-md.html"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-contact"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-context"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-copyright"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-jurisdiction"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-license"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-publisher"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-version"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-wg"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "active-tables"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "fmm-definition"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://hl7.org/fhir/versions.html#maturity"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "propagate-status"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "excludelogbinaryformat"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "tabbed-snapshots"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "i18n-default-lang"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "en"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "hl7.fhir.uv.tools.r4#1.1.2"
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "copyrightyear"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "2025+"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "releaselabel"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "release"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "autoload-resources"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-liquid"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template/liquid"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-liquid"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/liquid"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-qa"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/qa"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-temp"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/pages"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-output"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "output"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-suppressed-warnings"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/ignoreWarnings.txt"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-history"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "https://fhir.doh.gov.ph/pheref/history.html"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "template-html"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page.html"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "template-md"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page-md.html"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-contact"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-context"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-copyright"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-jurisdiction"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-license"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-publisher"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-version"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-wg"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "active-tables"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "fmm-definition"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://hl7.org/fhir/versions.html#maturity"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "propagate-status"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "excludelogbinaryformat"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "tabbed-snapshots"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "i18n-default-lang"
+         ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "en"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Bundle/anc-contact-transaction-ex> ;
+         fhir:reference [ fhir:v "Bundle/anc-contact-transaction-ex" ]
+       ] ;
+       fhir:name [ fhir:v "anc-contact-transaction-ex" ] ;
+       fhir:description [ fhir:v "Nurse Jane conducts Charity's first antenatal care visit at\nBarangay Malusog Health Centre. This bundle captures the full clinical\nencounter: pregnancy confirmation, vital signs, chief complaint,\niron-and-folic-acid dispensing, laboratory orders, and the ultrasound\nreferral to Metro Imaging Centre — along with the task that tracks the\nreferral outcome." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Condition/condition-pregnancy-ex> ;
+         fhir:reference [ fhir:v "Condition/condition-pregnancy-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Condition — Pregnancy" ] ;
+       fhir:description [ fhir:v "Charity's confirmed pregnancy, provisionally dated to a last menstrual period around New Year 2026, giving an estimated gestational age of 12–15 weeks." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Encounter"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Encounter/encounter-anc-ex> ;
+         fhir:reference [ fhir:v "Encounter/encounter-anc-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Encounter — First Antenatal Care Contact" ] ;
+       fhir:description [ fhir:v "The counselling session (08:30–10:00) in which nurse Jane confirms Charity's pregnancy, records vital signs and clinical history, and initiates the referral." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Encounter"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Encounter/encounter-registration-ex> ;
+         fhir:reference [ fhir:v "Encounter/encounter-registration-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Encounter — Registration" ] ;
+       fhir:description [ fhir:v "A brief ambulatory encounter (08:00–08:15) in which clerk Abraham collects Charity's demographic information and registers her in the system." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-encounter" ]
+       ] ;
+       fhir:name [ fhir:v "ERefEncounter" ] ;
+       fhir:description [ fhir:v "Encounter profile for the Philippine eReferral system. Extends PHCoreEncounter to capture the clinical encounter context associated with a referral, including encounter status, classification, participants, and clinical information relevant to the referral workflow." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-condition" ]
+       ] ;
+       fhir:name [ fhir:v "EReferral Condition" ] ;
+       fhir:description [ fhir:v "Condition profile for diagnoses, problems, or clinical conditions relevant to a Philippine eReferral request." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-medication-administration" ]
+       ] ;
+       fhir:name [ fhir:v "EReferral MedicationAdministration" ] ;
+       fhir:description [ fhir:v "Profile for medications administered to patients in the Philippine eReferral context. Captures medications given as part of treatment (REF-39) and referenced via ServiceRequest.supportingInfo (REF-15) to provide clinical context for referrals." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-observation" ]
+       ] ;
+       fhir:name [ fhir:v "EReferral Observation" ] ;
+       fhir:description [ fhir:v "Profile for clinical observations in the Philippine eReferral context. \nSupports vital signs, laboratory results, and clinical measurements included in \nreferral clinical summaries. Referenced via ServiceRequest.supportingInfo and \nServiceRequest.reasonReference." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-priority> ;
+         fhir:reference [ fhir:v "ValueSet/ereferral-priority" ]
+       ] ;
+       fhir:name [ fhir:v "eReferral Priority" ] ;
+       fhir:description [ fhir:v "Priority levels for eReferral requests. Uses standard FHIR RequestPriority values." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-procedure" ]
+       ] ;
+       fhir:name [ fhir:v "EReferral Procedure" ] ;
+       fhir:description [ fhir:v "Procedure profile for procedures performed or documented as part of the clinical context of a Philippine eReferral." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-provenance" ]
+       ] ;
+       fhir:name [ fhir:v "EReferral Provenance" ] ;
+       fhir:description [ fhir:v "Profile for tracking audit trail of eReferral actions including signatures and timestamps in the Philippine eReferral context." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-reason> ;
+         fhir:reference [ fhir:v "ValueSet/ereferral-reason" ]
+       ] ;
+       fhir:name [ fhir:v "eReferral Reason" ] ;
+       fhir:description [ fhir:v "Clinical reasons for eReferral requests. Uses SNOMED CT clinical findings and diagnoses." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response> ;
+         fhir:reference [ fhir:v "ValueSet/ereferral-receiving-response" ]
+       ] ;
+       fhir:name [ fhir:v "eReferral Receiving Facility Response" ] ;
+       fhir:description [ fhir:v "Response states used by a receiving facility after referral receipt in the PH eReferral workflow." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-related-person" ]
+       ] ;
+       fhir:name [ fhir:v "EReferral RelatedPerson" ] ;
+       fhir:description [ fhir:v "RelatedPerson profile for the Philippine eReferral system. This profile represents optional patient contacts used in referral workflows, including next of kin, emergency contacts, accompanying persons, and guardians. It extends PHCoreRelatedPerson and maps to TDG element REF-29." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type> ;
+         fhir:reference [ fhir:v "ValueSet/ereferral-relationship-type" ]
+       ] ;
+       fhir:name [ fhir:v "eReferral Relationship Type" ] ;
+       fhir:description [ fhir:v "Relationship roles used for patient contacts, next of kin, emergency contacts, guardians, and accompanying persons in Philippine eReferral." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-service-category> ;
+         fhir:reference [ fhir:v "ValueSet/ereferral-service-category" ]
+       ] ;
+       fhir:name [ fhir:v "eReferral Service Category" ] ;
+       fhir:description [ fhir:v "Categories of services that can be requested through eReferral" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-service-request" ]
+       ] ;
+       fhir:name [ fhir:v "EReferral ServiceRequest" ] ;
+       fhir:description [ fhir:v "Profile for ServiceRequest resource in the Philippine eReferral context. This profile defines the core referral request structure for referring patients between healthcare facilities." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-task" ]
+       ] ;
+       fhir:name [ fhir:v "EReferral Task" ] ;
+       fhir:description [ fhir:v "Task profile for Philippine eReferral workflow management. Tracks referral state transitions from request through completion, supporting workflow coordination between sending and receiving facilities." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow> ;
+         fhir:reference [ fhir:v "CodeSystem/ereferral-workflow" ]
+       ] ;
+       fhir:name [ fhir:v "eReferral Workflow Code System" ] ;
+       fhir:description [ fhir:v "Local workflow codes for Philippine eReferral receiving-facility responses and related referral coordination events." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-immunization> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-immunization" ]
+       ] ;
+       fhir:name [ fhir:v "ERefImmunization" ] ;
+       fhir:description [ fhir:v "Immunization profile for the Philippine eReferral system. Extends PHCoreImmunization to define must-support elements for referral clinical context. Immunization records are referenced via ServiceRequest.supportingInfo to provide supporting clinical information about a patient's vaccination history." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Immunization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Immunization/ExampleERefImmunizationRoutine> ;
+         fhir:reference [ fhir:v "Immunization/ExampleERefImmunizationRoutine" ]
+       ] ;
+       fhir:name [ fhir:v "ERefImmunization Example - Routine Immunization (MMR)" ] ;
+       fhir:description [ fhir:v "Example immunization instance demonstrating routine vaccination (MMR - Measles-Mumps-Rubella) as supporting clinical information in an eReferral context via ServiceRequest.supportingInfo." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-immunization"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-immunization>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-patient" ]
+       ] ;
+       fhir:name [ fhir:v "ERefPatient" ] ;
+       fhir:description [ fhir:v "Patient profile for the Philippine eReferral system. Extends PHCorePatient with additional elements specific to referral workflows. This profile supports the patient demographic requirements defined in the eReferral TDG (Technical Development Group) mapping, elements REF-21 through REF-30." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ERefPatientExample> ;
+         fhir:reference [ fhir:v "Patient/ERefPatientExample" ]
+       ] ;
+       fhir:name [ fhir:v "ERefPatient Example - Juan Dela Cruz" ] ;
+       fhir:description [ fhir:v "Example patient instance demonstrating the ERefPatient profile with PhilHealth ID, PhilSys ID, and complete demographic information for eReferral." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/MedicationAdministration/ExampleERefMedicationAdministrationAntibiotic> ;
+         fhir:reference [ fhir:v "MedicationAdministration/ExampleERefMedicationAdministrationAntibiotic" ]
+       ] ;
+       fhir:name [ fhir:v "Example Antibiotic Administration" ] ;
+       fhir:description [ fhir:v "Example IV antibiotic administration for a patient with suspected infection. Demonstrates REF-39 Treatment Given data element." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationBP> ;
+         fhir:reference [ fhir:v "Observation/ExampleERefObservationBP" ]
+       ] ;
+       fhir:name [ fhir:v "Example Blood Pressure Observation" ] ;
+       fhir:description [ fhir:v "Example blood pressure vital sign for eReferral (REF-33). Referenced via ServiceRequest.supportingInfo." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationTemperature> ;
+         fhir:reference [ fhir:v "Observation/ExampleERefObservationTemperature" ]
+       ] ;
+       fhir:name [ fhir:v "Example Body Temperature Observation" ] ;
+       fhir:description [ fhir:v "Example body temperature vital sign for eReferral (REF-37). Referenced via ServiceRequest.supportingInfo." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationWeight> ;
+         fhir:reference [ fhir:v "Observation/ExampleERefObservationWeight" ]
+       ] ;
+       fhir:name [ fhir:v "Example Body Weight Observation" ] ;
+       fhir:description [ fhir:v "Example body weight vital sign for eReferral (REF-38). Referenced via ServiceRequest.supportingInfo." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Medication/ExampleERefMedicationAntibiotic> ;
+         fhir:reference [ fhir:v "Medication/ExampleERefMedicationAntibiotic" ]
+       ] ;
+       fhir:name [ fhir:v "Example Cefuroxime Medication" ] ;
+       fhir:description [ fhir:v "Example antibiotic medication resource for IV administration." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationChiefComplaint> ;
+         fhir:reference [ fhir:v "Observation/ExampleERefObservationChiefComplaint" ]
+       ] ;
+       fhir:name [ fhir:v "Example Chief Complaint Observation" ] ;
+       fhir:description [ fhir:v "Example chief complaint for eReferral (REF-31). Referenced via ServiceRequest.reasonReference to provide clinical context for referral." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/MedicationAdministration/ExampleERefMedicationAdministrationChronic> ;
+         fhir:reference [ fhir:v "MedicationAdministration/ExampleERefMedicationAdministrationChronic" ]
+       ] ;
+       fhir:name [ fhir:v "Example Chronic Medication Administration" ] ;
+       fhir:description [ fhir:v "Example chronic medication administration (antihypertensive) demonstrating routine medication given to patient. Part of clinical summary (REF-15)." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Condition/ExampleERefConditionChestPain> ;
+         fhir:reference [ fhir:v "Condition/ExampleERefConditionChestPain" ]
+       ] ;
+       fhir:name [ fhir:v "Example Condition - Chest Pain" ] ;
+       fhir:description [ fhir:v "Example chest pain condition for referral" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Condition/ExampleERefConditionHypertensiveEmergency> ;
+         fhir:reference [ fhir:v "Condition/ExampleERefConditionHypertensiveEmergency" ]
+       ] ;
+       fhir:name [ fhir:v "Example Condition - Hypertensive Emergency" ] ;
+       fhir:description [ fhir:v "Example hypertensive emergency condition used as a clinical reason for referral." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationECG> ;
+         fhir:reference [ fhir:v "Observation/ExampleERefObservationECG" ]
+       ] ;
+       fhir:name [ fhir:v "Example ECG Observation" ] ;
+       fhir:description [ fhir:v "Example ECG findings observation for eReferral. Referenced via ServiceRequest.supportingInfo for cardiac referrals." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Encounter"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Encounter/ExampleERefEncounter> ;
+         fhir:reference [ fhir:v "Encounter/ExampleERefEncounter" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Encounter" ] ;
+       fhir:description [ fhir:v "An example encounter for a cardiology referral, where a patient is received at a tertiary hospital based on a referral from a rural health unit." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatient> ;
+         fhir:reference [ fhir:v "Patient/ExampleERefPatient" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Patient" ] ;
+       fhir:description [ fhir:v "Example patient for eReferral demonstration" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatientTask> ;
+         fhir:reference [ fhir:v "Patient/ExampleERefPatientTask" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Patient (for Task)" ] ;
+       fhir:description [ fhir:v "Minimal patient instance for ERefTask demonstration." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatientMinimal> ;
+         fhir:reference [ fhir:v "Patient/ExampleERefPatientMinimal" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Patient (Minimal)" ] ;
+       fhir:description [ fhir:v "Minimal patient instance for Provenance demonstration." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Provenance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Provenance/ExampleERefProvenanceUpdate> ;
+         fhir:reference [ fhir:v "Provenance/ExampleERefProvenanceUpdate" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Provenance for Status Update" ] ;
+       fhir:description [ fhir:v "Provenance record documenting a referral status update without signature. Demonstrates REF-3 (Date & Time of activity)." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Provenance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Provenance/ExampleERefProvenanceSignature> ;
+         fhir:reference [ fhir:v "Provenance/ExampleERefProvenanceSignature" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Provenance with Signature" ] ;
+       fhir:description [ fhir:v "Provenance record demonstrating professional signature attestation for a referral. Demonstrates REF-3 (Date & Time of Signature) and REF-4 (Professional Signature)." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequest> ;
+         fhir:reference [ fhir:v "ServiceRequest/ExampleERefServiceRequest" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Service Request" ] ;
+       fhir:description [ fhir:v "An example referral request from a rural health unit to a tertiary hospital for cardiology consultation." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequestMinimal> ;
+         fhir:reference [ fhir:v "ServiceRequest/ExampleERefServiceRequestMinimal" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Service Request (Minimal)" ] ;
+       fhir:description [ fhir:v "Minimal service request instance for Provenance demonstration." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Task/ExampleERefTaskAccepted> ;
+         fhir:reference [ fhir:v "Task/ExampleERefTaskAccepted" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Task - Accepted State" ] ;
+       fhir:description [ fhir:v "Task representing an eReferral that has been accepted by the receiving facility. Demonstrates TDG REF-9 'Care Navigator' assignment with owner now populated." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Task/ExampleERefTaskCompleted> ;
+         fhir:reference [ fhir:v "Task/ExampleERefTaskCompleted" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Task - Completed State" ] ;
+       fhir:description [ fhir:v "Task representing a completed eReferral. Demonstrates full workflow closure with execution period and completion output." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Task/ExampleERefTaskReceived> ;
+         fhir:reference [ fhir:v "Task/ExampleERefTaskReceived" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Task - Received State" ] ;
+       fhir:description [ fhir:v "Task representing an eReferral acknowledged by the receiving facility and under review for acceptance." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Task/ExampleERefTaskReferredOnward> ;
+         fhir:reference [ fhir:v "Task/ExampleERefTaskReferredOnward" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Task - Referred Onward State" ] ;
+       fhir:description [ fhir:v "Task representing an eReferral response where the receiving facility cannot take the case and directs the referral to another facility." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Task/ExampleERefTaskRejected> ;
+         fhir:reference [ fhir:v "Task/ExampleERefTaskRejected" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Task - Rejected State" ] ;
+       fhir:description [ fhir:v "Task representing an eReferral response where the receiving facility cannot take the case and no onward facility is specified." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Task/ExampleERefTaskRequested> ;
+         fhir:reference [ fhir:v "Task/ExampleERefTaskRequested" ]
+       ] ;
+       fhir:name [ fhir:v "Example eReferral Task - Requested State" ] ;
+       fhir:description [ fhir:v "Task representing a newly created eReferral in 'requested' status. Demonstrates TDG REF-9 'Care Navigator' assignment pattern with requester populated but owner not yet assigned." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "RelatedPerson"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/RelatedPerson/ExampleERefRelatedPersonAccompanying> ;
+         fhir:reference [ fhir:v "RelatedPerson/ExampleERefRelatedPersonAccompanying" ]
+       ] ;
+       fhir:name [ fhir:v "Example ERefRelatedPerson - Accompanying Person" ] ;
+       fhir:description [ fhir:v "Example accompanying person for an eReferral patient." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "RelatedPerson"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/RelatedPerson/ExampleERefRelatedPersonNextOfKin> ;
+         fhir:reference [ fhir:v "RelatedPerson/ExampleERefRelatedPersonNextOfKin" ]
+       ] ;
+       fhir:name [ fhir:v "Example ERefRelatedPerson - Next of Kin" ] ;
+       fhir:description [ fhir:v "Example next-of-kin RelatedPerson for an eReferral patient." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationHeartRate> ;
+         fhir:reference [ fhir:v "Observation/ExampleERefObservationHeartRate" ]
+       ] ;
+       fhir:name [ fhir:v "Example Heart Rate Observation" ] ;
+       fhir:description [ fhir:v "Example heart rate vital sign for eReferral (REF-34). Referenced via ServiceRequest.supportingInfo." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationLabGlucose> ;
+         fhir:reference [ fhir:v "Observation/ExampleERefObservationLabGlucose" ]
+       ] ;
+       fhir:name [ fhir:v "Example Laboratory Glucose Observation" ] ;
+       fhir:description [ fhir:v "Example laboratory result observation for eReferral with reference range." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequestOnward> ;
+         fhir:reference [ fhir:v "ServiceRequest/ExampleERefServiceRequestOnward" ]
+       ] ;
+       fhir:name [ fhir:v "Example Onward eReferral ServiceRequest" ] ;
+       fhir:description [ fhir:v "ServiceRequest representing the onward referral created after the first receiving facility reports that capacity is full." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefOrganizationOnwardReceiving> ;
+         fhir:reference [ fhir:v "Organization/ExampleERefOrganizationOnwardReceiving" ]
+       ] ;
+       fhir:name [ fhir:v "Example Onward Receiving Facility (for Task)" ] ;
+       fhir:description [ fhir:v "Organization instance representing the alternate receiving facility for a referred-onward response." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationOxygenSat> ;
+         fhir:reference [ fhir:v "Observation/ExampleERefObservationOxygenSat" ]
+       ] ;
+       fhir:name [ fhir:v "Example Oxygen Saturation Observation" ] ;
+       fhir:description [ fhir:v "Example oxygen saturation vital sign for eReferral (REF-36). Referenced via ServiceRequest.supportingInfo." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Procedure"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Procedure/ExampleERefProcedureECG> ;
+         fhir:reference [ fhir:v "Procedure/ExampleERefProcedureECG" ]
+       ] ;
+       fhir:name [ fhir:v "Example Procedure - Electrocardiogram" ] ;
+       fhir:description [ fhir:v "Example diagnostic procedure documented as supporting clinical information for referral." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Procedure"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Procedure/ExampleERefProcedureInitialManagement> ;
+         fhir:reference [ fhir:v "Procedure/ExampleERefProcedureInitialManagement" ]
+       ] ;
+       fhir:name [ fhir:v "Example Procedure - Initial Management" ] ;
+       fhir:description [ fhir:v "Example therapeutic procedure or intervention performed before referral." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefOrganizationReceiving> ;
+         fhir:reference [ fhir:v "Organization/ExampleERefOrganizationReceiving" ]
+       ] ;
+       fhir:name [ fhir:v "Example Receiving Facility (for Task)" ] ;
+       fhir:description [ fhir:v "Organization instance representing the receiving tertiary hospital." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefReceivingHospital> ;
+         fhir:reference [ fhir:v "Organization/ExampleERefReceivingHospital" ]
+       ] ;
+       fhir:name [ fhir:v "Example Receiving Hospital" ] ;
+       fhir:description [ fhir:v "Example tertiary hospital receiving facility" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefReferringFacility> ;
+         fhir:reference [ fhir:v "Organization/ExampleERefReferringFacility" ]
+       ] ;
+       fhir:name [ fhir:v "Example Referring Facility" ] ;
+       fhir:description [ fhir:v "Example referring healthcare facility for the Philippines eReferral workflow." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefOrganizationRequester> ;
+         fhir:reference [ fhir:v "Organization/ExampleERefOrganizationRequester" ]
+       ] ;
+       fhir:name [ fhir:v "Example Referring Facility (for Task)" ] ;
+       fhir:description [ fhir:v "Minimal organization instance representing the referring facility." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefOrganizationMinimal> ;
+         fhir:reference [ fhir:v "Organization/ExampleERefOrganizationMinimal" ]
+       ] ;
+       fhir:name [ fhir:v "Example Referring Facility (Minimal)" ] ;
+       fhir:description [ fhir:v "Minimal organization instance for Provenance demonstration." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Practitioner/ExampleERefPractitioner> ;
+         fhir:reference [ fhir:v "Practitioner/ExampleERefPractitioner" ]
+       ] ;
+       fhir:name [ fhir:v "Example Referring Practitioner" ] ;
+       fhir:description [ fhir:v "Example referring practitioner demonstrating practitioner demographics for the Philippines eReferral workflow." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Practitioner/ExampleERefPractitionerRequester> ;
+         fhir:reference [ fhir:v "Practitioner/ExampleERefPractitionerRequester" ]
+       ] ;
+       fhir:name [ fhir:v "Example Referring Practitioner (for Task)" ] ;
+       fhir:description [ fhir:v "Minimal practitioner instance for ERefTask demonstration." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Practitioner/ExampleERefPractitionerMinimal> ;
+         fhir:reference [ fhir:v "Practitioner/ExampleERefPractitionerMinimal" ]
+       ] ;
+       fhir:name [ fhir:v "Example Referring Practitioner (Minimal)" ] ;
+       fhir:description [ fhir:v "Minimal practitioner instance for Provenance demonstration." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRole> ;
+         fhir:reference [ fhir:v "PractitionerRole/ExampleERefPractitionerRole" ]
+       ] ;
+       fhir:name [ fhir:v "Example Referring Practitioner Role" ] ;
+       fhir:description [ fhir:v "Example referring practitioner role linking practitioner to facility for the Philippines eReferral workflow." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleRequester> ;
+         fhir:reference [ fhir:v "PractitionerRole/ExampleERefPractitionerRoleRequester" ]
+       ] ;
+       fhir:name [ fhir:v "Example Referring Practitioner Role (for Task)" ] ;
+       fhir:description [ fhir:v "Practitioner role linking referring practitioner to their facility." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleMinimal> ;
+         fhir:reference [ fhir:v "PractitionerRole/ExampleERefPractitionerRoleMinimal" ]
+       ] ;
+       fhir:name [ fhir:v "Example Referring Practitioner Role (Minimal)" ] ;
+       fhir:description [ fhir:v "Minimal practitioner role instance for Provenance demonstration." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationRespiratoryRate> ;
+         fhir:reference [ fhir:v "Observation/ExampleERefObservationRespiratoryRate" ]
+       ] ;
+       fhir:name [ fhir:v "Example Respiratory Rate Observation" ] ;
+       fhir:description [ fhir:v "Example respiratory rate vital sign for eReferral (REF-35). Referenced via ServiceRequest.supportingInfo." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequestTask> ;
+         fhir:reference [ fhir:v "ServiceRequest/ExampleERefServiceRequestTask" ]
+       ] ;
+       fhir:name [ fhir:v "Example ServiceRequest (for Task)" ] ;
+       fhir:description [ fhir:v "Minimal ServiceRequest instance referenced by Task examples." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"^^xsd:anyURI ;
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Medication/ExampleERefMedicationTwinact> ;
+         fhir:reference [ fhir:v "Medication/ExampleERefMedicationTwinact" ]
+       ] ;
+       fhir:name [ fhir:v "Example Twinact Medication" ] ;
+       fhir:description [ fhir:v "Example medication resource for Twinact (Telmisartan + Amlodipine) used in chronic medication administration example." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/MedicationAdministration/medicationadministration-ifa-ex> ;
+         fhir:reference [ fhir:v "MedicationAdministration/medicationadministration-ifa-ex" ]
+       ] ;
+       fhir:name [ fhir:v "MedicationAdministration — Iron and Folic Acid" ] ;
+       fhir:description [ fhir:v "Jane dispenses iron and folic acid (IFA) tablets to Charity with instructions to take one tablet daily, following WHO ANC guidelines for nutritional supplementation." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/observation-blood-pressure-ex> ;
+         fhir:reference [ fhir:v "Observation/observation-blood-pressure-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Observation — Blood Pressure" ] ;
+       fhir:description [ fhir:v "Charity's blood pressure measured during the physical exam: systolic 110 mmHg, diastolic 70 mmHg — within the normal range for pregnancy." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/observation-temperature-ex> ;
+         fhir:reference [ fhir:v "Observation/observation-temperature-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Observation — Body Temperature" ] ;
+       fhir:description [ fhir:v "Charity's body temperature of 36.8 degrees Celsius, a normal reading taken during the physical exam." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/observation-weight-ex> ;
+         fhir:reference [ fhir:v "Observation/observation-weight-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Observation — Body Weight" ] ;
+       fhir:description [ fhir:v "Charity's weight of 55 kg, recorded as a baseline measurement at her first ANC contact." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/observation-chief-complaint-ex> ;
+         fhir:reference [ fhir:v "Observation/observation-chief-complaint-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Observation — Chief Complaint" ] ;
+       fhir:description [ fhir:v "Charity's reason for visiting the health centre: a missed menstrual cycle and nausea, prompting her to seek antenatal care." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/observation-heart-rate-ex> ;
+         fhir:reference [ fhir:v "Observation/observation-heart-rate-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Observation — Heart Rate" ] ;
+       fhir:description [ fhir:v "Charity's resting heart rate of 78 beats per minute, recorded as part of her vital signs during the ANC contact." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/observation-oxygen-saturation-ex> ;
+         fhir:reference [ fhir:v "Observation/observation-oxygen-saturation-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Observation — Oxygen Saturation" ] ;
+       fhir:description [ fhir:v "Charity's peripheral oxygen saturation at 98 percent, confirming adequate oxygenation." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Observation/observation-respiratory-rate-ex> ;
+         fhir:reference [ fhir:v "Observation/observation-respiratory-rate-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Observation — Respiratory Rate" ] ;
+       fhir:description [ fhir:v "Charity's respiratory rate of 18 breaths per minute, within the normal adult range." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Organization/organization-sending-facility-ex> ;
+         fhir:reference [ fhir:v "Organization/organization-sending-facility-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Organization — Barangay Malusog Health Centre" ] ;
+       fhir:description [ fhir:v "The government health centre where Charity is registered and receives her first ANC contact. Identified by its NHFR code." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Organization/organization-receiving-facility-ex> ;
+         fhir:reference [ fhir:v "Organization/organization-receiving-facility-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Organization — Metro Imaging Centre" ] ;
+       fhir:description [ fhir:v "The external imaging centre where Charity is referred for an obstetric ultrasound to confirm gestational age." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Patient/patient-charity-ex> ;
+         fhir:reference [ fhir:v "Patient/patient-charity-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Patient — Charity Santos" ] ;
+       fhir:description [ fhir:v "Charity is a 24-year-old woman from Barangay Malusog, Quezon City, visiting the health centre for the first time during her pregnancy. Abraham registers her demographics, national IDs, and contact details." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-practitioner-role" ]
+       ] ;
+       fhir:name [ fhir:v "PH eReferral PractitionerRole" ] ;
+       fhir:description [ fhir:v "Profile on PractitionerRole for the Philippines eReferral specification, extending PHCorePractitionerRole. This profile captures the role of the referring practitioner and care navigator within the eReferral workflow, linking practitioners to healthcare facilities." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Practitioner/practitioner-abraham-ex> ;
+         fhir:reference [ fhir:v "Practitioner/practitioner-abraham-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner — Abraham Reyes" ] ;
+       fhir:description [ fhir:v "Abraham is the registration clerk who creates Charity's patient record at the health centre front desk." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Practitioner/practitioner-jane-ex> ;
+         fhir:reference [ fhir:v "Practitioner/practitioner-jane-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner — Jane Dela Cruz" ] ;
+       fhir:description [ fhir:v "Jane is the nurse who conducts Charity's first antenatal care counselling session, records vital signs, and creates the ultrasound referral." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/practitionerrole-abraham-ex> ;
+         fhir:reference [ fhir:v "PractitionerRole/practitionerrole-abraham-ex" ]
+       ] ;
+       fhir:name [ fhir:v "PractitionerRole — Clerk Abraham" ] ;
+       fhir:description [ fhir:v "Abraham's role as a registration clerk at Barangay Malusog Health Centre." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/practitionerrole-jane-ex> ;
+         fhir:reference [ fhir:v "PractitionerRole/practitionerrole-jane-ex" ]
+       ] ;
+       fhir:name [ fhir:v "PractitionerRole — Nurse Jane" ] ;
+       fhir:description [ fhir:v "Jane's role as a nurse at Barangay Malusog Health Centre, linked to her practitioner record and the sending facility." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-pwd-disability> ;
+         fhir:reference [ fhir:v "StructureDefinition/ereferral-pwd-disability" ]
+       ] ;
+       fhir:name [ fhir:v "PWD Disability Registration" ] ;
+       fhir:description [ fhir:v "Extension for Person With Disability (PWD) registration information in the Philippine eReferral system. Captures PWD ID number, disability type, and ID expiration date." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs> ;
+         fhir:reference [ fhir:v "CodeSystem/pwd-disability-type-cs" ]
+       ] ;
+       fhir:name [ fhir:v "PWD Disability Type Code System" ] ;
+       fhir:description [ fhir:v "Code system for types of disability as defined by the Philippine government for PWD registration." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs> ;
+         fhir:reference [ fhir:v "ValueSet/pwd-disability-type-vs" ]
+       ] ;
+       fhir:name [ fhir:v "PWD Disability Type Value Set" ] ;
+       fhir:description [ fhir:v "Value set for types of disability as defined by the Philippine government for PWD registration." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Bundle/registration-transaction-ex> ;
+         fhir:reference [ fhir:v "Bundle/registration-transaction-ex" ]
+       ] ;
+       fhir:name [ fhir:v "registration-transaction-ex" ] ;
+       fhir:description [ fhir:v "Clerk Abraham registers Charity at Barangay Malusog Health Centre.\nThis bundle captures everything recorded at the front desk: Charity's\ndemographic details, her national identifiers (PhilSys and PhilHealth),\nher home address and phone number, and her mother Maria as next-of-kin.\nIt also records Abraham's practitioner role and the registration encounter." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "RelatedPerson"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/RelatedPerson/relatedperson-companion-ex> ;
+         fhir:reference [ fhir:v "RelatedPerson/relatedperson-companion-ex" ]
+       ] ;
+       fhir:name [ fhir:v "RelatedPerson — Maria Santos (Mother)" ] ;
+       fhir:description [ fhir:v "Charity's mother Maria, registered as her next-of-kin and alternative contact person during the registration process." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/servicerequest-lab-orders-ex> ;
+         fhir:reference [ fhir:v "ServiceRequest/servicerequest-lab-orders-ex" ]
+       ] ;
+       fhir:name [ fhir:v "ServiceRequest — Laboratory Orders" ] ;
+       fhir:description [ fhir:v "Routine ANC laboratory tests ordered for Charity: diabetes screen, hepatitis B surface antigen, and HIV — in line with WHO recommended investigations." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/servicerequest-ultrasound-ex> ;
+         fhir:reference [ fhir:v "ServiceRequest/servicerequest-ultrasound-ex" ]
+       ] ;
+       fhir:name [ fhir:v "ServiceRequest — Obstetric Ultrasound Referral" ] ;
+       fhir:description [ fhir:v "Jane refers Charity to Metro Imaging Centre for an obstetric ultrasound to confirm gestational age and due date, needed before 24 weeks of pregnancy." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://fhir.doh.gov.ph/pheref/Task/task-referral-ex> ;
+         fhir:reference [ fhir:v "Task/task-referral-ex" ]
+       ] ;
+       fhir:name [ fhir:v "Task — Referral Tracking" ] ;
+       fhir:description [ fhir:v "Tracks the status of Charity's ultrasound referral. Currently in 'requested' state, awaiting acceptance by Metro Imaging Centre." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] ) ;
+     fhir:page [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:url ;
+           fhir:v "toc.html"^^xsd:anyURI
+         ]
+       ] ) ;
+       fhir:name [
+         a fhir:url ;
+         fhir:v "toc.html"^^xsd:anyURI
+       ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "index.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "index.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Home" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "ai-reasoning.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "ai-reasoning.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Ai Reasoning" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "approach.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "approach.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Approach" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "connectathon-readiness.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "connectathon-readiness.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Connectathon Readiness" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "coverage-map.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "coverage-map.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Coverage Map" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "data-dictionary.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "data-dictionary.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Data Dictionary" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "dd-mapping.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "dd-mapping.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Dd Mapping" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "decision-log.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "decision-log.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Decision Log" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "hl7-lifecycle.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "hl7-lifecycle.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Hl 7 Lifecycle" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "ig-evolution.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "ig-evolution.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Ig Evolution" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "interop-testing.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "interop-testing.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Interop Testing" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "references.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "references.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "References" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "referral-workflow.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "referral-workflow.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Referral Workflow" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "resource-architecture.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "resource-architecture.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Resource Architecture" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "technical-pipeline.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "technical-pipeline.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Technical Pipeline" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "testing-companion.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "testing-companion.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Testing Companion" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "v01-scope.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "v01-scope.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "V 01 Scope" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "version-management.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "version-management.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Version Management" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "who-smart-l1.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "who-smart-l1.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Who Smart L 1" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "input/assets" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [ fhir:v "path-tx-cache" ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

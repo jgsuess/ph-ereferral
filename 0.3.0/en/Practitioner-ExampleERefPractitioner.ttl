@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Practitioner/ExampleERefPractitioner> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleERefPractitioner"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"^^xsd:anyURI ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ExampleERefPractitioner</b></p><a name=\"ExampleERefPractitioner\"> </a><a name=\"hcExampleERefPractitioner\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.3</code>/PRAC-12345</p><p><b>active</b>: true</p><p><b>name</b>: Dr. Maria Cruz Santos(Official)</p><p><b>telecom</b>: <a href=\"tel:+63281234567\">+63 2 8123 4567</a>, <a href=\"mailto:mcsantos@hospital.ph\">mcsantos@hospital.ph</a></p><p><b>gender</b>: Female</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.3"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "PRAC-12345" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:text [ fhir:v "Dr. Maria Cruz Santos" ] ;
+     fhir:family [ fhir:v "Santos" ] ;
+     fhir:given ( [ fhir:v "Maria" ] [ fhir:v "Cruz" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr." ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63 2 8123 4567" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "mcsantos@hospital.ph" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:qualification ( [
+     fhir:code [
+       fhir:coding ( [
+         a sct:158965000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "158965000" ] ;
+         fhir:display [ fhir:v "Medical practitioner" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefPractitionerRole"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PractitionerRole ExampleERefPractitionerRole</b></p><a name="ExampleERefPractitionerRole"> </a><a name="hcExampleERefPractitionerRole"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ereferral-practitioner-role.html">PH eReferral PractitionerRole</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.3</code>/MD-98765</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href="Practitioner-ExampleERefPractitioner.html">Practitioner Dr. Maria Cruz Santos(official)</a></p><p><b>organization</b>: <a href="Organization-ExampleERefReferringFacility.html">Organization Manila General Hospital - Barangay 143 Health Center</a></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 158965000}">Medical practitioner</span></p><p><b>specialty</b>: <span title="Codes:{http://snomed.info/sct 419192003}">Internal medicine</span></p><p><b>telecom</b>: <a href="tel:+63281234567">+63 2 8123 4567</a></p></div>
+  </text>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.9.4.3.3"/>
+    <value value="MD-98765"/>
+  </identifier>
+  <active value="true"/>
+  <practitioner>
+    <reference value="Practitioner/ExampleERefPractitioner"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/ExampleERefReferringFacility"/>
+  </organization>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="158965000"/>
+      <display value="Medical practitioner"/>
+    </coding>
+  </code>
+  <specialty>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="419192003"/>
+      <display value="Internal medicine"/>
+    </coding>
+  </specialty>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63 2 8123 4567"/>
+    <use value="work"/>
+  </telecom>
+</PractitionerRole>

@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Organization/organization-sending-facility-ex> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "organization-sending-facility-ex"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"^^xsd:anyURI ;
+       fhir:link <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization>
+     ] ) ;
+     fhir:tag ( [
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "REF-4" ] ;
+       fhir:display [ fhir:v "REF-4" ]
+     ] [
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "REF-5" ] ;
+       fhir:display [ fhir:v "REF-5" ]
+     ] [
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "REF-6" ] ;
+       fhir:display [ fhir:v "REF-6" ]
+     ] [
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "REF-7" ] ;
+       fhir:display [ fhir:v "REF-7" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization organization-sending-facility-ex</b></p><a name=\"organization-sending-facility-ex\"> </a><a name=\"hcorganization-sending-facility-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization</code></p><p style=\"margin-bottom: 0px\">Tags: , , , </p></div><p><b>identifier</b>: Facility ID/DOH000-OO-0-0000123 (use: official, )</p><p><b>name</b>: Barangay Malusog Health Centre</p><p><b>telecom</b>: <a href=\"tel:+63-2-1234-5678\">+63-2-1234-5678</a></p><p><b>address</b>: 123 Health Centre Road Quezon City NCR 1100 PH (work)</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "FI" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "DOH000-OO-0-0000123" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Barangay Malusog Health Centre"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-2-1234-5678" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "work" ] ;
+     fhir:line ( [ fhir:v "123 Health Centre Road" ] ) ;
+     fhir:city [ fhir:v "Quezon City" ] ;
+     fhir:state [ fhir:v "NCR" ] ;
+     fhir:postalCode [ fhir:v "1100" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

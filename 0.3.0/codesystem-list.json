@@ -1,0 +1,18 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "EReferralWorkflowCS",
+    "title" : "eReferral Workflow Code System",
+    "description" : "Local workflow codes for Philippine eReferral receiving-facility responses and related referral coordination events."
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "PWDDisabilityTypeCS",
+    "title" : "PWD Disability Type Code System",
+    "description" : "Code system for types of disability as defined by the Philippine government for PWD registration."
+  }]
+}

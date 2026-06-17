@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefRelatedPersonAccompanying"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Maria Dela Cruz is the patient's spouse and emergency contact accompanying the patient during referral. Contact: +639171112222.</div>
+  </text>
+  <active value="true"/>
+  <patient>
+    <reference value="Patient/ERefPatientExample"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="ECON"/>
+      <display value="emergency contact"/>
+    </coding>
+  </relationship>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="SPS"/>
+      <display value="spouse"/>
+    </coding>
+  </relationship>
+  <name>
+    <use value="official"/>
+    <family value="Dela Cruz"/>
+    <given value="Maria"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+639171112222"/>
+    <use value="mobile"/>
+  </telecom>
+  <gender value="female"/>
+  <period>
+    <start value="2025-03-15"/>
+  </period>
+</RelatedPerson>

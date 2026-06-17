@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ereferral-workflow"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ereferral-workflow</b></p><a name=\"ereferral-workflow\"> </a><a name=\"hcereferral-workflow\"> </a><p>This case-sensitive code system <code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">received<a name=\"ereferral-workflow-received\"> </a></td><td>Received</td><td>The receiving facility has acknowledged receipt of the referral and is reviewing whether it can take the case.</td></tr><tr><td style=\"white-space:nowrap\">accepted<a name=\"ereferral-workflow-accepted\"> </a></td><td>Accepted</td><td>The receiving facility can take the case and has given a positive transfer or service response.</td></tr><tr><td style=\"white-space:nowrap\">rejected<a name=\"ereferral-workflow-rejected\"> </a></td><td>Rejected</td><td>The receiving facility cannot take the case and no onward receiving facility is identified in the same response.</td></tr><tr><td style=\"white-space:nowrap\">referred-onward<a name=\"ereferral-workflow-referred-onward\"> </a></td><td>Referred onward</td><td>The receiving facility cannot take the case and directs the patient or referral to another specified facility.</td></tr><tr><td style=\"white-space:nowrap\">capacity-full<a name=\"ereferral-workflow-capacity-full\"> </a></td><td>Capacity full</td><td>The receiving facility reports that capacity is full.</td></tr><tr><td style=\"white-space:nowrap\">onward-referral-request<a name=\"ereferral-workflow-onward-referral-request\"> </a></td><td>Onward referral request</td><td>A ServiceRequest created or identified as the next referral request after the initial receiving facility refers the case onward.</td></tr><tr><td style=\"white-space:nowrap\">consultation-summary<a name=\"ereferral-workflow-consultation-summary\"> </a></td><td>Consultation summary</td><td>A summary of the referral service outcome.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.3.0"] ; # 
+  fhir:name [ fhir:v "EReferralWorkflowCS"] ; # 
+  fhir:title [ fhir:v "eReferral Workflow Code System"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-06-17T04:37:58+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "SILab CoP IG Accelerator (eReferral)"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "SILab CoP IG Accelerator (eReferral)" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/UP-Manila-SILab" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Local workflow codes for Philippine eReferral receiving-facility responses and related referral coordination events."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PH" ] ;
+       fhir:display [ fhir:v "Philippines" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "7"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "received" ] ;
+     fhir:display [ fhir:v "Received" ] ;
+     fhir:definition [ fhir:v "The receiving facility has acknowledged receipt of the referral and is reviewing whether it can take the case." ]
+  ] [
+     fhir:code [ fhir:v "accepted" ] ;
+     fhir:display [ fhir:v "Accepted" ] ;
+     fhir:definition [ fhir:v "The receiving facility can take the case and has given a positive transfer or service response." ]
+  ] [
+     fhir:code [ fhir:v "rejected" ] ;
+     fhir:display [ fhir:v "Rejected" ] ;
+     fhir:definition [ fhir:v "The receiving facility cannot take the case and no onward receiving facility is identified in the same response." ]
+  ] [
+     fhir:code [ fhir:v "referred-onward" ] ;
+     fhir:display [ fhir:v "Referred onward" ] ;
+     fhir:definition [ fhir:v "The receiving facility cannot take the case and directs the patient or referral to another specified facility." ]
+  ] [
+     fhir:code [ fhir:v "capacity-full" ] ;
+     fhir:display [ fhir:v "Capacity full" ] ;
+     fhir:definition [ fhir:v "The receiving facility reports that capacity is full." ]
+  ] [
+     fhir:code [ fhir:v "onward-referral-request" ] ;
+     fhir:display [ fhir:v "Onward referral request" ] ;
+     fhir:definition [ fhir:v "A ServiceRequest created or identified as the next referral request after the initial receiving facility refers the case onward." ]
+  ] [
+     fhir:code [ fhir:v "consultation-summary" ] ;
+     fhir:display [ fhir:v "Consultation summary" ] ;
+     fhir:definition [ fhir:v "A summary of the referral service outcome." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

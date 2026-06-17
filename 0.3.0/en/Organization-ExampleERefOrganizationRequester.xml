@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefOrganizationRequester"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization ExampleERefOrganizationRequester</b></p><a name="ExampleERefOrganizationRequester"> </a><a name="hcExampleERefOrganizationRequester"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-organization.html">PH Core Organization</a></p></div><p><b>identifier</b>: <code>http://fhir.nhdr.gov.ph/nhfr/hospcode</code>/DOH123456</p><p><b>name</b>: Rural Health Unit - Barangay Health Center</p><p><b>address</b>: 123 Health Center Road Quezon City Metro Manila PH </p></div>
+  </text>
+  <identifier>
+    <system value="http://fhir.nhdr.gov.ph/nhfr/hospcode"/>
+    <value value="DOH123456"/>
+  </identifier>
+  <name value="Rural Health Unit - Barangay Health Center"/>
+  <address>
+    <line value="123 Health Center Road"/>
+    <city value="Quezon City"/>
+    <state value="Metro Manila"/>
+    <country value="PH"/>
+  </address>
+</Organization>

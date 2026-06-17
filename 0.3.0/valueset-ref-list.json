@@ -1,0 +1,102 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/ValueSet/contact-point-system",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ContactPointSystem",
+    "title" : "ContactPointSystem",
+    "description" : "Telecommunications form for contact point.",
+    "systems" : ["http://hl7.org/fhir/contact-point-system"],
+    "oids" : ["2.16.840.1.113883.4.642.3.71"],
+    "sources" : ["2.16.840.1.113883.4.642.3.71"],
+    "uses" : {
+    },
+    "StructureDefinition-ereferral-patient.html" : "ERefPatient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ContactPointUse",
+    "title" : "ContactPointUse",
+    "description" : "Use of contact point.",
+    "systems" : ["http://hl7.org/fhir/contact-point-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.73"],
+    "sources" : ["2.16.840.1.113883.4.642.3.73"],
+    "uses" : {
+    },
+    "StructureDefinition-ereferral-patient.html" : "ERefPatient"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-priority",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "EReferralPriority",
+    "title" : "eReferral Priority",
+    "description" : "Priority levels for eReferral requests. Uses standard FHIR RequestPriority values.",
+    "systems" : ["http://hl7.org/fhir/request-priority"],
+    "uses" : {
+    },
+    "StructureDefinition-ereferral-service-request.html" : "EReferral ServiceRequest"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-reason",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "EReferralReason",
+    "title" : "eReferral Reason",
+    "description" : "Clinical reasons for eReferral requests. Uses SNOMED CT clinical findings and diagnoses.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-ereferral-service-request.html" : "EReferral ServiceRequest"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "EReferralReceivingResponse",
+    "title" : "eReferral Receiving Facility Response",
+    "description" : "Response states used by a receiving facility after referral receipt in the PH eReferral workflow.",
+    "systems" : ["https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"],
+    "uses" : {
+    },
+    "StructureDefinition-ereferral-task.html" : "EReferral Task"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "EReferralRelationshipType",
+    "title" : "eReferral Relationship Type",
+    "description" : "Relationship roles used for patient contacts, next of kin, emergency contacts, guardians, and accompanying persons in Philippine eReferral.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+    "uses" : {
+    },
+    "StructureDefinition-ereferral-related-person.html" : "EReferral RelatedPerson"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-service-category",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "EReferralServiceCategory",
+    "title" : "eReferral Service Category",
+    "description" : "Categories of services that can be requested through eReferral",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-ereferral-service-request.html" : "EReferral ServiceRequest"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "PWDDisabilityTypeVS",
+    "title" : "PWD Disability Type Value Set",
+    "description" : "Value set for types of disability as defined by the Philippine government for PWD registration.",
+    "systems" : ["https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-ereferral-pwd-disability.html" : "PWD Disability Registration"
+  }]
+}
