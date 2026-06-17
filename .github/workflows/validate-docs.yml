@@ -42,5 +42,35 @@ jobs:
       - name: Install SUSHI
         run: npm install -g fsh-sushi
 
+      - name: Install fhir.ph.core@0.1.0 into FHIR cache
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          CACHE_DIR="${HOME}/.fhir/packages/fhir.ph.core#0.1.0"
+          if [ -d "$CACHE_DIR" ]; then
+            echo "fhir.ph.core#0.1.0 already in FHIR cache — skipping"
+            exit 0
+          fi
+          TMP=$(mktemp -d)
+          NPMRC=$(mktemp)
+          printf '@jgsuess:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=%s\n' \
+            "${GITHUB_TOKEN}" > "$NPMRC"
+          npm pack "@jgsuess/fhir.ph.core@0.1.0" \
+            --userconfig "$NPMRC" \
+            --pack-destination "$TMP" \
+            --silent
+          mkdir -p "$CACHE_DIR"
+          tar -xzf "$TMP"/*.tgz -C "$CACHE_DIR"
+          FHIR_PKG_JSON="${CACHE_DIR}/package/package.json" python3 -c "
+import json, os, pathlib
+p = pathlib.Path(os.environ['FHIR_PKG_JSON'])
+pkg = json.loads(p.read_text())
+pkg['name'] = 'fhir.ph.core'
+pkg.pop('publishConfig', None)
+p.write_text(json.dumps(pkg, indent=2))
+"
+          rm -rf "$TMP" "$NPMRC"
+          echo "Installed fhir.ph.core#0.1.0 from GitHub Packages"
+
       - name: Validate with SUSHI
         run: sushi .

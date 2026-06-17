@@ -25,6 +25,39 @@ function check_jar_location() {
   fi
 }
 
+function ensure_fhir_ph_core() {
+  local version="0.1.0"
+  local cache_dir="${HOME}/.fhir/packages/fhir.ph.core#${version}"
+  [ -d "$cache_dir" ] && return 0
+  echo "Installing fhir.ph.core#${version} from GitHub Packages..."
+  local token
+  if ! token=$(gh auth token 2>/dev/null); then
+    echo "ERROR: GitHub CLI not authenticated. Run 'gh auth login' first." >&2
+    exit 1
+  fi
+  local tmp_dir tmp_npmrc
+  tmp_dir=$(mktemp -d)
+  tmp_npmrc=$(mktemp)
+  printf '@jgsuess:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=%s\n' \
+    "${token}" > "$tmp_npmrc"
+  npm pack "@jgsuess/fhir.ph.core@${version}" \
+    --userconfig "$tmp_npmrc" \
+    --pack-destination "$tmp_dir" \
+    --silent
+  mkdir -p "$cache_dir"
+  tar -xzf "$tmp_dir"/*.tgz -C "$cache_dir"
+  FHIR_PKG_JSON="${cache_dir}/package/package.json" python3 -c "
+import json, os, pathlib
+p = pathlib.Path(os.environ['FHIR_PKG_JSON'])
+pkg = json.loads(p.read_text())
+pkg['name'] = 'fhir.ph.core'
+pkg.pop('publishConfig', None)
+p.write_text(json.dumps(pkg, indent=2))
+"
+  rm -rf "$tmp_dir" "$tmp_npmrc"
+  echo "fhir.ph.core#${version} installed."
+}
+
 function check_internet_connection() {
   local target="tx.fhir.org"
   local reachable=false
@@ -106,6 +139,7 @@ function run_publisher() {
 }
 
 function build_ig() {
+  ensure_fhir_ph_core
   local args=()
   if [ "$online" = "false" ]; then
     args+=("-tx" "n/a")
@@ -114,10 +148,12 @@ function build_ig() {
 }
 
 function build_nosushi() {
+  ensure_fhir_ph_core
   run_publisher -no-sushi "$@"
 }
 
 function build_notx() {
+  ensure_fhir_ph_core
   run_publisher -tx n/a "$@"
 }
 
