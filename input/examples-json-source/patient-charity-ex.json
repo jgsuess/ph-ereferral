@@ -3,44 +3,16 @@
   "id": "patient-charity-ex",
   "meta": {
     "profile": [
-      "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"
+      "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"
     ],
     "tag": [
-      {
-        "system": "https://example.com/peref-dd",
-        "code": "REF-20",
-        "display": "REF-20"
-      },
-      {
-        "system": "https://example.com/peref-dd",
-        "code": "REF-21",
-        "display": "REF-21"
-      },
-      {
-        "system": "https://example.com/peref-dd",
-        "code": "REF-22",
-        "display": "REF-22"
-      },
-      {
-        "system": "https://example.com/peref-dd",
-        "code": "REF-24",
-        "display": "REF-24"
-      },
-      {
-        "system": "https://example.com/peref-dd",
-        "code": "REF-25",
-        "display": "REF-25"
-      },
-      {
-        "system": "https://example.com/peref-dd",
-        "code": "REF-26",
-        "display": "REF-26"
-      },
-      {
-        "system": "https://example.com/peref-dd",
-        "code": "REF-27",
-        "display": "REF-27"
-      }
+      {"system": "https://example.com/peref-dd", "code": "REF-20", "display": "REF-20"},
+      {"system": "https://example.com/peref-dd", "code": "REF-21", "display": "REF-21"},
+      {"system": "https://example.com/peref-dd", "code": "REF-22", "display": "REF-22"},
+      {"system": "https://example.com/peref-dd", "code": "REF-24", "display": "REF-24"},
+      {"system": "https://example.com/peref-dd", "code": "REF-25", "display": "REF-25"},
+      {"system": "https://example.com/peref-dd", "code": "REF-26", "display": "REF-26"},
+      {"system": "https://example.com/peref-dd", "code": "REF-27", "display": "REF-27"}
     ]
   },
   "text": {
@@ -48,45 +20,22 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Charity is a 24-year-old female patient seeking her first antenatal care contact. [DD: REF-20 to REF-27]</div>"
   },
   "active": true,
-  "name": [
-    {
-      "use": "official",
-      "family": "Santos",
-      "given": [
-        "Charity"
-      ]
-    }
-  ],
+  "name": [{"use": "official", "family": "Santos", "given": ["Charity"]}],
   "gender": "female",
   "birthDate": "2001-08-15",
   "identifier": [
-    {
-      "system": "http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns",
-      "value": "1234-5678901-2"
-    },
-    {
-      "system": "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns",
-      "value": "12-345678901-2"
-    }
+    {"system": "https://philsys.gov.ph/", "value": "1234-5678901-2"},
+    {"system": "https://www.philhealth.gov.ph/", "value": "12-345678901-2"}
   ],
   "address": [
     {
       "use": "home",
-      "line": [
-        "456 Rizal Street",
-        "Barangay Malusog"
-      ],
+      "line": ["456 Rizal Street", "Barangay Malusog"],
       "city": "Quezon City",
       "district": "NCR",
       "postalCode": "1100",
       "country": "PH"
     }
   ],
-  "telecom": [
-    {
-      "system": "phone",
-      "value": "+63-917-123-4567",
-      "use": "mobile"
-    }
-  ]
+  "telecom": [{"system": "phone", "value": "+63-917-123-4567", "use": "mobile"}]
 }
