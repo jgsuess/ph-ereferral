@@ -164,7 +164,7 @@
   fhir:title [ fhir:v "ERefImmunization"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-06-17T10:39:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-17T12:31:02+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "SILab CoP IG Accelerator (eReferral)"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "SILab CoP IG Accelerator (eReferral)" ] ;

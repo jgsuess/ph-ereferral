@@ -25,8 +25,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.1"],
     "uses" : {
     },
-    "StructureDefinition-ereferral-patient.html" : "ERefPatient",
-    "StructureDefinition-ereferral-related-person.html" : "EReferral RelatedPerson"
+    "StructureDefinition-ereferral-related-person.html" : "EReferral RelatedPerson",
+    "StructureDefinition-ereferral-patient.html" : "ERefPatient"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/approach-site-codes",
@@ -54,10 +54,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.141"],
     "uses" : {
     },
-    "StructureDefinition-ereferral-observation.html" : "EReferral Observation",
+    "StructureDefinition-ereferral-condition.html" : "EReferral Condition",
     "StructureDefinition-ereferral-procedure.html" : "EReferral Procedure",
-    "StructureDefinition-ereferral-service-request.html" : "EReferral ServiceRequest",
-    "StructureDefinition-ereferral-condition.html" : "EReferral Condition"
+    "StructureDefinition-ereferral-observation.html" : "EReferral Observation",
+    "StructureDefinition-ereferral-service-request.html" : "EReferral ServiceRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/c80-practice-codes",
@@ -113,8 +113,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.161"],
     "uses" : {
     },
-    "StructureDefinition-ereferral-procedure.html" : "EReferral Procedure",
-    "StructureDefinition-ereferral-condition.html" : "EReferral Condition"
+    "StructureDefinition-ereferral-condition.html" : "EReferral Condition",
+    "StructureDefinition-ereferral-procedure.html" : "EReferral Procedure"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
@@ -184,8 +184,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.71"],
     "uses" : {
     },
-    "StructureDefinition-ereferral-practitioner-role.html" : "PH eReferral PractitionerRole",
-    "StructureDefinition-ereferral-patient.html" : "ERefPatient"
+    "StructureDefinition-ereferral-patient.html" : "ERefPatient",
+    "StructureDefinition-ereferral-practitioner-role.html" : "PH eReferral PractitionerRole"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
@@ -199,8 +199,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.73"],
     "uses" : {
     },
-    "StructureDefinition-ereferral-practitioner-role.html" : "PH eReferral PractitionerRole",
-    "StructureDefinition-ereferral-patient.html" : "ERefPatient"
+    "StructureDefinition-ereferral-patient.html" : "ERefPatient",
+    "StructureDefinition-ereferral-practitioner-role.html" : "PH eReferral PractitionerRole"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
@@ -623,18 +623,18 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-ereferral-observation.html" : "EReferral Observation",
-    "StructureDefinition-ereferral-procedure.html" : "EReferral Procedure",
-    "StructureDefinition-ereferral-practitioner-role.html" : "PH eReferral PractitionerRole",
-    "StructureDefinition-ereferral-encounter.html" : "ERefEncounter",
-    "StructureDefinition-ereferral-patient.html" : "ERefPatient",
-    "StructureDefinition-ereferral-related-person.html" : "EReferral RelatedPerson",
-    "StructureDefinition-ereferral-task.html" : "EReferral Task",
-    "StructureDefinition-ereferral-immunization.html" : "ERefImmunization",
     "StructureDefinition-ereferral-medication-administration.html" : "EReferral MedicationAdministration",
+    "StructureDefinition-ereferral-encounter.html" : "ERefEncounter",
+    "StructureDefinition-ereferral-immunization.html" : "ERefImmunization",
     "StructureDefinition-ereferral-provenance.html" : "EReferral Provenance",
-    "StructureDefinition-ereferral-service-request.html" : "EReferral ServiceRequest",
-    "StructureDefinition-ereferral-condition.html" : "EReferral Condition"
+    "StructureDefinition-ereferral-condition.html" : "EReferral Condition",
+    "StructureDefinition-ereferral-procedure.html" : "EReferral Procedure",
+    "StructureDefinition-ereferral-task.html" : "EReferral Task",
+    "StructureDefinition-ereferral-related-person.html" : "EReferral RelatedPerson",
+    "StructureDefinition-ereferral-observation.html" : "EReferral Observation",
+    "StructureDefinition-ereferral-patient.html" : "ERefPatient",
+    "StructureDefinition-ereferral-practitioner-role.html" : "PH eReferral PractitionerRole",
+    "StructureDefinition-ereferral-service-request.html" : "EReferral ServiceRequest"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
