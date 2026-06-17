@@ -1,0 +1,51 @@
+spring:
+  datasource:
+    url: 'jdbc:postgresql://db:5432/hapi'
+    username: admin
+    password: admin
+    driverClassName: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgresDialect
+      hibernate.search.enabled: false
+
+hapi:
+  fhir:
+    fhir_version: R4
+
+    # Repository validation: rejects writes that fail profile conformance.
+    # Profiles come from the pre-loaded ph-core and ph-ereferral packages below.
+    validation:
+      enabled: true
+      requests_enabled: true
+      responses_enabled: false
+
+    # MDM (Master Data Management): automatic patient deduplication.
+    # Rules are loaded from /app/config/mdm-rules.json (mounted via Docker configs).
+    mdm_enabled: true
+
+    # Pre-load Philippine FHIR packages on first boot.
+    # Set PH_CORE_VERSION / PH_EREFERRAL_VERSION env vars to override versions.
+    # reloadExisting: false means subsequent restarts skip re-download (fast).
+    implementationguides:
+      ph_core:
+        name: fhir.ph.core
+        version: "${PH_CORE_VERSION:0.1.1}"
+        reloadExisting: false
+        installMode: STORE_AND_INSTALL
+        fetchDependencies: true
+        packageUrl: "https://jgsuess.github.io/ph-core/${PH_CORE_VERSION:0.1.1}/package.tgz"
+        dependencyExcludes:
+          - "hl7.fhir.uv.extensions"
+          - "hl7.terminology"
+      ph_ereferral:
+        name: fhir.ph.ereferral
+        version: "${PH_EREFERRAL_VERSION:0.3.1}"
+        reloadExisting: false
+        installMode: STORE_AND_INSTALL
+        fetchDependencies: true
+        packageUrl: "https://jgsuess.github.io/ph-ereferral/${PH_EREFERRAL_VERSION:0.3.1}/package.tgz"
+        dependencyExcludes:
+          - "hl7.fhir.uv.extensions"
+          - "hl7.terminology"
+          - "fhir.ph.core"
