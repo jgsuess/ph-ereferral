@@ -130,7 +130,15 @@ jobs:
               fs.writeFileSync(p, JSON.stringify(pkg, null, 2));
             "
             tar -czf repacked.tgz package/
-            npm publish repacked.tgz --access public
+            publish_out=$(npm publish repacked.tgz --access public 2>&1); publish_rc=$?
+            echo "$publish_out"
+            if [ $publish_rc -ne 0 ]; then
+              if echo "$publish_out" | grep -q "Cannot publish over existing version"; then
+                echo "::notice::${scoped_name}@${RELEASE_VERSION} already published — skipping."
+              else
+                exit $publish_rc
+              fi
+            fi
             cd -
             rm -rf "$work"
           }
