@@ -10,7 +10,7 @@
   },
   "status": "completed",
   "medicationCodeableConcept": {
-    "coding": [{"system": "http://snomed.info/sct", "code": "74935002", "display": "Product containing iron and folic acid"}],
+    "coding": [{"system": "http://snomed.info/sct", "code": "776023009", "display": "Folic acid and iron only product"}],
     "text": "Iron and Folic Acid (IFA) tablets"
   },
   "subject": {"reference": "Patient/patient-charity-ex"},
