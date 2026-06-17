@@ -2,54 +2,23 @@
   "resourceType": "Encounter",
   "id": "encounter-registration-ex",
   "meta": {
-    "profile": [
-      "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter"
-    ],
-    "tag": [
-      {
-        "system": "https://example.com/peref-dd",
-        "code": "REF-43",
-        "display": "REF-43"
-      }
-    ]
+    "profile": ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"],
+    "tag": [{"system": "https://example.com/peref-dd", "code": "REF-43", "display": "REF-43"}]
   },
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Registration encounter — clerk Abraham registers Charity at the health centre. [DD: REF-43]</div>"
   },
   "status": "finished",
-  "class": {
-    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-    "code": "AMB",
-    "display": "ambulatory"
-  },
+  "class": {"system": "http://terminology.hl7.org/CodeSystem/v3-ActCode", "code": "AMB", "display": "ambulatory"},
   "type": [
     {
-      "coding": [
-        {
-          "system": "http://snomed.info/sct",
-          "code": "185349003",
-          "display": "Encounter for check up"
-        }
-      ],
+      "coding": [{"system": "http://snomed.info/sct", "code": "185349003", "display": "Encounter for check up"}],
       "text": "Registration"
     }
   ],
-  "subject": {
-    "reference": "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"
-  },
-  "participant": [
-    {
-      "individual": {
-        "reference": "urn:uuid:3d7e5a9b-4f6c-5b2d-0a9e-8c7f6e5d4c3a"
-      }
-    }
-  ],
-  "serviceProvider": {
-    "reference": "urn:uuid:7c9e6679-7425-40de-944b-e07fc1f90ae7"
-  },
-  "period": {
-    "start": "2026-02-24T08:00:00+08:00",
-    "end": "2026-02-24T08:15:00+08:00"
-  }
+  "subject": {"reference": "Patient/patient-charity-ex"},
+  "participant": [{"individual": {"reference": "PractitionerRole/practitionerrole-abraham-ex"}}],
+  "serviceProvider": {"reference": "Organization/organization-sending-facility-ex"},
+  "period": {"start": "2026-02-24T08:00:00+08:00", "end": "2026-02-24T08:15:00+08:00"}
 }

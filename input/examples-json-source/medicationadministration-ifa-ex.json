@@ -2,13 +2,7 @@
   "resourceType": "MedicationAdministration",
   "id": "medicationadministration-ifa-ex",
   "meta": {
-    "tag": [
-      {
-        "system": "https://example.com/peref-dd",
-        "code": "REF-38",
-        "display": "REF-38"
-      }
-    ]
+    "tag": [{"system": "https://example.com/peref-dd", "code": "REF-38", "display": "REF-38"}]
   },
   "text": {
     "status": "generated",
@@ -16,39 +10,16 @@
   },
   "status": "completed",
   "medicationCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "74935002",
-        "display": "Product containing iron and folic acid"
-      }
-    ],
+    "coding": [{"system": "http://snomed.info/sct", "code": "74935002", "display": "Product containing iron and folic acid"}],
     "text": "Iron and Folic Acid (IFA) tablets"
   },
-  "subject": {
-    "reference": "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"
-  },
-  "context": {
-    "reference": "urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901"
-  },
+  "subject": {"reference": "Patient/patient-charity-ex"},
+  "context": {"reference": "Encounter/encounter-anc-ex"},
   "effectiveDateTime": "2026-02-24",
-  "performer": [
-    {
-      "actor": {
-        "reference": "urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c"
-      }
-    }
-  ],
+  "performer": [{"actor": {"reference": "Practitioner/practitioner-jane-ex"}}],
   "dosage": {
     "text": "1 tablet daily",
-    "route": {
-      "coding": [
-        {
-          "system": "http://snomed.info/sct",
-          "code": "26643006",
-          "display": "Oral route"
-        }
-      ]
-    }
+    "route": {"coding": [{"system": "http://snomed.info/sct", "code": "26643006", "display": "Oral route"}]},
+    "dose": {"value": 1, "unit": "tablet", "system": "http://unitsofmeasure.org", "code": "{tbl}"}
   }
 }
