@@ -108,8 +108,8 @@ jobs:
                   continue
               dest.mkdir(parents=True, exist_ok=True)
               print(f"Installing {pkg_name}#{version} from {url}")
-              result = subprocess.run(
-                  f"curl -sL '{url}' | tar -xz --strip-components=1 -C '{dest}'",
+              subprocess.run(
+                  f"curl -sL '{url}' | tar -xz -C '{dest}'",
                   shell=True, check=True
               )
               print(f"  -> installed to {dest}")
