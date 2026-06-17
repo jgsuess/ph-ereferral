@@ -6,8 +6,8 @@
   "status" : "draft",
   "package-id" : "fhir.ph.ereferral",
   "ig-ver" : "0.1.0",
-  "date" : "Wed, 17 Jun, 2026 04:31:39 +0000",
-  "dateISO8601" : "2026-06-17T04:31:39+00:00",
+  "date" : "Wed, 17 Jun, 2026 05:47:03 +0000",
+  "dateISO8601" : "2026-06-17T05:47:03+00:00",
   "errs" : 0,
   "warnings" : 111,
   "hints" : 969,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1728668624
+  "maxMemory" : 2025139864
 }

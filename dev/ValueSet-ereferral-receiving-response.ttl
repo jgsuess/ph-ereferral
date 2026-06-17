@@ -19,7 +19,7 @@
   fhir:title [ fhir:v "eReferral Receiving Facility Response"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2026-06-17T04:31:39+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-17T05:47:03+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "SILab CoP IG Accelerator (eReferral)"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "SILab CoP IG Accelerator (eReferral)" ] ;

@@ -47,7 +47,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for PHeReferralImplementationGuide</h1>
- <p>Generated Wed Jun 17 04:34:39 UTC 2026, FHIR version 4.0.1 for fhir.ph.ereferral#0.1.0 (canonical = <a href="https://fhir.doh.gov.ph/pheref">https://fhir.doh.gov.ph/pheref</a> (<a href="https://fhir.doh.gov.ph/pheref/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Wed Jun 17 05:50:24 UTC 2026, FHIR version 4.0.1 for fhir.ph.ereferral#0.1.0 (canonical = <a href="https://fhir.doh.gov.ph/pheref">https://fhir.doh.gov.ph/pheref</a> (<a href="https://fhir.doh.gov.ph/pheref/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.2.9</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = fhir.ph.ereferral, Canonical = https://fhir.doh.gov.ph/pheref</td></tr>
@@ -1109,7 +1109,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    <tr style="background-color: #ffebcc">
      <td><b>Bundle&#8203;.entry[13]&#8203;.resource&#8203;/*ServiceRequest&#8203;/servicerequest-ultrasound-ex*&#8203;/&#8203;.category[0]&#8203;.coding[0] (l807&#8203;/c12)</b></td><td><b>warning</b></td><td><b>The concept '103693007' has a status of inactive and its use should be reviewed</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l57">log</a>, or see <a href="#vmi52" onClick="document.getElementById('vmi52').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">INACTIVE_CONCEPT_FOUND</span><div id="vmi52" style="display:none"><br/><pre>0ms tx-op
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#103693007 ("Diagnostic procedure")]"
-1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#103693007"
+0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#103693007"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "103693007" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a></td>
@@ -1294,9 +1294,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.org/fhir/ValueSet/diagnosis-role|4.0.1: Analysing http://hl7.org/fhir/ValueSet/diagnosis-role|4.0.1 for validation purposes
 0ms http://hl7.org/fhir/ValueSet/diagnosis-role|4.0.1: Parameters: disp-lang=en, generate-narrative, default-to-latest
 0ms http://hl7.org/fhir/ValueSet/diagnosis-role|4.0.1: Prepare include[0]: "(http://terminology.hl7.org/CodeSystem/diagnosis-role)"
-1ms http://hl7.org/fhir/ValueSet/diagnosis-role|4.0.1: CodeSystem found: "http://terminology.hl7.org/CodeSystem/diagnosis-role|1.1.1"
-1ms http://hl7.org/fhir/ValueSet/diagnosis-role|4.0.1: Validate "[http://snomed.info/sct#89100005 ("Final diagnosis (discharge)")]"
-1ms http://hl7.org/fhir/ValueSet/diagnosis-role|4.0.1: Check "http://snomed.info/sct#89100005"</pre></div></td><td><a href="StructureDefinition-ereferral-encounter.html">ERefEncounter</a></td>
+0ms http://hl7.org/fhir/ValueSet/diagnosis-role|4.0.1: CodeSystem found: "http://terminology.hl7.org/CodeSystem/diagnosis-role|1.1.1"
+0ms http://hl7.org/fhir/ValueSet/diagnosis-role|4.0.1: Validate "[http://snomed.info/sct#89100005 ("Final diagnosis (discharge)")]"
+0ms http://hl7.org/fhir/ValueSet/diagnosis-role|4.0.1: Check "http://snomed.info/sct#89100005"</pre></div></td><td><a href="StructureDefinition-ereferral-encounter.html">ERefEncounter</a></td>
    </tr>
 </table>
 <hr/>
@@ -1374,9 +1374,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Analysing https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0 for validation purposes
 0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Parameters: disp-lang=en, generate-narrative, default-to-latest
 0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Prepare include[0]: "(https://verification.fda.gov.ph)"
-1ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: CodeSystem found: "https://verification.fda.gov.ph|0.2.0"
-1ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Validate "[http://snomed.info/sct#105590001 ("Substance")]"
-1ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Check "http://snomed.info/sct#105590001"</pre></div></td><td><a href="https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-medication.html">PH Core Medication</a></td>
+0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: CodeSystem found: "https://verification.fda.gov.ph|0.2.0"
+0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Validate "[http://snomed.info/sct#105590001 ("Substance")]"
+0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Check "http://snomed.info/sct#105590001"</pre></div></td><td><a href="https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-medication.html">PH Core Medication</a></td>
    </tr>
 </table>
 <hr/>
@@ -1393,9 +1393,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Analysing https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0 for validation purposes
 0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Parameters: disp-lang=en, generate-narrative, default-to-latest
 0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Prepare include[0]: "(https://verification.fda.gov.ph)"
-1ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: CodeSystem found: "https://verification.fda.gov.ph|0.2.0"
-1ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Validate "[http://snomed.info/sct#105590001 ("Substance")]"
-1ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Check "http://snomed.info/sct#105590001"</pre></div></td><td><a href="https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-medication.html">PH Core Medication</a></td>
+0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: CodeSystem found: "https://verification.fda.gov.ph|0.2.0"
+0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Validate "[http://snomed.info/sct#105590001 ("Substance")]"
+0ms https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.2.0: Check "http://snomed.info/sct#105590001"</pre></div></td><td><a href="https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-medication.html">PH Core Medication</a></td>
    </tr>
 </table>
 <hr/>
@@ -2083,9 +2083,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Procedure.category.coding[0] (l47/c4)</b></td><td><b>warning</b></td><td><b>The concept '103693007' has a status of inactive and its use should be reviewed</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l94">log</a>, or see <a href="#vmi182" onClick="document.getElementById('vmi182').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">INACTIVE_CONCEPT_FOUND</span><div id="vmi182" style="display:none"><br/><pre>0ms tx-op
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#103693007 ("Diagnostic procedure")]"
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#103693007"
-1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
-1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
-1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "103693007" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-ereferral-procedure.html">EReferral Procedure</a></td>
+0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
+0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
+0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "103693007" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-ereferral-procedure.html">EReferral Procedure</a></td>
    </tr>
 </table>
 <hr/>
@@ -2237,7 +2237,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    <tr style="background-color: #ffebcc">
      <td><b>ServiceRequest&#8203;.category[0]&#8203;.coding[0] (l29&#8203;/c6)</b></td><td><b>warning</b></td><td><b>The concept '103693007' has a status of inactive and its use should be reviewed</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l57">log</a>, or see <a href="#vmi192" onClick="document.getElementById('vmi192').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">INACTIVE_CONCEPT_FOUND</span><div id="vmi192" style="display:none"><br/><pre>0ms tx-op
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#103693007 ("Diagnostic procedure")]"
-1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#103693007"
+0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#103693007"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "103693007" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a></td>

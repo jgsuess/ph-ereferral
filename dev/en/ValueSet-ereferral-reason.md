@@ -33,7 +33,7 @@ Clinical reasons for eReferral requests. Uses SNOMED CT clinical findings and di
   "title" : "eReferral Reason",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-17T04:31:39+00:00",
+  "date" : "2026-06-17T05:47:03+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",
