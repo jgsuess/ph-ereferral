@@ -33,7 +33,7 @@ Response states used by a receiving facility after referral receipt in the PH eR
   "title" : "eReferral Receiving Facility Response",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-06-16T23:54:18+00:00",
+  "date" : "2026-06-17T00:17:29+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",

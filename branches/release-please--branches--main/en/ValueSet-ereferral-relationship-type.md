@@ -33,7 +33,7 @@ Relationship roles used for patient contacts, next of kin, emergency contacts, g
   "title" : "eReferral Relationship Type",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T23:54:18+00:00",
+  "date" : "2026-06-17T00:17:29+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",

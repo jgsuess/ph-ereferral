@@ -45,8 +45,8 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "ValueSet-ereferral-reason.html" : "eReferral Reason",
-    "ValueSet-ereferral-service-category.html" : "eReferral Service Category"
+    "ValueSet-ereferral-service-category.html" : "eReferral Service Category",
+    "ValueSet-ereferral-reason.html" : "eReferral Reason"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
