@@ -168,6 +168,59 @@ What a real fix looks like:
 
 ---
 
+## TS-F02 — Slow-and-Low Upload (Timeout Chain)
+
+**Path tested:** Large inline attachment upload over a slow connection — thread
+pool exhaustion, JPA transaction timeout, client retry amplification
+
+```
+Prerequisites:
+  Configure HAPI with NO body size limit (the default out-of-the-box config).
+  Connect via a link throttled to 512 Kbps (use `tc qdisc` on Linux or
+  network emulation in the test environment).
+
+Test:
+  1. POST /fhir/Bundle (transaction bundle):
+     - ServiceRequest with supportingInfo:
+         5 × DocumentReference, each with Attachment.data = base64(700 KB PDF)
+     - Total body: ~4.8 MB
+     - Sent at 512 Kbps → expected upload time: ~75 seconds
+
+  2. While step 1 is in progress, POST a second identical bundle from a
+     second thread (concurrent upload).
+
+  3. While steps 1 and 2 are in progress, GET Task?status=requested
+     (a read operation that should be fast — ~5 ms normally).
+
+Assert:
+  4. Measure wall-clock time for GET in step 3.
+     Expected without attachment limits: 2–10 seconds (DB connections held by uploads)
+     Expected with proper limits (Attachment.url): < 100 ms
+
+  5. Check whether the server returns a sensible error if body size exceeds
+     a threshold. Without configuration: no error — server waits indefinitely.
+
+  6. Attempt 30 concurrent uploads (simulating morning peak from 30 BHSs).
+     assert server returns 503 or queues gracefully
+     → likely result: 503 after thread pool exhaustion, or indefinite hang
+
+Verdict (current configuration):
+  FHIR server: accepts uploads indefinitely, no size feedback to client
+  GET performance: degrades severely under concurrent large uploads
+  Thread pool: exhausted at ~28 concurrent 27 MB uploads (200 threads ÷ 7 min each)
+  Emergency read requests: delayed or rejected during morning peak
+
+What a real fix looks like (in priority order):
+  1. IG SHALL: Attachment.data MUST NOT exceed 100 KB. Use Attachment.url instead.
+     → This eliminates 99% of the slow-body problem at the protocol level.
+  2. docker/hapi/application.yaml: server.tomcat.connection-timeout: 30s
+  3. docker/hapi/application.yaml: spring.servlet.multipart.max-request-size: 5MB
+  4. IG SHOULD: servers SHOULD support Prefer: respond-async for bundles > 1 MB.
+  5. IG narrative: clients SHOULD respect Retry-After on 503 (exponential backoff).
+```
+
+---
+
 ## TS-F01 — Attachment Overload
 
 **Path tested:** POST a ServiceRequest with many large inline attachments

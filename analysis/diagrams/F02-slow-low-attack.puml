@@ -1,0 +1,119 @@
+@startuml F02-slow-low-attack
+!theme plain
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 11
+skinparam sequenceArrowThickness 1.5
+skinparam noteBackgroundColor #FFEBEE
+skinparam noteBorderColor #B71C1C
+
+title F-02 — Slow-and-Low Attack / Cascading Timeout Chain\nLarge inline attachments + no payload limits + poor rural connectivity
+
+actor "Rural BHS\n(Barangay Health\nStation)" as bhs        #FFF9C4
+actor "30 other BHSs\n(morning peak)" as others             #FFF9C4
+box "Provincial FHIR Server\n(HAPI + PostgreSQL)" #E3F2FD
+  participant "Tomcat\nThread Pool\n(200 threads)" as tomcat
+  participant "HAPI\nFHIR Core" as hapi
+  participant "JPA /\nPostgreSQL" as db
+end box
+actor "Legitimate\nEmergency\nRequest" as emergency          #FFCCBC
+
+autonumber
+
+== 07:00 — Morning Peak Begins ==
+
+bhs     -> tomcat : POST /fhir/Bundle\nContent-Length: 27,400,000\n[5 × 700 KB PDFs + clinical fields\nbase64-encoded, 27 MB JSON body]
+
+note over tomcat
+  Thread T-001 allocated.
+  Tomcat starts reading body.
+  No body-size limit configured.
+  No read-body timeout configured.
+end note
+
+tomcat  -> tomcat : Receiving body...\n512 Kbps rural 4G\n= 7 minutes 8 seconds\nto receive 27 MB
+
+others  -> tomcat : [30 concurrent uploads]\n[same payload range: 2–27 MB each]\n[threads T-002 ... T-031 allocated]
+
+note over tomcat #FFCCCC
+  T-001 to T-031: all blocked reading request bodies.
+  31 of 200 threads occupied by uploads in progress.
+  Each upload holds 1 database connection (HikariCP pool: 20 default).
+  Pool may be exhausted before uploads complete.
+end note
+
+== 07:03 — Pool Approaches Saturation ==
+
+emergency -> tomcat : GET /fhir/Task?owner=Org/emergency-dept\n[Legitimate search — no payload]
+
+note over tomcat #FFCCCC
+  All 20 database connections in use
+  by concurrent large write transactions.
+  Search query queued.
+  Emergency staff wait.
+end note
+
+== 07:08 — BHS Upload Completes ==
+
+tomcat  -> hapi   : Parse 27 MB JSON body\n[Java heap: 54–108 MB allocated]
+
+hapi    -> hapi   : FHIR validation:\nFHIRPath over all elements\n40 DocumentReferences × N expressions\n[30–120 second CPU-bound operation]
+
+hapi    -> db     : BEGIN TRANSACTION\nINSERT hfj_res_ver (res_text: 27 MB CLOB)\nPOSTGRESQL TOAST overflow\n[seconds for large CLOB write]
+
+note over db #FFCCCC
+  Transaction holds DB connection.
+  If JPA transaction timeout fires here
+  (not configured — inherits DB default):
+    ROLLBACK
+    HAPI returns 500
+    Client has no data saved
+    Client retries entire 27 MB
+end note
+
+db      --> hapi  : COMMIT (or ROLLBACK if timeout)
+hapi    --> tomcat : 201 Created (or 500 error)
+tomcat  --> bhs   : HTTP response
+
+bhs     -> bhs    : [If 500]: Retry immediately\nwith same 27 MB payload
+
+note right of bhs #FFCCCC
+  Without retry-after guidance in the IG,
+  clients retry immediately.
+  3 retries × 27 MB = 81 MB total
+  for one referral on this connection.
+end note
+
+== The "Not an Attack" Attack ==
+
+note over bhs, db
+  Everything above is a legitimate morning-peak scenario
+  with no adversarial intent.
+
+  30 BHSs × 7 minutes per upload × 1 Tomcat thread each
+  = 30 threads × 7 min = 210 thread-minutes consumed
+  during a 30-minute morning peak window.
+
+  With 200 total threads:
+    ~15% of thread capacity consumed by upload I/O wait
+    Database connections exhausted before uploads finish
+    Emergency search delayed 2–5 minutes
+
+  A deliberate slow-and-low attacker would:
+    Send headers at full speed (passes connection-rate limiter)
+    Trickle body at 1 KB/s (payload arrives in 7.6 hours)
+    Occupy 1 thread + 1 DB connection for 7.6 hours per connection
+    200 connections × 7.6 hours = 1,520 thread-hours
+    Server completely unavailable after 200 such connections
+    (easily achieved from one machine with 200 TCP connections)
+
+  The IG specifies:
+    ❌ No body size limit
+    ❌ No connection timeout for body reads
+    ❌ No JPA transaction timeout
+    ❌ No Prefer: respond-async pattern for large uploads
+    ❌ No attachment offloading (Attachment.url vs Attachment.data)
+    ❌ No CapabilityStatement maxRequestSize declaration
+    ❌ No retry-after guidance on 5xx responses
+end note
+
+@enduml

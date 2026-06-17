@@ -934,6 +934,200 @@ attachment size (e.g., "Attachments included via `Attachment.data` MUST NOT exce
 endpoint") would prevent the unbounded storage problem. A reference to IHE MHD for
 production attachment handling would complete the picture.
 
+### F-02 — Slow-and-Low Attacks and Cascading Timeout Chains
+
+This hole is a direct consequence of F-01. Because the IG places no cap on payload
+size and no guidance on server-side connection handling, large referral payloads create
+a family of denial-of-service vectors that are difficult to distinguish from legitimate
+behaviour on a rural Philippine network.
+
+#### What slow-and-low means in this context
+
+A "slow and low" attack keeps server resources occupied for as long as possible using
+the minimum amount of traffic needed to avoid triggering rate-based defences. The
+classic form (Slowloris) sends HTTP request headers one byte at a time to hold a TCP
+connection open without triggering a read-body timeout. Against a FHIR server with
+large-payload support, there is a more effective variant: **slow body upload**.
+
+The attacker — or simply a legitimate facility on a poor rural connection — sends the
+HTTP headers at full speed (enough to pass any connection-rate limiter or WAF), then
+trickles the body at a rate just fast enough to prevent the server's read timeout from
+firing. The server's thread is locked, waiting for the rest of a payload that may never
+arrive at a useful rate.
+
+#### Why large FHIR payloads make this severe
+
+A normal FHIR resource (Patient, Observation, ServiceRequest with text fields only)
+might be 3–15 KB. A server read-body timeout of 60 seconds is generous for that size.
+
+An ERefServiceRequest with inline PDF attachments is a different order of magnitude:
+
+| Referral content | Estimated JSON payload |
+|-----------------|----------------------|
+| Clinical fields only (no attachments) | ~10 KB |
+| + 1 lab result PDF (300 KB) | ~415 KB (base64 overhead ×1.37) |
+| + 3 PDFs × 500 KB | ~2.1 MB |
+| + 5 PDFs × 700 KB (emergency referral with imaging) | ~4.8 MB |
+| + 10 scanned forms × 1 MB (complex case) | ~13.7 MB |
+| + 40 PDFs × 500 KB (the scenario from F-01) | ~27.4 MB |
+
+At a rural FHIR client upload speed of 512 Kbps (typical for Philippine rural 4G on a
+congested cell):
+
+| Payload | Upload time at 512 Kbps |
+|---------|------------------------|
+| 2.1 MB | ~33 seconds |
+| 4.8 MB | ~75 seconds |
+| 13.7 MB | ~214 seconds (3.6 minutes) |
+| 27.4 MB | ~428 seconds (7 minutes) |
+
+These are not attack durations. They are the expected upload times for a genuine rural
+health unit on a real Philippine network. The server cannot tell the difference between:
+
+- A legitimate RHU in a poor-coverage barangay uploading a complex referral over 7 minutes
+- An attacker deliberately trickling a 27 MB payload to hold a connection open
+
+#### The server resource model during a large upload
+
+HAPI FHIR (the reference server in `docker-compose.yml`) processes requests using a
+standard Tomcat servlet thread pool. Each incoming HTTP request occupies:
+
+1. **One Tomcat thread** — held from the first byte of the request until the last byte
+   of the response. Default Tomcat max threads: 200.
+2. **One JPA database transaction** — opened when the request enters the FHIR write
+   path. Default transaction timeout: none (inherits from the database connection pool
+   timeout, typically not configured for FHIR servers in development).
+3. **One database connection** from the HikariCP pool. Default pool size: 10–20.
+4. **Heap memory** for deserialising the JSON body. A 27 MB JSON payload inflates to
+   2–4× its size as Java objects during FHIR parsing. A single large upload can hold
+   54–108 MB of heap.
+
+A server with 200 Tomcat threads and a 7-minute upload time:
+
+```
+200 threads ÷ 7 minutes per upload = ~28 concurrent large uploads saturate the pool
+
+After saturation:
+  New legitimate requests → queued or rejected (503 Service Unavailable)
+  Database connections exhausted → any FHIR read/write times out
+  GC pressure from heap → JVM pauses degrade all response times
+```
+
+This is not a theoretical bound. It is the operating condition when a modest eReferral
+rollout runs its morning peak across a rural province.
+
+#### The timeout cascade chain
+
+When a large upload finally completes (or is interrupted), the timeout chain begins:
+
+```
+1. HTTP read timeout (Tomcat)
+   ├─ Not configured in docker/hapi/application.yaml
+   └─ Defaults to Tomcat connector timeout (~20s for headers, but body read
+      can be indefinite on a persistent connection)
+
+2. FHIR validation timeout
+   ├─ HAPI runs FHIRPath evaluation over every element in the submitted resource
+   ├─ 40 DocumentReferences × FHIRPath expressions = O(N²) evaluation for some checks
+   ├─ No validation timeout configured in the docker stack
+   └─ A 27 MB resource may take 30–120 seconds to validate fully
+
+3. JPA transaction timeout
+   ├─ HAPI writes the resource + all its contained elements in one transaction
+   ├─ Writing 27 MB of base64 content to a PostgreSQL BYTEA column takes seconds
+   ├─ If the transaction times out mid-write, the DB rolls back
+   ├─ HAPI may not report the rollback cleanly → client receives 500 Internal Server Error
+   └─ Client retries → server processes the same 27 MB again
+
+4. Client retry amplification
+   ├─ Retry 1: same 27 MB, 7-minute upload, transaction rollback
+   ├─ Retry 2: same again
+   └─ 3 retries × 27 MB = 81 MB consumed in total for zero successful writes
+
+5. Base64 decode CPU cost
+   ├─ 27 MB of base64 text → 20 MB of decoded binary
+   ├─ Decoded on every request, including retries
+   └─ CPU cost is proportional to payload size; concurrent large uploads
+      can saturate a single-core container
+
+6. PostgreSQL TOAST overflow
+   ├─ HAPI stores the raw resource JSON in a CLOB column (hfj_res_ver.res_text)
+   ├─ PostgreSQL stores large CLOBs via TOAST (The Oversized Attribute Storage Technique)
+   ├─ TOAST compresses inline, then spills to an overflow table for very large values
+   ├─ Each 27 MB resource creates a large TOAST entry that is read back in full on
+      every resource retrieval, including bundle searches
+   └─ A search that returns 10 such resources reads 270 MB from PostgreSQL
+```
+
+#### The rural Philippines legitimate-traffic version
+
+None of this requires a malicious actor. It is what happens when:
+
+- An emergency occurs in a remote barangay
+- The BHS nurse creates a referral with photographs of the patient and a scanned copy
+  of the paper referral slip
+- The upload takes 8 minutes over congested LTE
+- The server times out at 5 minutes (if a timeout is configured) or holds the thread
+  for 8 minutes (if not)
+- 30 BHSs in the same province are doing the same thing simultaneously during morning
+  peak (07:00–09:00 is empirically the busiest period for referrals in Philippine
+  primary care)
+- The shared FHIR server for the province is unavailable for everyone during peak hour
+
+This is the "slow and low" attack that is not an attack. The IG's silence on payload
+limits, connection handling, and offloading strategy means the default server
+configuration — which is what every implementer starts from — is vulnerable to it
+without any adversary involvement.
+
+#### What the IG does not specify
+
+| Gap | Consequence |
+|-----|-------------|
+| No normative HTTP body size limit | Server accepts arbitrarily large payloads |
+| No `server.tomcat.connection-timeout` guidance | Threads held indefinitely during slow uploads |
+| No JPA transaction timeout guidance | Database connections exhausted by slow large writes |
+| No recommendation to use `Transfer-Encoding: chunked` for large uploads | Client must buffer entire payload before sending |
+| No asynchronous (`Prefer: respond-async`) upload pattern for large bundles | All large uploads are synchronous, blocking threads |
+| No retry-after guidance | Client retries immediately, amplifying the load |
+| No CapabilityStatement `maxRequestSize` declaration | Clients cannot self-limit before uploading |
+| No attachment offloading (see F-01) | Every attachment traverses the full synchronous path |
+| No CDN or pre-signed URL pattern for binary content | No escape valve for large binary uploads |
+
+#### Specific HAPI configuration gaps in `docker/hapi/application.yaml`
+
+The current `docker/hapi/application.yaml` (from the repository) configures:
+- `defer_indexing_for_codesystems_of_size: 100000` (needed for terminology, well-configured)
+- Remote terminology services (needed, well-configured)
+- The AGENTS.md documents the UCUM fragment workaround
+
+It does **not** configure:
+```yaml
+# Missing from docker/hapi/application.yaml:
+server:
+  tomcat:
+    connection-timeout: 30s          # not set — defaults to 20s for headers only
+    max-http-form-post-size: 10MB    # not set — unlimited
+    
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB             # not set
+      max-request-size: 10MB         # not set
+
+hapi:
+  fhir:
+    max_binary_size: 1048576         # not set — defaults to no limit in many builds
+    validation:
+      requests_enabled: true         # enabled but no timeout for large resources
+```
+
+These are not exotic hardening options. They are standard Java web server configuration
+that every production deployment should make explicit. Their absence in the reference
+Docker stack means every implementer who uses this stack as a starting point inherits
+the unprotected configuration.
+
+**See:** `analysis/diagrams/F02-slow-low-attack.puml`
+
 ---
 
 ## 12. Recommendations
@@ -958,3 +1152,4 @@ These are ranked by clinical risk, not implementation effort.
 | 14 | D-03 (Redundant Invariant) | Remove `ereferral-task-has-request`; the `focus 1..1 MS` cardinality already enforces it. |
 | 15 | 9.1 (Required by Narrative, Optional by Profile) | Elevate `ServiceRequest.subject`, `ServiceRequest.authoredOn`, and `ServiceRequest.performer` to `1..1 MS` or add invariants. A referral without a patient or destination is not operationally useful. |
 | 16 | F-01 (Attachment Scale / No Offloading Strategy) | Add a normative cap on inline `Attachment.data` size (e.g., 100 KB) and require `Attachment.url` for larger files. Reference IHE MHD for production attachment handling. Add a CapabilityStatement server requirement declaring maximum request body size. At national scale (30,000 facilities, 40 referrals/day, 5 PDFs each), unaddressed attachment storage reaches ~1.1 PB/year. |
+| 17 | F-02 (Slow-and-Low / Cascading Timeouts) | Add normative server configuration requirements: HTTP body read timeout (30s), JPA transaction timeout (60s), and a CapabilityStatement `maxRequestSize` declaration. Require `Prefer: respond-async` support for bundles above a defined threshold. Mandate the `Attachment.url` offloading pattern (F-01) as the primary remedy — this eliminates the slow-body vector for attachment content entirely. Without this, a standard morning peak across 30 rural BHSs can exhaust a provincial FHIR server's thread pool before any adversarial actor is involved. |
