@@ -90,7 +90,7 @@ This structure refers to these other structures:
   "name" : "ERefProcedure",
   "title" : "EReferral Procedure",
   "status" : "draft",
-  "date" : "2026-06-17T00:28:17+00:00",
+  "date" : "2026-06-17T00:35:38+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",
