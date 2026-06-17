@@ -1,7 +1,0 @@
-[{
-  "id" : "example.fhir.ph.ereferral",
-  "type" : "ImplementationGuide",
-  "url" : "https://jgsuess.github.io/ph-ereferral/ImplementationGuide/example.fhir.ph.ereferral",
-  "version" : "0.2.0",
-  "name" : "PHeReferralImplementationGuide"
-}]
