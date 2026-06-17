@@ -33,7 +33,7 @@ Priority levels for eReferral requests. Uses standard FHIR RequestPriority value
   "title" : "eReferral Priority",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T23:27:01+00:00",
+  "date" : "2026-06-17T00:00:17+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",
