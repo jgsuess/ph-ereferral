@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ereferral-receiving-response"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ereferral-receiving-response</b></p><a name=\"ereferral-receiving-response\"> </a><a name=\"hcereferral-receiving-response\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-ereferral-workflow.html\"><code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.3.1</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-received\">received</a></td><td>Received</td><td>The receiving facility has acknowledged receipt of the referral and is reviewing whether it can take the case.</td></tr><tr><td><a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-accepted\">accepted</a></td><td>Accepted</td><td>The receiving facility can take the case and has given a positive transfer or service response.</td></tr><tr><td><a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-rejected\">rejected</a></td><td>Rejected</td><td>The receiving facility cannot take the case and no onward receiving facility is identified in the same response.</td></tr><tr><td><a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-referred-onward\">referred-onward</a></td><td>Referred onward</td><td>The receiving facility cannot take the case and directs the patient or referral to another specified facility.</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.3.1"] ; # 
+  fhir:name [ fhir:v "EReferralReceivingResponse"] ; # 
+  fhir:title [ fhir:v "eReferral Receiving Facility Response"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-06-17T10:11:09+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "SILab CoP IG Accelerator (eReferral)"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "SILab CoP IG Accelerator (eReferral)" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/UP-Manila-SILab" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Response states used by a receiving facility after referral receipt in the PH eReferral workflow."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PH" ] ;
+       fhir:display [ fhir:v "Philippines" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "received" ] ;
+         fhir:display [ fhir:v "Received" ]
+       ] [
+         fhir:code [ fhir:v "accepted" ] ;
+         fhir:display [ fhir:v "Accepted" ]
+       ] [
+         fhir:code [ fhir:v "rejected" ] ;
+         fhir:display [ fhir:v "Rejected" ]
+       ] [
+         fhir:code [ fhir:v "referred-onward" ] ;
+         fhir:display [ fhir:v "Referred onward" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

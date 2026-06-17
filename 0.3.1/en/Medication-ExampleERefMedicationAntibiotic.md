@@ -1,0 +1,33 @@
+# Example Cefuroxime Medication - PH eReferral Implementation Guide v0.3.1
+
+## Example Medication: Example Cefuroxime Medication
+
+Profile: [PH Core Medication](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-medication.html)
+
+**code**: Cefuroxime 750mg IV (antibiotic)
+
+**status**: Active
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Medication",
+  "id" : "ExampleERefMedicationAntibiotic",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "105590001",
+      "display" : "Substance"
+    }],
+    "text" : "Cefuroxime 750mg IV (antibiotic)"
+  },
+  "status" : "active"
+}
+
+```

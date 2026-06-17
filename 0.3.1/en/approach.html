@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Approach - PH eReferral Implementation Guide v0.3.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style type="text/css">
+  /* ─────────────────────────────────────────────────────────────
+     Class-based Table Styling — only affects tables with classes
+     ───────────────────────────────────────────────────────────── */
+
+  /* Table Responsive (missing from Bootstrap 3 base template) */
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Dark header */
+  .thead-dark th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    background-color: #e8e8e8;
+  }
+
+  /* Global table enhancements */
+  .table-bordered {
+    border: 1px solid #dee2e6;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6;
+  }
+
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     .ph-table wrapper — for markdown tables in narrative pages
+     Wrap your markdown table in <div class="ph-table" markdown="1">
+     ───────────────────────────────────────────────────────────── */
+  .ph-table table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    color: #333;
+    background-color: #e8e8e8;
+  }
+
+  .ph-table td {
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table td:first-child {
+    font-weight: bold;
+  }
+
+  .ph-table tr:nth-of-type(odd) {
+    background-color: transparent;
+  }
+
+  .ph-table tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     Data-Dictionary-specific scrollable wrapper
+     ───────────────────────────────────────────────────────────── */
+  .data-dictionary-wrapper {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.3.1 - release
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Approach</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.3.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Approach</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="approach-from-who-smart-guidelines-to-fhir-examples">Approach: From WHO SMART Guidelines to FHIR Examples</h3>
+
+<p>This page documents the methodology used to produce the FHIR example resources in this Implementation Guide, tracing the path from the WHO SMART Guidelines framework through the Philippine eReferral data dictionary to validated, machine-readable FHIR Shorthand (FSH) instances.</p>
+
+<hr />
+
+<h4 id="source-artefacts-and-the-who-smart-guidelines-framework">Source Artefacts and the WHO SMART Guidelines Framework</h4>
+
+<p>The <a href="https://www.who.int/teams/digital-health-and-innovation/smart-guidelines">WHO SMART Guidelines</a> define five layers for turning clinical recommendations into computable health content:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Layer</th>
+      <th>Purpose</th>
+      <th>Philippine eReferral Artefact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>L1 – Narrative</strong></td>
+      <td>Personas, user scenarios, workflows</td>
+      <td><code class="language-plaintext highlighter-rouge">scenario.xml</code> — <em>User scenario 3.1: First antenatal care contact</em></td>
+    </tr>
+    <tr>
+      <td><strong>L2 – Operational</strong></td>
+      <td>DAK, process maps, use-case descriptions</td>
+      <td><em>Philippine Health Referral FHIR IG (PeRef): WHO SMART Guideline L2 Operational Guide</em> (external document)</td>
+    </tr>
+    <tr>
+      <td><strong>L3 – Machine-readable</strong></td>
+      <td>Data elements, terminology mappings, decision logic</td>
+      <td><strong>PeRef Logical Information Model (Data Dictionary)</strong> — the Excel workbook containing 46 data elements (REF-1 … REF-46)</td>
+    </tr>
+    <tr>
+      <td><strong>L4 – Executable</strong></td>
+      <td>FHIR profiles, FSH source, IG content</td>
+      <td>This Implementation Guide (<code class="language-plaintext highlighter-rouge">input/fsh/</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>L5 – Dynamic</strong></td>
+      <td>Tests, examples, validation results</td>
+      <td>The 22 FHIR example instances and 2 transaction bundles documented below</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="the-user-scenario-scenarioxml">The User Scenario (<code class="language-plaintext highlighter-rouge">scenario.xml</code>)</h5>
+
+<p>The scenario describes <strong>Charity</strong>, a 24-year-old pregnant woman visiting a government health centre for the first time.  Three personas interact across two business processes:</p>
+
+<ul>
+  <li><strong>Process A — Registration</strong>: Clerk <strong>Abraham</strong> collects demographics, identifiers (PhilSys, PhilHealth), address, and contact information.</li>
+  <li><strong>Process B — Routine ANC Contact</strong>: Nurse <strong>Jane</strong> conducts a counselling session, confirms pregnancy, records vital signs and clinical observations, dispenses iron/folic acid tablets, orders laboratory tests, and creates an ultrasound referral to an external imaging centre.</li>
+</ul>
+
+<p>The scenario is modelled after the WHO ANC Digital Adaptation Kit (DAK) user-scenario format and provides the narrative context for every example resource.</p>
+
+<h5 id="the-data-dictionary-excel-workbook">The Data Dictionary (Excel Workbook)</h5>
+
+<p>The <strong>DRAFT Working Copy CDG Consensus – PeRef Logical Information Model (Data Dictionary)</strong> is the authoritative source for data-element definitions.  Key sheets include:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sheet</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>PeRef Logical Information Model</strong></td>
+      <td>46 data elements (REF-1 … REF-46) with columns for <em>Element ID</em>, <em>Data Element</em>, <em>Clinical Information Group</em>, <em>FHIR Profile</em>, <em>FHIR Element (R4)</em>, <em>Cardinality</em>, <em>Data Type</em>, <em>Value Set</em>, and <em>CDG Status</em></td>
+    </tr>
+    <tr>
+      <td><strong>Workflow task Consensus</strong></td>
+      <td>Mapping of each element to a workflow task (e.g. <em>Create Referral Request</em>, <em>Assess Patient Condition</em>)</td>
+    </tr>
+    <tr>
+      <td><strong>Terminology Mapping</strong></td>
+      <td>Placeholder for value-set and code-system bindings (to be populated)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The 46 elements are organised into seven clinical information groups:</p>
+
+<ol>
+  <li><strong>Sending Practitioner</strong> (REF-1 … REF-3)</li>
+  <li><strong>Sending Facility</strong> (REF-4 … REF-7)</li>
+  <li><strong>Receiving Practitioner</strong> (REF-8)</li>
+  <li><strong>Receiving Facility</strong> (REF-9 … REF-10)</li>
+  <li><strong>Referral Request</strong> (REF-11 … REF-19)</li>
+  <li><strong>Patient Demographics</strong> (REF-20 … REF-29)</li>
+  <li><strong>Clinical Information</strong> (REF-30 … REF-40)</li>
+</ol>
+
+<p>Plus logistics (REF-41), referral decision (REF-42), encounter context (REF-43 … REF-44), and navigator roles (REF-45 … REF-46).</p>
+
+<hr />
+
+<h4 id="agile-iteration-through-the-smart-layers">Agile Iteration through the SMART Layers</h4>
+
+<p>Rather than treating the five WHO SMART layers as a strict waterfall sequence, this project works through them in <strong>short, incremental cycles</strong>. Each iteration takes a small slice of scope — a handful of new data elements, a scenario extension, or a set of stakeholder corrections — and pushes it through all five layers from narrative (L1) to validated outputs (L5) before circling back.</p>
+
+<p>&lt;?xml version="1.0" encoding="us-ascii" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1386px" preserveAspectRatio="none" style="width:706px;height:1386px;background:#FFFFFF;" version="1.1" viewBox="0 0 706 1386" width="706px" zoomAndPan="magnify"><defs></defs><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="673" x="15" y="35.4209">Agile Iteration through WHO SMART Guideline Layers</text><ellipse cx="266.25" cy="61.6094" fill="#FFFFFF" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;"></ellipse><rect fill="#FFFFFF" height="61.9063" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="283" x="124.75" y="91.6094"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="192" x="134.75" y="112.748">Identify scope for this iteration</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="263" x="134.75" y="126.7168">(new data elements, scenario extensions,</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="212" x="134.75" y="140.6855">or feedback from previous review)</text><rect fill="#FFFFFF" height="96.2344" style="stroke:#000000;stroke-width:1.0;" width="233" x="149.75" y="207.5156"></rect><path d="M257.75,207.5156 L257.75,216.8125 L247.75,226.8125 L149.75,226.8125 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="98" x="152.75" y="221.5107">L1 &#8212; Narrative</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="213" x="159.75" y="243.8125"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="193" x="169.75" y="264.9512">Update or refine user scenario</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="169" x="169.75" y="278.9199">(personas, workflow steps)</text><rect fill="#FFFFFF" height="96.2344" style="stroke:#000000;stroke-width:1.0;" width="221" x="155.75" y="313.75"></rect><path d="M282.75,313.75 L282.75,323.0469 L272.75,333.0469 L155.75,333.0469 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="117" x="158.75" y="327.7451">L2 &#8212; Operational</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="201" x="165.75" y="350.0469"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="132" x="175.75" y="371.1855">Revise process maps</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="181" x="175.75" y="385.1543">and data-element definitions</text><rect fill="#FFFFFF" height="164.1719" style="stroke:#000000;stroke-width:1.0;" width="226" x="153.25" y="419.9844"></rect><path d="M324.25,419.9844 L324.25,429.2813 L314.25,439.2813 L153.25,439.2813 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="161" x="156.25" y="433.9795">L3 &#8212; Machine-readable</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="164" x="184.25" y="456.2813"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="144" x="194.25" y="477.4199">Update data dictionary</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="78" x="194.25" y="491.3887">(CSV / Excel)</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="206" x="163.25" y="524.2188"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="186" x="173.25" y="545.3574">Map elements to FHIR profiles</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="101" x="173.25" y="559.3262">and terminology</text><rect fill="#FFFFFF" height="164.1719" style="stroke:#000000;stroke-width:1.0;" width="249" x="141.75" y="594.1563"></rect><path d="M265.75,594.1563 L265.75,603.4531 L255.75,613.4531 L141.75,613.4531 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="114" x="144.75" y="608.1514">L4 &#8212; Executable</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="229" x="151.75" y="630.4531"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="209" x="161.75" y="651.5918">Generate / update FSH instances</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="74" x="161.75" y="665.5605">and profiles</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="155" x="188.75" y="698.3906"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="135" x="198.75" y="719.5293">Compile IG with SUSHI</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="88" x="198.75" y="733.498">+ IG Publisher</text><rect fill="#FFFFFF" height="164.1719" style="stroke:#000000;stroke-width:1.0;" width="205" x="163.75" y="768.3281"></rect><path d="M270.75,768.3281 L270.75,777.625 L260.75,787.625 L163.75,787.625 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="97" x="166.75" y="782.3232">L5 &#8212; Dynamic</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="185" x="173.75" y="804.625"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="165" x="183.75" y="825.7637">Validate examples against</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="70" x="183.75" y="839.7324">FHIR server</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="123" x="204.75" y="872.5625"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="95" x="214.75" y="893.7012">Publish draft IG</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="103" x="214.75" y="907.6699">(CI build &#8594; /dev/)</text><path d="M356.25,942.5 L356.25,993.8984 L336.25,997.8984 L356.25,1001.8984 L356.25,1053.2969 A0,0 0 0 0 356.25,1053.2969 L554.25,1053.2969 A0,0 0 0 0 554.25,1053.2969 L554.25,952.5 L544.25,942.5 L356.25,942.5 A0,0 0 0 0 356.25,942.5 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><path d="M544.25,942.5 L544.25,952.5 L554.25,952.5 L544.25,942.5 " fill="#FFFFFF" style="stroke:#000000;stroke-width:1.0;"></path><text fill="#000000" font-family="Verdana" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="91" x="362.25" y="959.5669">Review gate</text><line style="stroke:#000000;stroke-width:1.0;" x1="356.25" x2="554.25" y1="967.6328" y2="967.6328"></line><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="177" x="362.25" y="984.6997">&#8226; Walk through published IG</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="159" x="362.25" y="999.8325">&#8226; Verify examples match</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="117" x="370.25" y="1014.9653">real-world practice</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="138" x="362.25" y="1030.0981">&#8226; Collect feedback for</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="85" x="370.25" y="1045.231">next iteration</text><rect fill="#FCE4EC" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="140" x="196.25" y="973.9297"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="120" x="206.25" y="995.0684">Present L5 outputs</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="99" x="206.25" y="1009.0371">to stakeholders</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="155" x="188.75" y="1123.3086"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="135" x="198.75" y="1144.4473">Incorporate feedback</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="66" x="198.75" y="1158.416">into scope</text><polygon fill="#FFFFFF" points="213.75,1073.2969,318.75,1073.2969,330.75,1086.1016,318.75,1098.9063,213.75,1098.9063,201.75,1086.1016,213.75,1073.2969" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="20" x="270.25" y="1109.1167">yes</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="105" x="213.75" y="1083.5073">Feedback requires</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="82" x="213.75" y="1096.312">another cycle?</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="14" x="330.75" y="1083.5073">no</text><polygon fill="#FFFFFF" points="266.25,1191.2461,278.25,1203.2461,266.25,1215.2461,254.25,1203.2461,266.25,1191.2461" style="stroke:#000000;stroke-width:1.0;"></polygon><polygon fill="#FFFFFF" points="266.25,173.5156,278.25,185.5156,266.25,197.5156,254.25,185.5156,266.25,173.5156" style="stroke:#000000;stroke-width:1.0;"></polygon><polygon fill="#FFFFFF" points="196.25,1235.2461,336.25,1235.2461,348.25,1247.2461,336.25,1259.2461,196.25,1259.2461,184.25,1247.2461,196.25,1235.2461" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="14" x="270.25" y="1269.4565">no</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="140" x="196.25" y="1251.0542">more iterations needed?</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="20" x="348.25" y="1244.6519">yes</text><rect fill="#FFFFFF" height="47.9375" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="211" x="160.75" y="1290.9565"></rect><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="125" x="170.75" y="1312.0952">Tag release (vX.Y.Z)</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="191" x="170.75" y="1326.064">and publish immutable version</text><ellipse cx="266.25" cy="1369.894" fill="#FFFFFF" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"></ellipse><ellipse cx="266.25" cy="1369.894" fill="#000000" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;"></ellipse><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="71.6094" y2="91.6094"></line><polygon fill="#000000" points="262.25,81.6094,266.25,91.6094,270.25,81.6094,266.25,85.6094" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="291.75" y2="350.0469"></line><polygon fill="#000000" points="262.25,340.0469,266.25,350.0469,270.25,340.0469,266.25,344.0469" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="504.2188" y2="524.2188"></line><polygon fill="#000000" points="262.25,514.2188,266.25,524.2188,270.25,514.2188,266.25,518.2188" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="397.9844" y2="456.2813"></line><polygon fill="#000000" points="262.25,446.2813,266.25,456.2813,270.25,446.2813,266.25,450.2813" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="678.3906" y2="698.3906"></line><polygon fill="#000000" points="262.25,688.3906,266.25,698.3906,270.25,688.3906,266.25,692.3906" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="572.1563" y2="630.4531"></line><polygon fill="#000000" points="262.25,620.4531,266.25,630.4531,270.25,620.4531,266.25,624.4531" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="852.5625" y2="872.5625"></line><polygon fill="#000000" points="262.25,862.5625,266.25,872.5625,270.25,862.5625,266.25,866.5625" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="746.3281" y2="804.625"></line><polygon fill="#000000" points="262.25,794.625,266.25,804.625,270.25,794.625,266.25,798.625" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="920.5" y2="973.9297"></line><polygon fill="#000000" points="262.25,963.9297,266.25,973.9297,270.25,963.9297,266.25,967.9297" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="1098.9063" y2="1123.3086"></line><polygon fill="#000000" points="262.25,1113.3086,266.25,1123.3086,270.25,1113.3086,266.25,1117.3086" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="330.75" x2="353.75" y1="1086.1016" y2="1086.1016"></line><polygon fill="#000000" points="349.75,1136.875,353.75,1146.875,357.75,1136.875,353.75,1140.875" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="353.75" x2="353.75" y1="1086.1016" y2="1203.2461"></line><line style="stroke:#000000;stroke-width:1.0;" x1="353.75" x2="278.25" y1="1203.2461" y2="1203.2461"></line><polygon fill="#000000" points="288.25,1199.2461,278.25,1203.2461,288.25,1207.2461,284.25,1203.2461" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="1171.2461" y2="1191.2461"></line><polygon fill="#000000" points="262.25,1181.2461,266.25,1191.2461,270.25,1181.2461,266.25,1185.2461" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="1021.8672" y2="1073.2969"></line><polygon fill="#000000" points="262.25,1063.2969,266.25,1073.2969,270.25,1063.2969,266.25,1067.2969" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="197.5156" y2="243.8125"></line><polygon fill="#000000" points="262.25,233.8125,266.25,243.8125,270.25,233.8125,266.25,237.8125" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="348.25" x2="566.25" y1="1247.2461" y2="1247.2461"></line><polygon fill="#000000" points="562.25,707.082,566.25,697.082,570.25,707.082,566.25,703.082" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="566.25" x2="566.25" y1="185.5156" y2="1247.2461"></line><line style="stroke:#000000;stroke-width:1.0;" x1="566.25" x2="278.25" y1="185.5156" y2="185.5156"></line><polygon fill="#000000" points="288.25,181.5156,278.25,185.5156,288.25,189.5156,284.25,185.5156" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="1215.2461" y2="1235.2461"></line><polygon fill="#000000" points="262.25,1225.2461,266.25,1235.2461,270.25,1225.2461,266.25,1229.2461" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="153.5156" y2="173.5156"></line><polygon fill="#000000" points="262.25,163.5156,266.25,173.5156,270.25,163.5156,266.25,167.5156" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="1259.2461" y2="1290.9565"></line><polygon fill="#000000" points="262.25,1280.9565,266.25,1290.9565,270.25,1280.9565,266.25,1284.9565" style="stroke:#000000;stroke-width:1.0;"></polygon><line style="stroke:#000000;stroke-width:1.0;" x1="266.25" x2="266.25" y1="1338.894" y2="1358.894"></line><polygon fill="#000000" points="262.25,1348.894,266.25,1358.894,270.25,1348.894,266.25,1352.894" style="stroke:#000000;stroke-width:1.0;"></polygon></g></svg></p>
+
+<p><strong>Key principles:</strong></p>
+
+<ul>
+  <li><strong>Artefacts at every layer are accepted as imperfect.</strong> A first-pass data dictionary will have gaps; initial FSH instances will carry placeholder codes; validation will surface issues. This is expected and welcomed — each cycle tightens the artefacts rather than attempting perfection up front.</li>
+  <li><strong>Every iteration closes with a stakeholder review of L5 outputs.</strong> The published development IG (<code class="language-plaintext highlighter-rouge">/dev/</code>) is walked through with domain experts, clinicians, and implementers. Concrete examples — not abstract specifications — form the basis of discussion, making it easier to spot misunderstandings and missing elements.</li>
+  <li><strong>Feedback is the fuel for the next cycle.</strong> Observations from the review are captured as scoped items for the following iteration, keeping the loop short and focused.</li>
+</ul>
+
+<p>This approach aligns with agile delivery practices: deliver working software (a published IG with validated examples) frequently, welcome changing requirements, and rely on close collaboration with stakeholders over exhaustive up-front specification.</p>
+
+<hr />
+
+<h4 id="version-control--traceability">Version Control &amp; Traceability</h4>
+
+<p>For this iterative approach to remain <strong>auditable and reproducible</strong>, every artefact that feeds the pipeline — the data dictionary (encrypted), scenario XML, CSV exports, FSH sources, generated JSON examples, and utility scripts — <strong>must be committed to the same Git repository as the IG itself</strong>.</p>
+
+<p>If any input artefact lives outside version control (e.g. on a shared drive or in email), the chain from L3 data elements through L4 FSH source to L5 published examples is broken: there is no way to determine which version of the data dictionary produced a given set of FHIR resources, and stakeholder review feedback cannot be traced back to a specific commit.</p>
+
+<p><strong>Rule:</strong> If it is an input to or output of the pipeline, it belongs in this repository.</p>
+
+<p><em>Note:</em> The data dictionary Excel workbook is stored as a PGP-encrypted file (<code class="language-plaintext highlighter-rouge">.xlsx.gpg</code>). To decrypt:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--decrypt</span> <span class="se">\</span>
+  <span class="s2">"DRAFT Working Copy CDG Consensus - PeRef Logical Information Model (Data Dictionary).xlsx.gpg"</span> <span class="se">\</span>
+  <span class="o">&gt;</span> <span class="s2">"DRAFT Working Copy CDG Consensus - PeRef Logical Information Model (Data Dictionary).xlsx"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="detailed-documentation">Detailed Documentation</h4>
+
+<p>The following pages provide in-depth coverage of each aspect of the project:</p>
+
+<ul>
+  <li><strong><a href="technical-pipeline.html">Technical Pipeline</a></strong> — the end-to-end data flow from source artefacts to a published IG, including the step-by-step script pipeline and data-dictionary coverage tracking.</li>
+  <li><strong><a href="resource-architecture.html">Resource Architecture</a></strong> — the FHIR resource types, transaction bundles, FHIR design patterns, scenario activity flow, and data-dictionary-to-FHIR mapping diagram.</li>
+  <li><strong><a href="ai-reasoning.html">AI-Assisted Reasoning</a></strong> — how an AI coding assistant was used to accelerate resource identification, terminology selection, and pipeline automation.</li>
+  <li><strong><a href="version-management.html">Version Management &amp; Publication</a></strong> — the two-lane CI/release publication model, how to cut a release, and known limitations.</li>
+  <li><strong><a href="dd-mapping.html">DD Mapping</a></strong> — the element-by-element mapping between the data dictionary and the FHIR example resources.</li>
+  <li><strong><a href="ig-evolution.html">IG Evolution</a></strong> — how the IG graduates from rapid agile drafting to the HL7 formal process, and what signals indicate readiness to transition.</li>
+  <li><strong><a href="hl7-lifecycle.html">HL7 Standards Lifecycle</a></strong> — the HL7 ballot and publication stages, the FHIR Maturity Model (FMM 0–5), Connectathon requirements, and the evidence needed to move from STU to Normative.</li>
+  <li><strong><a href="interop-testing.html">Interoperability Matrix Testing</a></strong> — CI-based automated testing of registered implementation endpoints against each other, the distinction between quality assurance and quality management, and how to subscribe an endpoint.</li>
+  <li><strong><a href="testing-companion.html">Testing Companion IG</a></strong> — the companion IG artefact that holds bulk test examples, SDC interactive forms, demo scripts, and a containerised local stack for hands-on experimentation.</li>
+</ul>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.3.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-17 10:11:00 +0000">
+    2026-06-17
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

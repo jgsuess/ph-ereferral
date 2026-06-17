@@ -1,0 +1,51 @@
+{
+  "resourceType" : "Task",
+  "id" : "ExampleERefTaskAccepted",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task ExampleERefTaskAccepted</b></p><a name=\"ExampleERefTaskAccepted\"> </a><a name=\"hcExampleERefTaskAccepted\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-task.html\">EReferral Task</a></p></div><p><b>status</b>: Accepted</p><p><b>businessStatus</b>: <span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow accepted}\">Accepted</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 3457005}\">eReferral for cardiology consultation</span></p><p><b>focus</b>: <a href=\"ServiceRequest-ExampleERefServiceRequestTask.html\">ServiceRequest Referral to cardiology service</a></p><p><b>for</b>: <a href=\"Patient-ExampleERefPatientTask.html\">Juan Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>executionPeriod</b>: 2025-03-15 14:22:00+0800 --&gt; (ongoing)</p><p><b>authoredOn</b>: 2025-03-15 09:30:00+0800</p><p><b>lastModified</b>: 2025-03-15 14:22:00+0800</p><p><b>requester</b>: <a href=\"PractitionerRole-ExampleERefPractitionerRoleRequester.html\">PractitionerRole Medical practitioner</a></p><p><b>owner</b>: <a href=\"Organization-ExampleERefOrganizationReceiving.html\">Organization Manila General Hospital</a></p><p><b>note</b>: , </p><blockquote><div><p>New referral for patient with chest pain. Awaiting receiving-facility response.</p>\n</div></blockquote><blockquote><div><p>Accepted by Manila General Hospital. Care navigator assigned.</p>\n</div></blockquote></div>"
+  },
+  "status" : "accepted",
+  "businessStatus" : {
+    "coding" : [{
+      "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+      "code" : "accepted",
+      "display" : "Accepted"
+    }]
+  },
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "3457005",
+      "display" : "Patient referral"
+    }],
+    "text" : "eReferral for cardiology consultation"
+  },
+  "focus" : {
+    "reference" : "ServiceRequest/ExampleERefServiceRequestTask"
+  },
+  "for" : {
+    "reference" : "Patient/ExampleERefPatientTask"
+  },
+  "executionPeriod" : {
+    "start" : "2025-03-15T14:22:00+08:00"
+  },
+  "authoredOn" : "2025-03-15T09:30:00+08:00",
+  "lastModified" : "2025-03-15T14:22:00+08:00",
+  "requester" : {
+    "reference" : "PractitionerRole/ExampleERefPractitionerRoleRequester"
+  },
+  "owner" : {
+    "reference" : "Organization/ExampleERefOrganizationReceiving"
+  },
+  "note" : [{
+    "text" : "New referral for patient with chest pain. Awaiting receiving-facility response."
+  },
+  {
+    "text" : "Accepted by Manila General Hospital. Care navigator assigned."
+  }]
+}

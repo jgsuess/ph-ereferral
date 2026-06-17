@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Hl 7 Lifecycle - PH eReferral Implementation Guide v0.3.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style type="text/css">
+  /* ─────────────────────────────────────────────────────────────
+     Class-based Table Styling — only affects tables with classes
+     ───────────────────────────────────────────────────────────── */
+
+  /* Table Responsive (missing from Bootstrap 3 base template) */
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Dark header */
+  .thead-dark th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    background-color: #e8e8e8;
+  }
+
+  /* Global table enhancements */
+  .table-bordered {
+    border: 1px solid #dee2e6;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6;
+  }
+
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     .ph-table wrapper — for markdown tables in narrative pages
+     Wrap your markdown table in <div class="ph-table" markdown="1">
+     ───────────────────────────────────────────────────────────── */
+  .ph-table table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table th {
+    text-align: left;
+    padding: 6px 10px;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    color: #333;
+    background-color: #e8e8e8;
+  }
+
+  .ph-table td {
+    border: 1px solid #dee2e6;
+  }
+
+  .ph-table td:first-child {
+    font-weight: bold;
+  }
+
+  .ph-table tr:nth-of-type(odd) {
+    background-color: transparent;
+  }
+
+  .ph-table tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     Data-Dictionary-specific scrollable wrapper
+     ───────────────────────────────────────────────────────────── */
+  .data-dictionary-wrapper {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.3.1 - release
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Hl 7 Lifecycle</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.3.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Hl 7 Lifecycle</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="hl7-standards-lifecycle">HL7 Standards Lifecycle</h3>
+
+<p>Once an Implementation Guide has moved past the rapid agile draft phase, HL7 International provides a well-established framework for developing it further. This framework defines the stages an IG passes through as it gains maturity, the evidence required at each stage transition, and the governance processes that validate progress. Understanding it is essential for planning a realistic path from an initial draft to a published standard.</p>
+
+<p>For context on where this fits in the overall IG evolution, see <a href="ig-evolution.html">IG Evolution</a>.</p>
+
+<hr />
+
+<h4 id="two-dimensions-of-ig-maturity">Two Dimensions of IG Maturity</h4>
+
+<p>IG development progress is tracked along two related but distinct axes:</p>
+
+<ol>
+  <li><strong>Ballot / publication status</strong> — the formal HL7 designation assigned to a published version: Draft, STU (Standard for Trial Use), or Normative.</li>
+  <li><strong>FHIR Maturity Model (FMM) level</strong> — a 0–5 scale that defines <em>objective, evidence-based criteria</em> a specification must meet before advancing to the next stage.</li>
+</ol>
+
+<p>An IG progresses by accumulating FMM evidence, and at certain FMM thresholds it becomes eligible for the next ballot status. The two axes are related but not identical: an IG at a given FMM level may or may not yet have gone through the corresponding ballot process.</p>
+
+<p>&lt;?xml version="1.0" encoding="us-ascii" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1186px" preserveAspectRatio="none" style="width:652px;height:1186px;background:#FFFFFF;" version="1.1" viewBox="0 0 652 1186" width="652px" zoomAndPan="magnify"><defs></defs><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="619" x="15" y="35.4209">HL7 Ballot and Publication Lifecycle for a FHIR IG</text><ellipse cx="328" cy="73.6094" fill="#000000" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"></ellipse><g id="CIBuild"><rect fill="#FFECB3" height="71.2188" rx="12.5" ry="12.5" style="stroke:#888888;stroke-width:1.0;" width="190" x="233" y="124.6094"></rect><line style="stroke:#888888;stroke-width:1.0;" x1="233" x2="423" y1="147.4141" y2="147.4141"></line><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="39" x="308.5" y="139.8198">CIBuild</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="101" x="238" y="162.6245">CI Build &#8212; Draft</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="168" x="238" y="175.4292">FMM 0-1 &#183; Active development</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="170" x="238" y="188.2339">Breaking changes at any time</text></g><g id="DraftBallot"><rect fill="#FFF9C4" height="71.2188" rx="12.5" ry="12.5" style="stroke:#888888;stroke-width:1.0;" width="205" x="225.5" y="248.6094"></rect><line style="stroke:#888888;stroke-width:1.0;" x1="225.5" x2="430.5" y1="271.4141" y2="271.4141"></line><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="60" x="298" y="263.8198">DraftBallot</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="74" x="230.5" y="286.6245">Draft Ballot</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="132" x="230.5" y="299.4292">First formal HL7 review</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="185" x="230.5" y="312.2339">FMM 1-2 &#183; High change tolerance</text></g><g id="Connectathon"><rect fill="#E8F5E9" height="71.2188" rx="12.5" ry="12.5" style="stroke:#888888;stroke-width:1.0;" width="205" x="225.5" y="387.6094"></rect><line style="stroke:#888888;stroke-width:1.0;" x1="225.5" x2="430.5" y1="410.4141" y2="410.4141"></line><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="78" x="289" y="402.8198">Connectathon</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="180" x="230.5" y="425.6245">Connectathon / Interop Test</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="147" x="230.5" y="438.4292">&#8805; 3 independent systems</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="185" x="230.5" y="451.2339">Results reported to FMG (FMM 2)</text></g><g id="STUBallot"><rect fill="#FFF9C4" height="71.2188" rx="12.5" ry="12.5" style="stroke:#888888;stroke-width:1.0;" width="255" x="200.5" y="526.6094"></rect><line style="stroke:#888888;stroke-width:1.0;" x1="200.5" x2="455.5" y1="549.4141" y2="549.4141"></line><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="55" x="300.5" y="541.8198">STUBallot</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="67" x="205.5" y="564.6245">STU Ballot</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="87" x="205.5" y="577.4292">FMM 2 required</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="235" x="205.5" y="590.2339">Community ballot &#8212; negatives reconciled</text></g><g id="STU1"><rect fill="#DCEDC8" height="71.2188" rx="12.5" ry="12.5" style="stroke:#888888;stroke-width:1.0;" width="189" x="233.5" y="650.6094"></rect><line style="stroke:#888888;stroke-width:1.0;" x1="233.5" x2="422.5" y1="673.4141" y2="673.4141"></line><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="30" x="313" y="665.8198">STU1</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="92" x="238.5" y="688.6245">STU Release 1</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="166" x="238.5" y="701.4292">FMM 3 &#183; Official HL7 standard</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="169" x="238.5" y="714.2339">Ready for production trial use</text></g><g id="STUn"><rect fill="#C8E6C9" height="71.2188" rx="12.5" ry="12.5" style="stroke:#888888;stroke-width:1.0;" width="242" x="207" y="789.6094"></rect><line style="stroke:#888888;stroke-width:1.0;" x1="207" x2="449" y1="812.4141" y2="812.4141"></line><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="30" x="313" y="804.8198">STUn</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="101" x="212" y="827.6245">STU Release 2+</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="222" x="212" y="840.4292">FMM 3-4 &#183; Implementations accumulate</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="193" x="212" y="853.2339">Additional ballot cycles as needed</text></g><g id="NormBallot"><rect fill="#FFE0B2" height="71.2188" rx="12.5" ry="12.5" style="stroke:#888888;stroke-width:1.0;" width="172" x="242" y="928.6094"></rect><line style="stroke:#888888;stroke-width:1.0;" x1="242" x2="414" y1="951.4141" y2="951.4141"></line><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="63" x="296.5" y="943.8198">NormBallot</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="107" x="247" y="966.6245">Normative Ballot</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="87" x="247" y="979.4292">FMM 5 required</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="152" x="247" y="992.2339">WG + FMG + TSC approval</text></g><g id="Normative"><rect fill="#B2EBF2" height="71.2188" rx="12.5" ry="12.5" style="stroke:#888888;stroke-width:1.0;" width="206" x="225" y="1052.6094"></rect><line style="stroke:#888888;stroke-width:1.0;" x1="225" x2="431" y1="1075.4141" y2="1075.4141"></line><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="58" x="299" y="1067.8198">Normative</text><text fill="#000000" font-family="Verdana" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="141" x="230" y="1090.6245">Normative Publication</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="159" x="230" y="1103.4292">FMM 5 &#183; Specification locked</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="186" x="230" y="1116.2339">Safe for regulated infrastructure</text></g><ellipse cx="328" cy="1170.6094" fill="none" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;"></ellipse><ellipse cx="328.5" cy="1171.1094" fill="#000000" rx="6" ry="6" style="stroke:none;stroke-width:1.0;"></ellipse><path d="M328,87.7357 C328,97.1479 328,111.1609 328,124.2845 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="328,124.2845,332,115.2845,328,119.2845,324,115.2845,328,124.2845" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M328,195.7433 C328,212.2278 328,231.8932 328,248.3888 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="328,248.3888,332,239.3888,328,243.3888,324,239.3888,328,248.3888" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="102" x="329" y="226.6763">project matures</text><path d="M328,319.6803 C328,340.4484 328,366.7834 328,387.5496 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="328,387.5496,332,378.5496,328,382.5496,324,378.5496,328,387.5496" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="143" x="329" y="350.6763">feedback incorporated</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="107" x="347" y="365.8091">(FMM 1 reached)</text><path d="M328,458.6803 C328,479.4484 328,505.7834 328,526.5496 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="328,526.5496,332,517.5496,328,521.5496,324,517.5496,328,526.5496" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="106" x="344" y="489.6763">interop evidence</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="136" x="329" y="504.8091">documented (FMM 2)</text><path d="M328,597.7433 C328,614.2278 328,633.8932 328,650.3888 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="328,650.3888,332,641.3888,328,645.3888,324,641.3888,328,650.3888" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="85" x="329" y="628.6763">ballot passed</text><path d="M328,721.6803 C328,742.4484 328,768.7834 328,789.5496 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="328,789.5496,332,780.5496,328,784.5496,324,780.5496,328,789.5496" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="105" x="338" y="752.6763">further feedback</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="123" x="329" y="767.8091">+ implementations</text><path d="M449.0562,814.9772 C460.0715,817.0836 467,820.4609 467,825.1094 C467,829.7578 460.0715,833.1352 449.0562,835.2415 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="449.0562,835.2415,458.6474,837.48,453.9673,834.3024,457.1448,829.6224,449.0562,835.2415" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="135" x="484" y="822.1763">additional STU cycles</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="167" x="468" y="837.3091">(common for national IGs)</text><path d="M328,860.6803 C328,881.4484 328,907.7834 328,928.5496 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="328,928.5496,332,919.5496,328,923.5496,324,919.5496,328,928.5496" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="102" x="351" y="891.6763">FMM 5 evidence</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="146" x="329" y="906.8091">+ governance decision</text><path d="M328,999.7433 C328,1016.2278 328,1035.8932 328,1052.3888 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="328,1052.3888,332,1043.3888,328,1047.3888,324,1043.3888,328,1052.3888" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="85" x="329" y="1030.6763">ballot passed</text><path d="M328,1123.6188 C328,1136.8652 328,1151.0647 328,1160.5526 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="328,1160.5526,332,1151.5526,328,1155.5526,324,1151.5526,328,1160.5526" style="stroke:#000000;stroke-width:1.0;"></polygon></g></svg></p>
+
+<hr />
+
+<h4 id="stage-1--early-development-pre-ballot">Stage 1 — Early Development (pre-ballot)</h4>
+
+<p><strong>Ballot status:</strong> CI build only (no formal HL7 status)
+<strong>FMM level:</strong> 0–1</p>
+
+<p>At this stage the IG is under active development, published only as a continuous-integration (CI) build. Breaking changes are expected at any time and no formal HL7 approval has been sought.</p>
+
+<p><em>FMM criteria:</em></p>
+<ul>
+  <li><strong>FMM 0</strong>: The artifact exists and builds cleanly.</li>
+  <li><strong>FMM 1</strong>: The responsible Work Group considers the artifact substantially complete; no unresolved blocking issues remain.</li>
+</ul>
+
+<p><em>Who uses this?</em> Project teams, early adopters, pilots, and teams preparing for Connectathon participation.</p>
+
+<hr />
+
+<h4 id="stage-2--ballot">Stage 2 — Ballot</h4>
+
+<p><strong>Ballot status:</strong> Draft ballot or STU ballot
+<strong>FMM level:</strong> 2 required for STU ballot</p>
+
+<p>The first formal HL7 community review. Balloting:</p>
+
+<ul>
+  <li>Collects structured comments from HL7 members.</li>
+  <li>Requires reconciliation of all negative votes before publication.</li>
+  <li>Is mandatory before any official HL7 publication.</li>
+</ul>
+
+<p>A ballot can be a <strong>Draft ballot</strong> (earlier, higher change tolerance) or an <strong>STU ballot</strong> (more mature, intended for real-world trial use). To file an STU ballot the IG must have reached at least <strong>FMM 2</strong>.</p>
+
+<p><em>FMM 2 criteria:</em></p>
+<ul>
+  <li>Successful interoperability demonstrated among at least <strong>three independently developed systems</strong>.</li>
+  <li>Testing conducted using realistic scenarios — typically at a <strong>FHIR Connectathon</strong> or equivalent event.</li>
+  <li>Results reported to and accepted by the <strong>FHIR Management Group (FMG)</strong>.</li>
+</ul>
+
+<blockquote>
+  <p><em>"Testing must occur one cycle before ballot."</em> — HL7 IG process guidance.</p>
+</blockquote>
+
+<hr />
+
+<h4 id="connectathons-in-the-stu-pathway">Connectathons in the STU Pathway</h4>
+
+<p>Connectathons are not optional polish — for FHIR artifacts, interoperability testing is a <strong>formal gating criterion</strong> for FMM advancement, not a post-publication nicety.</p>
+
+<p>A typical STU path looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Draft IG
+  ↓
+Connectathon testing (FMM 2)
+  ↓
+STU Ballot
+  ↓
+STU Publication
+</code></pre></div></div>
+
+<p>Connectathon evidence that HL7 accepts:</p>
+
+<ul>
+  <li><strong>≥ 3 independent implementations</strong> exercising the declared scope (≈80% coverage is the guideline).</li>
+  <li>Semi-realistic data and workflows — not just synthetic test cases.</li>
+  <li>Results <strong>documented and accepted by FMG</strong>.</li>
+</ul>
+
+<p>For IGs that go through multiple STU cycles, early Connectathons prove basic feasibility; later ones demonstrate stability, convergence, and cross-vendor consistency. This accumulating evidence directly feeds the case for Normative readiness.</p>
+
+<hr />
+
+<h4 id="stage-3--stu-standard-for-trial-use">Stage 3 — STU (Standard for Trial Use)</h4>
+
+<p><strong>Ballot status:</strong> STU
+<strong>FMM level:</strong> 3–4</p>
+
+<p>STU is the most common "production-ready" state for a FHIR IG. It signals:</p>
+
+<ul>
+  <li><strong>Official HL7 standard</strong> — the IG has passed ballot and is formally published.</li>
+  <li><strong>Ready for production trial use</strong> — real-world implementations are explicitly invited.</li>
+  <li><strong>Breaking changes still allowed</strong> — later STU releases may introduce incompatible changes.</li>
+  <li><strong>Real-world feedback expected</strong> — the trial use period is a deliberate mechanism for collecting implementation evidence.</li>
+</ul>
+
+<p>An IG commonly goes through multiple STU releases (STU 1, STU 2, STU 3…), each through a new ballot cycle. This is by design: each cycle allows the IG to absorb implementation feedback before the semantic model is locked.</p>
+
+<p><em>FMM criteria:</em></p>
+<ul>
+  <li><strong>FMM 3</strong>: Passed STU ballot; evidence of broad review with non-trivial changes resulting from external feedback.</li>
+  <li><strong>FMM 4</strong>: Evidence of broad review and multiple independent implementations; breaking changes slowing significantly.</li>
+</ul>
+
+<blockquote>
+  <p><strong>Important rule:</strong> An IG cannot be more mature than the least mature core artifact it depends on.</p>
+</blockquote>
+
+<hr />
+
+<h4 id="stage-4--normative-ballot">Stage 4 — Normative Ballot</h4>
+
+<p><strong>Ballot status:</strong> Normative ballot in progress
+<strong>FMM level:</strong> 5 required</p>
+
+<p>A Normative ballot signals intent to <strong>lock down the specification</strong>. It requires:</p>
+
+<ul>
+  <li>Multiple completed STU cycles with demonstrated real-world adoption.</li>
+  <li>Strong backward-compatibility confidence — the semantic model is stable.</li>
+  <li>Governance willingness to commit to long-term stewardship of a locked specification.</li>
+</ul>
+
+<p>The ballot process at this stage is more stringent: all negative votes must be resolved, and final approval passes through the sponsoring Work Group, the FMG, and the Technical Steering Committee (TSC).</p>
+
+<hr />
+
+<h4 id="stage-5--normative-publication">Stage 5 — Normative Publication</h4>
+
+<p><strong>Ballot status:</strong> Normative
+<strong>FMM level:</strong> 5</p>
+
+<p>The highest stability level in the HL7/FHIR ecosystem. A Normative IG:</p>
+
+<ul>
+  <li>Has changes <strong>tightly constrained</strong> by HL7 inter-version compatibility rules.</li>
+  <li>Establishes <strong>backward compatibility</strong> as the default expectation.</li>
+  <li>Is approved through an <strong>ANSI-accredited process</strong>.</li>
+  <li>Is safe to build long-lived, regulated, or national infrastructure on.</li>
+</ul>
+
+<p>Normative IGs are rare and slow to emerge — intentionally so. The bar is high because the governance commitment to maintain backward compatibility is real and long-lived.</p>
+
+<hr />
+
+<h4 id="the-fmm-maturity-ladder">The FMM Maturity Ladder</h4>
+
+<p>The table below maps each FMM level to its corresponding ballot status and the evidence required to reach it.</p>
+
+<p>&lt;?xml version="1.0" encoding="us-ascii" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="995px" preserveAspectRatio="none" style="width:645px;height:995px;background:#FFFFFF;" version="1.1" viewBox="0 0 645 995" width="645px" zoomAndPan="magnify"><defs></defs><g><text fill="#000000" font-family="Verdana" font-size="22" font-weight="bold" lengthAdjust="spacing" textLength="612" x="15" y="35.4209">FHIR Maturity Model &#8212; Progression for a FHIR IG</text><g id="s0"><rect fill="#FFECB3" height="64.2344" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="225" x="212" y="124.6094"></rect><line style="stroke:#000000;stroke-width:1.0;" x1="212" x2="437" y1="150.9063" y2="150.9063"></line><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="45" x="302" y="142.6045">FMM 0</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="78" x="217" y="167.0449">CI build only.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="205" x="217" y="181.0137">Artifact exists and builds cleanly.</text></g><g id="s1"><rect fill="#FFF9C4" height="78.2031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="307" x="171" y="241.6094"></rect><line style="stroke:#000000;stroke-width:1.0;" x1="171" x2="478" y1="267.9063" y2="267.9063"></line><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="45" x="302" y="259.6045">FMM 1</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="178" x="176" y="284.0449">CI build / draft ballot eligible.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="287" x="176" y="298.0137">Work Group considers substantially complete.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="194" x="176" y="311.9824">No unresolved blocking issues.</text></g><g id="s2"><rect fill="#E8F5E9" height="78.2031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="391" x="129" y="387.6094"></rect><line style="stroke:#000000;stroke-width:1.0;" x1="129" x2="520" y1="413.9063" y2="413.9063"></line><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="45" x="302" y="405.6045">FMM 2</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="115" x="134" y="430.0449">STU ballot eligible.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="371" x="134" y="444.0137">Interoperability demonstrated in &#8805; 3 independent systems.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="251" x="134" y="457.9824">Connectathon results accepted by FMG.</text></g><g id="s3"><rect fill="#DCEDC8" height="78.2031" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="405" x="122" y="518.6094"></rect><line style="stroke:#000000;stroke-width:1.0;" x1="122" x2="527" y1="544.9063" y2="544.9063"></line><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="45" x="302" y="536.6045">FMM 3</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="94" x="127" y="561.0449">STU Release 1.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="117" x="127" y="575.0137">Passed STU ballot.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="385" x="127" y="588.9824">Broad review with non-trivial changes from external feedback.</text></g><g id="s4"><rect fill="#C8E6C9" height="92.1719" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="264" x="192.5" y="649.6094"></rect><line style="stroke:#000000;stroke-width:1.0;" x1="192.5" x2="456.5" y1="675.9063" y2="675.9063"></line><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="45" x="302" y="667.6045">FMM 4</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="197.5" y="692.0449">STU Release 2+.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="160" x="197.5" y="706.0137">Evidence of broad review.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="244" x="197.5" y="719.9824">Multiple independent implementations.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="244" x="197.5" y="733.9512">Breaking changes slowing significantly.</text></g><g id="s5"><rect fill="#B2EBF2" height="92.1719" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="355" x="147" y="809.6094"></rect><line style="stroke:#000000;stroke-width:1.0;" x1="147" x2="502" y1="835.9063" y2="835.9063"></line><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="45" x="302" y="827.6045">FMM 5</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="154" x="152" y="852.0449">Normative ballot eligible.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="232" x="152" y="866.0137">&#8805; 2 formal release cycles at FMM 1+.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="237" x="152" y="879.9824">&#8805; 5 independent production systems.</text><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="335" x="152" y="893.9512">For international IGs: implementations in &gt; 1 country.</text></g><ellipse cx="324.5" cy="73.6094" fill="#000000" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"></ellipse><ellipse cx="324.5" cy="979.6094" fill="none" rx="10" ry="10" style="stroke:#000000;stroke-width:1.0;"></ellipse><ellipse cx="325" cy="980.1094" fill="#000000" rx="6" ry="6" style="stroke:none;stroke-width:1.0;"></ellipse><path d="M324.5,87.9281 C324.5,97.485 324.5,111.6342 324.5,124.5282 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="324.5,124.5282,328.5,115.5282,324.5,119.5282,320.5,115.5282,324.5,124.5282" style="stroke:#000000;stroke-width:1.0;"></polygon><path d="M324.5,188.7108 C324.5,204.8069 324.5,224.5928 324.5,241.5905 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="324.5,241.5905,328.5,232.5905,324.5,236.5905,320.5,232.5905,324.5,241.5905" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="103" x="325.5" y="219.6763">artifact matures</text><path d="M324.5,319.8207 C324.5,340.6511 324.5,366.3613 324.5,387.2195 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="324.5,387.2195,328.5,378.2195,324.5,382.2195,320.5,378.2195,324.5,387.2195" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="90" x="340.5" y="350.6763">Connectathon</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="120" x="325.5" y="365.8091">evidence accepted</text><path d="M324.5,465.6159 C324.5,482.2636 324.5,501.7613 324.5,518.4287 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="324.5,518.4287,328.5,509.4287,324.5,513.4287,320.5,509.4287,324.5,518.4287" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="115" x="325.5" y="496.6763">STU ballot passed</text><path d="M324.5,596.8549 C324.5,613.1965 324.5,632.3938 324.5,649.4296 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="324.5,649.4296,328.5,640.4296,324.5,644.4296,320.5,640.4296,324.5,649.4296" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="148" x="325.5" y="627.6763">subsequent STU cycles</text><path d="M324.5,741.8858 C324.5,763.1328 324.5,788.3864 324.5,809.5997 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="324.5,809.5997,328.5,800.5997,324.5,804.5997,320.5,800.5997,324.5,809.5997" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="129" x="325.5" y="772.6763">production evidence</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="127" x="326.5" y="787.8091">+ semantic stability</text><path d="M324.5,901.727 C324.5,926.1021 324.5,954.2457 324.5,969.455 " fill="none" style="stroke:#000000;stroke-width:1.0;"></path><polygon fill="#000000" points="324.5,969.455,328.5,960.455,324.5,964.455,320.5,960.455,324.5,969.455" style="stroke:#000000;stroke-width:1.0;"></polygon><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="106" x="325.5" y="932.6763">Normative ballot</text><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="84" x="336.5" y="947.8091">+ publication</text></g></svg></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phase</th>
+      <th>Ballot / Publication Status</th>
+      <th>FMM Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Early development</td>
+      <td>Draft (CI build only)</td>
+      <td>FMM 0–1</td>
+    </tr>
+    <tr>
+      <td>First review</td>
+      <td>Draft ballot / STU ballot</td>
+      <td>FMM 2</td>
+    </tr>
+    <tr>
+      <td>Trial use</td>
+      <td>STU</td>
+      <td>FMM 3–4</td>
+    </tr>
+    <tr>
+      <td>Locked specification</td>
+      <td>Normative</td>
+      <td>FMM 5</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h4 id="evidence-required-to-move-from-stu-to-normative">Evidence Required to Move from STU to Normative</h4>
+
+<p>Moving to Normative is not just another ballot. It is a <strong>governance decision to lock the specification</strong> permanently. HL7 expects credible, documented evidence across four areas:</p>
+
+<p><strong>1. Production implementation</strong></p>
+
+<ul>
+  <li>Named production deployments (not pilots or test environments).</li>
+  <li>Public implementation statements, regulator references, or national programme mandates.</li>
+  <li>Downstream IGs or certification programmes that depend on this IG.</li>
+</ul>
+
+<p>This evidence is specifically required for the FMM 4 → FMM 5 transition.</p>
+
+<p><strong>2. Stability across STU cycles</strong></p>
+
+<ul>
+  <li>Multiple STU releases with evidence that breaking changes have slowed dramatically.</li>
+  <li>Issues are predominantly clarifications or edge cases — not redesigns.</li>
+  <li>Alignment with the distinction between Trial Use (which allows incompatible changes) and Normative (which severely restricts them).</li>
+</ul>
+
+<p><strong>3. Broad and diverse review</strong></p>
+
+<ul>
+  <li>Comments from multiple independent organisations.</li>
+  <li>Non-trivial changes made as a result of external feedback.</li>
+  <li>Evidence that feedback came from actual implementers, not just the authoring team.</li>
+</ul>
+
+<p>This expectation is stated explicitly at FMM 3 and above, and carries forward to Normative decisions.</p>
+
+<p><strong>4. Interoperability history</strong></p>
+
+<ul>
+  <li>Repeated Connectathon participation with stable, consistent results across vendors.</li>
+  <li>No unresolved interoperability-blocking issues.</li>
+</ul>
+
+<p>While not always phrased as "attend X Connectathons", the interoperability evidence requirement persists through FMM 4–5.</p>
+
+<p><strong>Hard prerequisite: FMM 5</strong> requires all of the following:</p>
+
+<ul>
+  <li>Published in ≥ 2 formal release cycles at FMM 1+.</li>
+  <li>Implemented in ≥ 5 independent production systems.</li>
+  <li>For international IGs: implementations in more than one country.</li>
+</ul>
+
+<p>Even with FMM 5 evidence in hand, a Normative ballot is still required, all negatives must be resolved per ANSI rules, and final approval passes through the WG, FMG, and TSC.</p>
+
+<hr />
+
+<h4 id="governance-ballot-and-approval-chain">Governance: Ballot and Approval Chain</h4>
+
+<p>Every formal HL7 publication involves a layered governance chain:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>Approving body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Draft / STU ballot submission</td>
+      <td>Sponsoring Work Group</td>
+    </tr>
+    <tr>
+      <td>Ballot reconciliation</td>
+      <td>Work Group + HL7 members</td>
+    </tr>
+    <tr>
+      <td>STU / Normative publication</td>
+      <td>FHIR Management Group (FMG)</td>
+    </tr>
+    <tr>
+      <td>Normative publication (final)</td>
+      <td>+ Technical Steering Committee (TSC)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The FMG is the body that accepts Connectathon evidence and adjudicates FMM advancement claims. The TSC provides the final governance gate for Normative publications.</p>
+
+<hr />
+
+<h4 id="a-practical-note-for-national-igs">A Practical Note for National IGs</h4>
+
+<p>Many national IGs — including AU Base, AU Core, and US Core — <strong>intentionally remain at STU for extended periods</strong> to:</p>
+
+<ul>
+  <li>Absorb ecosystem feedback and align with evolving regulation.</li>
+  <li>Avoid premature lock-in that would constrain implementers.</li>
+  <li>Build the production evidence base required for a credible Normative claim.</li>
+</ul>
+
+<p><strong>Normative is a governance commitment, not just a technical milestone.</strong> If an IG still expects semantic churn, evolving slices, or frequent cardinality changes, it is not Normative-ready — and that is entirely appropriate for a maturing standard.</p>
+
+<p>Most successful IGs spend years at STU by design. The PH eReferral IG, currently in agile draft, has a long and productive journey ahead before Normative is the right conversation.</p>
+
+<hr />
+
+<h4 id="related-pages">Related Pages</h4>
+
+<ul>
+  <li><a href="ig-evolution.html">IG Evolution</a> — the two-phase development model and when to engage with the HL7 formal process.</li>
+  <li><a href="interop-testing.html">Interoperability Matrix Testing</a> — CI-based automated testing between registered implementations; the quality assurance activity that feeds the formal QM gates described on this page.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.3.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-17 10:11:00 +0000">
+    2026-06-17
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

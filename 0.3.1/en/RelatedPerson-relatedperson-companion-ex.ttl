@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/RelatedPerson/relatedperson-companion-ex> a fhir:RelatedPerson ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "relatedperson-companion-ex"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson"^^xsd:anyURI ;
+       fhir:link <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson>
+     ] ) ;
+     fhir:tag ( [
+       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "REF-28" ] ;
+       fhir:display [ fhir:v "REF-28" ]
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson relatedperson-companion-ex</b></p><a name=\"relatedperson-companion-ex\"> </a><a name=\"hcrelatedperson-companion-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson</code></p><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>patient</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\">Mother</span></p><p><b>name</b>: Maria Santos </p><p><b>telecom</b>: <a href=\"tel:+63-917-765-4321\">+63-917-765-4321</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:patient [
+     fhir:reference [ fhir:v "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479" ]
+  ] ; # 
+  fhir:relationship ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "MTH" ] ;
+       fhir:display [ fhir:v "Mother" ]
+     ] )
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Santos" ] ;
+     fhir:given ( [ fhir:v "Maria" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-917-765-4321" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

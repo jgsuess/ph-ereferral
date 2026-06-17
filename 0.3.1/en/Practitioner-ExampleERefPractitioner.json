@@ -1,0 +1,45 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "ExampleERefPractitioner",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ExampleERefPractitioner</b></p><a name=\"ExampleERefPractitioner\"> </a><a name=\"hcExampleERefPractitioner\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.3</code>/PRAC-12345</p><p><b>active</b>: true</p><p><b>name</b>: Dr. Maria Cruz Santos(Official)</p><p><b>telecom</b>: <a href=\"tel:+63281234567\">+63 2 8123 4567</a>, <a href=\"mailto:mcsantos@hospital.ph\">mcsantos@hospital.ph</a></p><p><b>gender</b>: Female</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.3",
+    "value" : "PRAC-12345"
+  }],
+  "active" : true,
+  "name" : [{
+    "use" : "official",
+    "text" : "Dr. Maria Cruz Santos",
+    "family" : "Santos",
+    "given" : ["Maria",
+    "Cruz"],
+    "prefix" : ["Dr."]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+63 2 8123 4567",
+    "use" : "work"
+  },
+  {
+    "system" : "email",
+    "value" : "mcsantos@hospital.ph",
+    "use" : "work"
+  }],
+  "gender" : "female",
+  "qualification" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "158965000",
+        "display" : "Medical practitioner"
+      }]
+    }
+  }]
+}

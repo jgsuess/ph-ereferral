@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefReferringFacility"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization ExampleERefReferringFacility</b></p><a name="ExampleERefReferringFacility"> </a><a name="hcExampleERefReferringFacility"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html">PH Core Organization</a></p></div><p><b>identifier</b>: Facility ID/DOH000000000001234</p><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode HOSP}">Hospital</span></p><p><b>name</b>: Manila General Hospital - Barangay 143 Health Center</p><p><b>telecom</b>: <a href="tel:+63281234567">+63 2 8123 4567</a>, <a href="mailto:contact@manilagenhosp.ph">contact@manilagenhosp.ph</a></p><p><b>address</b>: 123 Rizal Avenue, Barangay 143, Manila, Philippines(work)</p></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="FI"/>
+        <display value="Facility ID"/>
+      </coding>
+    </type>
+    <system value="https://nhfr.doh.gov.ph/facility"/>
+    <value value="DOH000000000001234"/>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="HOSP"/>
+      <display value="Hospital"/>
+    </coding>
+  </type>
+  <name value="Manila General Hospital - Barangay 143 Health Center"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63 2 8123 4567"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="contact@manilagenhosp.ph"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <use value="work"/>
+    <type value="both"/>
+    <text value="123 Rizal Avenue, Barangay 143, Manila, Philippines"/>
+    <line value="123 Rizal Avenue"/>
+    <city value="Manila"/>
+    <district value="Barangay 143"/>
+    <state value="Metro Manila"/>
+    <postalCode value="1000"/>
+    <country value="PH"/>
+  </address>
+</Organization>

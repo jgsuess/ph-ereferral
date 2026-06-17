@@ -1,0 +1,56 @@
+{
+  "resourceType" : "Organization",
+  "id" : "organization-sending-facility-ex",
+  "meta" : {
+    "profile" : ["http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization"],
+    "tag" : [{
+      "system" : "https://example.com/peref-dd",
+      "code" : "REF-4",
+      "display" : "REF-4"
+    },
+    {
+      "system" : "https://example.com/peref-dd",
+      "code" : "REF-5",
+      "display" : "REF-5"
+    },
+    {
+      "system" : "https://example.com/peref-dd",
+      "code" : "REF-6",
+      "display" : "REF-6"
+    },
+    {
+      "system" : "https://example.com/peref-dd",
+      "code" : "REF-7",
+      "display" : "REF-7"
+    }]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization organization-sending-facility-ex</b></p><a name=\"organization-sending-facility-ex\"> </a><a name=\"hcorganization-sending-facility-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-organization</code></p><p style=\"margin-bottom: 0px\">Tags: , , , </p></div><p><b>identifier</b>: Facility ID/DOH000-OO-0-0000123\u00a0(use:\u00a0official,\u00a0)</p><p><b>name</b>: Barangay Malusog Health Centre</p><p><b>telecom</b>: <a href=\"tel:+63-2-1234-5678\">+63-2-1234-5678</a></p><p><b>address</b>: 123 Health Centre Road Quezon City NCR 1100 PH (work)</p></div>"
+  },
+  "identifier" : [{
+    "use" : "official",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "FI"
+      }]
+    },
+    "system" : "http://doh.gov.ph/fhir/Identifier/doh-nhfr-code",
+    "value" : "DOH000-OO-0-0000123"
+  }],
+  "name" : "Barangay Malusog Health Centre",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+63-2-1234-5678",
+    "use" : "work"
+  }],
+  "address" : [{
+    "use" : "work",
+    "line" : ["123 Health Centre Road"],
+    "city" : "Quezon City",
+    "state" : "NCR",
+    "postalCode" : "1100",
+    "country" : "PH"
+  }]
+}

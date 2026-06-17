@@ -5,13 +5,22 @@
   "introduction": "Philippine eReferral FHIR Implementation Guide",
   "list": [
     {
+      "version": "0.3.1",
+      "date": "2026-06-17",
+      "path": "https://jgsuess.github.io/ph-ereferral/0.3.1",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": true
+    },
+    {
       "version": "0.3.0",
       "date": "2026-06-17",
       "path": "https://jgsuess.github.io/ph-ereferral/0.3.0",
       "status": "draft",
       "fhirversion": "4.0.1",
       "sequence": "Draft",
-      "current": true
+      "current": false
     },
     {
       "version": "0.2.0",

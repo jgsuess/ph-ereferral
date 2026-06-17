@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequest> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleERefServiceRequest"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"^^xsd:anyURI ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ExampleERefServiceRequest</b></p><a name=\"ExampleERefServiceRequest\"> </a><a name=\"hcExampleERefServiceRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-service-request.html\">EReferral ServiceRequest</a></p></div><p><b>requisition</b>: <code>urn:oid:1.2.840.113619.21.1.2</code>/REF-2025-001234</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 3457005}\">Patient referral</span></p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 183519002}\">Referral to cardiology service</span></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>occurrence</b>: 2025-03-16 08:00:00+0800</p><p><b>authoredOn</b>: 2025-03-15 09:30:00+0800</p><p><b>requester</b>: <a href=\"PractitionerRole-ExampleERefPractitionerRole.html\">PractitionerRole Medical practitioner</a></p><p><b>performer</b>: <a href=\"Organization-ExampleERefReceivingHospital.html\">Organization Philippine Heart Center</a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 29857009}\">Chest pain on exertion, suspected unstable angina</span></p><p><b>reasonReference</b>: <a href=\"Condition-ExampleERefConditionChestPain.html\">Condition Chest pain</a></p><p><b>supportingInfo</b>: </p><ul><li><a href=\"Observation-ExampleERefObservationBP.html\">Observation Blood pressure panel with all children optional</a></li><li><a href=\"Observation-ExampleERefObservationECG.html\">Observation EKG study</a></li></ul><p><b>note</b>: </p><blockquote><div><p>Patient reports chest pain on exertion for 3 days. ECG shows ST depression. Please evaluate for possible PCI. Patient has no known drug allergies.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:requisition [
+     fhir:system [ fhir:v "urn:oid:1.2.840.113619.21.1.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "REF-2025-001234" ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:3457005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3457005" ] ;
+       fhir:display [ fhir:v "Patient referral" ]
+     ] )
+  ] ) ; # 
+  fhir:priority [ fhir:v "urgent"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:183519002 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "183519002" ] ;
+       fhir:display [ fhir:v "Referral to cardiology service" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatient> ;
+     fhir:reference [ fhir:v "Patient/ExampleERefPatient" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:dateTime ;
+     fhir:v "2025-03-16T08:00:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2025-03-15T09:30:00+08:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRole> ;
+     fhir:reference [ fhir:v "PractitionerRole/ExampleERefPractitionerRole" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefReceivingHospital> ;
+     fhir:reference [ fhir:v "Organization/ExampleERefReceivingHospital" ]
+  ] ) ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:29857009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "29857009" ] ;
+       fhir:display [ fhir:v "Chest pain" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chest pain on exertion, suspected unstable angina" ]
+  ] ) ; # 
+  fhir:reasonReference ( [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Condition/ExampleERefConditionChestPain> ;
+     fhir:reference [ fhir:v "Condition/ExampleERefConditionChestPain" ]
+  ] ) ; # 
+  fhir:supportingInfo ( [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationBP> ;
+     fhir:reference [ fhir:v "Observation/ExampleERefObservationBP" ]
+  ] [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationECG> ;
+     fhir:reference [ fhir:v "Observation/ExampleERefObservationECG" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient reports chest pain on exertion for 3 days. ECG shows ST depression. Please evaluate for possible PCI. Patient has no known drug allergies." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

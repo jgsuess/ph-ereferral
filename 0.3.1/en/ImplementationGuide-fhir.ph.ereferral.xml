@@ -1,0 +1,1735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="fhir.ph.ereferral"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide fhir.ph.ereferral</b></p><a name="fhir.ph.ereferral"> </a><a name="hcfhir.ph.ereferral"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p></div><h2>PHeReferralImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>https://fhir.doh.gov.ph/pheref/ImplementationGuide/fhir.ph.ereferral</pre><div><p>This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH eReferral profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.</p>
+</div></div>
+  </text>
+  <url value="https://fhir.doh.gov.ph/pheref/ImplementationGuide/fhir.ph.ereferral"/>
+  <version value="0.3.1"/>
+  <name value="PHeReferralImplementationGuide"/>
+  <title value="PH eReferral Implementation Guide"/>
+  <status value="draft"/>
+  <date value="2026-06-17T10:11:09+00:00"/>
+  <publisher value="SILab CoP IG Accelerator (eReferral)"/>
+  <contact>
+    <name value="SILab CoP IG Accelerator (eReferral)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-Manila-SILab"/>
+    </telecom>
+  </contact>
+  <description value="This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH eReferral profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="fhir.ph.ereferral"/>
+  <license value="CC-BY-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="7.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.3.0"/>
+  </dependsOn>
+  <dependsOn id="fhir_ph_core">
+    <uri value="https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core"/>
+    <packageId value="fhir.ph.core"/>
+    <version value="0.1.1"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2025+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="release"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://fhir.doh.gov.ph/pheref/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#1.1.2"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2025+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="release"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://fhir.doh.gov.ph/pheref/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="en"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/anc-contact-transaction-ex"/>
+      </reference>
+      <name value="anc-contact-transaction-ex"/>
+      <description value="Nurse Jane conducts Charity's first antenatal care visit at&#xA;Barangay Malusog Health Centre. This bundle captures the full clinical&#xA;encounter: pregnancy confirmation, vital signs, chief complaint,&#xA;iron-and-folic-acid dispensing, laboratory orders, and the ultrasound&#xA;referral to Metro Imaging Centre — along with the task that tracks the&#xA;referral outcome."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/condition-pregnancy-ex"/>
+      </reference>
+      <name value="Condition — Pregnancy"/>
+      <description value="Charity's confirmed pregnancy, provisionally dated to a last menstrual period around New Year 2026, giving an estimated gestational age of 12–15 weeks."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-anc-ex"/>
+      </reference>
+      <name value="Encounter — First Antenatal Care Contact"/>
+      <description value="The counselling session (08:30–10:00) in which nurse Jane confirms Charity's pregnancy, records vital signs and clinical history, and initiates the referral."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-registration-ex"/>
+      </reference>
+      <name value="Encounter — Registration"/>
+      <description value="A brief ambulatory encounter (08:00–08:15) in which clerk Abraham collects Charity's demographic information and registers her in the system."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-encounter"/>
+      </reference>
+      <name value="ERefEncounter"/>
+      <description value="Encounter profile for the Philippine eReferral system. Extends PHCoreEncounter to capture the clinical encounter context associated with a referral, including encounter status, classification, participants, and clinical information relevant to the referral workflow."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-condition"/>
+      </reference>
+      <name value="EReferral Condition"/>
+      <description value="Condition profile for diagnoses, problems, or clinical conditions relevant to a Philippine eReferral request."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-medication-administration"/>
+      </reference>
+      <name value="EReferral MedicationAdministration"/>
+      <description value="Profile for medications administered to patients in the Philippine eReferral context. Captures medications given as part of treatment (REF-39) and referenced via ServiceRequest.supportingInfo (REF-15) to provide clinical context for referrals."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-observation"/>
+      </reference>
+      <name value="EReferral Observation"/>
+      <description value="Profile for clinical observations in the Philippine eReferral context. &#xA;Supports vital signs, laboratory results, and clinical measurements included in &#xA;referral clinical summaries. Referenced via ServiceRequest.supportingInfo and &#xA;ServiceRequest.reasonReference."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ereferral-priority"/>
+      </reference>
+      <name value="eReferral Priority"/>
+      <description value="Priority levels for eReferral requests. Uses standard FHIR RequestPriority values."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-procedure"/>
+      </reference>
+      <name value="EReferral Procedure"/>
+      <description value="Procedure profile for procedures performed or documented as part of the clinical context of a Philippine eReferral."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-provenance"/>
+      </reference>
+      <name value="EReferral Provenance"/>
+      <description value="Profile for tracking audit trail of eReferral actions including signatures and timestamps in the Philippine eReferral context."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ereferral-reason"/>
+      </reference>
+      <name value="eReferral Reason"/>
+      <description value="Clinical reasons for eReferral requests. Uses SNOMED CT clinical findings and diagnoses."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ereferral-receiving-response"/>
+      </reference>
+      <name value="eReferral Receiving Facility Response"/>
+      <description value="Response states used by a receiving facility after referral receipt in the PH eReferral workflow."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-related-person"/>
+      </reference>
+      <name value="EReferral RelatedPerson"/>
+      <description value="RelatedPerson profile for the Philippine eReferral system. This profile represents optional patient contacts used in referral workflows, including next of kin, emergency contacts, accompanying persons, and guardians. It extends PHCoreRelatedPerson and maps to TDG element REF-29."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ereferral-relationship-type"/>
+      </reference>
+      <name value="eReferral Relationship Type"/>
+      <description value="Relationship roles used for patient contacts, next of kin, emergency contacts, guardians, and accompanying persons in Philippine eReferral."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ereferral-service-category"/>
+      </reference>
+      <name value="eReferral Service Category"/>
+      <description value="Categories of services that can be requested through eReferral"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-service-request"/>
+      </reference>
+      <name value="EReferral ServiceRequest"/>
+      <description value="Profile for ServiceRequest resource in the Philippine eReferral context. This profile defines the core referral request structure for referring patients between healthcare facilities."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-task"/>
+      </reference>
+      <name value="EReferral Task"/>
+      <description value="Task profile for Philippine eReferral workflow management. Tracks referral state transitions from request through completion, supporting workflow coordination between sending and receiving facilities."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ereferral-workflow"/>
+      </reference>
+      <name value="eReferral Workflow Code System"/>
+      <description value="Local workflow codes for Philippine eReferral receiving-facility responses and related referral coordination events."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-immunization"/>
+      </reference>
+      <name value="ERefImmunization"/>
+      <description value="Immunization profile for the Philippine eReferral system. Extends PHCoreImmunization to define must-support elements for referral clinical context. Immunization records are referenced via ServiceRequest.supportingInfo to provide supporting clinical information about a patient's vaccination history."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Immunization"/>
+      </extension>
+      <reference>
+        <reference value="Immunization/ExampleERefImmunizationRoutine"/>
+      </reference>
+      <name value="ERefImmunization Example - Routine Immunization (MMR)"/>
+      <description value="Example immunization instance demonstrating routine vaccination (MMR - Measles-Mumps-Rubella) as supporting clinical information in an eReferral context via ServiceRequest.supportingInfo."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-immunization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-patient"/>
+      </reference>
+      <name value="ERefPatient"/>
+      <description value="Patient profile for the Philippine eReferral system. Extends PHCorePatient with additional elements specific to referral workflows. This profile supports the patient demographic requirements defined in the eReferral TDG (Technical Development Group) mapping, elements REF-21 through REF-30."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ERefPatientExample"/>
+      </reference>
+      <name value="ERefPatient Example - Juan Dela Cruz"/>
+      <description value="Example patient instance demonstrating the ERefPatient profile with PhilHealth ID, PhilSys ID, and complete demographic information for eReferral."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/ExampleERefMedicationAdministrationAntibiotic"/>
+      </reference>
+      <name value="Example Antibiotic Administration"/>
+      <description value="Example IV antibiotic administration for a patient with suspected infection. Demonstrates REF-39 Treatment Given data element."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleERefObservationBP"/>
+      </reference>
+      <name value="Example Blood Pressure Observation"/>
+      <description value="Example blood pressure vital sign for eReferral (REF-33). Referenced via ServiceRequest.supportingInfo."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleERefObservationTemperature"/>
+      </reference>
+      <name value="Example Body Temperature Observation"/>
+      <description value="Example body temperature vital sign for eReferral (REF-37). Referenced via ServiceRequest.supportingInfo."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleERefObservationWeight"/>
+      </reference>
+      <name value="Example Body Weight Observation"/>
+      <description value="Example body weight vital sign for eReferral (REF-38). Referenced via ServiceRequest.supportingInfo."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
+        <reference value="Medication/ExampleERefMedicationAntibiotic"/>
+      </reference>
+      <name value="Example Cefuroxime Medication"/>
+      <description value="Example antibiotic medication resource for IV administration."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleERefObservationChiefComplaint"/>
+      </reference>
+      <name value="Example Chief Complaint Observation"/>
+      <description value="Example chief complaint for eReferral (REF-31). Referenced via ServiceRequest.reasonReference to provide clinical context for referral."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/ExampleERefMedicationAdministrationChronic"/>
+      </reference>
+      <name value="Example Chronic Medication Administration"/>
+      <description value="Example chronic medication administration (antihypertensive) demonstrating routine medication given to patient. Part of clinical summary (REF-15)."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ExampleERefConditionChestPain"/>
+      </reference>
+      <name value="Example Condition - Chest Pain"/>
+      <description value="Example chest pain condition for referral"/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ExampleERefConditionHypertensiveEmergency"/>
+      </reference>
+      <name value="Example Condition - Hypertensive Emergency"/>
+      <description value="Example hypertensive emergency condition used as a clinical reason for referral."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleERefObservationECG"/>
+      </reference>
+      <name value="Example ECG Observation"/>
+      <description value="Example ECG findings observation for eReferral. Referenced via ServiceRequest.supportingInfo for cardiac referrals."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/ExampleERefEncounter"/>
+      </reference>
+      <name value="Example eReferral Encounter"/>
+      <description value="An example encounter for a cardiology referral, where a patient is received at a tertiary hospital based on a referral from a rural health unit."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ExampleERefPatient"/>
+      </reference>
+      <name value="Example eReferral Patient"/>
+      <description value="Example patient for eReferral demonstration"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ExampleERefPatientTask"/>
+      </reference>
+      <name value="Example eReferral Patient (for Task)"/>
+      <description value="Minimal patient instance for ERefTask demonstration."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ExampleERefPatientMinimal"/>
+      </reference>
+      <name value="Example eReferral Patient (Minimal)"/>
+      <description value="Minimal patient instance for Provenance demonstration."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/ExampleERefProvenanceUpdate"/>
+      </reference>
+      <name value="Example eReferral Provenance for Status Update"/>
+      <description value="Provenance record documenting a referral status update without signature. Demonstrates REF-3 (Date &amp; Time of activity)."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/ExampleERefProvenanceSignature"/>
+      </reference>
+      <name value="Example eReferral Provenance with Signature"/>
+      <description value="Provenance record demonstrating professional signature attestation for a referral. Demonstrates REF-3 (Date &amp; Time of Signature) and REF-4 (Professional Signature)."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ExampleERefServiceRequest"/>
+      </reference>
+      <name value="Example eReferral Service Request"/>
+      <description value="An example referral request from a rural health unit to a tertiary hospital for cardiology consultation."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ExampleERefServiceRequestMinimal"/>
+      </reference>
+      <name value="Example eReferral Service Request (Minimal)"/>
+      <description value="Minimal service request instance for Provenance demonstration."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/ExampleERefTaskAccepted"/>
+      </reference>
+      <name value="Example eReferral Task - Accepted State"/>
+      <description value="Task representing an eReferral that has been accepted by the receiving facility. Demonstrates TDG REF-9 'Care Navigator' assignment with owner now populated."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/ExampleERefTaskCompleted"/>
+      </reference>
+      <name value="Example eReferral Task - Completed State"/>
+      <description value="Task representing a completed eReferral. Demonstrates full workflow closure with execution period and completion output."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/ExampleERefTaskReceived"/>
+      </reference>
+      <name value="Example eReferral Task - Received State"/>
+      <description value="Task representing an eReferral acknowledged by the receiving facility and under review for acceptance."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/ExampleERefTaskReferredOnward"/>
+      </reference>
+      <name value="Example eReferral Task - Referred Onward State"/>
+      <description value="Task representing an eReferral response where the receiving facility cannot take the case and directs the referral to another facility."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/ExampleERefTaskRejected"/>
+      </reference>
+      <name value="Example eReferral Task - Rejected State"/>
+      <description value="Task representing an eReferral response where the receiving facility cannot take the case and no onward facility is specified."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/ExampleERefTaskRequested"/>
+      </reference>
+      <name value="Example eReferral Task - Requested State"/>
+      <description value="Task representing a newly created eReferral in 'requested' status. Demonstrates TDG REF-9 'Care Navigator' assignment pattern with requester populated but owner not yet assigned."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="RelatedPerson"/>
+      </extension>
+      <reference>
+        <reference value="RelatedPerson/ExampleERefRelatedPersonAccompanying"/>
+      </reference>
+      <name value="Example ERefRelatedPerson - Accompanying Person"/>
+      <description value="Example accompanying person for an eReferral patient."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="RelatedPerson"/>
+      </extension>
+      <reference>
+        <reference value="RelatedPerson/ExampleERefRelatedPersonNextOfKin"/>
+      </reference>
+      <name value="Example ERefRelatedPerson - Next of Kin"/>
+      <description value="Example next-of-kin RelatedPerson for an eReferral patient."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleERefObservationHeartRate"/>
+      </reference>
+      <name value="Example Heart Rate Observation"/>
+      <description value="Example heart rate vital sign for eReferral (REF-34). Referenced via ServiceRequest.supportingInfo."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleERefObservationLabGlucose"/>
+      </reference>
+      <name value="Example Laboratory Glucose Observation"/>
+      <description value="Example laboratory result observation for eReferral with reference range."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ExampleERefServiceRequestOnward"/>
+      </reference>
+      <name value="Example Onward eReferral ServiceRequest"/>
+      <description value="ServiceRequest representing the onward referral created after the first receiving facility reports that capacity is full."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleERefOrganizationOnwardReceiving"/>
+      </reference>
+      <name value="Example Onward Receiving Facility (for Task)"/>
+      <description value="Organization instance representing the alternate receiving facility for a referred-onward response."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleERefObservationOxygenSat"/>
+      </reference>
+      <name value="Example Oxygen Saturation Observation"/>
+      <description value="Example oxygen saturation vital sign for eReferral (REF-36). Referenced via ServiceRequest.supportingInfo."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/ExampleERefProcedureECG"/>
+      </reference>
+      <name value="Example Procedure - Electrocardiogram"/>
+      <description value="Example diagnostic procedure documented as supporting clinical information for referral."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/ExampleERefProcedureInitialManagement"/>
+      </reference>
+      <name value="Example Procedure - Initial Management"/>
+      <description value="Example therapeutic procedure or intervention performed before referral."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleERefOrganizationReceiving"/>
+      </reference>
+      <name value="Example Receiving Facility (for Task)"/>
+      <description value="Organization instance representing the receiving tertiary hospital."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleERefReceivingHospital"/>
+      </reference>
+      <name value="Example Receiving Hospital"/>
+      <description value="Example tertiary hospital receiving facility"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleERefReferringFacility"/>
+      </reference>
+      <name value="Example Referring Facility"/>
+      <description value="Example referring healthcare facility for the Philippines eReferral workflow."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleERefOrganizationRequester"/>
+      </reference>
+      <name value="Example Referring Facility (for Task)"/>
+      <description value="Minimal organization instance representing the referring facility."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/ExampleERefOrganizationMinimal"/>
+      </reference>
+      <name value="Example Referring Facility (Minimal)"/>
+      <description value="Minimal organization instance for Provenance demonstration."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ExampleERefPractitioner"/>
+      </reference>
+      <name value="Example Referring Practitioner"/>
+      <description value="Example referring practitioner demonstrating practitioner demographics for the Philippines eReferral workflow."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ExampleERefPractitionerRequester"/>
+      </reference>
+      <name value="Example Referring Practitioner (for Task)"/>
+      <description value="Minimal practitioner instance for ERefTask demonstration."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ExampleERefPractitionerMinimal"/>
+      </reference>
+      <name value="Example Referring Practitioner (Minimal)"/>
+      <description value="Minimal practitioner instance for Provenance demonstration."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/ExampleERefPractitionerRole"/>
+      </reference>
+      <name value="Example Referring Practitioner Role"/>
+      <description value="Example referring practitioner role linking practitioner to facility for the Philippines eReferral workflow."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/ExampleERefPractitionerRoleRequester"/>
+      </reference>
+      <name value="Example Referring Practitioner Role (for Task)"/>
+      <description value="Practitioner role linking referring practitioner to their facility."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/ExampleERefPractitionerRoleMinimal"/>
+      </reference>
+      <name value="Example Referring Practitioner Role (Minimal)"/>
+      <description value="Minimal practitioner role instance for Provenance demonstration."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleERefObservationRespiratoryRate"/>
+      </reference>
+      <name value="Example Respiratory Rate Observation"/>
+      <description value="Example respiratory rate vital sign for eReferral (REF-35). Referenced via ServiceRequest.supportingInfo."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ExampleERefServiceRequestTask"/>
+      </reference>
+      <name value="Example ServiceRequest (for Task)"/>
+      <description value="Minimal ServiceRequest instance referenced by Task examples."/>
+      <exampleCanonical value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
+        <reference value="Medication/ExampleERefMedicationTwinact"/>
+      </reference>
+      <name value="Example Twinact Medication"/>
+      <description value="Example medication resource for Twinact (Telmisartan + Amlodipine) used in chronic medication administration example."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/medicationadministration-ifa-ex"/>
+      </reference>
+      <name value="MedicationAdministration — Iron and Folic Acid"/>
+      <description value="Jane dispenses iron and folic acid (IFA) tablets to Charity with instructions to take one tablet daily, following WHO ANC guidelines for nutritional supplementation."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-blood-pressure-ex"/>
+      </reference>
+      <name value="Observation — Blood Pressure"/>
+      <description value="Charity's blood pressure measured during the physical exam: systolic 110 mmHg, diastolic 70 mmHg — within the normal range for pregnancy."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-temperature-ex"/>
+      </reference>
+      <name value="Observation — Body Temperature"/>
+      <description value="Charity's body temperature of 36.8 degrees Celsius, a normal reading taken during the physical exam."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-weight-ex"/>
+      </reference>
+      <name value="Observation — Body Weight"/>
+      <description value="Charity's weight of 55 kg, recorded as a baseline measurement at her first ANC contact."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-chief-complaint-ex"/>
+      </reference>
+      <name value="Observation — Chief Complaint"/>
+      <description value="Charity's reason for visiting the health centre: a missed menstrual cycle and nausea, prompting her to seek antenatal care."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-heart-rate-ex"/>
+      </reference>
+      <name value="Observation — Heart Rate"/>
+      <description value="Charity's resting heart rate of 78 beats per minute, recorded as part of her vital signs during the ANC contact."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-oxygen-saturation-ex"/>
+      </reference>
+      <name value="Observation — Oxygen Saturation"/>
+      <description value="Charity's peripheral oxygen saturation at 98 percent, confirming adequate oxygenation."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/observation-respiratory-rate-ex"/>
+      </reference>
+      <name value="Observation — Respiratory Rate"/>
+      <description value="Charity's respiratory rate of 18 breaths per minute, within the normal adult range."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/organization-sending-facility-ex"/>
+      </reference>
+      <name value="Organization — Barangay Malusog Health Centre"/>
+      <description value="The government health centre where Charity is registered and receives her first ANC contact. Identified by its NHFR code."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/organization-receiving-facility-ex"/>
+      </reference>
+      <name value="Organization — Metro Imaging Centre"/>
+      <description value="The external imaging centre where Charity is referred for an obstetric ultrasound to confirm gestational age."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/patient-charity-ex"/>
+      </reference>
+      <name value="Patient — Charity Santos"/>
+      <description value="Charity is a 24-year-old woman from Barangay Malusog, Quezon City, visiting the health centre for the first time during her pregnancy. Abraham registers her demographics, national IDs, and contact details."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-practitioner-role"/>
+      </reference>
+      <name value="PH eReferral PractitionerRole"/>
+      <description value="Profile on PractitionerRole for the Philippines eReferral specification, extending PHCorePractitionerRole. This profile captures the role of the referring practitioner and care navigator within the eReferral workflow, linking practitioners to healthcare facilities."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/practitioner-abraham-ex"/>
+      </reference>
+      <name value="Practitioner — Abraham Reyes"/>
+      <description value="Abraham is the registration clerk who creates Charity's patient record at the health centre front desk."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/practitioner-jane-ex"/>
+      </reference>
+      <name value="Practitioner — Jane Dela Cruz"/>
+      <description value="Jane is the nurse who conducts Charity's first antenatal care counselling session, records vital signs, and creates the ultrasound referral."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/practitionerrole-abraham-ex"/>
+      </reference>
+      <name value="PractitionerRole — Clerk Abraham"/>
+      <description value="Abraham's role as a registration clerk at Barangay Malusog Health Centre."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/practitionerrole-jane-ex"/>
+      </reference>
+      <name value="PractitionerRole — Nurse Jane"/>
+      <description value="Jane's role as a nurse at Barangay Malusog Health Centre, linked to her practitioner record and the sending facility."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ereferral-pwd-disability"/>
+      </reference>
+      <name value="PWD Disability Registration"/>
+      <description value="Extension for Person With Disability (PWD) registration information in the Philippine eReferral system. Captures PWD ID number, disability type, and ID expiration date."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/pwd-disability-type-cs"/>
+      </reference>
+      <name value="PWD Disability Type Code System"/>
+      <description value="Code system for types of disability as defined by the Philippine government for PWD registration."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pwd-disability-type-vs"/>
+      </reference>
+      <name value="PWD Disability Type Value Set"/>
+      <description value="Value set for types of disability as defined by the Philippine government for PWD registration."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/registration-transaction-ex"/>
+      </reference>
+      <name value="registration-transaction-ex"/>
+      <description value="Clerk Abraham registers Charity at Barangay Malusog Health Centre.&#xA;This bundle captures everything recorded at the front desk: Charity's&#xA;demographic details, her national identifiers (PhilSys and PhilHealth),&#xA;her home address and phone number, and her mother Maria as next-of-kin.&#xA;It also records Abraham's practitioner role and the registration encounter."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="RelatedPerson"/>
+      </extension>
+      <reference>
+        <reference value="RelatedPerson/relatedperson-companion-ex"/>
+      </reference>
+      <name value="RelatedPerson — Maria Santos (Mother)"/>
+      <description value="Charity's mother Maria, registered as her next-of-kin and alternative contact person during the registration process."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/servicerequest-lab-orders-ex"/>
+      </reference>
+      <name value="ServiceRequest — Laboratory Orders"/>
+      <description value="Routine ANC laboratory tests ordered for Charity: diabetes screen, hepatitis B surface antigen, and HIV — in line with WHO recommended investigations."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/servicerequest-ultrasound-ex"/>
+      </reference>
+      <name value="ServiceRequest — Obstetric Ultrasound Referral"/>
+      <description value="Jane refers Charity to Metro Imaging Centre for an obstetric ultrasound to confirm gestational age and due date, needed before 24 weeks of pregnancy."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/task-referral-ex"/>
+      </reference>
+      <name value="Task — Referral Tracking"/>
+      <description value="Tracks the status of Charity's ultrasound referral. Currently in 'requested' state, awaiting acceptance by Metro Imaging Centre."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="ai-reasoning.html"/>
+        </extension>
+        <nameUrl value="ai-reasoning.html"/>
+        <title value="Ai Reasoning"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="approach.html"/>
+        </extension>
+        <nameUrl value="approach.html"/>
+        <title value="Approach"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="connectathon-readiness.html"/>
+        </extension>
+        <nameUrl value="connectathon-readiness.html"/>
+        <title value="Connectathon Readiness"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="coverage-map.html"/>
+        </extension>
+        <nameUrl value="coverage-map.html"/>
+        <title value="Coverage Map"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="data-dictionary.html"/>
+        </extension>
+        <nameUrl value="data-dictionary.html"/>
+        <title value="Data Dictionary"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="dd-mapping.html"/>
+        </extension>
+        <nameUrl value="dd-mapping.html"/>
+        <title value="Dd Mapping"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="decision-log.html"/>
+        </extension>
+        <nameUrl value="decision-log.html"/>
+        <title value="Decision Log"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="hl7-lifecycle.html"/>
+        </extension>
+        <nameUrl value="hl7-lifecycle.html"/>
+        <title value="Hl 7 Lifecycle"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="ig-evolution.html"/>
+        </extension>
+        <nameUrl value="ig-evolution.html"/>
+        <title value="Ig Evolution"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="interop-testing.html"/>
+        </extension>
+        <nameUrl value="interop-testing.html"/>
+        <title value="Interop Testing"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="references.html"/>
+        </extension>
+        <nameUrl value="references.html"/>
+        <title value="References"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="referral-workflow.html"/>
+        </extension>
+        <nameUrl value="referral-workflow.html"/>
+        <title value="Referral Workflow"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="resource-architecture.html"/>
+        </extension>
+        <nameUrl value="resource-architecture.html"/>
+        <title value="Resource Architecture"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="technical-pipeline.html"/>
+        </extension>
+        <nameUrl value="technical-pipeline.html"/>
+        <title value="Technical Pipeline"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="testing-companion.html"/>
+        </extension>
+        <nameUrl value="testing-companion.html"/>
+        <title value="Testing Companion"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="v01-scope.html"/>
+        </extension>
+        <nameUrl value="v01-scope.html"/>
+        <title value="V 01 Scope"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="version-management.html"/>
+        </extension>
+        <nameUrl value="version-management.html"/>
+        <title value="Version Management"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="who-smart-l1.html"/>
+        </extension>
+        <nameUrl value="who-smart-l1.html"/>
+        <title value="Who Smart L 1"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/assets"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

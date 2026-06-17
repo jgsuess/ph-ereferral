@@ -1,0 +1,143 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Immunization/ExampleERefImmunizationRoutine> a fhir:Immunization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleERefImmunizationRoutine"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-immunization"^^xsd:anyURI ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-immunization>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Routine MMR (Measles-Mumps-Rubella) vaccination administered to Juan Dela Cruz on 15 March 2025 at Quezon City Health Center No. 1. Vaccine lot: LOT-2025-MMR-0045 (expires 2026-12-31), manufactured by Serum Institute of India. Dose 1 of 2 administered subcutaneously (0.5 mL) in the left thigh by Nurse Maria Santos, RN. Funded under the national Expanded Program on Immunization (EPI).</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://example.ph/immunization-records"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "IMM-2025-00123" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       a sct:871831003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "871831003" ] ;
+       fhir:display [ fhir:v "MMR (measles and mumps and rubella) vaccine" ]
+     ] )
+  ] ; # 
+  fhir:patient [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ERefPatientExample> ;
+     fhir:reference [ fhir:v "Patient/ERefPatientExample" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:dateTime ;
+     fhir:v "2025-03-15"^^xsd:date
+  ] ; # 
+  fhir:recorded [ fhir:v "2025-03-15T09:30:00+08:00"^^xsd:dateTime] ; # 
+  fhir:primarySource [ fhir:v true] ; # 
+  fhir:location [
+     fhir:display [ fhir:v "Quezon City Health Center No. 1" ]
+  ] ; # 
+  fhir:manufacturer [
+     fhir:display [ fhir:v "Serum Institute of India" ]
+  ] ; # 
+  fhir:lotNumber [ fhir:v "LOT-2025-MMR-0045"] ; # 
+  fhir:expirationDate [ fhir:v "2026-12-31"^^xsd:date] ; # 
+  fhir:site [
+     fhir:coding ( [
+       a sct:61396006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "61396006" ] ;
+       fhir:display [ fhir:v "Structure of left thigh" ]
+     ] )
+  ] ; # 
+  fhir:route [
+     fhir:coding ( [
+       a sct:34206005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "34206005" ] ;
+       fhir:display [ fhir:v "Subcutaneous route" ]
+     ] )
+  ] ; # 
+  fhir:doseQuantity [
+     fhir:value [ fhir:v 0.5 ] ;
+     fhir:unit [ fhir:v "mL" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mL" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:function [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0443"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "AP" ] ;
+         fhir:display [ fhir:v "Administering Provider" ]
+       ] )
+     ] ;
+     fhir:actor [
+       fhir:display [ fhir:v "Nurse Maria Santos, RN" ]
+     ]
+  ] ) ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:33879002 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "33879002" ] ;
+       fhir:display [ fhir:v "Administration of vaccine to produce active immunity (procedure)" ]
+     ] )
+  ] ) ; # 
+  fhir:isSubpotent [ fhir:v false] ; # 
+  fhir:programEligibility ( [
+     fhir:text [ fhir:v "Eligible - DOH Expanded Program on Immunization (EPI)" ]
+  ] ) ; # 
+  fhir:fundingSource [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/immunization-funding-source"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "public" ] ;
+       fhir:display [ fhir:v "Public" ]
+     ] )
+  ] ; # 
+  fhir:protocolApplied ( [
+     fhir:series [ fhir:v "MMR 2-Dose Series" ] ;
+     fhir:targetDisease ( [
+       fhir:coding ( [
+         a sct:14189004 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "14189004" ] ;
+         fhir:display [ fhir:v "Measles (disorder)" ]
+       ] )
+     ] [
+       fhir:coding ( [
+         a sct:36989005 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "36989005" ] ;
+         fhir:display [ fhir:v "Mumps (disorder)" ]
+       ] )
+     ] [
+       fhir:coding ( [
+         a sct:36653000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "36653000" ] ;
+         fhir:display [ fhir:v "Rubella (disorder)" ]
+       ] )
+     ] ) ;
+     fhir:doseNumber [
+       a fhir:positiveInt ;
+       fhir:v "1"^^xsd:positiveInteger
+     ] ;
+     fhir:seriesDoses [
+       a fhir:positiveInt ;
+       fhir:v "2"^^xsd:positiveInteger
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

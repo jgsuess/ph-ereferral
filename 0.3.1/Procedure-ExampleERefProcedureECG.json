@@ -1,0 +1,55 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "ExampleERefProcedureECG",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure ExampleERefProcedureECG</b></p><a name=\"ExampleERefProcedureECG\"> </a><a name=\"hcExampleERefProcedureECG\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-procedure.html\">EReferral Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 103693007}\">Diagnostic procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 29303009}\">Electrocardiographic procedure</span></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>performed</b>: 2025-03-15 09:15:00+0800</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></td><td><a href=\"PractitionerRole-ExampleERefPractitionerRole.html\">PractitionerRole Medical practitioner</a></td></tr></table><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 29857009}\">Chest pain</span></p><p><b>reasonReference</b>: <a href=\"Condition-ExampleERefConditionChestPain.html\">Condition Chest pain</a></p><p><b>note</b>: </p><blockquote><div><p>ECG was performed prior to referral to support clinical assessment of chest pain.</p>\n</div></blockquote></div>"
+  },
+  "status" : "completed",
+  "category" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "103693007",
+      "display" : "Diagnostic procedure"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "29303009",
+      "display" : "Electrocardiographic procedure"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleERefPatient"
+  },
+  "performedDateTime" : "2025-03-15T09:15:00+08:00",
+  "performer" : [{
+    "function" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "158965000",
+        "display" : "Medical practitioner"
+      }]
+    },
+    "actor" : {
+      "reference" : "PractitionerRole/ExampleERefPractitionerRole"
+    }
+  }],
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "29857009",
+      "display" : "Chest pain"
+    }]
+  }],
+  "reasonReference" : [{
+    "reference" : "Condition/ExampleERefConditionChestPain"
+  }],
+  "note" : [{
+    "text" : "ECG was performed prior to referral to support clinical assessment of chest pain."
+  }]
+}
