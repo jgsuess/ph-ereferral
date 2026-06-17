@@ -10,12 +10,12 @@
 #
 # Examples:
 #   ./docker/scripts/upload_examples.sh
-#   ./docker/scripts/upload_examples.sh http://localhost:8080/fhir 0.1.0 0.2.0
+#   ./docker/scripts/upload_examples.sh http://localhost:8080/fhir 0.1.1 0.3.1
 set -euo pipefail
 
 BASE_URL="${1:-http://localhost:8080/fhir}"
-PH_CORE_VERSION="${2:-0.1.0}"
-PH_EREFERRAL_VERSION="${3:-0.2.0}"
+PH_CORE_VERSION="${2:-0.1.1}"
+PH_EREFERRAL_VERSION="${3:-0.3.1}"
 EREFERRAL_REPO="${EREFERRAL_REPO:-jgsuess/ph-ereferral}"
 EREFERRAL_BRANCH="${EREFERRAL_BRANCH:-main}"
 
