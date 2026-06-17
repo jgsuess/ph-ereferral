@@ -1,0 +1,70 @@
+@startuml E03-infinite-onward-chain
+!theme plain
+skinparam defaultFontName Helvetica
+skinparam ArrowColor #666666
+skinparam nodeBackgroundColor #FFCCBC
+skinparam nodeBorderColor #E64A19
+
+title E-03 — Infinite Onward Chain\nServiceRequest.replaces allows unlimited depth; no termination condition
+
+frame "Hop 1 — Facility A (full)" #FFF9C4 {
+  node "SR/ref-001\nstatus=active" as sr1
+  node "Task/t-001\nstatus=rejected\nbStatus=#referred-onward\nstatusReason=#capacity-full" as t1
+}
+
+frame "Hop 2 — Facility B (full)" #FFE0CC {
+  node "SR/ref-002\nstatus=active\nreplaces=SR/ref-001" as sr2
+  node "Task/t-002\nstatus=rejected\nbStatus=#referred-onward\nstatusReason=#capacity-full" as t2
+}
+
+frame "Hop 3 — Facility C (full)" #FFD5A8 {
+  node "SR/ref-003\nstatus=active\nreplaces=SR/ref-002" as sr3
+  node "Task/t-003\nstatus=rejected\nbStatus=#referred-onward\nstatusReason=#capacity-full" as t3
+}
+
+node "..." as dots #FFCCCC
+
+frame "Hop N — Facility N" #FFCCCC {
+  node "SR/ref-00N\nstatus=active\nreplaces=SR/ref-00(N-1)" as srN
+  node "Task/t-00N\nstatus=???\n(accepted? rejected again?)" as tN #FFAAAA
+}
+
+sr1 --> t1 : Task tracks SR
+sr1 <-- sr2 : replaces
+sr2 --> t2
+sr2 <-- sr3 : replaces
+sr3 --> t3
+sr3 <-- dots
+dots <-- srN : replaces
+srN --> tN
+
+note right of dots
+  All are valid ERefServiceRequests.
+  No profile constraint limits chain depth.
+  ServiceRequest.replaces is 0..* MS.
+
+  After 10 hops:
+  • 10 open ServiceRequests (all status=active)
+  • 10 open Tasks (all status=rejected)
+  • Patient has been passed to 10 facilities
+  • No facility has taken ownership
+  • Patient status: unknown
+end note
+
+note bottom
+  Open queries across all hops:
+    GET ServiceRequest?status=active → 10 results (all are this patient's referral chain)
+    GET Task?status=rejected         → 10 results (all are this patient's referral chain)
+
+  No FHIR query can efficiently find "the latest unresolved referral for this patient"
+  without traversing the full replaces chain — O(N) queries for an N-hop chain.
+
+  The IG does not define:
+    • Maximum chain depth
+    • Responsibility for breaking a cycle (all-full scenario)
+    • What happens when no facility can accept
+    • How the patient is notified of failure to find a receiving facility
+    • How the original referral is marked as "failed to place"
+end note
+
+@enduml

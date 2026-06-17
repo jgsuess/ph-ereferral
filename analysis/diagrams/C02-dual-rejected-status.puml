@@ -1,0 +1,45 @@
+@startuml C02-dual-rejected-status
+!theme plain
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 12
+
+title C-02 — Dual-Rejected Status Collision\nTwo distinct outcomes share the same Task.status value
+
+package "Intended meaning" {
+  card "Genuinely Rejected" as r1 {
+    file "Task.status = rejected\nTask.businessStatus = #rejected\nTask.statusReason.text = \"Full at capacity\"\n\nMeaning: Facility cannot take case.\nNo onward destination given." as t1 #FFCDD2
+  }
+
+  card "Referred Onward" as r2 {
+    file "Task.status = rejected        ← SAME!\nTask.businessStatus = #referred-onward\nTask.statusReason = #capacity-full\nTask.output → onward SR\n\nMeaning: Facility cannot take case.\nNew destination identified." as t2 #FFE0B2
+  }
+}
+
+package "FHIR query results" {
+  frame "GET Task?status=rejected" as query #E8EAF6 {
+    card "Returns BOTH ↑ Tasks" #BBDEFB
+  }
+}
+
+note bottom of query
+  A dashboard counting "rejections"
+  includes referred-onward cases.
+
+  A system filtering Task?status=rejected
+  cannot distinguish:
+    • "Case refused — no alternative"
+    • "Case redirected — alternative given"
+
+  without reading businessStatus on every result.
+
+  Reporting impact example (10 tasks):
+    Query returns 10 "rejected" tasks.
+    Actual breakdown:
+      3 genuinely rejected (no path for patient)
+      7 referred onward   (patient redirected)
+
+    Dashboard: "Rejection rate: 100%"
+    Reality:   "Genuine rejection rate: 30%"
+end note
+
+@enduml

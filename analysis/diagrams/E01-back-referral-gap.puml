@@ -1,0 +1,52 @@
+@startuml E01-back-referral-gap
+!theme plain
+skinparam defaultFontName Helvetica
+skinparam componentStyle rectangle
+
+title E-01 — The Back-Referral Black Hole\nConsultation summary stranded on the receiving side
+
+rectangle "Initiating Facility" #FFF9C4 {
+  component "DR. SANTOS\n(referring)" as santos
+  component "Patient Record\n(PHC system)" as phrec
+  component "eReferral Module\n(Task requester)" as eref_init
+}
+
+rectangle "Shared FHIR Server / Receiving Facility" #FFE0CC {
+  component "Task/close-004\nstatus = completed\noutput[0].type = #consultation-summary\noutput[0].value = 'Ultrasound 18wks:\nSingle viable fetus.\nPlacenta posterior, no praevia.\nFHR 152 bpm.\nFollow-up ANC in 4 weeks.'" as task
+  component "ERefServiceRequest/mat-004\nstatus = active" as sr
+}
+
+rectangle "What is NOT in the IG" #FFCCCC {
+  component "FHIR Subscription\n(push notification)" as sub #FFAAAA
+  component "Back-referral Task\n(direction: receiving → initiating)" as backtask #FFAAAA
+  component "Communication Resource\n(from receiving to referring)" as comm #FFAAAA
+  component "Polling SLA\n(how often, by whom?)" as poll #FFAAAA
+}
+
+santos     --> eref_init : Creates referral
+eref_init  --> sr        : POST ServiceRequest
+eref_init  --> task      : POST Task (status=requested)
+
+task       -[dashed]-> task : [receiving facility updates:\nstatus=received → accepted → completed]
+
+task       -[dashed,#red]-> santos  : ❌ No notification path
+task       -[dashed,#red]-> phrec   : ❌ No update to patient record
+task       -[dashed,#red]-> sub     : ❌ Not defined in IG
+task       -[dashed,#red]-> backtask: ❌ No back-referral resource
+task       -[dashed,#red]-> comm    : ❌ Communication not in scope
+task       -[dashed,#red]-> poll    : ❌ No polling requirement
+
+note bottom
+  After the referral completes, DR. SANTOS:
+  - Does not receive the consultation summary
+  - Does not know the outcome unless polling GET Task?requester=...
+  - Cannot update the patient's PHC record automatically
+  - Cannot schedule the follow-up ANC contact based on the summary
+
+  The patient must relay the findings verbally at the next visit.
+  If the patient does not attend, the primary care record is never updated.
+
+  This is the second half of a referral conversation that is not modelled.
+end note
+
+@enduml

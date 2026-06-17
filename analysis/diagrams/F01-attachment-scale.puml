@@ -1,0 +1,107 @@
+@startuml F01-attachment-scale
+!theme plain
+skinparam defaultFontName Helvetica
+skinparam noteBackgroundColor #FFEBEE
+skinparam defaultFontSize 11
+
+title F-01 — Attachment Scale Bomb\nNo size limit, no offloading strategy; Philippines-scale calculations
+
+rectangle "Per Referral" #FFF9C4 {
+  note as perref
+    ServiceRequest.supportingInfo → 0..* clinical resources
+    Each resource may embed Attachment data (Binary/base64)
+    Example: lab result PDFs, imaging reports, referral slip scans
+
+    Realistic clinical summary for 1 referral:
+      • Chief complaint narrative
+      • 1-2 lab result PDFs        (~500 KB each)
+      • 1 imaging report PDF       (~500 KB)
+      • Referral slip scan         (~300 KB)
+      • Medication list            (~50 KB text)
+
+    Plausible per-referral payload: 1–2 MB inline FHIR content
+    IG cap stated: none (FHIR base has no normative size limit)
+  end note
+}
+
+rectangle "Per Facility Per Day" #FFE0CC {
+  note as perfac
+    Conservative: rural health unit (RHU)
+      10–20 referrals/day × 1.5 MB = 15–30 MB/day
+    Moderate: district hospital outpatient
+      40–80 referrals/day × 1.5 MB = 60–120 MB/day
+    High: city hospital referral hub
+      100–200 referrals/day × 1.5 MB = 150–300 MB/day
+  end note
+}
+
+rectangle "Philippines National Scale" #FFCCBC {
+  note as national
+    Public health facilities (DOH estimate):
+      ~21,000 Barangay Health Stations (BHS)
+      ~2,600  Rural Health Units (RHUs)
+      ~1,200  District/City/Provincial hospitals
+      ~700    Tertiary/Specialist hospitals
+    Total: ~25,500 public facilities
+
+    Plus ~9,000 PhilHealth-accredited private facilities
+    Conservative active eReferral facilities (early rollout): ~10,000
+
+    Low estimate (10,000 facilities × 20 MB/day):
+      200 GB/day ingest
+      73 TB/year
+
+    Full rollout (25,000 facilities × 50 MB/day):
+      1.25 TB/day ingest
+      456 TB/year
+
+    At 40 referrals/day/facility × 500 KB each × 25,000 facilities:
+      500 GB/day
+      182 TB/year
+  end note
+}
+
+rectangle "What the IG Does NOT Provide" #FFAAAA {
+  note as missing
+    ❌ No attachment size limit (no profile constraint)
+    ❌ No IHE MHD DocumentReference offloading pattern
+    ❌ No Binary resource with external URL strategy
+    ❌ No CDN / blob storage reference (S3, Azure Blob, GCS)
+    ❌ No SMART on FHIR bulk data export for attachments
+    ❌ No server capability statement requirement for max attachment size
+    ❌ No deduplication strategy (same lab result referenced in N referrals)
+    ❌ No retention / deletion policy for attachments
+    ❌ No compression requirement
+
+    Every attachment is base64-encoded inline in the FHIR resource.
+    A single FHIR transaction bundle with 5 PDF attachments
+    could be 3–5 MB of JSON.
+  end note
+}
+
+rectangle "Attack / Stress Vector" #FF8A80 {
+  note as attack
+    A single malformed POST:
+      ServiceRequest with supportingInfo containing:
+        40 × DocumentReference each with 1 MB attachment
+      = 40 MB in one FHIR transaction
+
+    A FHIR server with no input size limit:
+      → accepts 40 MB JSON body
+      → stores 40 MB of base64 content in the database
+      → indexes all references
+      → returns a 200 OK
+
+    HAPI FHIR default max POST body: server configuration
+    The IG does not specify a server-side limit.
+    The CapabilityStatement does not declare maxRequestBodySize.
+
+    Repeated 1000 times from one IP address:
+      40 GB of FHIR attachment data ingested
+      Server storage exhausted or severely degraded
+      (unintentional DoS from misconfigured real system
+       or intentional from adversary)
+  end note
+}
+
+@enduml

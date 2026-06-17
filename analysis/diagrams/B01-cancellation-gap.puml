@@ -1,0 +1,68 @@
+@startuml B01-cancellation-gap
+!theme plain
+skinparam defaultFontName Helvetica
+skinparam sequenceArrowThickness 1.5
+skinparam noteBackgroundColor #FFF9C4
+
+title B-01 — The Cancellation Gap\nServiceRequest is revoked; the Task owner does not know
+
+actor "Initiating\nFacility" as initiator #FFF9C4
+actor "Receiving\nFacility" as receiver  #FFE0CC
+actor "Patient" as patient               #C8E6C9
+database "FHIR Server" as server         #E3F2FD
+
+autonumber
+
+initiator -> server  : POST ServiceRequest (status=active)
+server    --> initiator : SR/cardio-001
+
+initiator -> server  : POST Task (status=requested, focus=SR/cardio-001)
+server    --> initiator : Task/track-001
+
+receiver  -> server  : PUT Task/track-001\n(status=accepted, owner=Org/manila-gen\nbusinessStatus=#accepted)
+server    --> receiver : 200 OK
+
+note over receiver
+  Manila General assigns care navigator.
+  Books clinic slot for patient.
+  Prepares cardiology consult.
+end note
+
+patient   -> initiator : "I changed my mind. I don't want the referral."
+
+initiator -> server  : PUT ServiceRequest/cardio-001\n**status = revoked**
+server    --> initiator : 200 OK
+
+note over initiator, server #FFCCCC
+  No cascade to Task/track-001.
+  No notification to Org/manila-gen.
+  No FHIR Subscription defined in the IG.
+  No polling requirement specified.
+end note
+
+receiver  -> server  : GET Task?owner=Org/manila-gen&status=accepted
+server    --> receiver : Task/track-001 (status=accepted)
+
+note over receiver #FFCCCC
+  Manila General sees: "Referral accepted."
+  Does NOT see: "Referral revoked."
+
+  To detect revocation, receiver would need to:
+  GET ServiceRequest/cardio-001
+  → discover status=revoked
+
+  This requires out-of-band coordination
+  or proactive polling — neither is
+  specified in the IG.
+end note
+
+receiver  -> patient : SMS: "Your appointment is confirmed at Manila General."
+patient   -> receiver : No-show
+
+note right of patient #FFCCCC
+  Patient was told referral was cancelled.
+  Receiving facility had no idea.
+  Clinical capacity wasted.
+end note
+
+@enduml

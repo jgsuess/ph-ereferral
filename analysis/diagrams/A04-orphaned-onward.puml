@@ -1,0 +1,57 @@
+@startuml A04-orphaned-onward
+!theme plain
+skinparam defaultFontName Helvetica
+skinparam noteBackgroundColor #FFEBEE
+skinparam noteBorderColor #B71C1C
+
+title A-04 — Orphaned Referred-Onward Path\nThe state machine terminates the onward path without a completed state
+
+state "happy_path (defined)" #E8F5E9 {
+  state D as "draft"
+  state Req as "requested"
+  state Rec as "received"
+  state Acc as "accepted"
+  state Com as "completed" <<terminal>>
+  D --> Req
+  Req --> Rec
+  Rec --> Acc
+  Acc --> Com
+  Com --> [*]
+}
+
+state "onward_path (defined)" #FFF3E0 {
+  state D2 as "draft"
+  state Req2 as "requested"
+  state Rec2 as "received"
+  state RO as "referred_onward\n(Task.status=rejected\nbusinessStatus=#referred-onward)" #FFCCCC
+  D2 --> Req2
+  Req2 --> Rec2
+  Rec2 --> RO
+
+  state "???" as missing #FFAAAA : No completed state.\nYAML notes explicitly say:\n"The referred-onward path ends\nwithout a completed state."
+  RO -[dashed,#red]-> missing : undefined transition
+}
+
+note right of RO
+  Task/t-001 stays in:
+    status = rejected
+    businessStatus = #referred-onward
+
+  Forever.
+
+  - Open task in all dashboards
+  - Counted as active referral
+  - No resolution event
+  - No notification to initiator
+  - Patient outcome unknown
+end note
+
+note bottom
+  Contrast with rejection_path:
+  rejected --> completed  (complete_rejected transition exists)
+
+  But for referred_onward:
+  referred_onward --> ??? (no transition defined)
+end note
+
+@enduml
