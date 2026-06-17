@@ -19,12 +19,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           lfs: true
 
       - name: Setup Node (for SUSHI)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "20"
 
@@ -32,14 +32,14 @@ jobs:
         run: npm install -g fsh-sushi
 
       - name: Install Java (for IG Publisher)
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: "temurin"
           java-version: "21"
 
       - name: Cache IG Publisher
         id: cache-publisher
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: input-cache/publisher.jar
           key: ig-publisher-${{ hashFiles('ig.ini') }}

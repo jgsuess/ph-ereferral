@@ -38,14 +38,14 @@ jobs:
           echo "Release version: $VERSION"
 
       - name: Checkout (tag)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.event_name == 'workflow_dispatch' && format('refs/tags/v{0}', inputs.version) || github.ref }}
           fetch-depth: 0
           lfs: true
 
       - name: Setup Node (for SUSHI + npm publish)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "20"
           registry-url: "https://npm.pkg.github.com"
@@ -55,14 +55,14 @@ jobs:
         run: npm install -g fsh-sushi
 
       - name: Install Java (for IG Publisher)
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: "temurin"
           java-version: "21"
 
       - name: Cache IG Publisher
         id: cache-publisher
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: input-cache/publisher.jar
           key: ig-publisher-${{ hashFiles('ig.ini') }}
