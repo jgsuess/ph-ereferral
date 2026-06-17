@@ -1,0 +1,19 @@
+{
+  "url" : "https://jgsuess.github.io/ph-ereferral/ImplementationGuide/example.fhir.ph.ereferral",
+  "name" : "PHeReferralImplementationGuide",
+  "title" : "PH eReferral Implementation Guide",
+  "description" : "This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH eReferral profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.",
+  "status" : "draft",
+  "package-id" : "example.fhir.ph.ereferral",
+  "ig-ver" : "0.2.0",
+  "date" : "Wed, 17 Jun, 2026 00:28:40 +0000",
+  "dateISO8601" : "2026-06-17T00:28:40+00:00",
+  "errs" : 15,
+  "warnings" : 87,
+  "hints" : 85,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 918530288
+}

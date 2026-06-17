@@ -1,0 +1,41 @@
+# example.fhir.ph.ereferral#0.2.0: PH eReferral Implementation Guide
+
+## Pages
+
+* [Home](index.md)
+* [Dd Mapping](dd-mapping.md)
+* [Approach](approach.md)
+* [Artifacts Summary](artifacts.md)
+
+## Resources
+
+### ImplementationGuides
+
+* [PH eReferral Implementation Guide](index.md)
+
+### Examples
+
+* [anc-contact-transaction-ex (Bundle)](Bundle-anc-contact-transaction-ex.md)
+* [registration-transaction-ex (Bundle)](Bundle-registration-transaction-ex.md)
+* [condition-pregnancy-ex (Condition)](Condition-condition-pregnancy-ex.md)
+* [encounter-anc-ex (Encounter)](Encounter-encounter-anc-ex.md)
+* [encounter-registration-ex (Encounter)](Encounter-encounter-registration-ex.md)
+* [medicationadministration-ifa-ex (MedicationAdministration)](MedicationAdministration-medicationadministration-ifa-ex.md)
+* [observation-blood-pressure-ex (Observation)](Observation-observation-blood-pressure-ex.md)
+* [observation-chief-complaint-ex (Observation)](Observation-observation-chief-complaint-ex.md)
+* [observation-heart-rate-ex (Observation)](Observation-observation-heart-rate-ex.md)
+* [observation-oxygen-saturation-ex (Observation)](Observation-observation-oxygen-saturation-ex.md)
+* [observation-respiratory-rate-ex (Observation)](Observation-observation-respiratory-rate-ex.md)
+* [observation-temperature-ex (Observation)](Observation-observation-temperature-ex.md)
+* [observation-weight-ex (Observation)](Observation-observation-weight-ex.md)
+* [Metro Imaging Centre (Organization)](Organization-organization-receiving-facility-ex.md)
+* [Barangay Malusog Health Centre (Organization)](Organization-organization-sending-facility-ex.md)
+* [patient-charity-ex (Patient)](Patient-patient-charity-ex.md)
+* [practitioner-abraham-ex (Practitioner)](Practitioner-practitioner-abraham-ex.md)
+* [practitioner-jane-ex (Practitioner)](Practitioner-practitioner-jane-ex.md)
+* [practitionerrole-abraham-ex (PractitionerRole)](PractitionerRole-practitionerrole-abraham-ex.md)
+* [practitionerrole-jane-ex (PractitionerRole)](PractitionerRole-practitionerrole-jane-ex.md)
+* [relatedperson-companion-ex (RelatedPerson)](RelatedPerson-relatedperson-companion-ex.md)
+* [servicerequest-lab-orders-ex (ServiceRequest)](ServiceRequest-servicerequest-lab-orders-ex.md)
+* [servicerequest-ultrasound-ex (ServiceRequest)](ServiceRequest-servicerequest-ultrasound-ex.md)
+* [task-referral-ex (Task)](Task-task-referral-ex.md)
