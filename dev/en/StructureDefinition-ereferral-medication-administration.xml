@@ -4,10 +4,10 @@
   <id value="ereferral-medication-administration"/>
   <language value="en"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition ereferral-medication-administration</b></p><a name="ereferral-medication-administration"> </a><a name="hcereferral-medication-administration"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-ereferral-medication-administration-definitions.html#MedicationAdministration">MedicationAdministration</a><a name="MedicationAdministration"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-medicationadministration.html">PHCoreMedicationAdministration</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Administration of medication to a patient</span><table class="obligation grid"><tr><td style="font-size: 11px"><b>Obligations</b></td><td style="font-size: 11px"><b>Actor</b></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html">PH Core Server</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html">PH Core Consumer</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate" title="Obligation Codes: be able to populate">able-to-populate</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html">PH Core Creator</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html">PH Core Server</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html">PH Core Consumer</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate" title="Obligation Codes: be able to populate">able-to-populate</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html">PH Core Creator</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html">PH Core Server</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html">PH Core Consumer</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate" title="Obligation Codes: be able to populate">able-to-populate</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html">PH Core Creator</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html">PH Core Server</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html">PH Core Consumer</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate" title="Obligation Codes: be able to populate">able-to-populate</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html">PH Core Creator</a></td></tr></table></td></tr>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition ereferral-medication-administration</b></p><a name="ereferral-medication-administration"> </a><a name="hcereferral-medication-administration"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-ereferral-medication-administration-definitions.html#MedicationAdministration">MedicationAdministration</a><a name="MedicationAdministration"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-medicationadministration.html">PHCoreMedicationAdministration</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Administration of medication to a patient</span><table class="obligation grid"><tr><td style="font-size: 11px"><b>Obligations</b></td><td style="font-size: 11px"><b>Actor</b></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html">PH Core Server</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html">PH Core Consumer</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate" title="Obligation Codes: be able to populate">able-to-populate</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html">PH Core Creator</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html">PH Core Server</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html">PH Core Consumer</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate" title="Obligation Codes: be able to populate">able-to-populate</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html">PH Core Creator</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html">PH Core Server</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html">PH Core Consumer</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate" title="Obligation Codes: be able to populate">able-to-populate</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html">PH Core Creator</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html">PH Core Server</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle" title="Obligation Codes: correctly handle">handle</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html">PH Core Consumer</a></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate" title="Obligation Codes: be able to populate">able-to-populate</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html">PH Core Creator</a></td></tr></table></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-ereferral-medication-administration-definitions.html#MedicationAdministration.status" title="The status of the medication administration. Tracks whether the medication was completed, in-progress, or not administered.">status</a><a name="MedicationAdministration.status"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Medication administration status</td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-ereferral-medication-administration-definitions.html#MedicationAdministration.medication[x]" title="The medication that was administered to the patient. Can be a reference to a Medication resource or a coded concept.">medication[x]</a><a name="MedicationAdministration.medication_x_"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a><span style="opacity: 0.5">, </span><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/medication.html">Medication</a>)</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Medication administered</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-ereferral-medication-administration-definitions.html#MedicationAdministration.subject" title="The patient who received the medication. Constrained to PHCorePatient.">subject</a><a name="MedicationAdministration.subject"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a style="opacity: 0.5; opacity: 0.5" href="https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-patient.html">PH Core Patient</a> | <a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/group.html">Group</a>)</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Patient receiving medication</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-ereferral-medication-administration-definitions.html#MedicationAdministration.subject" title="The patient who received the medication. Constrained to PHCorePatient.">subject</a><a name="MedicationAdministration.subject"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a style="opacity: 0.5; opacity: 0.5" href="file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-patient.html">PH Core Patient</a> | <a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/group.html">Group</a>)</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Patient receiving medication</td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-ereferral-medication-administration-definitions.html#MedicationAdministration.effective[x]" title="The date/time or period when the medication administration occurred.">effective[x]</a><a name="MedicationAdministration.effective_x_"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a><span style="opacity: 0.5">, </span><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">When medication was administered</td></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
@@ -112,7 +112,7 @@
   <name value="ERefMedicationAdministration"/>
   <title value="EReferral MedicationAdministration"/>
   <status value="draft"/>
-  <date value="2026-06-17T05:47:03+00:00"/>
+  <date value="2026-06-17T10:39:22+00:00"/>
   <publisher value="SILab CoP IG Accelerator (eReferral)"/>
   <contact>
     <name value="SILab CoP IG Accelerator (eReferral)"/>
@@ -162,7 +162,7 @@
   <derivation value="constraint"/>
   <snapshot>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
-      <valueString value="0.2.0"/>
+      <valueString value="0.1.1"/>
     </extension>
     <element id="MedicationAdministration">
       <path value="MedicationAdministration"/>
@@ -654,7 +654,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -665,7 +665,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -676,7 +676,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.statusReason"/>
@@ -806,7 +806,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -817,7 +817,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -828,7 +828,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.statusReason.coding"/>
@@ -882,7 +882,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -893,7 +893,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -904,7 +904,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.statusReason.text"/>
@@ -955,7 +955,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -966,7 +966,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -977,7 +977,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.category"/>
@@ -1099,7 +1099,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1110,7 +1110,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1121,7 +1121,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.category.coding"/>
@@ -1175,7 +1175,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1186,7 +1186,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1197,7 +1197,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.category.text"/>
@@ -1355,7 +1355,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1366,7 +1366,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1377,7 +1377,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.medication[x]"/>
@@ -1509,7 +1509,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1520,7 +1520,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1531,7 +1531,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.medication[x].coding"/>
@@ -1585,7 +1585,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1596,7 +1596,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1607,7 +1607,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.medication[x].text"/>
@@ -1977,7 +1977,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1988,7 +1988,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1999,7 +1999,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.performer.function"/>
@@ -2125,7 +2125,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2136,7 +2136,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2147,7 +2147,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.performer.function.coding"/>
@@ -2201,7 +2201,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2212,7 +2212,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2223,7 +2223,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.performer.function.text"/>
@@ -2312,7 +2312,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2323,7 +2323,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2334,7 +2334,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.reasonCode"/>
@@ -2464,7 +2464,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2475,7 +2475,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2486,7 +2486,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.reasonCode.coding"/>
@@ -2540,7 +2540,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2551,7 +2551,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2562,7 +2562,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.reasonCode.text"/>
@@ -2938,7 +2938,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2949,7 +2949,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2960,7 +2960,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.dosage.site"/>
@@ -3087,7 +3087,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3098,7 +3098,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3109,7 +3109,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.dosage.site.coding"/>
@@ -3163,7 +3163,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3174,7 +3174,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3185,7 +3185,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.dosage.site.text"/>
@@ -3236,7 +3236,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3247,7 +3247,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3258,7 +3258,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.dosage.route"/>
@@ -3384,7 +3384,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3395,7 +3395,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3406,7 +3406,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.dosage.route.coding"/>
@@ -3460,7 +3460,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3471,7 +3471,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3482,7 +3482,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.dosage.route.text"/>
@@ -3533,7 +3533,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3544,7 +3544,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3555,7 +3555,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.dosage.method"/>
@@ -3682,7 +3682,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3693,7 +3693,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3704,7 +3704,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.dosage.method.coding"/>
@@ -3758,7 +3758,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Server"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3769,7 +3769,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -3780,7 +3780,7 @@
           <valueCanonical value="https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.2.0"/>
+          <valueCanonical value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration|0.1.1"/>
         </extension>
       </extension>
       <path value="MedicationAdministration.dosage.method.text"/>

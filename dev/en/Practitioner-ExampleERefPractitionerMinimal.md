@@ -2,7 +2,7 @@
 
 ## Example Practitioner: Example Referring Practitioner (Minimal)
 
-Profile: [PH Core Practitioner](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitioner.html)
+Profile: [PH Core Practitioner](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitioner.html)
 
 **identifier**: `urn:oid:2.16.840.1.113883.2.9.4.3.3`/MD-98765
 

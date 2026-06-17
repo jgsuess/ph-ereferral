@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "ereferral-provenance"] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition ereferral-provenance</b></p><a name=\"ereferral-provenance\"> </a><a name=\"hcereferral-provenance\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-provenance-definitions.html#Provenance\">Provenance</a><a name=\"Provenance\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-provenance.html\">PHCoreProvenance</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Who, What, When for a set of resources</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-provenance-definitions.html#Provenance.target\">target</a><a name=\"Provenance.target\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-ereferral-service-request.html\">EReferral ServiceRequest</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The Resource(s) this Provenance record supports</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-provenance-definitions.html#Provenance.signature\">signature</a><a name=\"Provenance.signature\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Signature\">Signature</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Signature on target</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-provenance-definitions.html#Provenance.signature.data\">data</a><a name=\"Provenance.signature.data\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#base64Binary\">base64Binary</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The actual signature content (XML DigSig. JWS, picture, etc.)</span></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition ereferral-provenance</b></p><a name=\"ereferral-provenance\"> </a><a name=\"hcereferral-provenance\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-provenance-definitions.html#Provenance\">Provenance</a><a name=\"Provenance\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-provenance.html\">PHCoreProvenance</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Who, What, When for a set of resources</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-provenance-definitions.html#Provenance.target\">target</a><a name=\"Provenance.target\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-ereferral-service-request.html\">EReferral ServiceRequest</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The Resource(s) this Provenance record supports</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-provenance-definitions.html#Provenance.signature\">signature</a><a name=\"Provenance.signature\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Signature\">Signature</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Signature on target</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-provenance-definitions.html#Provenance.signature.data\">data</a><a name=\"Provenance.signature.data\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#base64Binary\">base64Binary</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The actual signature content (XML DigSig. JWS, picture, etc.)</span></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
      fhir:extension ( [
@@ -67,7 +67,7 @@
   fhir:name [ fhir:v "ERefProvenance"] ; # 
   fhir:title [ fhir:v "EReferral Provenance"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-06-17T05:47:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-17T10:39:22+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "SILab CoP IG Accelerator (eReferral)"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "SILab CoP IG Accelerator (eReferral)" ] ;
@@ -119,7 +119,7 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:string ;
-         fhir:v "0.2.0"
+         fhir:v "0.1.1"
        ]
      ] ) ;
      fhir:element ( [
@@ -501,7 +501,7 @@
        fhir:path [ fhir:v "Provenance.target" ] ;
        fhir:short [ fhir:v "The Resource(s) this Provenance record supports" ] ;
        fhir:definition [ fhir:v "The Reference(s) that were generated or updated by the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by a single activity." ] ;
-       fhir:comment [ fhir:v "See the [PH Core Provenance Profile](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-provenance.html) for guidance on supported resource types." ] ;
+       fhir:comment [ fhir:v "See the [PH Core Provenance Profile](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-provenance.html) for guidance on supported resource types." ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "*" ] ;
        fhir:base [
@@ -971,8 +971,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -994,8 +994,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1017,8 +1017,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1182,8 +1182,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1205,8 +1205,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1228,8 +1228,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1299,8 +1299,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1322,8 +1322,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1345,8 +1345,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1410,8 +1410,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1433,8 +1433,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1456,8 +1456,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1618,8 +1618,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1641,8 +1641,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1664,8 +1664,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1735,8 +1735,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1758,8 +1758,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -1781,8 +1781,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -2087,8 +2087,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -2110,8 +2110,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -2133,8 +2133,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -2290,8 +2290,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -2313,8 +2313,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -2336,8 +2336,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -2407,8 +2407,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -2430,8 +2430,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -2453,8 +2453,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -2995,8 +2995,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -3018,8 +3018,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -3041,8 +3041,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -3112,8 +3112,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -3135,8 +3135,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -3158,8 +3158,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -3685,8 +3685,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -3708,8 +3708,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -3731,8 +3731,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -3802,8 +3802,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -3825,8 +3825,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]
@@ -3848,8 +3848,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0"^^xsd:anyURI ;
-             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.2.0>
+             fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1"^^xsd:anyURI ;
+             fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance|0.1.1>
            ]
          ] ) ;
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ]

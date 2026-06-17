@@ -2,7 +2,7 @@
 
 ## Example Medication: Example Twinact Medication
 
-Profile: [PH Core Medication](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-medication.html)
+Profile: [PH Core Medication](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-medication.html)
 
 **code**: Twinact (Telmisartan 80mg + Amlodipine 5mg) - antihypertensive
 

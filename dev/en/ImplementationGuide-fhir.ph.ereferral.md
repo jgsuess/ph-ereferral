@@ -14,7 +14,7 @@
   "name" : "PHeReferralImplementationGuide",
   "title" : "PH eReferral Implementation Guide",
   "status" : "draft",
-  "date" : "2026-06-17T05:47:03+00:00",
+  "date" : "2026-06-17T10:39:22+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",
@@ -58,7 +58,7 @@
     "id" : "fhir_ph_core",
     "uri" : "https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core",
     "packageId" : "fhir.ph.core",
-    "version" : "dev"
+    "version" : "0.1.1"
   }],
   "definition" : {
     "extension" : [{
@@ -1843,6 +1843,15 @@
         }],
         "nameUrl" : "decision-log.html",
         "title" : "Decision Log",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "dependency-management.html"
+        }],
+        "nameUrl" : "dependency-management.html",
+        "title" : "Dependency Management",
         "generation" : "markdown"
       },
       {

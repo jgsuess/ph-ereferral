@@ -12,7 +12,7 @@
   <name value="PHeReferralImplementationGuide"/>
   <title value="PH eReferral Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-06-17T05:47:03+00:00"/>
+  <date value="2026-06-17T10:39:22+00:00"/>
   <publisher value="SILab CoP IG Accelerator (eReferral)"/>
   <contact>
     <name value="SILab CoP IG Accelerator (eReferral)"/>
@@ -51,7 +51,7 @@
   <dependsOn id="fhir_ph_core">
     <uri value="https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core"/>
     <packageId value="fhir.ph.core"/>
-    <version value="dev"/>
+    <version value="0.1.1"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -1576,6 +1576,14 @@
         </extension>
         <nameUrl value="decision-log.html"/>
         <title value="Decision Log"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="dependency-management.html"/>
+        </extension>
+        <nameUrl value="dependency-management.html"/>
+        <title value="Dependency Management"/>
         <generation value="markdown"/>
       </page>
       <page>

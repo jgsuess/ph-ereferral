@@ -117,7 +117,7 @@ This is an R4 IG. None of the features it uses are changed in R4B, so it can be 
 
 | | | |
 | :--- | :--- | :--- |
-| [Draft PH Core](https://build.fhir.org/ig/jgsuess/ph-core/) | [0.2.0](https://simplifier.net/packages/fhir.ph.core/0.2.0) |  |
+| [Draft PH Core](file:///home/runner/work/ph-core/ph-core/output) | [0.1.1](https://simplifier.net/packages/fhir.ph.core/0.1.1) |  |
 | [FHIR Extensions Pack](http://hl7.org/fhir/extensions/5.3.0) | [5.3.0](https://simplifier.net/packages/hl7.fhir.uv.extensions.r4/5.3.0) | Automatically added as a dependency - all IGs depend on the HL7 Extension Pack |
 | [FHIR R4 package : Core](http://hl7.org/fhir/R4) | [4.0.1](https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1) | Imported by HL7 Terminology (THO) (and potentially others) |
 | [HL7 Terminology (THO)](http://terminology.hl7.org/7.2.0) | [7.2.0](https://simplifier.net/packages/hl7.terminology.r4/7.2.0) | Automatically added as a dependency - all IGs depend on HL7 Terminology |

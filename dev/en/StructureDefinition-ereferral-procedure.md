@@ -45,8 +45,8 @@ This structure refers to these other structures:
 
 * [ERefPatient (https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient)](StructureDefinition-ereferral-patient.md)
 * [ERefEncounter (https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter)](StructureDefinition-ereferral-encounter.md)
-* [PH Core Condition (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-condition.html)
-* [PH Core Observation (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-observation.html)
+* [PH Core Condition (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-condition.html)
+* [PH Core Observation (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-observation.html)
 * [EReferral Procedure (https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure)](StructureDefinition-ereferral-procedure.md)
 
  **Key Elements View** 
@@ -73,8 +73,8 @@ This structure refers to these other structures:
 
 * [ERefPatient (https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient)](StructureDefinition-ereferral-patient.md)
 * [ERefEncounter (https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter)](StructureDefinition-ereferral-encounter.md)
-* [PH Core Condition (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-condition.html)
-* [PH Core Observation (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-observation.html)
+* [PH Core Condition (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-condition.html)
+* [PH Core Observation (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-observation.html)
 * [EReferral Procedure (https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure)](StructureDefinition-ereferral-procedure.md)
 
 
@@ -90,7 +90,7 @@ This structure refers to these other structures:
   "name" : "ERefProcedure",
   "title" : "EReferral Procedure",
   "status" : "draft",
-  "date" : "2026-06-17T05:47:03+00:00",
+  "date" : "2026-06-17T10:39:22+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",

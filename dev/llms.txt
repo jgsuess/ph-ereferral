@@ -21,6 +21,7 @@
 * [References](en/references.md)
 * [Decision Log](en/decision-log.md)
 * [Hl 7 Lifecycle](en/hl7-lifecycle.md)
+* [Dependency Management](en/dependency-management.md)
 * [Resource Architecture](en/resource-architecture.md)
 
 ## Resources

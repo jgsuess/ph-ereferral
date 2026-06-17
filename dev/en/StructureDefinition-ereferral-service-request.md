@@ -340,14 +340,14 @@ Mandatory: 1 element
 This structure refers to these other structures:
 
 * [EReferral ServiceRequest (https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request)](StructureDefinition-ereferral-service-request.md)
-* [PH Core Patient (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-patient.html)
-* [PH Core PractitionerRole (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitionerrole.html)
-* [PH Core Organization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-organization.html)
-* [PH Core Condition (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-condition.html)
-* [PH Core Observation (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-observation.html)
-* [PH Core Procedure (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-procedure.html)
-* [PH Core Medication Administration (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-medicationadministration.html)
-* [PH Core Immunization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-immunization.html)
+* [PH Core Patient (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-patient.html)
+* [PH Core PractitionerRole (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitionerrole.html)
+* [PH Core Organization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html)
+* [PH Core Condition (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-condition.html)
+* [PH Core Observation (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-observation.html)
+* [PH Core Procedure (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-procedure.html)
+* [PH Core Medication Administration (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-medicationadministration.html)
+* [PH Core Immunization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-immunization.html)
 
  **Key Elements View** 
 
@@ -378,14 +378,14 @@ Mandatory: 1 element
 This structure refers to these other structures:
 
 * [EReferral ServiceRequest (https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request)](StructureDefinition-ereferral-service-request.md)
-* [PH Core Patient (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-patient.html)
-* [PH Core PractitionerRole (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitionerrole.html)
-* [PH Core Organization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-organization.html)
-* [PH Core Condition (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-condition.html)
-* [PH Core Observation (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-observation.html)
-* [PH Core Procedure (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-procedure.html)
-* [PH Core Medication Administration (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-medicationadministration.html)
-* [PH Core Immunization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-immunization.html)
+* [PH Core Patient (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-patient.html)
+* [PH Core PractitionerRole (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitionerrole.html)
+* [PH Core Organization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html)
+* [PH Core Condition (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-condition.html)
+* [PH Core Observation (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-observation.html)
+* [PH Core Procedure (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-procedure.html)
+* [PH Core Medication Administration (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-medicationadministration.html)
+* [PH Core Immunization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-immunization.html)
 
 
 
@@ -961,7 +961,7 @@ This structure refers to these other structures:
   "name" : "ERefServiceRequest",
   "title" : "EReferral ServiceRequest",
   "status" : "draft",
-  "date" : "2026-06-17T05:47:03+00:00",
+  "date" : "2026-06-17T10:39:22+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",

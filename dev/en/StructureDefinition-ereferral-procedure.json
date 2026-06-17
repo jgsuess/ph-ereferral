@@ -4,14 +4,14 @@
   "language" : "en",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition ereferral-procedure</b></p><a name=\"ereferral-procedure\"> </a><a name=\"hcereferral-procedure\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure\">Procedure</a><a name=\"Procedure\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-procedure.html\">PHCoreProcedure</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">An action that is being or was performed on a patient</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.subject\">subject</a><a name=\"Procedure.subject\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-ereferral-patient.html\">ERefPatient</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Who the procedure was performed on</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.encounter\">encounter</a><a name=\"Procedure.encounter\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-ereferral-encounter.html\">ERefEncounter</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Encounter created as part of</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.performer\">performer</a><a name=\"Procedure.performer\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#BackboneElement\">BackboneElement</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The people who performed the procedure</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.performer.actor\">actor</a><a name=\"Procedure.performer.actor\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitionerrole.html\">PH Core PractitionerRole</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-organization.html\">PH Core Organization</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-patient.html\">PH Core Patient</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-relatedperson.html\">PH Core RelatedPerson</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/device.html\">Device</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The reference to the practitioner</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.reasonReference\">reasonReference</a><a name=\"Procedure.reasonReference\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-condition.html\">PH Core Condition</a> | <a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-observation.html\">PH Core Observation</a> | <a href=\"StructureDefinition-ereferral-procedure.html\">EReferral Procedure</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The justification that the procedure was performed</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.note\">note</a><a name=\"Procedure.note\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Annotation\">Annotation</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Additional information about the procedure</span></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition ereferral-procedure</b></p><a name=\"ereferral-procedure\"> </a><a name=\"hcereferral-procedure\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure\">Procedure</a><a name=\"Procedure\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-procedure.html\">PHCoreProcedure</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">An action that is being or was performed on a patient</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.subject\">subject</a><a name=\"Procedure.subject\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-ereferral-patient.html\">ERefPatient</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Who the procedure was performed on</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.encounter\">encounter</a><a name=\"Procedure.encounter\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-ereferral-encounter.html\">ERefEncounter</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Encounter created as part of</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.performer\">performer</a><a name=\"Procedure.performer\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#BackboneElement\">BackboneElement</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The people who performed the procedure</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.performer.actor\">actor</a><a name=\"Procedure.performer.actor\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a style=\"opacity: 0.5; opacity: 0.5\" href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitionerrole.html\">PH Core PractitionerRole</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html\">PH Core Organization</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-patient.html\">PH Core Patient</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-relatedperson.html\">PH Core RelatedPerson</a> | <a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/device.html\">Device</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The reference to the practitioner</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.reasonReference\">reasonReference</a><a name=\"Procedure.reasonReference\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-condition.html\">PH Core Condition</a> | <a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-observation.html\">PH Core Observation</a> | <a href=\"StructureDefinition-ereferral-procedure.html\">EReferral Procedure</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The justification that the procedure was performed</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-procedure-definitions.html#Procedure.note\">note</a><a name=\"Procedure.note\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Annotation\">Annotation</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Additional information about the procedure</span></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
   },
   "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure",
   "version" : "0.1.0",
   "name" : "ERefProcedure",
   "title" : "EReferral Procedure",
   "status" : "draft",
-  "date" : "2026-06-17T05:47:03+00:00",
+  "date" : "2026-06-17T10:39:22+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",
@@ -57,7 +57,7 @@
   "snapshot" : {
     "extension" : [{
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
-      "valueString" : "0.2.0"
+      "valueString" : "0.1.1"
     }],
     "element" : [{
       "id" : "Procedure",
@@ -603,7 +603,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -618,7 +618,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -633,7 +633,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -698,7 +698,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -713,7 +713,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -728,7 +728,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -866,7 +866,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -881,7 +881,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -896,7 +896,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -956,7 +956,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -971,7 +971,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -986,7 +986,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1042,7 +1042,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1057,7 +1057,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1072,7 +1072,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1207,7 +1207,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1222,7 +1222,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1237,7 +1237,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1297,7 +1297,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1312,7 +1312,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1327,7 +1327,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1383,7 +1383,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1398,7 +1398,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1413,7 +1413,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1558,7 +1558,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1573,7 +1573,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1588,7 +1588,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1648,7 +1648,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1663,7 +1663,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1678,7 +1678,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1734,7 +1734,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1749,7 +1749,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1764,7 +1764,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1828,7 +1828,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1843,7 +1843,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1858,7 +1858,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1918,7 +1918,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1933,7 +1933,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1948,7 +1948,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -2242,7 +2242,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2257,7 +2257,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2272,7 +2272,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -2412,7 +2412,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2427,7 +2427,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2442,7 +2442,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -2502,7 +2502,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2517,7 +2517,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2532,7 +2532,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -2706,7 +2706,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2721,7 +2721,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2736,7 +2736,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -2876,7 +2876,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2891,7 +2891,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2906,7 +2906,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -2966,7 +2966,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2981,7 +2981,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2996,7 +2996,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3052,7 +3052,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3067,7 +3067,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3082,7 +3082,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3140,7 +3140,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3155,7 +3155,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3170,7 +3170,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3306,7 +3306,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3321,7 +3321,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3336,7 +3336,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3396,7 +3396,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3411,7 +3411,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3426,7 +3426,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3482,7 +3482,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3497,7 +3497,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3512,7 +3512,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3644,7 +3644,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3659,7 +3659,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3674,7 +3674,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3734,7 +3734,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3749,7 +3749,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3764,7 +3764,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3854,7 +3854,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3869,7 +3869,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3884,7 +3884,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4016,7 +4016,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4031,7 +4031,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4046,7 +4046,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4106,7 +4106,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4121,7 +4121,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4136,7 +4136,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4224,7 +4224,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4239,7 +4239,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4254,7 +4254,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4385,7 +4385,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4400,7 +4400,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4415,7 +4415,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4475,7 +4475,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4490,7 +4490,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4505,7 +4505,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4742,7 +4742,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4757,7 +4757,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4772,7 +4772,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4903,7 +4903,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4918,7 +4918,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4933,7 +4933,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4993,7 +4993,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5008,7 +5008,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5023,7 +5023,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -5145,7 +5145,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5160,7 +5160,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5175,7 +5175,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -5307,7 +5307,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5322,7 +5322,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5337,7 +5337,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -5397,7 +5397,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5412,7 +5412,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5427,7 +5427,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],

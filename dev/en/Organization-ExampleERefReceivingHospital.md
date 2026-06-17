@@ -2,7 +2,7 @@
 
 ## Example Organization: Example Receiving Hospital
 
-Profile: [PH Core Organization](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-organization.html)
+Profile: [PH Core Organization](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html)
 
 **identifier**: `urn:oid:2.16.840.1.113883.2.9.4.1.1`/HOSP-QC-001
 

@@ -2,7 +2,7 @@
 
 ## Example PractitionerRole: Example Referring Practitioner Role (Minimal)
 
-Profile: [PH Core PractitionerRole](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitionerrole.html)
+Profile: [PH Core PractitionerRole](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitionerrole.html)
 
 **active**: true
 

@@ -341,7 +341,7 @@ Mandatory: 3 elements(2 nested mandatory elements)
   "title" : "ERefPatient",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-17T05:47:03+00:00",
+  "date" : "2026-06-17T10:39:22+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",

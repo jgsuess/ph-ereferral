@@ -2,7 +2,7 @@
 
 ## Example Organization: Example Referring Facility (Minimal)
 
-Profile: [PH Core Organization](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-organization.html)
+Profile: [PH Core Organization](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html)
 
 **identifier**: `http://fhir.nhdr.gov.ph/nhfr/hospcode`/DOH123456
 

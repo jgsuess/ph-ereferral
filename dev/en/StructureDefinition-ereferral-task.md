@@ -47,9 +47,9 @@ Mandatory: 2 elements
 This structure refers to these other structures:
 
 * [EReferral ServiceRequest (https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request)](StructureDefinition-ereferral-service-request.md)
-* [PH Core Practitioner (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitioner.html)
-* [PH Core PractitionerRole (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitionerrole.html)
-* [PH Core Organization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-organization.html)
+* [PH Core Practitioner (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitioner.html)
+* [PH Core PractitionerRole (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitionerrole.html)
+* [PH Core Organization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html)
 
  **Key Elements View** 
 
@@ -78,9 +78,9 @@ Mandatory: 2 elements
 This structure refers to these other structures:
 
 * [EReferral ServiceRequest (https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request)](StructureDefinition-ereferral-service-request.md)
-* [PH Core Practitioner (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitioner.html)
-* [PH Core PractitionerRole (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitionerrole.html)
-* [PH Core Organization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization)](https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-organization.html)
+* [PH Core Practitioner (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitioner.html)
+* [PH Core PractitionerRole (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitionerrole.html)
+* [PH Core Organization (https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization)](file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html)
 
 
 
@@ -458,7 +458,7 @@ This structure refers to these other structures:
   "name" : "ERefTask",
   "title" : "EReferral Task",
   "status" : "draft",
-  "date" : "2026-06-17T05:47:03+00:00",
+  "date" : "2026-06-17T10:39:22+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",

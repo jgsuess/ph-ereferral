@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "PHeReferralImplementationGuide"] ; # 
   fhir:title [ fhir:v "PH eReferral Implementation Guide"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-06-17T05:47:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-17T10:39:22+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "SILab CoP IG Accelerator (eReferral)"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "SILab CoP IG Accelerator (eReferral)" ] ;
@@ -76,7 +76,7 @@
        fhir:link <https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core>
      ] ;
      fhir:packageId [ fhir:v "fhir.ph.core" ] ;
-     fhir:version [ fhir:v "dev" ]
+     fhir:version [ fhir:v "0.1.1" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -2717,6 +2717,20 @@
            fhir:v "decision-log.html"^^xsd:anyURI
          ] ;
          fhir:title [ fhir:v "Decision Log" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "dependency-management.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "dependency-management.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Dependency Management" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

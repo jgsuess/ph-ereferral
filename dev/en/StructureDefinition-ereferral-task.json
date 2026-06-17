@@ -4,7 +4,7 @@
   "language" : "en",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition ereferral-task</b></p><a name=\"ereferral-task\"> </a><a name=\"hcereferral-task\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task\">Task</a><a name=\"Task\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-task.html\">PHCoreTask</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">A task to be performed</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"https://build.fhir.org/ig/jgsuess/ph-core/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr></table></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.statusReason\" title=\"Reason or instruction associated with the receiving facility response, such as capacity full or other instructions.\">statusReason</a><a name=\"Task.statusReason\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Reason for current workflow status</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.businessStatus\" title=\"The receiving facility response after referral receipt. Uses local eReferral terms for received, accepted, rejected, or referred onward while Task.status remains the standard FHIR Task lifecycle status.\">businessStatus</a><a name=\"Task.businessStatus\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Receiving-facility response<br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding: </span><a href=\"ValueSet-ereferral-receiving-response.html\" title=\"https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response\" class=\"binding\">eReferral Receiving Facility Response</a><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R4/terminologies.html#extensible\" title=\"To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.\" class=\"binding\">extensible</a><span title=\"null\" class=\"binding\">)</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.intent\" title=\"The intent is fixed to 'order' as eReferral tasks represent actionable orders for services to be performed by receiving facilities.\">intent</a><a name=\"Task.intent\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Fixed to 'order' for referrals<br/><span style=\"font-weight:bold\">Fixed Value: </span><span style=\"color: darkgreen\">order</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.focus\" title=\"The ServiceRequest that this task is tracking through the eReferral workflow. Required for all eReferral tasks.\">focus</a><a name=\"Task.focus\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-ereferral-service-request.html\">EReferral ServiceRequest</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Reference to the ServiceRequest being tracked</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.authoredOn\" title=\"The date and time when the eReferral task was created.\">authoredOn</a><a name=\"Task.authoredOn\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">When task was created</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.lastModified\" title=\"The date and time when the eReferral task was last modified.\">lastModified</a><a name=\"Task.lastModified\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">When task was last updated</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.requester\" title=\"The practitioner or facility that created the referral task. Represents the initiating side of the eReferral workflow.\">requester</a><a name=\"Task.requester\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a> | <a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitionerrole.html\">PH Core PractitionerRole</a> | <a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-organization.html\">PH Core Organization</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Requesting practitioner or facility</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.owner\" title=\"The practitioner, care navigator, or facility responsible for executing the referral task. TDG REF-9: 'Care Navigator' assignment.\">owner</a><a name=\"Task.owner\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a> | <a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-practitionerrole.html\">PH Core PractitionerRole</a> | <a href=\"https://build.fhir.org/ig/jgsuess/ph-core/StructureDefinition-ph-core-organization.html\">PH Core Organization</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Assigned care navigator or receiving facility</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.output\" title=\"Structured outputs from the receiving facility response. For referred-onward responses, this may identify that an onward referral request was created; the onward ServiceRequest should use ServiceRequest.replaces to link back to the prior request.\">output</a><a name=\"Task.output\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#BackboneElement\">BackboneElement</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Receiving response output</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.output.value[x]\">value[x]</a><a name=\"Task.output.value_x_\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#base64Binary\">base64Binary</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a><span style=\"opacity: 0.5\">, </span><a href=\"http://hl7.org/fhir/R4/references.html\">canonical</a>()<span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#date\">date</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#decimal\">decimal</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#id\">id</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#instant\">instant</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#integer\">integer</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#markdown\">markdown</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#oid\">oid</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#positiveInt\">positiveInt</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#time\">time</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#unsignedInt\">unsignedInt</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#uri\">uri</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#url\">url</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#uuid\">uuid</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Address\">Address</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Age\">Age</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Annotation\">Annotation</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Attachment\">Attachment</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#ContactPoint\">ContactPoint</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Count\">Count</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Distance\">Distance</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Duration\">Duration</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#HumanName\">HumanName</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Money\">Money</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Period\">Period</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Quantity\">Quantity</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Range\">Range</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Ratio\">Ratio</a><span style=\"opacity: 0.5\">, </span><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>()<span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#SampledData\">SampledData</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Signature\">Signature</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Timing\">Timing</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail\">ContactDetail</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#Contributor\">Contributor</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement\">DataRequirement</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Expression\">Expression</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition\">ParameterDefinition</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact\">RelatedArtifact</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#TriggerDefinition\">TriggerDefinition</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#UsageContext\">UsageContext</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Dosage\">Dosage</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Meta\">Meta</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Result of output</span></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition ereferral-task</b></p><a name=\"ereferral-task\"> </a><a name=\"hcereferral-task\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task\">Task</a><a name=\"Task\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-task.html\">PHCoreTask</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">A task to be performed</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html\">PH Core Server</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-handle\" title=\"Obligation Codes: correctly handle\">handle</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Consumer.html\">PH Core Consumer</a></td></tr><tr><td style=\"font-size: 11px\"><b>MAY</b>:<a href=\"http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Creator.html\">PH Core Creator</a></td></tr></table></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.statusReason\" title=\"Reason or instruction associated with the receiving facility response, such as capacity full or other instructions.\">statusReason</a><a name=\"Task.statusReason\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Reason for current workflow status</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.businessStatus\" title=\"The receiving facility response after referral receipt. Uses local eReferral terms for received, accepted, rejected, or referred onward while Task.status remains the standard FHIR Task lifecycle status.\">businessStatus</a><a name=\"Task.businessStatus\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Receiving-facility response<br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding: </span><a href=\"ValueSet-ereferral-receiving-response.html\" title=\"https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response\" class=\"binding\">eReferral Receiving Facility Response</a><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R4/terminologies.html#extensible\" title=\"To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.\" class=\"binding\">extensible</a><span title=\"null\" class=\"binding\">)</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.intent\" title=\"The intent is fixed to 'order' as eReferral tasks represent actionable orders for services to be performed by receiving facilities.\">intent</a><a name=\"Task.intent\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Fixed to 'order' for referrals<br/><span style=\"font-weight:bold\">Fixed Value: </span><span style=\"color: darkgreen\">order</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.focus\" title=\"The ServiceRequest that this task is tracking through the eReferral workflow. Required for all eReferral tasks.\">focus</a><a name=\"Task.focus\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-ereferral-service-request.html\">EReferral ServiceRequest</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Reference to the ServiceRequest being tracked</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.authoredOn\" title=\"The date and time when the eReferral task was created.\">authoredOn</a><a name=\"Task.authoredOn\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">When task was created</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.lastModified\" title=\"The date and time when the eReferral task was last modified.\">lastModified</a><a name=\"Task.lastModified\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">When task was last updated</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.requester\" title=\"The practitioner or facility that created the referral task. Represents the initiating side of the eReferral workflow.\">requester</a><a name=\"Task.requester\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a> | <a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitionerrole.html\">PH Core PractitionerRole</a> | <a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html\">PH Core Organization</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Requesting practitioner or facility</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.owner\" title=\"The practitioner, care navigator, or facility responsible for executing the referral task. TDG REF-9: 'Care Navigator' assignment.\">owner</a><a name=\"Task.owner\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a> | <a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitionerrole.html\">PH Core PractitionerRole</a> | <a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html\">PH Core Organization</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Assigned care navigator or receiving facility</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.output\" title=\"Structured outputs from the receiving facility response. For referred-onward responses, this may identify that an onward referral request was created; the onward ServiceRequest should use ServiceRequest.replaces to link back to the prior request.\">output</a><a name=\"Task.output\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#BackboneElement\">BackboneElement</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Receiving response output</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ereferral-task-definitions.html#Task.output.value[x]\">value[x]</a><a name=\"Task.output.value_x_\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#base64Binary\">base64Binary</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a><span style=\"opacity: 0.5\">, </span><a href=\"http://hl7.org/fhir/R4/references.html\">canonical</a>()<span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#date\">date</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#decimal\">decimal</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#id\">id</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#instant\">instant</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#integer\">integer</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#markdown\">markdown</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#oid\">oid</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#positiveInt\">positiveInt</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#time\">time</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#unsignedInt\">unsignedInt</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#uri\">uri</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#url\">url</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#uuid\">uuid</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Address\">Address</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Age\">Age</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Annotation\">Annotation</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Attachment\">Attachment</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#ContactPoint\">ContactPoint</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Count\">Count</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Distance\">Distance</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Duration\">Duration</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#HumanName\">HumanName</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Money\">Money</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Period\">Period</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Quantity\">Quantity</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Range\">Range</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Ratio\">Ratio</a><span style=\"opacity: 0.5\">, </span><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>()<span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#SampledData\">SampledData</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Signature\">Signature</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Timing\">Timing</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail\">ContactDetail</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#Contributor\">Contributor</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement\">DataRequirement</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Expression\">Expression</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition\">ParameterDefinition</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact\">RelatedArtifact</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#TriggerDefinition\">TriggerDefinition</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/metadatatypes.html#UsageContext\">UsageContext</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Dosage\">Dosage</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Meta\">Meta</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Result of output</span></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
   },
   "extension" : [{
     "extension" : [{
@@ -374,7 +374,7 @@
   "name" : "ERefTask",
   "title" : "EReferral Task",
   "status" : "draft",
-  "date" : "2026-06-17T05:47:03+00:00",
+  "date" : "2026-06-17T10:39:22+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",
@@ -420,7 +420,7 @@
   "snapshot" : {
     "extension" : [{
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
-      "valueString" : "0.2.0"
+      "valueString" : "0.1.1"
     }],
     "element" : [{
       "id" : "Task",
@@ -1046,7 +1046,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1061,7 +1061,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1076,7 +1076,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1207,7 +1207,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1222,7 +1222,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1237,7 +1237,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1297,7 +1297,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1312,7 +1312,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1327,7 +1327,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1383,7 +1383,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1398,7 +1398,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1413,7 +1413,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1540,7 +1540,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1555,7 +1555,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1570,7 +1570,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1630,7 +1630,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1645,7 +1645,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1660,7 +1660,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1815,7 +1815,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1830,7 +1830,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -1845,7 +1845,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -1985,7 +1985,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2000,7 +2000,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2015,7 +2015,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -2075,7 +2075,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2090,7 +2090,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2105,7 +2105,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -2473,7 +2473,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2488,7 +2488,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2503,7 +2503,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -2643,7 +2643,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2658,7 +2658,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2673,7 +2673,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -2733,7 +2733,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2748,7 +2748,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2763,7 +2763,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -2905,7 +2905,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2920,7 +2920,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -2935,7 +2935,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3078,7 +3078,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3093,7 +3093,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3108,7 +3108,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3168,7 +3168,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3183,7 +3183,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3198,7 +3198,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3792,7 +3792,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3807,7 +3807,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3822,7 +3822,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -3955,7 +3955,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3970,7 +3970,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -3985,7 +3985,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4045,7 +4045,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4060,7 +4060,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4075,7 +4075,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4316,7 +4316,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4331,7 +4331,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4346,7 +4346,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4469,7 +4469,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4484,7 +4484,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4499,7 +4499,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4559,7 +4559,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4574,7 +4574,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4589,7 +4589,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4789,7 +4789,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4804,7 +4804,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4819,7 +4819,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -4951,7 +4951,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4966,7 +4966,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -4981,7 +4981,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -5041,7 +5041,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5056,7 +5056,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5071,7 +5071,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -5314,7 +5314,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5329,7 +5329,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5344,7 +5344,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -5468,7 +5468,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5483,7 +5483,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5498,7 +5498,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
@@ -5558,7 +5558,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5573,7 +5573,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       },
@@ -5588,7 +5588,7 @@
         },
         {
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.2.0"
+          "valueCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task|0.1.1"
         }],
         "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
       }],
