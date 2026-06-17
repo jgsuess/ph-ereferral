@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.1](https://github.com/jgsuess/ph-ereferral/compare/v0.3.0...v0.3.1) (2026-06-17)
+
+
+### Bug Fixes
+
+* **deps:** pin fhir.ph.core to 0.1.1 ([6602fe5](https://github.com/jgsuess/ph-ereferral/commit/6602fe56879436a43a77e456cbd9a03fe5d09f22))
+* **examples:** correct profile URLs, resolve urn:uuid refs, fix constraints ([570aeba](https://github.com/jgsuess/ph-ereferral/commit/570aebaf929924281e8e95805e2d83729c1ccaac))
+* **examples:** use SNOMED code for RelatedPerson.relationship (v3-RoleCode not available without hl7.terminology package) ([abff377](https://github.com/jgsuess/ph-ereferral/commit/abff377d80c9a825db9b557c3374e512b6496025))
+
 ## [0.3.0](https://github.com/jgsuess/ph-ereferral/compare/v0.2.0...v0.3.0) (2026-06-17)
 
 
