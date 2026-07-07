@@ -311,64 +311,89 @@
   <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix sct: &lt;http://snomed.info/id/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
 
- a fhir:Procedure ;
+&lt;http://hl7.org/fhir/Procedure/ExampleERefProcedureInitialManagement&gt; a fhir:Procedure ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/resource.html#Procedure.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleERefProcedureInitialManagement&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#Procedure.meta">fhir:meta</a> [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure&gt;     ] )
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#Procedure.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;en&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/domainresource.html#Procedure.text">fhir:text</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Procedure ExampleERefProcedureInitialManagement&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleERefProcedureInitialManagement\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleERefProcedureInitialManagement\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ereferral-procedure.html\&quot;&gt;EReferral Procedure&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:\&quot;&gt;Therapeutic procedure&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:\&quot;&gt;Initial stabilization and symptom management&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-ExampleERefPatient.html\&quot;&gt;Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;performed&lt;/b&gt;: 2025-03-15 08:45:00+0800 --&amp;gt; 2025-03-15 09:10:00+0800&lt;/p&gt;&lt;h3&gt;Performers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Function&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 158965000}\&quot;&gt;Medical practitioner&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;PractitionerRole-ExampleERefPractitionerRole.html\&quot;&gt;PractitionerRole Medical practitioner&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 29857009}\&quot;&gt;Chest pain&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonReference&lt;/b&gt;: &lt;a href=\&quot;Condition-ExampleERefConditionChestPain.html\&quot;&gt;Condition Chest pain&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;note&lt;/b&gt;: &lt;/p&gt;&lt;blockquote&gt;&lt;div&gt;&lt;p&gt;Initial management was provided before referral, including monitoring, symptom control, and preparation for transfer.&lt;/p&gt;\n&lt;/div&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;completed&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.category">fhir:category</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Therapeutic procedure&quot; ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.code">fhir:code</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Initial stabilization and symptom management&quot; ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.subject">fhir:subject</a> [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient/ExampleERefPatient&quot; ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performed_x_">fhir:performed</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period">a</a> fhir:Period ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-03-15T08:45:00+08:00&quot;^^xsd:dateTime ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">fhir:end</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-03-15T09:10:00+08:00&quot;^^xsd:dateTime ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performer">fhir:performer</a> ( [
-<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performer.function">fhir:function</a> [
-      ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-a sct:158965000 ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;158965000&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Medical practitioner&quot; ]       ] )     ] ;
-<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performer.actor">fhir:actor</a> [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole/ExampleERefPractitionerRole&quot; ]     ]
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.reasonCode">fhir:reasonCode</a> ( [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-a sct:29857009 ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;29857009&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Chest pain&quot; ]     ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.reasonReference">fhir:reasonReference</a> ( [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Condition/ExampleERefConditionChestPain&quot; ]
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.note">fhir:note</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">fhir:text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:v</a> &quot;Initial management was provided before referral, including monitoring, symptom control, and preparation for transfer.&quot; ]
-  ] ) . # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Procedure.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ExampleERefProcedureInitialManagement&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Procedure.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Procedure.language">fhir:Resource.language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;en&quot;] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Procedure.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Procedure ExampleERefProcedureInitialManagement&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleERefProcedureInitialManagement\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleERefProcedureInitialManagement\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ereferral-procedure.html\&quot;&gt;EReferral Procedure&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:\&quot;&gt;Therapeutic procedure&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:\&quot;&gt;Initial stabilization and symptom management&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-ExampleERefPatient.html\&quot;&gt;Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;performed&lt;/b&gt;: 2025-03-15 08:45:00+0800 --&amp;gt; 2025-03-15 09:10:00+0800&lt;/p&gt;&lt;h3&gt;Performers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Function&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 158965000}\&quot;&gt;Medical practitioner&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;PractitionerRole-ExampleERefPractitionerRole.html\&quot;&gt;PractitionerRole Medical practitioner&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 29857009}\&quot;&gt;Chest pain&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonReference&lt;/b&gt;: &lt;a href=\&quot;Condition-ExampleERefConditionChestPain.html\&quot;&gt;Condition Chest pain&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;note&lt;/b&gt;: &lt;/p&gt;&lt;blockquote&gt;&lt;div&gt;&lt;p&gt;Initial management was provided before referral, including monitoring, symptom control, and preparation for transfer.&lt;/p&gt;\n&lt;/div&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.status">fhir:Procedure.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;completed&quot;] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.category">fhir:Procedure.category</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Therapeutic procedure&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.code">fhir:Procedure.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Initial stabilization and symptom management&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.subject">fhir:Procedure.subject</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Patient/ExampleERefPatient&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/ExampleERefPatient&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performed_x_">fhir:Procedure.performedPeriod</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2025-03-15T08:45:00+08:00&quot;^^xsd:dateTime ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">fhir:Period.end</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2025-03-15T09:10:00+08:00&quot;^^xsd:dateTime ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performer">fhir:Procedure.performer</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performer.function">fhir:Procedure.performer.function</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         a sct:158965000 ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;158965000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Medical practitioner&quot; ]
+       ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performer.actor">fhir:Procedure.performer.actor</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/PractitionerRole/ExampleERefPractitionerRole&gt; ;
+       <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;PractitionerRole/ExampleERefPractitionerRole&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.reasonCode">fhir:Procedure.reasonCode</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       a sct:29857009 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;29857009&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Chest pain&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.reasonReference">fhir:Procedure.reasonReference</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Condition/ExampleERefConditionChestPain&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Condition/ExampleERefConditionChestPain&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/procedure.html#Procedure.note">fhir:Procedure.note</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">fhir:Annotation.text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Initial management was provided before referral, including monitoring, symptom control, and preparation for transfer.&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Patient/ExampleERefPatient&gt; a fhir:Patient .
+
+&lt;http://hl7.org/fhir/PractitionerRole/ExampleERefPractitionerRole&gt; a fhir:PractitionerRole .
+
+&lt;http://hl7.org/fhir/Condition/ExampleERefConditionChestPain&gt; a fhir:Condition .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Procedure/ExampleERefProcedureInitialManagement.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/Procedure/ExampleERefProcedureInitialManagement.ttl&gt; .
 
 </code></pre>
 
@@ -404,8 +429,8 @@ a sct:29857009 ;
           IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
           Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-17 12:31:00 +0000">
-    2026-06-17
+  <span title="2026-07-07 09:49:00 +0000">
+    2026-07-07
   </span>
 
           <br/>

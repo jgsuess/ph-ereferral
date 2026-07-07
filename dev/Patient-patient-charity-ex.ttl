@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,74 +7,101 @@
 
 <https://fhir.doh.gov.ph/pheref/Patient/patient-charity-ex> a fhir:Patient ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "patient-charity-ex"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "patient-charity-ex"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient" ;
+       fhir:index 0 ;
        fhir:link <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient>
-     ] ) ;
-     fhir:tag ( [
-       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "REF-20" ] ;
-       fhir:display [ fhir:v "REF-20" ]
-     ] [
-       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "REF-21" ] ;
-       fhir:display [ fhir:v "REF-21" ]
-     ] [
-       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "REF-22" ] ;
-       fhir:display [ fhir:v "REF-22" ]
-     ] [
-       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "REF-24" ] ;
-       fhir:display [ fhir:v "REF-24" ]
-     ] [
-       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "REF-25" ] ;
-       fhir:display [ fhir:v "REF-25" ]
-     ] [
-       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "REF-26" ] ;
-       fhir:display [ fhir:v "REF-26" ]
-     ] [
-       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "REF-27" ] ;
-       fhir:display [ fhir:v "REF-27" ]
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient patient-charity-ex</b></p><a name=\"patient-charity-ex\"> </a><a name=\"hcpatient-charity-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient</code></p><p style=\"margin-bottom: 0px\">Tags: , , , , , , </p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns</code>/12-345678901-2</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"tel:+63-917-123-4567\">+63-917-123-4567</a></li><li>456 Rizal Street Barangay Malusog Quezon City 1100 PH (home)</li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:identifier ( [
-     fhir:system [ fhir:v "http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "1234-5678901-2" ]
-  ] [
-     fhir:system [ fhir:v "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "12-345678901-2" ]
-  ] ) ; # 
-  fhir:active [ fhir:v true] ; # 
-  fhir:name ( [
-     fhir:use [ fhir:v "official" ] ;
-     fhir:family [ fhir:v "Santos" ] ;
-     fhir:given ( [ fhir:v "Charity" ] )
-  ] ) ; # 
-  fhir:telecom ( [
-     fhir:system [ fhir:v "phone" ] ;
-     fhir:value [ fhir:v "+63-917-123-4567" ] ;
-     fhir:use [ fhir:v "mobile" ]
-  ] ) ; # 
-  fhir:gender [ fhir:v "female"] ; # 
-  fhir:birthDate [ fhir:v "2001-08-15"^^xsd:date] ; # 
-  fhir:address ( [
-     fhir:use [ fhir:v "home" ] ;
-     fhir:line ( [ fhir:v "456 Rizal Street" ] [ fhir:v "Barangay Malusog" ] ) ;
-     fhir:city [ fhir:v "Quezon City" ] ;
-     fhir:district [ fhir:v "NCR" ] ;
-     fhir:postalCode [ fhir:v "1100" ] ;
-     fhir:country [ fhir:v "PH" ]
-  ] ) . # 
+     ] ;
+     fhir:Meta.tag [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://example.com/peref-dd" ] ;
+       fhir:Coding.code [ fhir:value "REF-20" ] ;
+       fhir:Coding.display [ fhir:value "REF-20" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Coding.system [ fhir:value "https://example.com/peref-dd" ] ;
+       fhir:Coding.code [ fhir:value "REF-21" ] ;
+       fhir:Coding.display [ fhir:value "REF-21" ]
+     ], [
+       fhir:index 2 ;
+       fhir:Coding.system [ fhir:value "https://example.com/peref-dd" ] ;
+       fhir:Coding.code [ fhir:value "REF-22" ] ;
+       fhir:Coding.display [ fhir:value "REF-22" ]
+     ], [
+       fhir:index 3 ;
+       fhir:Coding.system [ fhir:value "https://example.com/peref-dd" ] ;
+       fhir:Coding.code [ fhir:value "REF-24" ] ;
+       fhir:Coding.display [ fhir:value "REF-24" ]
+     ], [
+       fhir:index 4 ;
+       fhir:Coding.system [ fhir:value "https://example.com/peref-dd" ] ;
+       fhir:Coding.code [ fhir:value "REF-25" ] ;
+       fhir:Coding.display [ fhir:value "REF-25" ]
+     ], [
+       fhir:index 5 ;
+       fhir:Coding.system [ fhir:value "https://example.com/peref-dd" ] ;
+       fhir:Coding.code [ fhir:value "REF-26" ] ;
+       fhir:Coding.display [ fhir:value "REF-26" ]
+     ], [
+       fhir:index 6 ;
+       fhir:Coding.system [ fhir:value "https://example.com/peref-dd" ] ;
+       fhir:Coding.code [ fhir:value "REF-27" ] ;
+       fhir:Coding.display [ fhir:value "REF-27" ]
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient patient-charity-ex</b></p><a name=\"patient-charity-ex\"> </a><a name=\"hcpatient-charity-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-patient</code></p><p style=\"margin-bottom: 0px\">Tags: , , , , , , </p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns</code>/12-345678901-2</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"tel:+63-917-123-4567\">+63-917-123-4567</a></li><li>456 Rizal Street Barangay Malusog Quezon City 1100 PH (home)</li></ul></td></tr></table></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns" ] ;
+     fhir:Identifier.value [ fhir:value "1234-5678901-2" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.system [ fhir:value "http://doh.gov.ph/fhir/ph-core/NamingSystem/philhealth-id-ns" ] ;
+     fhir:Identifier.value [ fhir:value "12-345678901-2" ]
+  ] ;
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.family [ fhir:value "Santos" ] ;
+     fhir:HumanName.given [
+       fhir:value "Charity" ;
+       fhir:index 0
+     ]
+  ] ;
+  fhir:Patient.telecom [
+     fhir:index 0 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+63-917-123-4567" ] ;
+     fhir:ContactPoint.use [ fhir:value "mobile" ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "female"] ;
+  fhir:Patient.birthDate [ fhir:value "2001-08-15"^^xsd:date] ;
+  fhir:Patient.address [
+     fhir:index 0 ;
+     fhir:Address.use [ fhir:value "home" ] ;
+     fhir:Address.line [
+       fhir:value "456 Rizal Street" ;
+       fhir:index 0
+     ], [
+       fhir:value "Barangay Malusog" ;
+       fhir:index 1
+     ] ;
+     fhir:Address.city [ fhir:value "Quezon City" ] ;
+     fhir:Address.district [ fhir:value "NCR" ] ;
+     fhir:Address.postalCode [ fhir:value "1100" ] ;
+     fhir:Address.country [ fhir:value "PH" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Patient/patient-charity-ex.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

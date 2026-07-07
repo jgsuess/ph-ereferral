@@ -311,47 +311,64 @@
   <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
 
- a fhir:RelatedPerson ;
+&lt;http://hl7.org/fhir/RelatedPerson/relatedperson-companion-ex&gt; a fhir:RelatedPerson ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/resource.html#RelatedPerson.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;relatedperson-companion-ex&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#RelatedPerson.meta">fhir:meta</a> [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson&gt;     ] ) ;
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.tag">fhir:tag</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://example.com/peref-dd&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;REF-28&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;REF-28&quot; ]     ] )
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#RelatedPerson.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;en&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/domainresource.html#RelatedPerson.text">fhir:text</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: RelatedPerson relatedperson-companion-ex&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;relatedperson-companion-ex\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcrelatedperson-companion-ex\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;code&gt;http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson&lt;/code&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Tag: &lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\&quot;&gt;Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;relationship&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\&quot;&gt;Mother&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Maria Santos &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+63-917-765-4321\&quot;&gt;+63-917-765-4321&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.patient">fhir:patient</a> [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479&quot; ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.relationship">fhir:relationship</a> ( [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MTH&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Mother&quot; ]     ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.name">fhir:name</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">fhir:family</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Santos&quot; ] ;
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">fhir:given</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Maria&quot; ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.telecom">fhir:telecom</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;phone&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;+63-917-765-4321&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;mobile&quot; ]
-  ] ) . # 
+  <a href="http://hl7.org/fhir/R4/resource.html#RelatedPerson.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;relatedperson-companion-ex&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#RelatedPerson.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson&gt;
+     ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.tag">fhir:Meta.tag</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://example.com/peref-dd&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;REF-28&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;REF-28&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#RelatedPerson.language">fhir:Resource.language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;en&quot;] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#RelatedPerson.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: RelatedPerson relatedperson-companion-ex&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;relatedperson-companion-ex\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcrelatedperson-companion-ex\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;code&gt;http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-relatedperson&lt;/code&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Tag: &lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\&quot;&gt;Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;relationship&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\&quot;&gt;Mother&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Maria Santos &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+63-917-765-4321\&quot;&gt;+63-917-765-4321&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.patient">fhir:RelatedPerson.patient</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.relationship">fhir:RelatedPerson.relationship</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MTH&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Mother&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.name">fhir:RelatedPerson.name</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">fhir:HumanName.family</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Santos&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">fhir:HumanName.given</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Maria&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.telecom">fhir:RelatedPerson.telecom</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;phone&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;+63-917-765-4321&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">fhir:ContactPoint.use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;mobile&quot; ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/RelatedPerson/relatedperson-companion-ex.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/RelatedPerson/relatedperson-companion-ex.ttl&gt; .
 
 </code></pre>
 
@@ -387,8 +404,8 @@
           IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
           Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-17 12:31:00 +0000">
-    2026-06-17
+  <span title="2026-07-07 09:49:00 +0000">
+    2026-07-07
   </span>
 
           <br/>

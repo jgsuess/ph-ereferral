@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,59 +7,78 @@
 
 <https://fhir.doh.gov.ph/pheref/RelatedPerson/ExampleERefRelatedPersonNextOfKin> a fhir:RelatedPerson ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ExampleERefRelatedPersonNextOfKin"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "ExampleERefRelatedPersonNextOfKin"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person" ;
+       fhir:index -1 ;
        fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person>
-     ] )
-  ] ; # 
-  fhir:language [ fhir:v "en"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Roberto Dela Cruz is the patient's father and next of kin. Contact: +639189876543.</div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:active [ fhir:v true] ; # 
-  fhir:patient [
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Roberto Dela Cruz is the patient's father and next of kin. Contact: +639189876543.</div>"
+  ] ;
+  fhir:RelatedPerson.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:RelatedPerson.patient [
      fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ERefPatientExample> ;
-     fhir:reference [ fhir:v "Patient/ERefPatientExample" ]
-  ] ; # 
-  fhir:relationship ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "NOK" ] ;
-       fhir:display [ fhir:v "next of kin" ]
-     ] )
-  ] [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "FTH" ] ;
-       fhir:display [ fhir:v "father" ]
-     ] )
-  ] ) ; # 
-  fhir:name ( [
-     fhir:use [ fhir:v "official" ] ;
-     fhir:family [ fhir:v "Dela Cruz" ] ;
-     fhir:given ( [ fhir:v "Roberto" ] )
-  ] ) ; # 
-  fhir:telecom ( [
-     fhir:system [ fhir:v "phone" ] ;
-     fhir:value [ fhir:v "+639189876543" ] ;
-     fhir:use [ fhir:v "mobile" ]
-  ] ) ; # 
-  fhir:gender [ fhir:v "male"] ; # 
-  fhir:birthDate [ fhir:v "1958-04-12"^^xsd:date] ; # 
-  fhir:address ( [
-     fhir:use [ fhir:v "home" ] ;
-     fhir:line ( [ fhir:v "456 Mabini Street" ] ) ;
-     fhir:city [ fhir:v "Quezon City" ] ;
-     fhir:state [ fhir:v "Metro Manila" ] ;
-     fhir:postalCode [ fhir:v "1100" ] ;
-     fhir:country [ fhir:v "PH" ]
-  ] ) ; # 
-  fhir:period [
-     fhir:start [ fhir:v "2025-03-15"^^xsd:date ]
-  ] . # 
+     fhir:Reference.reference [ fhir:value "Patient/ERefPatientExample" ]
+  ] ;
+  fhir:RelatedPerson.relationship [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ] ;
+       fhir:Coding.code [ fhir:value "NOK" ] ;
+       fhir:Coding.display [ fhir:value "next of kin" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ] ;
+       fhir:Coding.code [ fhir:value "FTH" ] ;
+       fhir:Coding.display [ fhir:value "father" ]
+     ]
+  ] ;
+  fhir:RelatedPerson.name [
+     fhir:index -1 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.family [ fhir:value "Dela Cruz" ] ;
+     fhir:HumanName.given [
+       fhir:value "Roberto" ;
+       fhir:index -1
+     ]
+  ] ;
+  fhir:RelatedPerson.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+639189876543" ] ;
+     fhir:ContactPoint.use [ fhir:value "mobile" ]
+  ] ;
+  fhir:RelatedPerson.gender [ fhir:value "male"] ;
+  fhir:RelatedPerson.birthDate [ fhir:value "1958-04-12"^^xsd:date] ;
+  fhir:RelatedPerson.address [
+     fhir:index -1 ;
+     fhir:Address.use [ fhir:value "home" ] ;
+     fhir:Address.line [
+       fhir:value "456 Mabini Street" ;
+       fhir:index -1
+     ] ;
+     fhir:Address.city [ fhir:value "Quezon City" ] ;
+     fhir:Address.state [ fhir:value "Metro Manila" ] ;
+     fhir:Address.postalCode [ fhir:value "1100" ] ;
+     fhir:Address.country [ fhir:value "PH" ]
+  ] ;
+  fhir:RelatedPerson.period [
+     fhir:Period.start [ fhir:value "2025-03-15"^^xsd:date ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/RelatedPerson/ExampleERefRelatedPersonNextOfKin.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

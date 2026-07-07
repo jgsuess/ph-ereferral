@@ -1,7 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <https://loinc.org/rdf/> .
+@prefix loinc: <http://loinc.org/rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -9,53 +8,58 @@
 
 <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationChiefComplaint> a fhir:Observation ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ExampleERefObservationChiefComplaint"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "ExampleERefObservationChiefComplaint"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation" ;
+       fhir:index 0 ;
        fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationChiefComplaint</b></p><a name=\"ExampleERefObservationChiefComplaint\"> </a><a name=\"hcExampleERefObservationChiefComplaint\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 10154-3}\">Chief Complaint</span></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>effective</b>: 2025-03-15 09:00:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-ExampleERefPractitioner.html\">Practitioner Dr. Maria Cruz Santos(official)</a></p><p><b>value</b>: Chest pain for 2 hours, radiating to left arm</p><p><b>note</b>: </p><blockquote><div><p>Patient reports sudden onset of crushing chest pain while at rest</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:status [ fhir:v "final"] ; # 
-  fhir:category ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "survey" ] ;
-       fhir:display [ fhir:v "Survey" ]
-     ] )
-  ] ) ; # 
-  fhir:code [
-     fhir:coding ( [
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationChiefComplaint</b></p><a name=\"ExampleERefObservationChiefComplaint\"> </a><a name=\"hcExampleERefObservationChiefComplaint\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 10154-3}\">Chief Complaint</span></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>effective</b>: 2025-03-15 09:00:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-ExampleERefPractitioner.html\">Practitioner Dr. Maria Cruz Santos(official)</a></p><p><b>value</b>: Chest pain for 2 hours, radiating to left arm</p><p><b>note</b>: </p><blockquote><div><p>Patient reports sudden onset of crushing chest pain while at rest</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "survey" ] ;
+       fhir:Coding.display [ fhir:value "Survey" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
        a loinc:10154-3 ;
-       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "10154-3" ] ;
-       fhir:display [ fhir:v "Chief complaint Narrative - Reported" ]
-     ] ) ;
-     fhir:text [ fhir:v "Chief Complaint" ]
-  ] ; # 
-  fhir:subject [
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "10154-3" ] ;
+       fhir:Coding.display [ fhir:value "Chief complaint Narrative - Reported" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Chief Complaint" ]
+  ] ;
+  fhir:Observation.subject [
      fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatient> ;
-     fhir:reference [ fhir:v "Patient/ExampleERefPatient" ]
-  ] ; # 
-  fhir:effective [
-     a fhir:dateTime ;
-     fhir:v "2025-03-15T09:00:00+08:00"^^xsd:dateTime
-  ] ; # 
-  fhir:performer ( [
+     fhir:Reference.reference [ fhir:value "Patient/ExampleERefPatient" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2025-03-15T09:00:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.performer [
+     fhir:index 0 ;
      fhir:link <https://fhir.doh.gov.ph/pheref/Practitioner/ExampleERefPractitioner> ;
-     fhir:reference [ fhir:v "Practitioner/ExampleERefPractitioner" ]
-  ] ) ; # 
-  fhir:value [
-     a fhir:string ;
-     fhir:v "Chest pain for 2 hours, radiating to left arm"
-  ] ; # 
-  fhir:note ( [
-     fhir:text [ fhir:v "Patient reports sudden onset of crushing chest pain while at rest" ]
-  ] ) . # 
+     fhir:Reference.reference [ fhir:value "Practitioner/ExampleERefPractitioner" ]
+  ] ;
+  fhir:Observation.valueString [ fhir:value "Chest pain for 2 hours, radiating to left arm"] ;
+  fhir:Observation.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Patient reports sudden onset of crushing chest pain while at rest" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationChiefComplaint.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

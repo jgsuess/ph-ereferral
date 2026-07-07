@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -9,83 +8,96 @@
 
 <https://fhir.doh.gov.ph/pheref/Task/ExampleERefTaskReferredOnward> a fhir:Task ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ExampleERefTaskReferredOnward"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "ExampleERefTaskReferredOnward"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task" ;
+       fhir:index 0 ;
        fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task>
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task ExampleERefTaskReferredOnward</b></p><a name=\"ExampleERefTaskReferredOnward\"> </a><a name=\"hcExampleERefTaskReferredOnward\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-task.html\">EReferral Task</a></p></div><p><b>status</b>: Rejected</p><p><b>statusReason</b>: <span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow capacity-full}\">Capacity full</span></p><p><b>businessStatus</b>: <span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow referred-onward}\">Referred onward</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 3457005}\">eReferral for cardiology consultation</span></p><p><b>focus</b>: <a href=\"ServiceRequest-ExampleERefServiceRequestTask.html\">ServiceRequest Referral to cardiology service</a></p><p><b>for</b>: <a href=\"Patient-ExampleERefPatientTask.html\">Juan Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>authoredOn</b>: 2025-03-15 09:30:00+0800</p><p><b>lastModified</b>: 2025-03-15 10:10:00+0800</p><p><b>requester</b>: <a href=\"PractitionerRole-ExampleERefPractitionerRoleRequester.html\">PractitionerRole Medical practitioner</a></p><p><b>owner</b>: <a href=\"Organization-ExampleERefOrganizationReceiving.html\">Organization Manila General Hospital</a></p><p><b>note</b>: , </p><blockquote><div><p>New referral for patient with chest pain. Awaiting receiving-facility response.</p>\n</div></blockquote><blockquote><div><p>Manila General Hospital reports capacity full and directs transfer to Eastern District Medical Center.</p>\n</div></blockquote><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow onward-referral-request}\">Onward referral request</span></td><td><span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow onward-referral-request}\">Onward ServiceRequest created: ExampleERefServiceRequestOnward</span></td></tr></table></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:status [ fhir:v "rejected"] ; # 
-  fhir:statusReason [
-     fhir:coding ( [
-       fhir:system [ fhir:v "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "capacity-full" ] ;
-       fhir:display [ fhir:v "Capacity full" ]
-     ] )
-  ] ; # 
-  fhir:businessStatus [
-     fhir:coding ( [
-       fhir:system [ fhir:v "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "referred-onward" ] ;
-       fhir:display [ fhir:v "Referred onward" ]
-     ] )
-  ] ; # 
-  fhir:intent [ fhir:v "order"] ; # 
-  fhir:code [
-     fhir:coding ( [
-       a sct:3457005 ;
-       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "3457005" ] ;
-       fhir:display [ fhir:v "Patient referral" ]
-     ] ) ;
-     fhir:text [ fhir:v "eReferral for cardiology consultation" ]
-  ] ; # 
-  fhir:focus [
-     fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequestTask> ;
-     fhir:reference [ fhir:v "ServiceRequest/ExampleERefServiceRequestTask" ]
-  ] ; # 
-  fhir:for [
-     fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatientTask> ;
-     fhir:reference [ fhir:v "Patient/ExampleERefPatientTask" ]
-  ] ; # 
-  fhir:authoredOn [ fhir:v "2025-03-15T09:30:00+08:00"^^xsd:dateTime] ; # 
-  fhir:lastModified [ fhir:v "2025-03-15T10:10:00+08:00"^^xsd:dateTime] ; # 
-  fhir:requester [
-     fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleRequester> ;
-     fhir:reference [ fhir:v "PractitionerRole/ExampleERefPractitionerRoleRequester" ]
-  ] ; # 
-  fhir:owner [
-     fhir:link <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefOrganizationReceiving> ;
-     fhir:reference [ fhir:v "Organization/ExampleERefOrganizationReceiving" ]
-  ] ; # 
-  fhir:note ( [
-     fhir:text [ fhir:v "New referral for patient with chest pain. Awaiting receiving-facility response." ]
-  ] [
-     fhir:text [ fhir:v "Manila General Hospital reports capacity full and directs transfer to Eastern District Medical Center." ]
-  ] ) ; # 
-  fhir:output ( [
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "onward-referral-request" ] ;
-         fhir:display [ fhir:v "Onward referral request" ]
-       ] )
-     ] ;
-     fhir:value [
-       a fhir:CodeableConcept ;
-       fhir:coding ( [
-         fhir:system [ fhir:v "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "onward-referral-request" ] ;
-         fhir:display [ fhir:v "Onward referral request" ]
-       ] ) ;
-       fhir:text [ fhir:v "Onward ServiceRequest created: ExampleERefServiceRequestOnward" ]
      ]
-  ] ) . # 
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task ExampleERefTaskReferredOnward</b></p><a name=\"ExampleERefTaskReferredOnward\"> </a><a name=\"hcExampleERefTaskReferredOnward\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-task.html\">EReferral Task</a></p></div><p><b>status</b>: Rejected</p><p><b>statusReason</b>: <span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow capacity-full}\">Capacity full</span></p><p><b>businessStatus</b>: <span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow referred-onward}\">Referred onward</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 3457005}\">eReferral for cardiology consultation</span></p><p><b>focus</b>: <a href=\"ServiceRequest-ExampleERefServiceRequestTask.html\">ServiceRequest Referral to cardiology service</a></p><p><b>for</b>: <a href=\"Patient-ExampleERefPatientTask.html\">Juan Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>authoredOn</b>: 2025-03-15 09:30:00+0800</p><p><b>lastModified</b>: 2025-03-15 10:10:00+0800</p><p><b>requester</b>: <a href=\"PractitionerRole-ExampleERefPractitionerRoleRequester.html\">PractitionerRole Medical practitioner</a></p><p><b>owner</b>: <a href=\"Organization-ExampleERefOrganizationReceiving.html\">Organization Manila General Hospital</a></p><p><b>note</b>: , </p><blockquote><div><p>New referral for patient with chest pain. Awaiting receiving-facility response.</p>\n</div></blockquote><blockquote><div><p>Manila General Hospital reports capacity full and directs transfer to Eastern District Medical Center.</p>\n</div></blockquote><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow onward-referral-request}\">Onward referral request</span></td><td><span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow onward-referral-request}\">Onward ServiceRequest created: ExampleERefServiceRequestOnward</span></td></tr></table></div>"
+  ] ;
+  fhir:Task.status [ fhir:value "rejected"] ;
+  fhir:Task.statusReason [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow" ] ;
+       fhir:Coding.code [ fhir:value "capacity-full" ] ;
+       fhir:Coding.display [ fhir:value "Capacity full" ]
+     ]
+  ] ;
+  fhir:Task.businessStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow" ] ;
+       fhir:Coding.code [ fhir:value "referred-onward" ] ;
+       fhir:Coding.display [ fhir:value "Referred onward" ]
+     ]
+  ] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:3457005 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "3457005" ] ;
+       fhir:Coding.display [ fhir:value "Patient referral" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "eReferral for cardiology consultation" ]
+  ] ;
+  fhir:Task.focus [
+     fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequestTask> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/ExampleERefServiceRequestTask" ]
+  ] ;
+  fhir:Task.for [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatientTask> ;
+     fhir:Reference.reference [ fhir:value "Patient/ExampleERefPatientTask" ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2025-03-15T09:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.lastModified [ fhir:value "2025-03-15T10:10:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleRequester> ;
+     fhir:Reference.reference [ fhir:value "PractitionerRole/ExampleERefPractitionerRoleRequester" ]
+  ] ;
+  fhir:Task.owner [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefOrganizationReceiving> ;
+     fhir:Reference.reference [ fhir:value "Organization/ExampleERefOrganizationReceiving" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "New referral for patient with chest pain. Awaiting receiving-facility response." ]
+  ], [
+     fhir:index 1 ;
+     fhir:Annotation.text [ fhir:value "Manila General Hospital reports capacity full and directs transfer to Eastern District Medical Center." ]
+  ] ;
+  fhir:Task.output [
+     fhir:index 0 ;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow" ] ;
+         fhir:Coding.code [ fhir:value "onward-referral-request" ] ;
+         fhir:Coding.display [ fhir:value "Onward referral request" ]
+       ]
+     ] ;
+     fhir:Task.output.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow" ] ;
+         fhir:Coding.code [ fhir:value "onward-referral-request" ] ;
+         fhir:Coding.display [ fhir:value "Onward referral request" ]
+       ] ;
+       fhir:CodeableConcept.text [ fhir:value "Onward ServiceRequest created: ExampleERefServiceRequestOnward" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Task/ExampleERefTaskReferredOnward.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

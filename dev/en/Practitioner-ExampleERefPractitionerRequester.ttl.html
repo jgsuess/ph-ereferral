@@ -311,35 +311,50 @@
   <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
 
- a fhir:Practitioner ;
+&lt;http://hl7.org/fhir/Practitioner/ExampleERefPractitionerRequester&gt; a fhir:Practitioner ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/resource.html#Practitioner.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleERefPractitionerRequester&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#Practitioner.meta">fhir:meta</a> [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner&gt;     ] )
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#Practitioner.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;en&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/domainresource.html#Practitioner.text">fhir:text</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner ExampleERefPractitionerRequester&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleERefPractitionerRequester\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleERefPractitionerRequester\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitioner.html\&quot;&gt;PH Core Practitioner&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:2.16.840.1.113883.2.9.4.3.3&lt;/code&gt;/MD-98765&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Maria Santos &lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: Female&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">fhir:identifier</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:2.16.840.1.113883.2.9.4.3.3&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;MD-98765&quot; ]
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">fhir:name</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">fhir:family</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Santos&quot; ] ;
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">fhir:given</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Maria&quot; ] ) ;
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.prefix">fhir:prefix</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Dr.&quot; ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.gender">fhir:gender</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;female&quot;] . # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Practitioner.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ExampleERefPractitionerRequester&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Practitioner.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Practitioner.language">fhir:Resource.language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;en&quot;] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Practitioner.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner ExampleERefPractitionerRequester&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleERefPractitionerRequester\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleERefPractitionerRequester\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitioner.html\&quot;&gt;PH Core Practitioner&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:2.16.840.1.113883.2.9.4.3.3&lt;/code&gt;/MD-98765&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Maria Santos &lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: Female&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">fhir:Practitioner.identifier</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:oid:2.16.840.1.113883.2.9.4.3.3&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;MD-98765&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">fhir:Practitioner.name</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">fhir:HumanName.family</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Santos&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">fhir:HumanName.given</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Maria&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+     ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.prefix">fhir:HumanName.prefix</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Dr.&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.gender">fhir:Practitioner.gender</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;female&quot;] .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Practitioner/ExampleERefPractitionerRequester.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/Practitioner/ExampleERefPractitionerRequester.ttl&gt; .
 
 </code></pre>
 
@@ -375,8 +390,8 @@
           IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
           Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-17 12:31:00 +0000">
-    2026-06-17
+  <span title="2026-07-07 09:49:00 +0000">
+    2026-07-07
   </span>
 
           <br/>

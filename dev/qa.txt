@@ -1,14 +1,14 @@
 PHeReferralImplementationGuide : Validation Results
 =========================================
 
-err = 0, warn = 111, info = 1051
-IG Publisher Version: 2.2.9
-Generated Wed Jun 17 12:34:39 UTC 2026. FHIR version 4.0.1 for fhir.ph.ereferral#0.1.0 (canonical = https://fhir.doh.gov.ph/pheref)
+err = 0, warn = 120, info = 1065
+IG Publisher Version: 2.2.10
+Generated Tue Jul 07 09:53:45 UTC 2026. FHIR version 4.0.1 for fhir.ph.ereferral#0.1.0 (canonical = https://fhir.doh.gov.ph/pheref)
  Build Errors : 0 / 0 / 0
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Bundle-anc-contact-transaction-ex : 0 / 38 / 57
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Bundle-registration-transaction-ex : 0 / 11 / 22
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/CodeSystem-ereferral-workflow : 0 / 0 / 1
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/CodeSystem-pwd-disability-type-cs : 0 / 0 / 1
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/CodeSystem-ereferral-workflow : 0 / 1 / 1
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/CodeSystem-pwd-disability-type-cs : 0 / 1 / 1
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Condition-ExampleERefConditionChestPain : 0 / 0 / 1
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Condition-ExampleERefConditionHypertensiveEmergency : 0 / 0 / 1
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Condition-condition-pregnancy-ex : 0 / 0 / 2
@@ -16,7 +16,7 @@ Generated Wed Jun 17 12:34:39 UTC 2026. FHIR version 4.0.1 for fhir.ph.ereferral
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Encounter-encounter-anc-ex : 0 / 2 / 2
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Encounter-encounter-registration-ex : 0 / 2 / 2
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Immunization-ExampleERefImmunizationRoutine : 0 / 1 / 1
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ImplementationGuide-fhir.ph.ereferral : 0 / 0 / 1
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ImplementationGuide-fhir.ph.ereferral : 0 / 0 / 2
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Medication-ExampleERefMedicationAntibiotic : 0 / 0 / 3
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Medication-ExampleERefMedicationTwinact : 0 / 0 / 3
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/MedicationAdministration-ExampleERefMedicationAdministrationAntibiotic : 0 / 0 / 1
@@ -63,7 +63,7 @@ Generated Wed Jun 17 12:34:39 UTC 2026. FHIR version 4.0.1 for fhir.ph.ereferral
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/PractitionerRole-practitionerrole-jane-ex : 0 / 0 / 2
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Procedure-ExampleERefProcedureECG : 0 / 1 / 1
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Procedure-ExampleERefProcedureInitialManagement : 0 / 0 / 1
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Provenance-ExampleERefProvenanceSignature : 0 / 0 / 1
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Provenance-ExampleERefProvenanceSignature : 0 / 1 / 2
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Provenance-ExampleERefProvenanceUpdate : 0 / 0 / 1
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/RelatedPerson-ExampleERefRelatedPersonAccompanying : 0 / 0 / 1
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/RelatedPerson-ExampleERefRelatedPersonNextOfKin : 0 / 0 / 1
@@ -74,19 +74,19 @@ Generated Wed Jun 17 12:34:39 UTC 2026. FHIR version 4.0.1 for fhir.ph.ereferral
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ServiceRequest-ExampleERefServiceRequestTask : 0 / 0 / 1
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ServiceRequest-servicerequest-lab-orders-ex : 0 / 0 / 2
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ServiceRequest-servicerequest-ultrasound-ex : 0 / 1 / 5
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-condition : 0 / 0 / 58
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-encounter : 0 / 0 / 86
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-immunization : 0 / 0 / 149
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-medication-administration : 0 / 3 / 78
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-observation : 0 / 0 / 122
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-patient : 0 / 2 / 58
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-practitioner-role : 0 / 0 / 14
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-procedure : 0 / 0 / 123
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-provenance : 0 / 0 / 44
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-pwd-disability : 0 / 1 / 1
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-related-person : 0 / 0 / 49
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-service-request : 0 / 4 / 76
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-task : 0 / 0 / 89
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-condition : 0 / 0 / 59
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-encounter : 0 / 0 / 87
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-immunization : 0 / 0 / 150
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-medication-administration : 0 / 3 / 79
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-observation : 0 / 0 / 123
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-patient : 0 / 2 / 59
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-practitioner-role : 0 / 0 / 15
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-procedure : 0 / 0 / 124
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-provenance : 0 / 0 / 45
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-pwd-disability : 0 / 1 / 2
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-related-person : 0 / 0 / 50
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-service-request : 0 / 4 / 77
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/StructureDefinition-ereferral-task : 0 / 0 / 90
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Task-ExampleERefTaskAccepted : 0 / 0 / 1
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Task-ExampleERefTaskCompleted : 0 / 0 / 3
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Task-ExampleERefTaskReceived : 0 / 0 / 1
@@ -94,12 +94,12 @@ Generated Wed Jun 17 12:34:39 UTC 2026. FHIR version 4.0.1 for fhir.ph.ereferral
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Task-ExampleERefTaskRejected : 0 / 0 / 1
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Task-ExampleERefTaskRequested : 0 / 0 / 1
  /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/Task-task-referral-ex : 0 / 1 / 3
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-ereferral-priority : 0 / 0 / 1
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-ereferral-reason : 0 / 0 / 3
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-ereferral-receiving-response : 0 / 0 / 1
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-ereferral-relationship-type : 0 / 0 / 1
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-ereferral-service-category : 0 / 0 / 1
- /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-pwd-disability-type-vs : 0 / 0 / 1
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-ereferral-priority : 0 / 1 / 1
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-ereferral-reason : 0 / 1 / 3
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-ereferral-receiving-response : 0 / 1 / 1
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-ereferral-relationship-type : 0 / 1 / 1
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-ereferral-service-category : 0 / 1 / 1
+ /home/runner/work/ph-ereferral/ph-ereferral/fsh-generated/resources/ValueSet-pwd-disability-type-vs : 0 / 1 / 1
 </table>
 == n/a ==
 == fsh-generated/resources/Bundle-anc-contact-transaction-ex.json ==
@@ -190,7 +190,9 @@ WARNING: Bundle/registration-transaction-ex: Bundle.entry[5].resource/*Encounter
 INFORMATION: Bundle/registration-transaction-ex: Bundle.entry[5].resource/*Encounter/encounter-registration-ex*/.meta.tag[0].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
 WARNING: Bundle/registration-transaction-ex: Bundle.entry[5].resource/*Encounter/encounter-registration-ex*/.meta.profile[0]: Profile reference 'http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-encounter' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
 == fsh-generated/resources/CodeSystem-ereferral-workflow.json ==
+WARNING: Resource: The resource CodeSystem/ereferral-workflow should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/CodeSystem-pwd-disability-type-cs.json ==
+WARNING: Resource: The resource CodeSystem/pwd-disability-type-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/Condition-ExampleERefConditionChestPain.json ==
 == fsh-generated/resources/Condition-ExampleERefConditionHypertensiveEmergency.json ==
 == fsh-generated/resources/Condition-condition-pregnancy-ex.json ==
@@ -209,6 +211,7 @@ WARNING: Encounter/encounter-registration-ex: Encounter.meta.profile[0]: Profile
 == fsh-generated/resources/Immunization-ExampleERefImmunizationRoutine.json ==
 WARNING: Immunization/ExampleERefImmunizationRoutine: Immunization.identifier[0].system: No definition could be found for URL value 'http://example.ph/immunization-records'
 == fsh-generated/resources/ImplementationGuide-fhir.ph.ereferral.json ==
+INFORMATION: Resource: The resource ImplementationGuide/fhir.ph.ereferral could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/Medication-ExampleERefMedicationAntibiotic.json ==
 INFORMATION: Medication/ExampleERefMedicationAntibiotic: Medication.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-medication.html' at 'div/div/p/a' for 'PH Core Medication' is not a widely supported protocol and should be checked
 INFORMATION: Medication/ExampleERefMedicationAntibiotic: Medication.code: None of the codings provided are in the value set 'Drugs' (https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs|0.1.1), and a coding is recommended to come from this value set (codes = http://snomed.info/sct#105590001)
@@ -359,6 +362,7 @@ INFORMATION: PractitionerRole/practitionerrole-jane-ex: PractitionerRole.meta.ta
 WARNING: Procedure/ExampleERefProcedureECG: Procedure.category.coding[0]: The concept '103693007' has a status of inactive and its use should be reviewed
 == fsh-generated/resources/Procedure-ExampleERefProcedureInitialManagement.json ==
 == fsh-generated/resources/Provenance-ExampleERefProvenanceSignature.json ==
+WARNING: Provenance/ExampleERefProvenanceSignature: Provenance.signature[0].sigFormat.code: Unknown Code 'application/signature+xml' in the CodeSystem 'urn:ietf:bcp:13' version '0.0.2' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 == fsh-generated/resources/Provenance-ExampleERefProvenanceUpdate.json ==
 == fsh-generated/resources/RelatedPerson-ExampleERefRelatedPersonAccompanying.json ==
 == fsh-generated/resources/RelatedPerson-ExampleERefRelatedPersonNextOfKin.json ==
@@ -437,6 +441,7 @@ INFORMATION: StructureDefinition/ereferral-condition: StructureDefinition.snapsh
 INFORMATION: StructureDefinition/ereferral-condition: StructureDefinition.snapshot.element[62].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-condition: StructureDefinition.snapshot.element[62].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-condition: StructureDefinition.snapshot.element[62].extension[3].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Resource: The resource StructureDefinition/ereferral-condition could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-ereferral-encounter.json ==
 INFORMATION: StructureDefinition/ereferral-encounter: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-encounter.html' at 'div/table/tr/td/a' for 'PHCoreEncounter' is not a widely supported protocol and should be checked
 INFORMATION: StructureDefinition/ereferral-encounter: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-condition.html' at 'div/table/tr/td/a' for 'PH Core Condition' is not a widely supported protocol and should be checked
@@ -523,6 +528,7 @@ INFORMATION: StructureDefinition/ereferral-encounter: StructureDefinition.snapsh
 INFORMATION: StructureDefinition/ereferral-encounter: StructureDefinition.snapshot.element[109].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-encounter: StructureDefinition.snapshot.element[109].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-encounter: StructureDefinition.snapshot.element[109].extension[3].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Resource: The resource StructureDefinition/ereferral-encounter could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-ereferral-immunization.json ==
 INFORMATION: StructureDefinition/ereferral-immunization: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-immunization.html' at 'div/table/tr/td/a' for 'PHCoreImmunization' is not a widely supported protocol and should be checked
 INFORMATION: StructureDefinition/ereferral-immunization: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html' at 'div/table/tr/td/table/tr/td/a' for 'PH Core Server' is not a widely supported protocol and should be checked
@@ -672,6 +678,7 @@ INFORMATION: StructureDefinition/ereferral-immunization: StructureDefinition.sna
 INFORMATION: StructureDefinition/ereferral-immunization: StructureDefinition.snapshot.element[114].extension[0].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-immunization: StructureDefinition.snapshot.element[114].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-immunization: StructureDefinition.snapshot.element[114].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Resource: The resource StructureDefinition/ereferral-immunization could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-ereferral-medication-administration.json ==
 INFORMATION: StructureDefinition/ereferral-medication-administration: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-medicationadministration.html' at 'div/table/tr/td/a' for 'PHCoreMedicationAdministration' is not a widely supported protocol and should be checked
 INFORMATION: StructureDefinition/ereferral-medication-administration: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html' at 'div/table/tr/td/table/tr/td/a' for 'PH Core Server' is not a widely supported protocol and should be checked
@@ -753,6 +760,7 @@ INFORMATION: StructureDefinition/ereferral-medication-administration: StructureD
 WARNING: StructureDefinition/ereferral-medication-administration: StructureDefinition: The definition builds on 'https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration' which is experimental, but this definition is not labeled as experimental
 WARNING: StructureDefinition/ereferral-medication-administration: StructureDefinition.snapshot.element[25].binding: The definition for the element 'MedicationAdministration.medication[x]' binds to the value set 'https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/ereferral-medication-administration: StructureDefinition.snapshot: The slice 'medicationReference' on path 'MedicationAdministration.medication[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+INFORMATION: Resource: The resource StructureDefinition/ereferral-medication-administration could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-ereferral-observation.json ==
 INFORMATION: StructureDefinition/ereferral-observation: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-observation.html' at 'div/table/tr/td/a' for 'PHCoreObservation' is not a widely supported protocol and should be checked
 INFORMATION: StructureDefinition/ereferral-observation: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html' at 'div/table/tr/td/table/tr/td/a' for 'PH Core Server' is not a widely supported protocol and should be checked
@@ -875,6 +883,7 @@ INFORMATION: StructureDefinition/ereferral-observation: StructureDefinition.snap
 INFORMATION: StructureDefinition/ereferral-observation: StructureDefinition.snapshot.element[102].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-observation: StructureDefinition.snapshot.element[102].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-observation: StructureDefinition.snapshot.element[102].extension[3].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Resource: The resource StructureDefinition/ereferral-observation could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-ereferral-patient.json ==
 INFORMATION: StructureDefinition/ereferral-patient: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-patient.html' at 'div/table/tr/td/a' for 'PHCorePatient' is not a widely supported protocol and should be checked
 INFORMATION: StructureDefinition/ereferral-patient: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html' at 'div/table/tr/td/table/tr/td/a' for 'PH Core Server' is not a widely supported protocol and should be checked
@@ -935,6 +944,7 @@ INFORMATION: StructureDefinition/ereferral-patient: StructureDefinition.snapshot
 INFORMATION: StructureDefinition/ereferral-patient: StructureDefinition.snapshot.element[66].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-patient: StructureDefinition.snapshot.element[66].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-patient: StructureDefinition.snapshot.element[66].extension[3].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Resource: The resource StructureDefinition/ereferral-patient could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-ereferral-practitioner-role.json ==
 INFORMATION: StructureDefinition/ereferral-practitioner-role: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitionerrole.html' at 'div/table/tr/td/a' for 'PHCorePractitionerRole' is not a widely supported protocol and should be checked
 INFORMATION: StructureDefinition/ereferral-practitioner-role: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html' at 'div/table/tr/td/table/tr/td/a' for 'PH Core Server' is not a widely supported protocol and should be checked
@@ -949,6 +959,7 @@ INFORMATION: StructureDefinition/ereferral-practitioner-role: StructureDefinitio
 INFORMATION: StructureDefinition/ereferral-practitioner-role: StructureDefinition.snapshot.element[18].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-practitioner-role: StructureDefinition.snapshot.element[18].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-practitioner-role: StructureDefinition.snapshot.element[18].extension[3].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Resource: The resource StructureDefinition/ereferral-practitioner-role could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-ereferral-procedure.json ==
 INFORMATION: StructureDefinition/ereferral-procedure: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-procedure.html' at 'div/table/tr/td/a' for 'PHCoreProcedure' is not a widely supported protocol and should be checked
 INFORMATION: StructureDefinition/ereferral-procedure: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-practitioner.html' at 'div/table/tr/td/a' for 'PH Core Practitioner' is not a widely supported protocol and should be checked
@@ -1072,6 +1083,7 @@ INFORMATION: StructureDefinition/ereferral-procedure: StructureDefinition.snapsh
 INFORMATION: StructureDefinition/ereferral-procedure: StructureDefinition.snapshot.element[91].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-procedure: StructureDefinition.snapshot.element[91].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-procedure: StructureDefinition.snapshot.element[91].extension[3].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Resource: The resource StructureDefinition/ereferral-procedure could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-ereferral-provenance.json ==
 INFORMATION: StructureDefinition/ereferral-provenance: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-provenance.html' at 'div/table/tr/td/a' for 'PHCoreProvenance' is not a widely supported protocol and should be checked
 INFORMATION: StructureDefinition/ereferral-provenance: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html' at 'div/table/tr/td/table/tr/td/a' for 'PH Core Server' is not a widely supported protocol and should be checked
@@ -1116,7 +1128,9 @@ INFORMATION: StructureDefinition/ereferral-provenance: StructureDefinition.snaps
 INFORMATION: StructureDefinition/ereferral-provenance: StructureDefinition.snapshot.element[63].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-provenance: StructureDefinition.snapshot.element[63].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-provenance: StructureDefinition.snapshot.element[63].extension[3].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Resource: The resource StructureDefinition/ereferral-provenance could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-ereferral-pwd-disability.json ==
+INFORMATION: Resource: The resource StructureDefinition/ereferral-pwd-disability could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 WARNING: StructureDefinition.where(url = 'https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-pwd-disability'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-ereferral-related-person.json ==
 INFORMATION: StructureDefinition/ereferral-related-person: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-relatedperson.html' at 'div/table/tr/td/a' for 'PHCoreRelatedPerson' is not a widely supported protocol and should be checked
@@ -1167,6 +1181,7 @@ INFORMATION: StructureDefinition/ereferral-related-person: StructureDefinition.s
 INFORMATION: StructureDefinition/ereferral-related-person: StructureDefinition.snapshot.element[80].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-related-person: StructureDefinition.snapshot.element[80].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-related-person: StructureDefinition.snapshot.element[80].extension[3].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Resource: The resource StructureDefinition/ereferral-related-person could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-ereferral-service-request.json ==
 INFORMATION: StructureDefinition/ereferral-service-request: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-serviceRequest.html' at 'div/table/tr/td/a' for 'PHCoreServiceRequest' is not a widely supported protocol and should be checked
 INFORMATION: StructureDefinition/ereferral-service-request: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html' at 'div/table/tr/td/table/tr/td/a' for 'PH Core Server' is not a widely supported protocol and should be checked
@@ -1247,6 +1262,7 @@ WARNING: StructureDefinition/ereferral-service-request: StructureDefinition.diff
 WARNING: StructureDefinition/ereferral-service-request: StructureDefinition.differential.element[6].binding: The definition for the element 'ServiceRequest.priority' binds to the value set 'https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-priority' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/ereferral-service-request: StructureDefinition.snapshot.element[17].binding: The definition for the element 'ServiceRequest.category' binds to the value set 'https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-service-category' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/ereferral-service-request: StructureDefinition.snapshot.element[18].binding: The definition for the element 'ServiceRequest.priority' binds to the value set 'https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-priority' which is experimental, but this structure is not labeled as experimental
+INFORMATION: Resource: The resource StructureDefinition/ereferral-service-request could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-ereferral-task.json ==
 INFORMATION: StructureDefinition/ereferral-task: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-task.html' at 'div/table/tr/td/a' for 'PHCoreTask' is not a widely supported protocol and should be checked
 INFORMATION: StructureDefinition/ereferral-task: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/ph-core/ph-core/output/ActorDefinition-Server.html' at 'div/table/tr/td/table/tr/td/a' for 'PH Core Server' is not a widely supported protocol and should be checked
@@ -1336,6 +1352,7 @@ INFORMATION: StructureDefinition/ereferral-task: StructureDefinition.snapshot.el
 INFORMATION: StructureDefinition/ereferral-task: StructureDefinition.snapshot.element[93].extension[1].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-task: StructureDefinition.snapshot.element[93].extension[2].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: StructureDefinition/ereferral-task: StructureDefinition.snapshot.element[93].extension[3].extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Resource: The resource StructureDefinition/ereferral-task could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/Task-ExampleERefTaskAccepted.json ==
 == fsh-generated/resources/Task-ExampleERefTaskCompleted.json ==
 INFORMATION: Task/ExampleERefTaskCompleted: Task.output[0].type: Reference to draft CodeSystem https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow|0.1.0
@@ -1352,10 +1369,16 @@ INFORMATION: Task/task-referral-ex: Task.meta.tag[0].system: A definition for Co
 INFORMATION: Task/task-referral-ex: Task.meta.tag[1].system: A definition for CodeSystem 'https://example.com/peref-dd' could not be found, so the code cannot be validated
 WARNING: Task/task-referral-ex: Task.businessStatus.coding[0].system: A definition for CodeSystem 'https://example.com/peref/CodeSystem/referral-disposition' could not be found, so the code cannot be validated
 == fsh-generated/resources/ValueSet-ereferral-priority.json ==
+WARNING: Resource: The resource ValueSet/ereferral-priority should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-ereferral-reason.json ==
 INFORMATION: ValueSet/ereferral-reason: ValueSet.compose.include[0].concept[2]: Wrong Display Name 'Suspected lung cancer' for http://snomed.info/sct#414545008. Valid display is one of 5 choices: 'Ischemic heart disease (disorder)' (en), 'Ischemic heart disease' (en), 'Ischaemic heart disease' (en), 'IHD - Ischemic heart disease' (en) or 'IHD - Ischaemic heart disease' (en) (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
 INFORMATION: ValueSet/ereferral-reason: ValueSet.compose.include[0].concept[7]: Wrong Display Name 'Anxiety disorder' for http://snomed.info/sct#109006. Valid display is one of 3 choices: 'Anxiety disorder of childhood OR adolescence' (en), 'Anxiety disorder of childhood or adolescence, NOS' (en) or 'Anxiety disorder of childhood OR adolescence (disorder)' (en) (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
+WARNING: Resource: The resource ValueSet/ereferral-reason should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-ereferral-receiving-response.json ==
+WARNING: Resource: The resource ValueSet/ereferral-receiving-response should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-ereferral-relationship-type.json ==
+WARNING: Resource: The resource ValueSet/ereferral-relationship-type should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-ereferral-service-category.json ==
+WARNING: Resource: The resource ValueSet/ereferral-service-category should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ValueSet-pwd-disability-type-vs.json ==
+WARNING: Resource: The resource ValueSet/pwd-disability-type-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)

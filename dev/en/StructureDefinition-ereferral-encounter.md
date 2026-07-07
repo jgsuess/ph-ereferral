@@ -87,7 +87,7 @@ This structure refers to these other structures:
   "title" : "ERefEncounter",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-17T12:31:02+00:00",
+  "date" : "2026-07-07T09:49:11+00:00",
   "publisher" : "SILab CoP IG Accelerator (eReferral)",
   "contact" : [{
     "name" : "SILab CoP IG Accelerator (eReferral)",

@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,60 +7,72 @@
 
 <https://fhir.doh.gov.ph/pheref/Provenance/ExampleERefProvenanceSignature> a fhir:Provenance ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ExampleERefProvenanceSignature"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "ExampleERefProvenanceSignature"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance" ;
+       fhir:index 0 ;
        fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance>
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance ExampleERefProvenanceSignature</b></p><a name=\"ExampleERefProvenanceSignature\"> </a><a name=\"hcExampleERefProvenanceSignature\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-provenance.html\">EReferral Provenance</a></p></div><p>Provenance for <a href=\"ServiceRequest-ExampleERefServiceRequestMinimal.html\">ServiceRequest Patient referral to specialist</a></p><p>Summary</p><table class=\"grid\"><tr><td>Recorded</td><td>2025-03-15 09:30:00+0800</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-DataOperation CREATE}\">create</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td><td><b>On Behalf Of</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type author}\">Author</span></td><td><a href=\"PractitionerRole-ExampleERefPractitionerRoleMinimal.html\">PractitionerRole Medical practitioner</a></td><td><a href=\"Organization-ExampleERefOrganizationMinimal.html\">Organization Rural Health Unit - Barangay Health Center</a></td></tr></table></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:target ( [
-     fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequestMinimal> ;
-     fhir:reference [ fhir:v "ServiceRequest/ExampleERefServiceRequestMinimal" ]
-  ] ) ; # 
-  fhir:recorded [ fhir:v "2025-03-15T09:30:00+08:00"^^xsd:dateTime] ; # 
-  fhir:activity [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-DataOperation"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "CREATE" ] ;
-       fhir:display [ fhir:v "create" ]
-     ] )
-  ] ; # 
-  fhir:agent ( [
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/provenance-participant-type"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "author" ] ;
-         fhir:display [ fhir:v "Author" ]
-       ] )
-     ] ;
-     fhir:who [
-       fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleMinimal> ;
-       fhir:reference [ fhir:v "PractitionerRole/ExampleERefPractitionerRoleMinimal" ]
-     ] ;
-     fhir:onBehalfOf [
-       fhir:link <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefOrganizationMinimal> ;
-       fhir:reference [ fhir:v "Organization/ExampleERefOrganizationMinimal" ]
      ]
-  ] ) ; # 
-  fhir:signature ( [
-     fhir:type ( [
-       fhir:system [ fhir:v "urn:iso-astm:E1762-95:2013"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "1.2.840.10065.1.12.1.5" ] ;
-       fhir:display [ fhir:v "Verification Signature" ]
-     ] ) ;
-     fhir:when [ fhir:v "2025-03-15T09:30:00+08:00"^^xsd:dateTime ] ;
-     fhir:who [
-       fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleMinimal> ;
-       fhir:reference [ fhir:v "PractitionerRole/ExampleERefPractitionerRoleMinimal" ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance ExampleERefProvenanceSignature</b></p><a name=\"ExampleERefProvenanceSignature\"> </a><a name=\"hcExampleERefProvenanceSignature\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-provenance.html\">EReferral Provenance</a></p></div><p>Provenance for <a href=\"ServiceRequest-ExampleERefServiceRequestMinimal.html\">ServiceRequest Patient referral to specialist</a></p><p>Summary</p><table class=\"grid\"><tr><td>Recorded</td><td>2025-03-15 09:30:00+0800</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-DataOperation CREATE}\">create</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td><td><b>On Behalf Of</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type author}\">Author</span></td><td><a href=\"PractitionerRole-ExampleERefPractitionerRoleMinimal.html\">PractitionerRole Medical practitioner</a></td><td><a href=\"Organization-ExampleERefOrganizationMinimal.html\">Organization Rural Health Unit - Barangay Health Center</a></td></tr></table></div>"
+  ] ;
+  fhir:Provenance.target [
+     fhir:index 0 ;
+     fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequestMinimal> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/ExampleERefServiceRequestMinimal" ]
+  ] ;
+  fhir:Provenance.recorded [ fhir:value "2025-03-15T09:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Provenance.activity [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-DataOperation" ] ;
+       fhir:Coding.code [ fhir:value "CREATE" ] ;
+       fhir:Coding.display [ fhir:value "create" ]
+     ]
+  ] ;
+  fhir:Provenance.agent [
+     fhir:index 0 ;
+     fhir:Provenance.agent.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+         fhir:Coding.code [ fhir:value "author" ] ;
+         fhir:Coding.display [ fhir:value "Author" ]
+       ]
      ] ;
-     fhir:sigFormat [ fhir:v "application/signature+xml" ] ;
-     fhir:data [ fhir:v "dGVzdHNpZ25hdHVyZWJhc2U2NA=="^^xsd:base64Binary ]
-  ] ) . # 
+     fhir:Provenance.agent.who [
+       fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleMinimal> ;
+       fhir:Reference.reference [ fhir:value "PractitionerRole/ExampleERefPractitionerRoleMinimal" ]
+     ] ;
+     fhir:Provenance.agent.onBehalfOf [
+       fhir:link <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefOrganizationMinimal> ;
+       fhir:Reference.reference [ fhir:value "Organization/ExampleERefOrganizationMinimal" ]
+     ]
+  ] ;
+  fhir:Provenance.signature [
+     fhir:index 0 ;
+     fhir:Signature.type [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso-astm:E1762-95:2013" ] ;
+       fhir:Coding.code [ fhir:value "1.2.840.10065.1.12.1.5" ] ;
+       fhir:Coding.display [ fhir:value "Verification Signature" ]
+     ] ;
+     fhir:Signature.when [ fhir:value "2025-03-15T09:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:Signature.who [
+       fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleMinimal> ;
+       fhir:Reference.reference [ fhir:value "PractitionerRole/ExampleERefPractitionerRoleMinimal" ]
+     ] ;
+     fhir:Signature.sigFormat [ fhir:value "application/signature+xml" ] ;
+     fhir:Signature.data [ fhir:value "dGVzdHNpZ25hdHVyZWJhc2U2NA=="^^xsd:base64Binary ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Provenance/ExampleERefProvenanceSignature.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

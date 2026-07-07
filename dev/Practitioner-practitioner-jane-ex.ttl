@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,22 +7,32 @@
 
 <https://fhir.doh.gov.ph/pheref/Practitioner/practitioner-jane-ex> a fhir:Practitioner ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "practitioner-jane-ex"] ; # 
-  fhir:meta [
-     fhir:tag ( [
-       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "REF-1" ] ;
-       fhir:display [ fhir:v "REF-1" ]
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner practitioner-jane-ex</b></p><a name=\"practitioner-jane-ex\"> </a><a name=\"hcpractitioner-jane-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>name</b>: Jane Dela Cruz </p></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:name ( [
-     fhir:family [ fhir:v "Dela Cruz" ] ;
-     fhir:given ( [ fhir:v "Jane" ] )
-  ] ) . # 
+  fhir:Resource.id [ fhir:value "practitioner-jane-ex"] ;
+  fhir:Resource.meta [
+     fhir:Meta.tag [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://example.com/peref-dd" ] ;
+       fhir:Coding.code [ fhir:value "REF-1" ] ;
+       fhir:Coding.display [ fhir:value "REF-1" ]
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner practitioner-jane-ex</b></p><a name=\"practitioner-jane-ex\"> </a><a name=\"hcpractitioner-jane-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>name</b>: Jane Dela Cruz </p></div>"
+  ] ;
+  fhir:Practitioner.name [
+     fhir:index 0 ;
+     fhir:HumanName.family [ fhir:value "Dela Cruz" ] ;
+     fhir:HumanName.given [
+       fhir:value "Jane" ;
+       fhir:index 0
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Practitioner/practitioner-jane-ex.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

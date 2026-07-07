@@ -1,7 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <https://loinc.org/rdf/> .
+@prefix loinc: <http://loinc.org/rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -9,92 +8,104 @@
 
 <https://fhir.doh.gov.ph/pheref/Observation/observation-blood-pressure-ex> a fhir:Observation ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "observation-blood-pressure-ex"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "observation-blood-pressure-ex"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation" ;
+       fhir:index -1 ;
        fhir:link <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
-     ] [
-       fhir:v "http://hl7.org/fhir/StructureDefinition/vitalsigns"^^xsd:anyURI ;
+     ], [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/vitalsigns" ;
+       fhir:index -1 ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/vitalsigns>
-     ] [
-       fhir:v "http://hl7.org/fhir/StructureDefinition/bp"^^xsd:anyURI ;
+     ], [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/bp" ;
+       fhir:index -1 ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/bp>
-     ] ) ;
-     fhir:tag ( [
-       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "REF-32" ] ;
-       fhir:display [ fhir:v "REF-32" ]
-     ] )
-  ] ; # 
-  fhir:language [ fhir:v "en"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-blood-pressure-ex</b></p><a name=\"observation-blood-pressure-ex\"> </a><a name=\"hcobservation-blood-pressure-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href=\"http://hl7.org/fhir/R4/vitalsigns.html\">Vital Signs Profile</a>, <a href=\"http://hl7.org/fhir/R4/bp.html\">Observation Blood Pressure Profile</a></p><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85354-9}\">Blood pressure systolic &amp; diastolic</span></p><p><b>subject</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c\">Practitioner Jane Dela Cruz </a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8480-6}\">Systolic blood pressure</span></p><p><b>value</b>: 110 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8462-4}\">Diastolic blood pressure</span></p><p><b>value</b>: 70 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:status [ fhir:v "final"] ; # 
-  fhir:category ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "vital-signs" ] ;
-       fhir:display [ fhir:v "Vital Signs" ]
-     ] )
-  ] ) ; # 
-  fhir:code [
-     fhir:coding ( [
+     ] ;
+     fhir:Meta.tag [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://example.com/peref-dd" ] ;
+       fhir:Coding.code [ fhir:value "REF-32" ] ;
+       fhir:Coding.display [ fhir:value "REF-32" ]
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-blood-pressure-ex</b></p><a name=\"observation-blood-pressure-ex\"> </a><a name=\"hcobservation-blood-pressure-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code>, <a href=\"http://hl7.org/fhir/R4/vitalsigns.html\">Vital Signs Profile</a>, <a href=\"http://hl7.org/fhir/R4/bp.html\">Observation Blood Pressure Profile</a></p><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85354-9}\">Blood pressure systolic &amp; diastolic</span></p><p><b>subject</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24 09:00:00+0800</p><p><b>performer</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c\">Practitioner Jane Dela Cruz </a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8480-6}\">Systolic blood pressure</span></p><p><b>value</b>: 110 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8462-4}\">Diastolic blood pressure</span></p><p><b>value</b>: 70 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "vital-signs" ] ;
+       fhir:Coding.display [ fhir:value "Vital Signs" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
        a loinc:85354-9 ;
-       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "85354-9" ] ;
-       fhir:display [ fhir:v "Blood pressure panel with all children optional" ]
-     ] ) ;
-     fhir:text [ fhir:v "Blood pressure systolic & diastolic" ]
-  ] ; # 
-  fhir:subject [
-     fhir:reference [ fhir:v "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479" ]
-  ] ; # 
-  fhir:encounter [
-     fhir:reference [ fhir:v "urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901" ]
-  ] ; # 
-  fhir:effective [
-     a fhir:dateTime ;
-     fhir:v "2026-02-24T09:00:00+08:00"^^xsd:dateTime
-  ] ; # 
-  fhir:performer ( [
-     fhir:reference [ fhir:v "urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c" ]
-  ] ) ; # 
-  fhir:component ( [
-     fhir:code [
-       fhir:coding ( [
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "85354-9" ] ;
+       fhir:Coding.display [ fhir:value "Blood pressure panel with all children optional" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Blood pressure systolic & diastolic" ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-02-24T09:00:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.performer [
+     fhir:index -1 ;
+     fhir:Reference.reference [ fhir:value "urn:uuid:4e8f6b0c-5a7d-6c3e-1b0f-9d8a7f6e5d4c" ]
+  ] ;
+  fhir:Observation.component [
+     fhir:index -1 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
          a loinc:8480-6 ;
-         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "8480-6" ] ;
-         fhir:display [ fhir:v "Systolic blood pressure" ]
-       ] )
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "8480-6" ] ;
+         fhir:Coding.display [ fhir:value "Systolic blood pressure" ]
+       ]
      ] ;
-     fhir:value [
-       a fhir:Quantity ;
-       fhir:value [ fhir:v "110"^^xsd:decimal ] ;
-       fhir:unit [ fhir:v "mmHg" ] ;
-       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "mm[Hg]" ]
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "110"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "mmHg" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "mm[Hg]" ]
      ]
-  ] [
-     fhir:code [
-       fhir:coding ( [
+  ], [
+     fhir:index -1 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
          a loinc:8462-4 ;
-         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "8462-4" ] ;
-         fhir:display [ fhir:v "Diastolic blood pressure" ]
-       ] )
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "8462-4" ] ;
+         fhir:Coding.display [ fhir:value "Diastolic blood pressure" ]
+       ]
      ] ;
-     fhir:value [
-       a fhir:Quantity ;
-       fhir:value [ fhir:v "70"^^xsd:decimal ] ;
-       fhir:unit [ fhir:v "mmHg" ] ;
-       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "mm[Hg]" ]
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "70"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "mmHg" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "mm[Hg]" ]
      ]
-  ] ) . # 
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Observation/observation-blood-pressure-ex.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

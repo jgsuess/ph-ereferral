@@ -311,56 +311,77 @@
   <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix sct: &lt;http://snomed.info/id/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
 
- a fhir:PractitionerRole ;
+&lt;http://hl7.org/fhir/PractitionerRole/ExampleERefPractitionerRole&gt; a fhir:PractitionerRole ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ExampleERefPractitionerRole&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.meta">fhir:meta</a> [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role&gt;     ] )
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;en&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/domainresource.html#PractitionerRole.text">fhir:text</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole ExampleERefPractitionerRole&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleERefPractitionerRole\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleERefPractitionerRole\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ereferral-practitioner-role.html\&quot;&gt;PH eReferral PractitionerRole&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:2.16.840.1.113883.2.9.4.3.3&lt;/code&gt;/MD-98765&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-ExampleERefPractitioner.html\&quot;&gt;Practitioner Dr. Maria Cruz Santos(official)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;Organization-ExampleERefReferringFacility.html\&quot;&gt;Organization Manila General Hospital - Barangay 143 Health Center&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 158965000}\&quot;&gt;Medical practitioner&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 419192003}\&quot;&gt;Internal medicine&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+63281234567\&quot;&gt;+63 2 8123 4567&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.identifier">fhir:identifier</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:2.16.840.1.113883.2.9.4.3.3&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;MD-98765&quot; ]
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.active">fhir:active</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> true] ; # 
-  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">fhir:practitioner</a> [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/ExampleERefPractitioner&quot; ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">fhir:organization</a> [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization/ExampleERefReferringFacility&quot; ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.code">fhir:code</a> ( [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-a sct:158965000 ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;158965000&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Medical practitioner&quot; ]     ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.specialty">fhir:specialty</a> ( [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-a sct:419192003 ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;419192003&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Internal medicine&quot; ]     ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.telecom">fhir:telecom</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;phone&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;+63 2 8123 4567&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;work&quot; ]
-  ] ) . # 
+  <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ExampleERefPractitionerRole&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.language">fhir:Resource.language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;en&quot;] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#PractitionerRole.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole ExampleERefPractitionerRole&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ExampleERefPractitionerRole\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcExampleERefPractitionerRole\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ereferral-practitioner-role.html\&quot;&gt;PH eReferral PractitionerRole&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:2.16.840.1.113883.2.9.4.3.3&lt;/code&gt;/MD-98765&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-ExampleERefPractitioner.html\&quot;&gt;Practitioner Dr. Maria Cruz Santos(official)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;Organization-ExampleERefReferringFacility.html\&quot;&gt;Organization Manila General Hospital - Barangay 143 Health Center&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 158965000}\&quot;&gt;Medical practitioner&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 419192003}\&quot;&gt;Internal medicine&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+63281234567\&quot;&gt;+63 2 8123 4567&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.identifier">fhir:PractitionerRole.identifier</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:oid:2.16.840.1.113883.2.9.4.3.3&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;MD-98765&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.active">fhir:PractitionerRole.active</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean] ;
+  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">fhir:PractitionerRole.practitioner</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Practitioner/ExampleERefPractitioner&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Practitioner/ExampleERefPractitioner&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">fhir:PractitionerRole.organization</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Organization/ExampleERefReferringFacility&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Organization/ExampleERefReferringFacility&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.code">fhir:PractitionerRole.code</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       a sct:158965000 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;158965000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Medical practitioner&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.specialty">fhir:PractitionerRole.specialty</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       a sct:419192003 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;419192003&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Internal medicine&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.telecom">fhir:PractitionerRole.telecom</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;phone&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;+63 2 8123 4567&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">fhir:ContactPoint.use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;work&quot; ]
+  ] .
+
+&lt;http://hl7.org/fhir/Practitioner/ExampleERefPractitioner&gt; a fhir:Practitioner .
+
+&lt;http://hl7.org/fhir/Organization/ExampleERefReferringFacility&gt; a fhir:Organization .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/PractitionerRole/ExampleERefPractitionerRole.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/PractitionerRole/ExampleERefPractitionerRole.ttl&gt; .
 
 </code></pre>
 
@@ -396,8 +417,8 @@ a sct:419192003 ;
           IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
           Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-17 12:31:00 +0000">
-    2026-06-17
+  <span title="2026-07-07 09:49:00 +0000">
+    2026-07-07
   </span>
 
           <br/>

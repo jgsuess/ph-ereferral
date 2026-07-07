@@ -311,53 +311,64 @@
   <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
 
- a fhir:Task ;
+&lt;http://hl7.org/fhir/Task/task-referral-ex&gt; a fhir:Task ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/resource.html#Task.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;task-referral-ex&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#Task.meta">fhir:meta</a> [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.tag">fhir:tag</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://example.com/peref-dd&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;REF-16&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;REF-16&quot; ]     ] [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://example.com/peref-dd&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;REF-42&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;REF-42&quot; ]     ] )
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#Task.language">fhir:language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;en&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/domainresource.html#Task.text">fhir:text</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Task task-referral-ex&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;task-referral-ex\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hctask-referral-ex\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Tags: , &lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Requested&lt;/p&gt;&lt;p&gt;&lt;b&gt;businessStatus&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://example.com/peref/CodeSystem/referral-disposition requested}\&quot;&gt;Requested&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Bundle-anc-contact-transaction-ex.html#urn-uuid-f2a3b4c5-d6e7-8901-fabc-012345678901\&quot;&gt;ServiceRequest Ultrasound scan - obstetric&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;for&lt;/b&gt;: &lt;a href=\&quot;Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\&quot;&gt;Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a href=\&quot;Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901\&quot;&gt;Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&amp;gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;authoredOn&lt;/b&gt;: 2026-02-24&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;Bundle-anc-contact-transaction-ex.html#urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d\&quot;&gt;PractitionerRole Nurse&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;owner&lt;/b&gt;: &lt;a href=\&quot;Bundle-anc-contact-transaction-ex.html#urn-uuid-1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed\&quot;&gt;Organization Metro Imaging Centre&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/task.html#Task.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;requested&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/task.html#Task.businessStatus">fhir:businessStatus</a> [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://example.com/peref/CodeSystem/referral-disposition&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;requested&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Requested&quot; ]     ] )
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/task.html#Task.intent">fhir:intent</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;order&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/task.html#Task.focus">fhir:focus</a> [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;urn:uuid:f2a3b4c5-d6e7-8901-fabc-012345678901&quot; ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/task.html#Task.for">fhir:for</a> [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479&quot; ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/task.html#Task.encounter">fhir:encounter</a> [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901&quot; ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/task.html#Task.authoredOn">fhir:authoredOn</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2026-02-24&quot;^^xsd:date] ; # 
-  <a href="http://hl7.org/fhir/R4/task.html#Task.requester">fhir:requester</a> [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;urn:uuid:5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d&quot; ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/task.html#Task.owner">fhir:owner</a> [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;urn:uuid:1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed&quot; ]
-  ] . # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Task.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;task-referral-ex&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Task.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.tag">fhir:Meta.tag</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://example.com/peref-dd&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;REF-16&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;REF-16&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://example.com/peref-dd&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;REF-42&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;REF-42&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Task.language">fhir:Resource.language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;en&quot;] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Task.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Task task-referral-ex&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;task-referral-ex\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hctask-referral-ex\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Tags: , &lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Requested&lt;/p&gt;&lt;p&gt;&lt;b&gt;businessStatus&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://example.com/peref/CodeSystem/referral-disposition requested}\&quot;&gt;Requested&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Bundle-anc-contact-transaction-ex.html#urn-uuid-f2a3b4c5-d6e7-8901-fabc-012345678901\&quot;&gt;ServiceRequest Ultrasound scan - obstetric&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;for&lt;/b&gt;: &lt;a href=\&quot;Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\&quot;&gt;Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a href=\&quot;Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901\&quot;&gt;Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&amp;gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;authoredOn&lt;/b&gt;: 2026-02-24&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;Bundle-anc-contact-transaction-ex.html#urn-uuid-5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d\&quot;&gt;PractitionerRole Nurse&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;owner&lt;/b&gt;: &lt;a href=\&quot;Bundle-anc-contact-transaction-ex.html#urn-uuid-1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed\&quot;&gt;Organization Metro Imaging Centre&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/task.html#Task.status">fhir:Task.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;requested&quot;] ;
+  <a href="http://hl7.org/fhir/R4/task.html#Task.businessStatus">fhir:Task.businessStatus</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://example.com/peref/CodeSystem/referral-disposition&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;requested&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Requested&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/task.html#Task.intent">fhir:Task.intent</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;order&quot;] ;
+  <a href="http://hl7.org/fhir/R4/task.html#Task.focus">fhir:Task.focus</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;urn:uuid:f2a3b4c5-d6e7-8901-fabc-012345678901&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/task.html#Task.for">fhir:Task.for</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/task.html#Task.encounter">fhir:Task.encounter</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/task.html#Task.authoredOn">fhir:Task.authoredOn</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2026-02-24&quot;^^xsd:date] ;
+  <a href="http://hl7.org/fhir/R4/task.html#Task.requester">fhir:Task.requester</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;urn:uuid:5f9a7c1d-6b8e-7d4f-2c1a-0e9b8a7f6e5d&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/task.html#Task.owner">fhir:Task.owner</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;urn:uuid:1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed&quot; ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Task/task-referral-ex.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/Task/task-referral-ex.ttl&gt; .
 
 </code></pre>
 
@@ -393,8 +404,8 @@
           IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
           Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-17 12:31:00 +0000">
-    2026-06-17
+  <span title="2026-07-07 09:49:00 +0000">
+    2026-07-07
   </span>
 
           <br/>

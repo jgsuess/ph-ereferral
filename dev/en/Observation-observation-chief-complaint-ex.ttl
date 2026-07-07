@@ -1,7 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <https://loinc.org/rdf/> .
+@prefix loinc: <http://loinc.org/rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -9,53 +8,57 @@
 
 <https://fhir.doh.gov.ph/pheref/Observation/observation-chief-complaint-ex> a fhir:Observation ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "observation-chief-complaint-ex"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "observation-chief-complaint-ex"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation" ;
+       fhir:index -1 ;
        fhir:link <http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation>
-     ] ) ;
-     fhir:tag ( [
-       fhir:system [ fhir:v "https://example.com/peref-dd"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "REF-30" ] ;
-       fhir:display [ fhir:v "REF-30" ]
-     ] )
-  ] ; # 
-  fhir:language [ fhir:v "en"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-chief-complaint-ex</b></p><a name=\"observation-chief-complaint-ex\"> </a><a name=\"hcobservation-chief-complaint-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code></p><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category exam}\">Exam</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 10154-3}\">Chief complaint Narrative - Reported</span></p><p><b>subject</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24</p><p><b>value</b>: Missed menstrual cycle and nausea</p></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:status [ fhir:v "final"] ; # 
-  fhir:category ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "exam" ] ;
-       fhir:display [ fhir:v "Exam" ]
-     ] )
-  ] ) ; # 
-  fhir:code [
-     fhir:coding ( [
+     ] ;
+     fhir:Meta.tag [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://example.com/peref-dd" ] ;
+       fhir:Coding.code [ fhir:value "REF-30" ] ;
+       fhir:Coding.display [ fhir:value "REF-30" ]
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-chief-complaint-ex</b></p><a name=\"observation-chief-complaint-ex\"> </a><a name=\"hcobservation-chief-complaint-ex\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <code>http://doh.gov.ph/fhir/ph-core/StructureDefinition/ph-core-observation</code></p><p style=\"margin-bottom: 0px\">Tag: </p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category exam}\">Exam</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 10154-3}\">Chief complaint Narrative - Reported</span></p><p><b>subject</b>: <a href=\"Bundle-registration-transaction-ex.html#urn-uuid-f47ac10b-58cc-4372-a567-0e02b2c3d479\">Charity Santos (official) Female, DoB: 2001-08-15 ( http://doh.gov.ph/fhir/ph-core/NamingSystem/philsys-id-ns#1234-5678901-2)</a></p><p><b>encounter</b>: <a href=\"Bundle-anc-contact-transaction-ex.html#urn-uuid-b2c3d4e5-f6a7-8901-bcde-f12345678901\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Prenatal visit; period = 2026-02-24 08:30:00+0800 --&gt; 2026-02-24 10:00:00+0800; reasonCode = Pregnant</a></p><p><b>effective</b>: 2026-02-24</p><p><b>value</b>: Missed menstrual cycle and nausea</p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "exam" ] ;
+       fhir:Coding.display [ fhir:value "Exam" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
        a loinc:10154-3 ;
-       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "10154-3" ] ;
-       fhir:display [ fhir:v "Chief complaint Narrative - Reported" ]
-     ] )
-  ] ; # 
-  fhir:subject [
-     fhir:reference [ fhir:v "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479" ]
-  ] ; # 
-  fhir:encounter [
-     fhir:reference [ fhir:v "urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901" ]
-  ] ; # 
-  fhir:effective [
-     a fhir:dateTime ;
-     fhir:v "2026-02-24"^^xsd:date
-  ] ; # 
-  fhir:value [
-     a fhir:string ;
-     fhir:v "Missed menstrual cycle and nausea"
-  ] . # 
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "10154-3" ] ;
+       fhir:Coding.display [ fhir:value "Chief complaint Narrative - Reported" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:b2c3d4e5-f6a7-8901-bcde-f12345678901" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-02-24"^^xsd:date] ;
+  fhir:Observation.valueString [ fhir:value "Missed menstrual cycle and nausea"] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Observation/observation-chief-complaint-ex.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

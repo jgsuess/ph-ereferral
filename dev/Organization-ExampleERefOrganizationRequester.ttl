@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,28 +7,39 @@
 
 <https://fhir.doh.gov.ph/pheref/Organization/ExampleERefOrganizationRequester> a fhir:Organization ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ExampleERefOrganizationRequester"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "ExampleERefOrganizationRequester"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization" ;
+       fhir:index 0 ;
        fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization>
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ExampleERefOrganizationRequester</b></p><a name=\"ExampleERefOrganizationRequester\"> </a><a name=\"hcExampleERefOrganizationRequester\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html\">PH Core Organization</a></p></div><p><b>identifier</b>: <code>http://fhir.nhdr.gov.ph/nhfr/hospcode</code>/DOH123456</p><p><b>name</b>: Rural Health Unit - Barangay Health Center</p><p><b>address</b>: 123 Health Center Road Quezon City Metro Manila PH </p></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:identifier ( [
-     fhir:system [ fhir:v "http://fhir.nhdr.gov.ph/nhfr/hospcode"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "DOH123456" ]
-  ] ) ; # 
-  fhir:name [ fhir:v "Rural Health Unit - Barangay Health Center"] ; # 
-  fhir:address ( [
-     fhir:line ( [ fhir:v "123 Health Center Road" ] ) ;
-     fhir:city [ fhir:v "Quezon City" ] ;
-     fhir:state [ fhir:v "Metro Manila" ] ;
-     fhir:country [ fhir:v "PH" ]
-  ] ) . # 
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ExampleERefOrganizationRequester</b></p><a name=\"ExampleERefOrganizationRequester\"> </a><a name=\"hcExampleERefOrganizationRequester\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"file:///home/runner/work/ph-core/ph-core/output/StructureDefinition-ph-core-organization.html\">PH Core Organization</a></p></div><p><b>identifier</b>: <code>http://fhir.nhdr.gov.ph/nhfr/hospcode</code>/DOH123456</p><p><b>name</b>: Rural Health Unit - Barangay Health Center</p><p><b>address</b>: 123 Health Center Road Quezon City Metro Manila PH </p></div>"
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://fhir.nhdr.gov.ph/nhfr/hospcode" ] ;
+     fhir:Identifier.value [ fhir:value "DOH123456" ]
+  ] ;
+  fhir:Organization.name [ fhir:value "Rural Health Unit - Barangay Health Center"] ;
+  fhir:Organization.address [
+     fhir:index 0 ;
+     fhir:Address.line [
+       fhir:value "123 Health Center Road" ;
+       fhir:index 0
+     ] ;
+     fhir:Address.city [ fhir:value "Quezon City" ] ;
+     fhir:Address.state [ fhir:value "Metro Manila" ] ;
+     fhir:Address.country [ fhir:value "PH" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Organization/ExampleERefOrganizationRequester.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

@@ -1,7 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <https://loinc.org/rdf/> .
+@prefix loinc: <http://loinc.org/rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -9,67 +8,74 @@
 
 <https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationLabGlucose> a fhir:Observation ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ExampleERefObservationLabGlucose"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "ExampleERefObservationLabGlucose"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation" ;
+       fhir:index 0 ;
        fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationLabGlucose</b></p><a name=\"ExampleERefObservationLabGlucose\"> </a><a name=\"hcExampleERefObservationLabGlucose\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2339-0}\">Glucose [Mass/volume] in Blood</span></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>effective</b>: 2025-03-15 08:30:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-ExampleERefPractitioner.html\">Practitioner Dr. Maria Cruz Santos(official)</a></p><p><b>value</b>: 95 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Text</b></td></tr><tr><td style=\"display: none\">*</td><td>70 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>100 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>Normal range</td></tr></table></div>"^^rdf:XMLLiteral ]
-  ] ; # 
-  fhir:status [ fhir:v "final"] ; # 
-  fhir:category ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "laboratory" ] ;
-       fhir:display [ fhir:v "Laboratory" ]
-     ] )
-  ] ) ; # 
-  fhir:code [
-     fhir:coding ( [
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationLabGlucose</b></p><a name=\"ExampleERefObservationLabGlucose\"> </a><a name=\"hcExampleERefObservationLabGlucose\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2339-0}\">Glucose [Mass/volume] in Blood</span></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Juan Miguel Dela Cruz  Male, DoB: 1965-07-20 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#PH-123456789)</a></p><p><b>effective</b>: 2025-03-15 08:30:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-ExampleERefPractitioner.html\">Practitioner Dr. Maria Cruz Santos(official)</a></p><p><b>value</b>: 95 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Text</b></td></tr><tr><td style=\"display: none\">*</td><td>70 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>100 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>Normal range</td></tr></table></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "laboratory" ] ;
+       fhir:Coding.display [ fhir:value "Laboratory" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
        a loinc:2339-0 ;
-       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "2339-0" ] ;
-       fhir:display [ fhir:v "Glucose [Mass/volume] in Blood" ]
-     ] )
-  ] ; # 
-  fhir:subject [
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "2339-0" ] ;
+       fhir:Coding.display [ fhir:value "Glucose [Mass/volume] in Blood" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
      fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatient> ;
-     fhir:reference [ fhir:v "Patient/ExampleERefPatient" ]
-  ] ; # 
-  fhir:effective [
-     a fhir:dateTime ;
-     fhir:v "2025-03-15T08:30:00+08:00"^^xsd:dateTime
-  ] ; # 
-  fhir:performer ( [
+     fhir:Reference.reference [ fhir:value "Patient/ExampleERefPatient" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2025-03-15T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.performer [
+     fhir:index 0 ;
      fhir:link <https://fhir.doh.gov.ph/pheref/Practitioner/ExampleERefPractitioner> ;
-     fhir:reference [ fhir:v "Practitioner/ExampleERefPractitioner" ]
-  ] ) ; # 
-  fhir:value [
-     a fhir:Quantity ;
-     fhir:value [ fhir:v "95"^^xsd:decimal ] ;
-     fhir:unit [ fhir:v "mg/dL" ] ;
-     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
-     fhir:code [ fhir:v "mg/dL" ]
-  ] ; # 
-  fhir:referenceRange ( [
-     fhir:low [
-       fhir:value [ fhir:v "70"^^xsd:decimal ] ;
-       fhir:unit [ fhir:v "mg/dL" ] ;
-       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "mg/dL" ]
+     fhir:Reference.reference [ fhir:value "Practitioner/ExampleERefPractitioner" ]
+  ] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "95"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "mg/dL" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "mg/dL" ]
+  ] ;
+  fhir:Observation.referenceRange [
+     fhir:index 0 ;
+     fhir:Observation.referenceRange.low [
+       fhir:Quantity.value [ fhir:value "70"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "mg/dL" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "mg/dL" ]
      ] ;
-     fhir:high [
-       fhir:value [ fhir:v "100"^^xsd:decimal ] ;
-       fhir:unit [ fhir:v "mg/dL" ] ;
-       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "mg/dL" ]
+     fhir:Observation.referenceRange.high [
+       fhir:Quantity.value [ fhir:value "100"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "mg/dL" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "mg/dL" ]
      ] ;
-     fhir:text [ fhir:v "Normal range" ]
-  ] ) . # 
+     fhir:Observation.referenceRange.text [ fhir:value "Normal range" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Observation/ExampleERefObservationLabGlucose.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 
