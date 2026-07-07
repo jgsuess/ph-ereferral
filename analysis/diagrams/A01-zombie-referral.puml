@@ -1,0 +1,45 @@
+@startuml A01-zombie-referral
+!theme plain
+skinparam defaultFontName Helvetica
+skinparam sequenceArrowThickness 1.5
+skinparam noteBackgroundColor #FFFDE7
+skinparam noteBorderColor #F57F17
+
+title A-01 — Zombie Referral\nTask jumps directly to completed, bypassing all intermediate states
+
+actor "Initiating\nFacility" as initiator #FFF9C4
+actor "Receiving\nFacility" as receiver #FFCCBC
+database "FHIR Server" as server #E3F2FD
+
+autonumber
+
+initiator -> server : POST ServiceRequest\n(status=active, intent=order,\nperformer=metro-imaging)
+server --> initiator : 201 Created\nSR/mat-ultrasound-001
+
+initiator -> server : POST Task\n**status = completed**\n**businessStatus = #accepted**\nfocus → SR/mat-ultrasound-001\nexecutionPeriod.start = T+0s\nexecutionPeriod.end = T+1s\noutput[0] = "Ultrasound performed. Normal findings."
+server --> initiator : 201 Created\nTask/ghost-complete-001
+
+note over initiator, server
+  FHIR validator: ✅ PASS
+  State machine:  ❌ FAIL (no path: [start] → completed)
+
+  The Task was never in "requested", "received", or "accepted".
+  The receiving facility was never notified.
+  The ultrasound was never performed.
+  The output text is fabricated.
+end note
+
+receiver -> server : GET Task?focus=SR/mat-ultrasound-001
+server --> receiver : Task/ghost-complete-001  (status=completed)
+
+note over receiver
+  Receiving facility sees:
+  "Referral already completed."
+
+  No way to tell it was created
+  in completed status without
+  reading AuditEvent logs
+  (which are not required by the IG).
+end note
+
+@enduml

@@ -1,0 +1,73 @@
+@startuml A02-backward-traversal
+!theme plain
+skinparam defaultFontName Helvetica
+
+title A-02 — Backward Traversal\nIntended state model (left) vs. what the profile permits (right)
+
+left to right direction
+
+state "INTENDED (state machine model)" as intended {
+  state D1 as "draft" <<initiator>>
+  state R1 as "requested" <<initiator>>
+  state Re1 as "received" <<receiving>>
+  state A1 as "accepted" <<receiving>>
+  state C1 as "completed" <<recipient>>
+
+  [*] --> D1
+  D1 --> R1
+  R1 --> Re1
+  Re1 --> A1
+  A1 --> C1
+  C1 --> [*]
+}
+
+state "PERMITTED (by ERefTask profile)" as permitted {
+  state D2 as "draft"
+  state R2 as "requested"
+  state Re2 as "received"
+  state A2 as "accepted"
+  state Rej2 as "rejected"
+  state C2 as "completed"
+  state IP2 as "in-progress" #FFCCCC
+  state OH2 as "on-hold"     #FFCCCC
+  state RD2 as "ready"       #FFCCCC
+  state CX2 as "cancelled"   #FFCCCC
+
+  [*] --> D2
+  [*] --> R2   #red : direct create in any status
+  [*] --> Re2  #red
+  [*] --> A2   #red
+  [*] --> C2   #red
+
+  D2  --> R2
+  D2  --> C2   #red : skip everything
+  R2  --> Re2
+  R2  --> A2   #red : skip received
+  R2  --> C2   #red : skip everything
+  Re2 --> A2
+  Re2 --> C2   #red : skip accepted
+  A2  --> C2
+  A2  --> R2   #red : move backward
+  C2  --> R2   #red : reopen completed referral
+  C2  --> D2   #red : move all the way back
+
+  R2  --> IP2  #red : unmodeled status
+  R2  --> OH2  #red : unmodeled status
+  R2  --> RD2  #red : unmodeled status
+  A2  --> CX2  #red : cancel after acceptance - no handler
+}
+
+note bottom of permitted
+  Red arrows: transitions not in the state machine
+  but not prevented by any ERefTask invariant.
+  Pink states: permitted by ereferral-task-status-valid
+  but undefined in the workflow model.
+end note
+
+skinparam state {
+  BackgroundColor<<initiator>> #FFF9C4
+  BackgroundColor<<receiving>> #FFE0CC
+  BackgroundColor<<recipient>> #BBDEFB
+}
+
+@enduml

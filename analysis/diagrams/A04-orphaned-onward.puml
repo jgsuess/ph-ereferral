@@ -1,0 +1,51 @@
+@startuml A04-orphaned-onward
+!theme plain
+skinparam defaultFontName Helvetica
+skinparam noteBackgroundColor #FFEBEE
+skinparam noteBorderColor #B71C1C
+skinparam state {
+  BackgroundColor #F5F5F5
+  BorderColor #9E9E9E
+}
+
+title A-04 — Orphaned Referred-Onward Path
+
+state "happy_path" as hp {
+  state HpDraft as "draft"
+  state HpReq as "requested"
+  state HpRec as "received"
+  state HpAcc as "accepted"
+  state HpCom as "completed"
+  HpDraft --> HpReq
+  HpReq --> HpRec
+  HpRec --> HpAcc
+  HpAcc --> HpCom
+  HpCom --> [*]
+}
+
+state "onward_path" as op {
+  state OpDraft as "draft"
+  state OpReq as "requested"
+  state OpRec as "received"
+  state OpRO as "referred_onward\nTask.status=rejected\nbStatus=#referred-onward"
+  state OpMiss as "??? NO STATE\n(path ends here\nin the YAML)"
+  OpDraft --> OpReq
+  OpReq --> OpRec
+  OpRec --> OpRO
+  OpRO -[dashed]-> OpMiss : undefined
+}
+
+note right of OpRO
+  Task stays rejected+referred-onward
+  forever — no complete_referred_onward
+  transition exists.
+  Open in every dashboard query.
+end note
+
+note right of OpMiss #FFAAAA
+  The happy_path and rejection_path
+  both have a completed terminal state.
+  The onward_path does not.
+end note
+
+@enduml

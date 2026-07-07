@@ -1,0 +1,60 @@
+@startuml D02-multi-task-race
+!theme plain
+skinparam defaultFontName Helvetica
+skinparam sequenceArrowThickness 1.5
+
+title D-02 — Multi-Task Race Condition\nTwo facilities simultaneously accept the same referral
+
+actor "Initiating\nFacility" as initiator   #FFF9C4
+actor "Facility A" as facilityA             #BBDEFB
+actor "Facility B" as facilityB             #C8E6C9
+database "FHIR Server" as server            #E3F2FD
+actor "Patient" as patient                  #F3E5F5
+
+autonumber
+
+initiator -> server : POST ServiceRequest (status=active) → SR/obs-002
+initiator -> server : POST Task (status=requested, focus=SR/obs-002) → Task/req-001
+
+note over initiator
+  Notification broadcast (out-of-band)
+  to both Facility A and Facility B
+  (no routing mechanism defined in IG)
+end note
+
+facilityA -> server : POST Task\n(status=accepted\n owner=Org/facility-a\n focus=SR/obs-002) → Task/acc-001
+facilityB -> server : POST Task\n(status=accepted\n owner=Org/facility-b\n focus=SR/obs-002) → Task/acc-002
+
+note over server #FFCCCC
+  Server accepts both POSTs.
+  No uniqueness constraint on Task.focus.
+  No "one active Task per ServiceRequest" rule.
+end note
+
+facilityA -> patient : "Come to Facility A at 2pm."
+facilityB -> patient : "Come to Facility B at 3pm."
+
+note over patient #FFCCCC
+  Patient receives contradictory instructions.
+  Both appointments were created from the same referral.
+end note
+
+facilityA -> server : GET Task?focus=SR/obs-002
+server --> facilityA : Task/req-001, Task/acc-001, **Task/acc-002**
+note over facilityA : "Who is Task/acc-002?\n   Facility A discovers\n   the conflict only by\n   actively querying."
+
+note right of server
+  Final state:
+  SR/obs-002:   status=active
+  Task/req-001: status=requested (never updated)
+  Task/acc-001: status=accepted, owner=Facility A
+  Task/acc-002: status=accepted, owner=Facility B
+
+  No profile constraint was violated.
+  No resolution mechanism is defined.
+  Who cancels which Task?
+  Who notifies the patient?
+  The IG is silent.
+end note
+
+@enduml
