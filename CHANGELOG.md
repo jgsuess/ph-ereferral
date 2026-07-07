@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.4.0](https://github.com/jgsuess/ph-ereferral/compare/v0.3.1...v0.4.0) (2026-07-07)
+
+
+### Features
+
+* **deps:** bump to fhir.ph.core 0.1.1 and fhir.ph.ereferral 0.3.1 ([1c9a1fc](https://github.com/jgsuess/ph-ereferral/commit/1c9a1fc59c9d3be47363eeae6a024b523a9117b4))
+
+
+### Bug Fixes
+
+* **ci:** pre-install custom fhir.ph.* packages before IG Publisher ([c61f097](https://github.com/jgsuess/ph-ereferral/commit/c61f09712c48759315ac00ee951d3008a405e201))
+* **ci:** pull --rebase before gh-pages push to avoid race with ig-ci-dev ([9b9cfde](https://github.com/jgsuess/ph-ereferral/commit/9b9cfde86ad2173ec296eea52b9f435e2625aa85))
+* **ci:** remove --strip-components=1 from FHIR package pre-install ([ea79678](https://github.com/jgsuess/ph-ereferral/commit/ea7967890ea6402a6b0404a343cb12fd1547268b))
+* **examples:** update medicationadministration-ifa-ex to current SNOMED code ([90dd927](https://github.com/jgsuess/ph-ereferral/commit/90dd9272a2c9e85b730e85a034e1876ed83aa85c))
+* **scripts:** bump upload_examples.sh defaults to ph-core 0.1.1 / ph-ereferral 0.3.1 ([3513327](https://github.com/jgsuess/ph-ereferral/commit/35133277135022561f6acde95988f4eef8732745))
+
 ## [0.3.1](https://github.com/jgsuess/ph-ereferral/compare/v0.3.0...v0.3.1) (2026-06-17)
 
 
